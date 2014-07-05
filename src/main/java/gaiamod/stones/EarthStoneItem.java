@@ -12,6 +12,11 @@ public class EarthStoneItem  extends Item{
 		super();
         this.setUnlocalizedName(Strings.EarthStoneItemName);
         this.setCreativeTab(GaiaMod.getcreativeTab());
+        
+        this.maxStackSize = 64;
+        this.setMaxDamage(64);
+        this.setNoRepair();
+        
         this.setTextureName(References.MODID + ":" + getUnlocalizedName().substring(5));
 
     }

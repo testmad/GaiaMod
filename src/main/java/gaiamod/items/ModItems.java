@@ -1,4 +1,4 @@
-package gaiamod.ModItems;
+package gaiamod.items;
 
 import gaiamod.lib.Registrar;
 import net.minecraft.item.Item;

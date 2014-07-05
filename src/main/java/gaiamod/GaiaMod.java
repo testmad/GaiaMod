@@ -2,7 +2,7 @@ package gaiamod;
 
 import gaiamod.armor.ModArmor;
 import gaiamod.blocks.ModBlocks;
-import gaiamod.core.handler.CraftingHandler;
+import gaiamod.core.handlers.CraftingHandler;
 import gaiamod.core.proxy.CommonProxy;
 import gaiamod.creativetab.GaiaModTab;
 import gaiamod.lib.References;

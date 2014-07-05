@@ -9,12 +9,8 @@ public class ModStones {
 	public static Item fireStoneItem;
 	public static Item waterStoneItem;
 	public static Item earthStoneItem;
-	
 	public static Item gaiaStoneItem;
 	public static Item omegaStoneItem;
-	
-	public static Item memoryStoneItem;
-	
 	public static Item heartStoneItem;
 	public static Item joinedHeartStoneItem;
 	 
@@ -32,20 +28,11 @@ public class ModStones {
         earthStoneItem = new EarthStoneItem();
         Registrar.registerItem(earthStoneItem);
         
-        
-        
         gaiaStoneItem = new GaiaStoneItem();
         Registrar.registerItem(gaiaStoneItem);
         
         omegaStoneItem = new OmegaStoneItem();
         Registrar.registerItem(omegaStoneItem);
-        
-        
-        
-        memoryStoneItem = new MemoryStoneItem();
-        Registrar.registerItem(memoryStoneItem);
-        
-        
         
         heartStoneItem = new HeartStoneItem();
         Registrar.registerItem(heartStoneItem);

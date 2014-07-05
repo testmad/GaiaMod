@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;FireStoneItem.java&apos; to &apos;Minecraft/src/main/java/gaiamod.stones&apos;&#x0D;&#x0A;- Original project: &apos;Minecraft&apos;&#x0D;&#x0A;- Destination element: &apos;Minecraft/src/main/java/gaiamod.stones&apos;&#x0D;&#x0A;- Original element: &apos;gaiamod.stones.FireStoneItem.java&apos;" description="Copy compilation unit" destination="/src\/main\/java&lt;gaiamod.stones" element1="/src\/main\/java&lt;gaiamod.stones{FireStoneItem.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1404521356237" units="1" version="1.0"/>
+</session>

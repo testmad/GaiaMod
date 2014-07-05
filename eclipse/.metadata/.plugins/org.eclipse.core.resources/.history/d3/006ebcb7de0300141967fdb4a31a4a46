@@ -8,12 +8,8 @@ public class Strings {
 	public static final String FireStoneItemName = "fireStoneItem";
 	public static final String WaterStoneItemName = "waterStoneItem";
 	public static final String EarthStoneItemName = "earthStoneItem";
-	
 	public static final String GaiaStoneItemName = "gaiaStoneItem";
 	public static final String OmegaStoneItemName = "omegaStoneItem";
-	
-	public static final String MemoryStoneItemName = "memoryStoneItem";
-	
 	public static final String HeartStoneItemName = "heartStoneItem";
 	public static final String JoinedHeartStoneItemName = "joinedHeartStoneItem";
 	

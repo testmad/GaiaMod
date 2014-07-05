@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [20:48:03] [main/INFO]: Setting user: Player892
 [20:48:04] [Client thread/INFO]: LWJGL Version: 2.9.0
 [20:48:06] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Gaia Mod
@@ -10,3 +11,8 @@
 [20:48:08] [Sound Library Loader/INFO]: Sound engine started
 [20:48:09] [MCO Availability Checker #1/ERROR]: Couldn't connect to Realms
 [20:48:22] [Client thread/INFO]: Stopping!
+=======
+[23:46:58] [main/INFO]: Setting user: Player343
+[23:46:59] [Client thread/INFO]: LWJGL Version: 2.9.0
+[23:47:02] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Gaia Mod
+>>>>>>> c8b59719d1b81fa0ad78afe24bd5eea4bc70f1e3

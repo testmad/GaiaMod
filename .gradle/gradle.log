@@ -54,4 +54,8 @@ Download http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.2/scala
 
 BUILD SUCCESSFUL
 
+<<<<<<< HEAD
 Total time: 2 mins 35.235 secs
+=======
+Total time: 12.009 secs
+>>>>>>> c8b59719d1b81fa0ad78afe24bd5eea4bc70f1e3

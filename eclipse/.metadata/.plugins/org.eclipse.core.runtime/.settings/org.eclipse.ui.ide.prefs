@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
+=======
+>>>>>>> c8b59719d1b81fa0ad78afe24bd5eea4bc70f1e3
 IMPORT_FILES_AND_FOLDERS_MODE=prompt
 IMPORT_FILES_AND_FOLDERS_VIRTUAL_FOLDER_MODE=prompt
 PROBLEMS_FILTERS_MIGRATE=true
 SAVE_ALL_BEFORE_BUILD=true
 eclipse.preferences.version=1
+<<<<<<< HEAD
 platformState=1404529777188
+=======
+platformState=1404314581897
+>>>>>>> c8b59719d1b81fa0ad78afe24bd5eea4bc70f1e3
 quickStart=false
 tipsAndTricks=true

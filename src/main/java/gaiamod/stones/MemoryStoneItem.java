@@ -10,7 +10,7 @@ public class MemoryStoneItem  extends Item{
 	public MemoryStoneItem()
     {
 		super();
-        this.setUnlocalizedName(Strings.FireStoneItemName);
+        this.setUnlocalizedName(Strings.MemoryStoneItemName);
         this.setCreativeTab(GaiaMod.getcreativeTab());
         this.setTextureName(References.MODID + ":" + getUnlocalizedName().substring(5));
 

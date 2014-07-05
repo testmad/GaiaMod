@@ -6,11 +6,13 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
 	
-	public static Block livingStone;
+	public static Block gaiaAltarBlock;
 	
 	public static void init()
     {
-		livingStone = new LivingStone();
-		Registrar.registerBlock(livingStone);
+		gaiaAltarBlock = new GaiaAltarBlock();
+		Registrar.registerBlock(gaiaAltarBlock);
+		
+		
     }
 }

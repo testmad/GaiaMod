@@ -14,6 +14,7 @@ public class ModStones {
 	public static Item omegaStoneItem;
 	
 	public static Item memoryStoneItem;
+	public static Item stormStoneItem;
 	
 	public static Item heartStoneItem;
 	public static Item joinedHeartStoneItem;
@@ -44,6 +45,9 @@ public class ModStones {
         
         memoryStoneItem = new MemoryStoneItem();
         Registrar.registerItem(memoryStoneItem);
+        
+        stormStoneItem = new StormStoneItem();
+        Registrar.registerItem(stormStoneItem);
         
         
         

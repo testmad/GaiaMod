@@ -11,11 +11,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 
-public class LivingStone extends Block {
+public class GaiaAltarBlock extends Block {
 
-	public LivingStone() {
+	public GaiaAltarBlock() {
 		super(Material.rock);
-		this.setBlockName(Strings.LivingStoneName);
+		this.setBlockName(Strings.GaiaAltarBlockName);
 		this.setBlockTextureName(References.MODID + ":"
 				+ getUnlocalizedName().substring(5));
 		this.setCreativeTab(GaiaMod.getcreativeTab());

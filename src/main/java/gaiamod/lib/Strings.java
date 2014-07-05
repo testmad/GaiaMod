@@ -2,7 +2,7 @@ package gaiamod.lib;
 
 public class Strings {
 
-	public static final String LivingStoneName = "livingStone";
+	public static final String GaiaAltarBlockName = "gaiaAltarBlock";
 	
 	public static final String WindStoneItemName = "windStoneItem";
 	public static final String FireStoneItemName = "fireStoneItem";
@@ -13,6 +13,8 @@ public class Strings {
 	public static final String OmegaStoneItemName = "omegaStoneItem";
 	
 	public static final String MemoryStoneItemName = "memoryStoneItem";
+	public static final String StormStoneItemName = "stormStoneItem";
+	
 	
 	public static final String HeartStoneItemName = "heartStoneItem";
 	public static final String JoinedHeartStoneItemName = "joinedHeartStoneItem";

@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="completion_proposal_size">
-	</section>
-<<<<<<< HEAD
-=======
 	<section name="JavaElementSearchActions">
-	</section>
->>>>>>> c8b59719d1b81fa0ad78afe24bd5eea4bc70f1e3
-	<section name="quick_assist_proposal_size">
 	</section>
 </section>

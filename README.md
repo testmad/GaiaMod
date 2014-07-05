@@ -28,4 +28,14 @@ Weapons
 - Gaia Sword
 
 Multiblock structures
-- Alters (Prey by crouching to restore armor duribility at an alter)
+- Alters (Pray by crouching to restore armor duribility at an alter)
+
+
+Detailed Item Notes
+=======
+Gaia Alter
+- Contains water and lava tanks
+- 2x2 crafting grid in the center
+- Used to craft various stones
+- Must pray while holding a stone to enable its special ability (fills durability)
+- Will need to refill durability on stones / armor / weapons at an alter periodically

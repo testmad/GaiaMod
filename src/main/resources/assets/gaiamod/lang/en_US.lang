@@ -1,4 +1,4 @@
-tile.livingStone.name=Living Stone
+tile.gaiaAltarBlock.name=Gaia Altar
 
 item.windStoneItem.name=Wind Stone
 item.fireStoneItem.name=Fire Stone
@@ -8,6 +8,8 @@ item.gaiaStoneItem.name=Gaia Stone
 item.omegaStoneItem.name=Omega Stone
 item.heartStoneItem.name=Heart Stone
 item.joinedHeartStoneItem.name=Joined Heart Stone
+item.memoryStoneItem.name=Memory Stone
+item.stormStoneItem.name=Storm Stone
 
 item.gaiaHelmet.name=Gaia Helmet
 item.gaiaChest.name=Gaia Chestplate
@@ -19,4 +21,4 @@ item.omegaChest.name=Omega Chestplate
 item.omegaLeggings.name=Omega Leggings
 item.omegaBoots.name=Omega Boots
 
-itemGroup.gaiamod=Test Tab
+itemGroup.gaiamod=Gaia Mod

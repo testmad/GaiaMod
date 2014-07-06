@@ -61,7 +61,7 @@ public class GaiaMod {
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		
-		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+		//NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 
 	}
 

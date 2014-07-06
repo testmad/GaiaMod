@@ -1,6 +1,6 @@
-package gaiamod.weapons;
+package gaiamod.gui;
 
-public class ModWeapons {
+public class ModGui {
 	
 	public static void init()
     {

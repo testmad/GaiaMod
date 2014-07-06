@@ -1,4 +1,4 @@
-package gaiamod.lib;
+package gaiamod.util;
 
 public class Strings {
 

@@ -1,4 +1,4 @@
-package gaiamod.core.proxy;
+package gaiamod.proxy;
 
 public class CommonProxy {
 

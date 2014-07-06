@@ -1,7 +1,7 @@
 package gaiamod.armor;
 
-import gaiamod.lib.Registrar;
-import gaiamod.lib.Strings;
+import gaiamod.util.Registrar;
+import gaiamod.util.Strings;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;

@@ -1,4 +1,4 @@
-package gaiamod.core.handlers;
+package gaiamod.handlers;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;

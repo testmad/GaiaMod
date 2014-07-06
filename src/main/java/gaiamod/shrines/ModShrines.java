@@ -1,7 +1,7 @@
 package gaiamod.shrines;
 
 import gaiamod.blocks.GaiaAltarBlock;
-import gaiamod.lib.Registrar;
+import gaiamod.util.Registrar;
 import net.minecraft.block.Block;
 import cpw.mods.fml.common.registry.GameRegistry;
 

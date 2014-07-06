@@ -1,6 +1,6 @@
 package gaiamod.stones;
 
-import gaiamod.lib.Registrar;
+import gaiamod.util.Registrar;
 import net.minecraft.item.Item;
 
 public class ModStones {

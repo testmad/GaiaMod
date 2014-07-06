@@ -1,9 +1,8 @@
 package gaiamod.blocks;
 
 import gaiamod.GaiaMod;
-import gaiamod.lib.References;
-import gaiamod.lib.Strings;
-import gaiamod.stones.ModStones;
+import gaiamod.util.References;
+import gaiamod.util.Strings;
 
 import java.util.Random;
 

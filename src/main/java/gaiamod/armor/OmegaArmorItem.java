@@ -3,7 +3,7 @@ package gaiamod.armor;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import gaiamod.GaiaMod;
-import gaiamod.lib.References;
+import gaiamod.util.References;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;

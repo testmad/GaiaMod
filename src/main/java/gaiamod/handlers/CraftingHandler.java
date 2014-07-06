@@ -1,4 +1,4 @@
-package gaiamod.core.handlers;
+package gaiamod.handlers;
 
 public class CraftingHandler {
 

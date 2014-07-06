@@ -1,4 +1,4 @@
-package gaiamod.core.handlers;
+package gaiamod.handlers;
 
 import gaiamod.blocks.ModBlocks;
 import gaiamod.stones.ModStones;

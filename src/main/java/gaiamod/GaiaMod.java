@@ -2,15 +2,21 @@ package gaiamod;
 
 import gaiamod.armor.ModArmor;
 import gaiamod.blocks.ModBlocks;
-import gaiamod.core.handlers.GuiHandler;
-import gaiamod.core.handlers.RecipeHandler;
-import gaiamod.core.proxy.CommonProxy;
+import gaiamod.containers.ModContainers;
 import gaiamod.creativetab.GaiaModTab;
-import gaiamod.lib.References;
+import gaiamod.gui.ModGui;
+import gaiamod.handlers.GuiHandler;
+import gaiamod.handlers.ModHandlers;
+import gaiamod.handlers.RecipeHandler;
+import gaiamod.items.ModItems;
+import gaiamod.proxy.CommonProxy;
+import gaiamod.shrines.ModShrines;
 import gaiamod.stones.ModStones;
+import gaiamod.tileentities.ModTileEntities;
+import gaiamod.tools.ModTools;
+import gaiamod.util.References;
+import gaiamod.weapons.ModWeapons;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraftforge.common.MinecraftForge;
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -21,11 +27,7 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 @Mod(modid = References.MODID, name = References.MODNAME, version = References.VERSION)
 public class GaiaMod {
 
-	private static CreativeTabs gaiaModTab = new GaiaModTab(CreativeTabs.getNextID(), References.MODID);
-
-	public static CreativeTabs getcreativeTab() {
-		return gaiaModTab;
-	}
+	public static CreativeTabs gaiaModTab;
 	
 	@Mod.Instance(References.MODID)
 	public static GaiaMod instance;
@@ -34,29 +36,41 @@ public class GaiaMod {
 	public static CommonProxy proxy;
 	
 	@Mod.EventHandler
-	public static void preInit(FMLPreInitializationEvent event) {
+	public void preInit(FMLPreInitializationEvent event) {
 		
-		FMLCommonHandler.instance().bus().register(handler);
-		MinecraftForge.EVENT_BUS.register(handler);
+		gaiaModTab = new GaiaModTab(CreativeTabs.getNextID(), References.MODID);
 		
-
+		ModHandlers.init();
+		ModTileEntities.init();
+		ModContainers.init();
+		
 		ModBlocks.init();
+		ModItems.init();
 		ModStones.init();
+		ModShrines.init();
+		ModTools.init();
+		ModWeapons.init();
 		ModArmor.init();
-
+		
+		ModGui.init();
 
 		RecipeHandler.init();
-	}
-
-	@Mod.EventHandler
-	public static void init(FMLInitializationEvent event) {
 		
-		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+	}
+
+	@Mod.EventHandler
+	public void init(FMLInitializationEvent event) {
+		
+		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 
 	}
 
 	@Mod.EventHandler
-	public static void postInit(FMLPostInitializationEvent event) {
+	public void postInit(FMLPostInitializationEvent event) {
 
+	}
+	
+	public static CreativeTabs getcreativeTab() {
+		return gaiaModTab;
 	}
 }

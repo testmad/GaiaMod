@@ -1,4 +1,4 @@
-package gaiamod.altars;
+package gaiamod.blocks;
 
 import gaiamod.GaiaMod;
 import gaiamod.lib.References;

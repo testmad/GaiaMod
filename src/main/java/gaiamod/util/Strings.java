@@ -4,6 +4,7 @@ public class Strings {
 
 	public static final String GaiaAltarBlockName = "gaiaAltarBlock";
 	
+	
 	public static final String WindStoneItemName = "windStoneItem";
 	public static final String FireStoneItemName = "fireStoneItem";
 	public static final String WaterStoneItemName = "waterStoneItem";

@@ -40,6 +40,7 @@ public class GaiaMod {
 		
 		gaiaModTab = new GaiaModTab(CreativeTabs.getNextID(), References.MODID);
 		
+		ModGui.init();
 		ModHandlers.init();
 		ModTileEntities.init();
 		ModContainers.init();
@@ -52,7 +53,7 @@ public class GaiaMod {
 		ModWeapons.init();
 		ModArmor.init();
 		
-		ModGui.init();
+		
 
 		RecipeHandler.init();
 		
@@ -61,7 +62,8 @@ public class GaiaMod {
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		
-		//NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+		//Move to ModHandlers
+		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 
 	}
 

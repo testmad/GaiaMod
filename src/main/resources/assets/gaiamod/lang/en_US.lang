@@ -1,4 +1,6 @@
 tile.gaiaAltarBlock.name=Gaia Altar
+tile.gaiaAltarBlockIdle.name=Gaia Altar
+tile.gaiaAltarBlockActive.name=Gaia Altar
 
 item.windStoneItem.name=Wind Stone
 item.fireStoneItem.name=Fire Stone

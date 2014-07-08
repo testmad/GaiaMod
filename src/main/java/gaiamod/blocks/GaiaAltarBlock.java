@@ -2,9 +2,11 @@ package gaiamod.blocks;
 
 import gaiamod.GaiaMod;
 import gaiamod.gui.ModGui;
-import gaiamod.tileentities.TileEntityGaiaAltarBlock;
+import gaiamod.tileentities.TileEntityGaiaAltar;
 import gaiamod.util.References;
-import gaiamod.util.Strings;
+
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -23,41 +25,39 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class GaiaAltarBlock extends BlockContainer {
 	
-	@SideOnly(Side.CLIENT)
-	private IIcon gaiaAltarFront;
+	private Random rand;
+	private final boolean isActive;
+	private static boolean keepInventory = false;
+	
+	//@SideOnly(Side.CLIENT)
+	//private IIcon gaiaAltarFront;
 	
 	@SideOnly(Side.CLIENT)
 	private IIcon gaiaAltarTop;
 
-	protected GaiaAltarBlock() {
+	public GaiaAltarBlock(boolean blockState) {
 		super(Material.rock);
-		this.setBlockName(Strings.GaiaAltarBlockName);
-		this.setCreativeTab(GaiaMod.getcreativeTab());
-
-		this.setHardness(3.5f);
-		this.setResistance(5f);
-		//this.setHarvestLevel("pickaxe", 2);
-
-		this.setStepSound(Block.soundTypeStone);
+		rand = new Random();
+		isActive = blockState;
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons (IIconRegister iconRegister) {
-		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_side");
-		this.gaiaAltarFront = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_front");
-		this.gaiaAltarTop = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_top");
+		//this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_side");
+		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + (this.isActive ? getUnlocalizedName().substring(5) + "_side_active" : getUnlocalizedName().substring(5) + "_side_idle"));
+		//this.gaiaAltarFront = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_front");
+		this.gaiaAltarTop = iconRegister.registerIcon(References.MODID + ":" + (this.isActive ? getUnlocalizedName().substring(5) + "_top_active" : getUnlocalizedName().substring(5) + "_top_idle"));
+		//this.gaiaAltarTop = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_top");
 	}
 	
 	@SideOnly(Side.CLIENT)
     public IIcon getIcon(int side, int metadata)
     {
-        return side == 1 ? this.gaiaAltarTop : (side == 0 ? this.gaiaAltarTop : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
+        //return side == 1 ? this.gaiaAltarTop : (side == 0 ? this.gaiaAltarTop : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
+		//return metadata == 0 && side == 1 ? this.gaiaAltarTop : (side == metadata ? this.gaiaAltarTop : this.blockIcon);
+		//return side == 1 ? this.gaiaAltarTop : this.blockIcon;
+		return side == 1 ? this.gaiaAltarTop : (side == 0 ? this.blockIcon : (side != metadata ? this.blockIcon : this.blockIcon));
     }
-
-	public Item getItemDropped(World world, int x , int y, int z) {
-		
-		return Item.getItemFromBlock(this);
-	}
 	
 	public void onBlockAdded(World world, int x, int y, int z)
     {
@@ -99,19 +99,7 @@ public class GaiaAltarBlock extends BlockContainer {
 		
 	}
 	
-	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
-		if(!world.isRemote) {
-			FMLNetworkHandler.openGui(player, GaiaMod.instance, ModGui.guiIDGaiaAltarBlock, world, x, y, z);
-		}
-		return true;
-	}
-	
-	@Override
-	public TileEntity createNewTileEntity(World world, int i) {
-		return new TileEntityGaiaAltarBlock();
-	}
-	
-    public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemstack)
+	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemstack)
     {
         int l = MathHelper.floor_double((double)(entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 
@@ -137,9 +125,55 @@ public class GaiaAltarBlock extends BlockContainer {
 
         if (itemstack.hasDisplayName())
         {
-            ((TileEntityGaiaAltarBlock)world.getTileEntity(x, y, z)).setGuiDisplayName(itemstack.getDisplayName());
+            //((TileEntityGaiaAltar)world.getTileEntity(x, y, z)).setCustomName(itemstack.getDisplayName());
         }
-    }	
+    }
+	
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
+		if(world.isRemote) {
+			return true;
+		}else if (!player.isSneaking()) {
+			TileEntityGaiaAltar entity =(TileEntityGaiaAltar) world.getTileEntity(x, y, z);
+			if (entity != null){
+				FMLNetworkHandler.openGui(player, GaiaMod.instance, ModGui.guiIDGaiaAltar, world, x, y, z);
+			}
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	@Override
+	public TileEntity createNewTileEntity(World world, int i) {
+		return new TileEntityGaiaAltar();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+public Item getItemDropped(World world, int x , int y, int z) {
+		
+		return Item.getItemFromBlock(this);
+	}
+	
+	
+	
+	
+
+	
+	
 	
 	
 	

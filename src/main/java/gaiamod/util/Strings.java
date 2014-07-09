@@ -29,4 +29,19 @@ public class Strings {
 	public static final String OmegaChestName = "omegaChest";
 	public static final String OmegaLeggingsName = "omegaLeggings";
 	public static final String OmegaBootsName = "omegaBoots";
+	
+	public static final String WaterHelmetName = "waterHelmet";
+	public static final String WaterChestName = "waterChest";
+	public static final String WaterLeggingsName = "waterLeggings";
+	public static final String WaterBootsName = "waterBoots";
+	
+	public static final String FireHelmetName = "fireHelmet";
+	public static final String FireChestName = "fireChest";
+	public static final String FireLeggingsName = "fireLeggings";
+	public static final String FireBootsName = "fireBoots";
+	
+	public static final String EarthHelmetName = "earthHelmet";
+	public static final String EarthChestName = "earthChest";
+	public static final String EarthLeggingsName = "earthLeggings";
+	public static final String EarthBootsName = "earthBoots";
 }

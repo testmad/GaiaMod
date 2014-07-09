@@ -21,7 +21,7 @@ public class GaiaArmorItem extends ItemArmor{
 		this.setTextureName(References.MODID + ":" + getUnlocalizedName().substring(5));
 		
 	}
-	
+
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
 		
 		if(stack.getItem() == ModArmor.gaiaHelmet)
@@ -46,16 +46,4 @@ public class GaiaArmorItem extends ItemArmor{
 			return null;
 		}
 	}
-	
-	@Override
-	@SideOnly(Side.CLIENT)
-    public boolean hasEffect(ItemStack par1ItemStack, int pass)
-    {
-		par1ItemStack.setTagInfo("ench", new NBTTagList());
-        return true;
-    }
-	
-
-	
-
 }

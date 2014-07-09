@@ -18,6 +18,21 @@ public class ModArmor {
 	public static Item omegaLeggings;
 	public static Item omegaBoots;
 	
+	public static Item earthHelmet;
+	public static Item earthChest;
+	public static Item earthLeggings;
+	public static Item earthBoots;
+	
+	public static Item fireHelmet;
+	public static Item fireChest;
+	public static Item fireLeggings;
+	public static Item fireBoots;
+	
+	public static Item waterHelmet;
+	public static Item waterChest;
+	public static Item waterLeggings;
+	public static Item waterBoots;
+	
 	static ArmorMaterial gaiaArmorMaterial = EnumHelper.addArmorMaterial("gaiaArmorMaterial", 20, new int[]{2,6,5,2}, 20);
 	
 	public static void init()
@@ -46,6 +61,45 @@ public class ModArmor {
         
         omegaBoots = new OmegaArmorItem(gaiaArmorMaterial, 3, Strings.OmegaBootsName);
         Registrar.registerItem(omegaBoots);
+        
+        
+        earthHelmet = new OmegaArmorItem(gaiaArmorMaterial, 0, Strings.EarthHelmetName);
+        Registrar.registerItem(earthHelmet);
+        
+        earthChest = new OmegaArmorItem(gaiaArmorMaterial, 1, Strings.EarthChestName);
+        Registrar.registerItem(earthChest);
+        
+        earthLeggings = new OmegaArmorItem(gaiaArmorMaterial, 2, Strings.EarthLeggingsName);
+        Registrar.registerItem(earthLeggings);
+        
+        earthBoots = new OmegaArmorItem(gaiaArmorMaterial, 3, Strings.EarthBootsName);
+        Registrar.registerItem(earthBoots);
+        
+        
+        fireHelmet = new OmegaArmorItem(gaiaArmorMaterial, 0, Strings.FireHelmetName);
+        Registrar.registerItem(fireHelmet);
+        
+        fireChest = new OmegaArmorItem(gaiaArmorMaterial, 1, Strings.FireChestName);
+        Registrar.registerItem(fireChest);
+        
+        fireLeggings = new OmegaArmorItem(gaiaArmorMaterial, 2, Strings.FireLeggingsName);
+        Registrar.registerItem(fireLeggings);
+        
+        fireBoots = new OmegaArmorItem(gaiaArmorMaterial, 3, Strings.FireBootsName);
+        Registrar.registerItem(fireBoots);
+        
+        
+        waterHelmet = new OmegaArmorItem(gaiaArmorMaterial, 0, Strings.WaterHelmetName);
+        Registrar.registerItem(waterHelmet);
+        
+        waterChest = new OmegaArmorItem(gaiaArmorMaterial, 1, Strings.WaterChestName);
+        Registrar.registerItem(waterChest);
+        
+        waterLeggings = new OmegaArmorItem(gaiaArmorMaterial, 2, Strings.WaterLeggingsName);
+        Registrar.registerItem(waterLeggings);
+        
+        waterBoots = new OmegaArmorItem(gaiaArmorMaterial, 3, Strings.WaterBootsName);
+        Registrar.registerItem(waterBoots);
         
     }
 	

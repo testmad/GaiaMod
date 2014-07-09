@@ -1,42 +1,39 @@
 package gaiamod.armor;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import gaiamod.GaiaMod;
 import gaiamod.util.References;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagList;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 
-public class OmegaArmorItem extends ItemArmor{
-	
-	public OmegaArmorItem(ArmorMaterial material, int armorType,String name) {
-		
+public class WaterArmorItem  extends ItemArmor{
+
+	public WaterArmorItem(ArmorMaterial material, int armorType,String name) {
+			
 		super(material, 0 , armorType);
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(GaiaMod.getcreativeTab());
 		this.canRepair = true;	
 
 		this.setTextureName(References.MODID + ":" + getUnlocalizedName().substring(5));
-		
 	}
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
 		
-		if(stack.getItem() == ModArmor.omegaHelmet)
+		if(stack.getItem() == ModArmor.waterHelmet)
 		{
 			return References.MODID + ":models/armor/omegaarmor1.png";
 		}
-		else if(stack.getItem() == ModArmor.omegaChest)
+		else if(stack.getItem() == ModArmor.waterChest)
 		{
 			return References.MODID + ":models/armor/omegaarmor1.png";
 		}
-		else if(stack.getItem() == ModArmor.omegaLeggings)
+		else if(stack.getItem() == ModArmor.waterLeggings)
 		{
 			return References.MODID + ":models/armor/omegaarmor2.png";
 		}
-		else if(stack.getItem() == ModArmor.omegaBoots)
+		else if(stack.getItem() == ModArmor.waterBoots)
 		{
 			return References.MODID + ":models/armor/omegaarmor1.png";
 		}
@@ -46,4 +43,5 @@ public class OmegaArmorItem extends ItemArmor{
 			return null;
 		}
 	}
+
 }

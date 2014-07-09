@@ -12,6 +12,8 @@ import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotCrafting;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -43,6 +45,12 @@ public class ContainerGaiaAltar extends Container{
 		//result
 		this.addSlotToContainer(new SlotGaiaAltar(invPlayer.player, entity, 4, 116, 35));
 		
+		//water slot
+		this.addSlotToContainer(new Slot(entity, 5, 10, 58));
+		
+		//lava slot
+		this.addSlotToContainer(new Slot(entity, 6, 150, 58));
+		
 		//player inv		
 		for (int i = 0; i < 3; i++){
 			for(int k = 0; k < 9; k++){
@@ -59,7 +67,7 @@ public class ContainerGaiaAltar extends Container{
 		super.addCraftingToCrafters(crafting);
 		crafting.sendProgressBarUpdate(this, 0, this.altar.cookTime);
 		crafting.sendProgressBarUpdate(this, 1, this.altar.waterPower);
-		//crafting.sendProgressBarUpdate(this, 1, this.altar.lavaPower);
+		crafting.sendProgressBarUpdate(this, 2, this.altar.lavaPower);
 	}
 	
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2){
@@ -134,13 +142,44 @@ public class ContainerGaiaAltar extends Container{
     }	
 	
 	public void detectAndSendChanges(){
+		super.detectAndSendChanges();
 		
+		for (int i=0; i < this.crafters.size(); i++){
+			ICrafting par1 = (ICrafting)this.crafters.get(i);
+			
+			if(this.cookTime != this.altar.cookTime){
+				par1.sendProgressBarUpdate(this, 0, this.altar.cookTime);
+			}
+			
+			if(this.waterPower != this.altar.waterPower){
+				par1.sendProgressBarUpdate(this, 1, this.altar.waterPower);
+			}
+			
+			if(this.lavaPower != this.altar.lavaPower){
+				par1.sendProgressBarUpdate(this, 2, this.altar.lavaPower);
+			}
+		}
+		
+		this.cookTime = this.altar.cookTime;
+		this.waterPower = this.altar.waterPower;
+		this.lavaPower = this.altar.lavaPower;
 		
 	}
 	
 	@SideOnly(Side.CLIENT)
-	public void updateProgressBar(int slot, int newValue){
+	public void updateProgressBar(int i, int j){
+		if(i ==0){
+			altar.cookTime = j;
+			
+		}
 		
+		if(i ==1){
+			altar.waterPower = j;
+		}
+		
+		if(i ==2){
+			altar.lavaPower = j;
+		}
 	}
 	
 	@Override

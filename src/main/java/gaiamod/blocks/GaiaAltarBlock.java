@@ -132,14 +132,14 @@ public class GaiaAltarBlock extends BlockContainer {
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
 		if(world.isRemote) {
 			return true;
-		}else if (!player.isSneaking()) {
-			TileEntityGaiaAltar entity =(TileEntityGaiaAltar) world.getTileEntity(x, y, z);
+		}else /*if (!player.isSneaking())*/ {
+			TileEntityGaiaAltar entity =(TileEntityGaiaAltar)world.getTileEntity(x, y, z);
 			if (entity != null){
 				FMLNetworkHandler.openGui(player, GaiaMod.instance, ModGui.guiIDGaiaAltar, world, x, y, z);
 			}
 			return true;
-		}else{
-			return false;
+		/*}else{
+			return false;*/
 		}
 	}
 	
@@ -148,7 +148,25 @@ public class GaiaAltarBlock extends BlockContainer {
 		return new TileEntityGaiaAltar();
 	}
 	
-	
+	public static void updateBlockState(boolean isAltaring, World world, int xCoord, int yCoord, int zCoord) {
+
+		int i = world.getBlockMetadata(xCoord, yCoord, zCoord);
+		TileEntity entity = world.getTileEntity(xCoord, yCoord, zCoord);
+		keepInventory = true;
+		
+		if(isAltaring){
+			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.gaiaAltarBlockActive);
+		}else{
+			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.gaiaAltarBlockIdle);
+		}
+		keepInventory = false;
+		world.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, i, 2);
+		
+		if(entity != null){
+			entity.validate();
+			world.setTileEntity(xCoord, yCoord, zCoord, entity);
+		}
+	}
 	
 	
 	
@@ -165,8 +183,10 @@ public class GaiaAltarBlock extends BlockContainer {
 	
 public Item getItemDropped(World world, int x , int y, int z) {
 		
-		return Item.getItemFromBlock(this);
+		return Item.getItemFromBlock(ModBlocks.gaiaAltarBlockIdle);
 	}
+
+
 	
 	
 	

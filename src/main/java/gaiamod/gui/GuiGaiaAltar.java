@@ -42,8 +42,21 @@ public class GuiGaiaAltar extends GuiContainer{
 		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
 		
 		//do power
+		if(gaiaAltar.hasWaterPower()){
+			int i1 = gaiaAltar.getWaterRemainingScaled(43);
+			drawTexturedModalRect(guiLeft + 11, guiTop + 53 - i1, 176, 43-i1,14,i1 );
+		}
+		
+		if(gaiaAltar.hasLavaPower()){
+			int i1 = gaiaAltar.getLavaRemainingScaled(43);
+			drawTexturedModalRect(guiLeft + 151, guiTop + 53 - i1, 190, 43-i1,14,i1 );
+		}
 		
 		//do cooking
+		
+			int j1 = gaiaAltar.getAltarProgressScaled(24);
+			drawTexturedModalRect(guiLeft + 79, guiTop + 34, 176, 64,j1 + 1,81 );
+		
 	}
 
 }

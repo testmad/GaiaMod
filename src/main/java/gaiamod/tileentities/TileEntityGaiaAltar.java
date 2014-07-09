@@ -1,10 +1,14 @@
 package gaiamod.tileentities;
 
+import gaiamod.blocks.GaiaAltarBlock;
 import gaiamod.handlers.AltarRecipes;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -12,21 +16,14 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 	
-	//private String localizedName;
-	
-	//private static final int[] slots_top = new int[]{3,4,5,6};
-	//private static final int[] slots_bottom = new int[]{0,1,2};
-	//private static final int[] slots_side = new int[]{7};
-	
-	//water 5
-	//lava 6
-	
-	private ItemStack slots[];
+	private ItemStack[] slots = new ItemStack[7];
 	
 	public int cookTime;
 	public int waterPower;
 	public int lavaPower;
-	public static final int maxPower = 10000;
+	public static final int maxWaterPower = 1001;
+	public static final int maxLavaPower = 1001;
+	
 	public static final int cookSpeed = 100;
 	
 	private static final int[] slots_top = new int[]{0, 1, 2, 3};
@@ -36,7 +33,7 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 	private String customName;
 	
 	public TileEntityGaiaAltar(){
-		slots = new ItemStack[7];
+		//slots = new ItemStack[7];
 	}
 
 	@Override
@@ -52,16 +49,20 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 	@Override
 	public ItemStack decrStackSize(int i, int j) {
 		if (slots[i] != null){
+			ItemStack itemstack;
+			
 			if (slots[i].stackSize <= j){
-				ItemStack itemstack = slots[i];
+				itemstack = slots[i];
 				slots[i] = null;
 				return itemstack;
-			}
-			ItemStack itemstack1 = slots[i].splitStack(j);
+			}else{
+		
+			itemstack = slots[i].splitStack(j);
 			if(slots[i].stackSize == 0){
 				slots[i] = null;
 			}
-			return itemstack1;
+			return itemstack;
+		}
 		}else{
 			return null;
 		}
@@ -115,7 +116,9 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+		//return i == 4 ? false : (i == 5 ? hasWater(itemstack) : (i == 6 ? hasLava(itemstack) : true));
 		return i == 4 ? false : (i == 5 ? hasWater(itemstack) : (i == 6 ? hasLava(itemstack) : true));
+		
 	}
 	
 	public boolean hasWater(ItemStack itemstack){
@@ -132,8 +135,8 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 		}else{
 			Item item = itemstack.getItem();
 			
-			if(item == Items.water_bucket) return 50;
-			return 0;
+			if(item != Items.water_bucket) return 0;
+			return 100;
 		}
 	}
 	
@@ -143,8 +146,8 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 		}else{
 			Item item = itemstack.getItem();
 			
-			if(item == Items.lava_bucket) return 50;
-			return 0;
+			if(item != Items.lava_bucket) return 0;
+			return 100;
 		}
 	}
 	
@@ -205,11 +208,11 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 	}
 	
 	public int getWaterRemainingScaled(int i){
-		return(waterPower *i / maxPower);
+		return(waterPower *i / maxWaterPower);
 	}
 	
 	public int getLavaRemainingScaled(int i){
-		return(lavaPower *i / maxPower);
+		return(lavaPower *i / maxLavaPower);
 	}
 	
 	private boolean canAltar(){
@@ -248,7 +251,7 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 				slots[4].stackSize += itemstack.stackSize;
 			}
 			
-			for (int i = 0; i < 2; i++){
+			for (int i = 0; i < 4; i++){
 				if(slots[i].stackSize <= 0){
 					slots[i] = new ItemStack(slots[i].getItem().setFull3D());
 				}else{
@@ -262,183 +265,83 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 		}
 	}
 	
+	public boolean hasWaterPower(){
+		return waterPower > 0;
+	}
+	
+	public boolean hasLavaPower(){
+		return lavaPower > 0;
+	}
+	
+	public boolean isAltaring(){
+		return this.cookTime > 0;
+	}
+	
 	public void updateEntity(){
+		
+		boolean flag = this.hasWaterPower();
+		boolean flag1 = this.hasLavaPower();
+		boolean flag2 = false;
+		boolean flag3 = false;
+		
+		if(hasWaterPower() && hasLavaPower() && this.isAltaring()){
+			this.waterPower--;
+			this.lavaPower--;
+			
+		}
+		
+		if(!worldObj.isRemote){
+			if(this.hasWater(this.slots[5]) && this.waterPower < (this.maxWaterPower - this.isItemWater(this.slots[5]))){
+				this.waterPower += isItemWater(this.slots[5]);
+				
+				if(this.slots[5] != null){
+					flag2 = true;
+					this.slots[5].stackSize --;
+					
+					if(this.slots[5].stackSize ==0){
+						this.slots[5] = this.slots[5].getItem().getContainerItem(this.slots[5]);
+					}
+				}
+			}
+			
+			if(this.hasLava(this.slots[6]) && this.lavaPower < (this.maxLavaPower - this.isItemLava(this.slots[6]))){
+				this.lavaPower += isItemLava(this.slots[6]);
+				
+				if(this.slots[6] != null){
+					flag3 = true;
+					this.slots[6].stackSize --;
+					
+					if(this.slots[6].stackSize ==0){
+						this.slots[6] = this.slots[6].getItem().getContainerItem(this.slots[6]);
+					}
+				}
+			}
+			
+			if (hasWaterPower() && hasLavaPower() && canAltar()){
+				cookTime++;
+				
+				if (this.cookTime == this.cookSpeed){
+					this.cookTime = 0;
+					this.altarItem();
+					flag2=true;
+					flag3=true;
+				}
+			}else{
+				cookTime = 0;
+			}
+			
+			if(flag != this.isAltaring() && flag1 != this.isAltaring()){
+				flag2=true;
+				flag3=true;
+				GaiaAltarBlock.updateBlockState(this.isAltaring(), this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+			}
+		}
+		
+		if(flag2 && flag3){
+			this.markDirty();
+		}
+		
 		
 	}
 
-//	public void setGuiDisplayName(String displayName) {
-//		this.localizedName = displayName;
-//		
-//	}
-//	
-//	public String getInventoryName(){
-//		return this.hasCustomInventoryName() ? this.localizedName : "container.gaiaAltarBlock";
-//	}
-//
-//	public boolean hasCustomInventoryName() {
-//		return this.localizedName != null && this.localizedName.length() > 0;
-//	}
-//
-//	public int getSizeInventory(){
-//		return this.slots.length;
-//	}
-//
-//	@Override
-//	public ItemStack getStackInSlot(int var1) {
-//		return this.slots[var1];
-//	}
-//
-//	@Override
-//	public ItemStack decrStackSize(int var1, int var2) {
-//		if(this.slots[var1] != null){
-//			ItemStack itemstack;
-//			if(this.slots[var1].stackSize <= var2){
-//				itemstack = this.slots[var1];
-//				this.slots[var1] = null;
-//				return itemstack;
-//			}else{
-//				itemstack = this.slots[var1].splitStack(var2);
-//				
-//				if(this.slots[var1].stackSize == 0){
-//					this.slots[var1] = null;
-//				}
-//			}
-//		}
-//		
-//		return null;
-//	}
-//
-//	@Override
-//	public ItemStack getStackInSlotOnClosing(int i) {
-//		if(this.slots[i] != null){
-//			ItemStack itemstack = this.slots[i];
-//			this.slots[i] = null;
-//			return itemstack;
-//		}
-//		return null;
-//	}
-//
-//	@Override
-//	public void setInventorySlotContents(int i, ItemStack itemstack) {
-//		this.slots[i] = itemstack;
-//		
-//		if(itemstack != null && itemstack.stackSize > this.getInventoryStackLimit()){
-//			itemstack.stackSize = this.getInventoryStackLimit();
-//		}
-//		
-//	}
-//
-//	@Override
-//	public int getInventoryStackLimit() {
-//		return 64;
-//	}
-//
-//	@Override
-//	public boolean isUseableByPlayer(EntityPlayer entityplayer) {
-//		return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false: entityplayer.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
-//		
-//	}
-//
-//	public void openInventory() {
-//	}
-//
-//	public void closeInventory() {
-//	}
-//
-//	@Override
-//	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-//		return (i == 7) || (i == 2) ? false : (i == 0 ? isItemWater(itemstack) : true ) || (i == 1 ? isItemLava(itemstack) : true);
-//	}
-//	
-//	public static boolean isItemWater (ItemStack itemstack){
-//		if(itemstack == null){
-//			return false;
-//		}else{
-//			Item item = itemstack.getItem();
-//			
-//			if(item != Items.water_bucket){
-//				return false;
-//			}else{
-//				return true;
-//			}
-//		}
-//	}
-//	
-//	public static boolean isItemLava (ItemStack itemstack){
-//		if(itemstack == null){
-//			return false;
-//		}else{
-//			Item item = itemstack.getItem();
-//			
-//			if(item != Items.lava_bucket){
-//				return false;
-//			}else{
-//				return true;
-//			}
-//		}
-//	}
-//
-//	public void updateEntity() {
-//		
-//		
-//	}
-//	
-//	
-//	@Override
-//	public int[] getAccessibleSlotsFromSide(int var1) {
-//	
-//		return var1 == 0 ? slots_bottom : (var1 == 1 ? slots_top : slots_side);
-//	}
-//
-//	@Override
-//	public boolean canInsertItem(int i, ItemStack itemstack, int var3) {
-//
-//		return this.isItemValidForSlot(i, itemstack);
-//	}
-//
-//	@Override
-//	public boolean canExtractItem(int i, ItemStack itemstack, int j) {
-//
-//		return j != 0 || i != 1 || itemstack.getItem() == Items.bucket;
-//	}
-//	
-//	public void readFromNBT(NBTTagCompound nbt){
-//		super.readFromNBT(nbt);
-//		
-//		NBTTagList list = nbt.getTagList("Items", 10);
-//		this.slots = new ItemStack[this.getSizeInventory()];
-//		
-//		for(int i = 0; i < list.tagCount(); i++){
-//			NBTTagCompound compound = (NBTTagCompound) list.getCompoundTagAt(i);
-//			byte b = compound.getByte("Slot");
-//			
-//			if(b >= 0 && b < this.slots.length){
-//				this.slots[b] = ItemStack.loadItemStackFromNBT(compound);
-//			}
-//		}
-//		
-//
-//	}
-//	
-//	
-//	public void  writeToNBT(NBTTagCompound nbt){
-//		super.writeToNBT(nbt);
-//		
-//
-//	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

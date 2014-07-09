@@ -66,8 +66,8 @@ public class ContainerGaiaAltar extends Container{
 	public void addCraftingToCrafters(ICrafting crafting){
 		super.addCraftingToCrafters(crafting);
 		crafting.sendProgressBarUpdate(this, 0, this.altar.cookTime);
-		crafting.sendProgressBarUpdate(this, 1, this.altar.waterPower);
-		crafting.sendProgressBarUpdate(this, 2, this.altar.lavaPower);
+		crafting.sendProgressBarUpdate(this, 1, this.altar.waterPowerLevel);
+		crafting.sendProgressBarUpdate(this, 2, this.altar.lavaPowerLevel);
 	}
 	
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2){
@@ -151,18 +151,18 @@ public class ContainerGaiaAltar extends Container{
 				par1.sendProgressBarUpdate(this, 0, this.altar.cookTime);
 			}
 			
-			if(this.waterPower != this.altar.waterPower){
-				par1.sendProgressBarUpdate(this, 1, this.altar.waterPower);
+			if(this.waterPower != this.altar.waterPowerLevel){
+				par1.sendProgressBarUpdate(this, 1, this.altar.waterPowerLevel);
 			}
 			
-			if(this.lavaPower != this.altar.lavaPower){
-				par1.sendProgressBarUpdate(this, 2, this.altar.lavaPower);
+			if(this.lavaPower != this.altar.lavaPowerLevel){
+				par1.sendProgressBarUpdate(this, 2, this.altar.lavaPowerLevel);
 			}
 		}
 		
 		this.cookTime = this.altar.cookTime;
-		this.waterPower = this.altar.waterPower;
-		this.lavaPower = this.altar.lavaPower;
+		this.waterPower = this.altar.waterPowerLevel;
+		this.lavaPower = this.altar.lavaPowerLevel;
 		
 	}
 	
@@ -174,11 +174,11 @@ public class ContainerGaiaAltar extends Container{
 		}
 		
 		if(i ==1){
-			altar.waterPower = j;
+			altar.waterPowerLevel = j;
 		}
 		
 		if(i ==2){
-			altar.lavaPower = j;
+			altar.lavaPowerLevel = j;
 		}
 	}
 	

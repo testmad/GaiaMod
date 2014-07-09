@@ -132,14 +132,14 @@ public class GaiaAltarBlock extends BlockContainer {
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
 		if(world.isRemote) {
 			return true;
-		}else /*if (!player.isSneaking())*/ {
+		}else if (!player.isSneaking()){
 			TileEntityGaiaAltar entity =(TileEntityGaiaAltar)world.getTileEntity(x, y, z);
 			if (entity != null){
 				FMLNetworkHandler.openGui(player, GaiaMod.instance, ModGui.guiIDGaiaAltar, world, x, y, z);
 			}
 			return true;
-		/*}else{
-			return false;*/
+		}else{
+			return false;
 		}
 	}
 	

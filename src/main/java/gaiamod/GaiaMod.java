@@ -2,11 +2,9 @@ package gaiamod;
 
 import gaiamod.armor.ModArmor;
 import gaiamod.blocks.ModBlocks;
-import gaiamod.containers.ModContainers;
 import gaiamod.creativetab.GaiaModTab;
 import gaiamod.gui.ModGui;
 import gaiamod.handlers.GuiHandler;
-import gaiamod.handlers.ModHandlers;
 import gaiamod.handlers.RecipeHandler;
 import gaiamod.items.ModItems;
 import gaiamod.proxy.CommonProxy;
@@ -41,9 +39,7 @@ public class GaiaMod {
 		gaiaModTab = new GaiaModTab(CreativeTabs.getNextID(), References.MODID);
 		
 		ModGui.init();
-		ModHandlers.init();
 		ModTileEntities.init();
-		ModContainers.init();
 		
 		ModBlocks.init();
 		ModItems.init();
@@ -52,8 +48,6 @@ public class GaiaMod {
 		ModTools.init();
 		ModWeapons.init();
 		ModArmor.init();
-		
-		
 
 		RecipeHandler.init();
 		

@@ -168,7 +168,24 @@ public class GaiaAltarBlock extends BlockContainer {
 		}
 	}
 	
-	
+	@SideOnly(Side.CLIENT)
+	public void randomDisplayTick(World world, int x, int y, int z, Random rand){
+		if(this.isActive) {
+			int direction = world.getBlockMetadata(x, y, z);
+
+			float x1 = (float)x + rand.nextFloat();
+			float y1 = (float)y + 0.7F;
+			float z1 = (float)z + 0.5F;
+
+			float f = 0.52F;
+			float f1 = rand.nextFloat() * 0.6F - 0.3F;
+
+			world.spawnParticle("smoke", (double)(x1), (double)(y1 + f), (double)(z1 + f1), 0D, 0D, 0D);
+			world.spawnParticle("flame", (double)(x1), (double)(y1 + f), (double)(z1 + f1), 0D, 0D, 0D);
+			world.spawnParticle("spell", (double)(x1), (double)(y1 + f), (double)(z1 + f1), 0D, 0D, 0D);
+
+			}
+	}
 	
 	
 	

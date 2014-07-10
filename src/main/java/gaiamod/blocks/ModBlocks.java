@@ -17,7 +17,7 @@ public class ModBlocks {
 		gaiaAltarBlockIdle = new GaiaAltarBlock(false).setBlockName(Strings.GaiaAltarBlockName + "Idle").setCreativeTab(GaiaMod.getcreativeTab()).setHardness(3.5F);
 		Registrar.registerBlock(gaiaAltarBlockIdle);
 		
-		gaiaAltarBlockActive = new GaiaAltarBlock(true).setBlockName(Strings.GaiaAltarBlockName + "Active").setHardness(3.5F);
+		gaiaAltarBlockActive = new GaiaAltarBlock(true).setBlockName(Strings.GaiaAltarBlockName + "Active").setHardness(3.5F).setLightLevel(0.875F);
 		Registrar.registerBlock(gaiaAltarBlockActive);
 		
     }

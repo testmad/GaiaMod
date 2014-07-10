@@ -21,6 +21,7 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 	public int cookTime;
 	public int waterPowerLevel;
 	public int lavaPowerLevel;
+	public int burn;
 	public static final int maxWaterPower = 1000;
 	public static final int maxLavaPower = 1000;
 	
@@ -57,12 +58,12 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 				return itemstack;
 			}else{
 		
-			itemstack = slots[i].splitStack(j);
-			if(slots[i].stackSize == 0){
-				slots[i] = null;
+				itemstack = slots[i].splitStack(j);
+				if(slots[i].stackSize == 0){
+					slots[i] = null;
+				}
+				return itemstack;
 			}
-			return itemstack;
-		}
 		}else{
 			return null;
 		}
@@ -74,9 +75,8 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 			ItemStack itemstack = slots[i];
 			slots[i] = null;
 			return itemstack;
-		}else{
-			return null;
 		}
+		return null;
 	}
 
 	@Override
@@ -104,51 +104,59 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 
 	@Override
 	public boolean isUseableByPlayer(EntityPlayer player) {
-		if (worldObj.getTileEntity(xCoord, yCoord, zCoord) != this) {
-			return false;
-		}else{
-			return player.getDistanceSq((double)xCoord + 0.5D, (double)yCoord + 0.5D, (double)zCoord + 0.5D) <= 64;
-		}
-	}
+		return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : player.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
+	}	
 
 	public void openInventory() {}
 	public void closeInventory() {}
 
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		//return i == 4 ? false : (i == 5 ? hasWater(itemstack) : (i == 6 ? hasLava(itemstack) : true));
 		return i == 4 ? false : (i == 5 ? isItemWater(itemstack) : (i == 6 ? isItemLava(itemstack) : true));
-		
 	}
 	
 	public boolean isItemWater(ItemStack itemstack){
-		return hasWater(itemstack) > 0;
+		return getHasWater(itemstack) > 0;
 	}
 	
 	public boolean isItemLava(ItemStack itemstack){
-		return hasLava(itemstack) > 0;
+		return getHasLava(itemstack) > 0;
 	}
 	
-	public static int hasWater (ItemStack itemstack){
+	public static int getHasWater (ItemStack itemstack){
 		if(itemstack == null){
 			return 0;
 		}else{
 			Item item = itemstack.getItem();
 			
-			if(item != Items.water_bucket) return 0;
-			return 800;
+			if(item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.air) {
+				Block block = Block.getBlockFromItem(item);
+				
+				if(block == Blocks.water) return 800;
+				
+			}
+			
+			if(item == Items.water_bucket) return 800;
 		}
+		return 0;
 	}
 	
-	public static int hasLava (ItemStack itemstack){
+	public static int getHasLava (ItemStack itemstack){
 		if(itemstack == null){
 			return 0;
 		}else{
 			Item item = itemstack.getItem();
 			
-			if(item != Items.lava_bucket) return 0;
-			return 800;
+			if(item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.air) {
+				Block block = Block.getBlockFromItem(item);
+				
+				if(block == Blocks.lava) return 800;
+				
+			}
+			
+			if(item == Items.lava_bucket) return 800;
 		}
+		return 0;
 	}
 	
 	public void readFromNBT(NBTTagCompound nbt){
@@ -287,12 +295,11 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 		if(hasWaterPower() && hasLavaPower() && this.isAltaring()){
 			this.waterPowerLevel--;
 			this.lavaPowerLevel--;
-			
 		}
 		
 		if(!worldObj.isRemote){
-			if(this.isItemWater(this.slots[5]) && this.waterPowerLevel < (this.maxWaterPower - this.hasWater(this.slots[5]))){
-				this.waterPowerLevel += hasWater(this.slots[5]);
+			if(this.isItemWater(this.slots[5]) && this.waterPowerLevel < (this.maxWaterPower - this.getHasWater(this.slots[5]))){
+				this.waterPowerLevel += getHasWater(this.slots[5]);
 				
 				if(this.slots[5] != null){
 					flag2 = true;
@@ -304,11 +311,11 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 				}
 			}
 			
-			if(this.isItemLava(this.slots[6]) && this.lavaPowerLevel < (this.maxLavaPower - this.hasLava(this.slots[6]))){
-				this.lavaPowerLevel += hasLava(this.slots[6]);
+			if(this.isItemLava(this.slots[6]) && this.lavaPowerLevel < (this.maxLavaPower - this.getHasLava(this.slots[6]))){
+				this.lavaPowerLevel += getHasLava(this.slots[6]);
 				
 				if(this.slots[6] != null){
-					flag3 = true;
+					flag2 = true;
 					this.slots[6].stackSize --;
 					
 					if(this.slots[6].stackSize ==0){
@@ -323,28 +330,20 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 				if (this.cookTime == this.cookSpeed){
 					this.cookTime = 0;
 					this.altarItem();
-					flag2=true;
-					flag3=true;
+					flag2 = true;
 				}
 			}else{
 				this.cookTime = 0;
-				
+				flag3 = true;
 			}
 			
-			if(flag != this.isAltaring() && flag1 != this.isAltaring()){
-				flag2=true;
+			if(flag3 != this.isAltaring()){
 				flag3=true;
-				GaiaAltarBlock.updateBlockState(this.isAltaring(), this.worldObj, this.xCoord, this.yCoord, this.zCoord);
-			}else{
 				GaiaAltarBlock.updateBlockState(this.isAltaring(), this.worldObj, this.xCoord, this.yCoord, this.zCoord);
 			}
 		}
-		
-		if(flag2 && flag3){
+		if(flag2 || flag3){
 			this.markDirty();
 		}
-		
-		
 	}
-
 }

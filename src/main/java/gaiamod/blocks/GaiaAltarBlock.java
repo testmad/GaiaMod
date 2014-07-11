@@ -59,7 +59,9 @@ public class GaiaAltarBlock extends BlockContainer {
         //return side == 1 ? this.gaiaAltarTop : (side == 0 ? this.gaiaAltarTop : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
 		//return metadata == 0 && side == 1 ? this.gaiaAltarTop : (side == metadata ? this.gaiaAltarTop : this.blockIcon);
 		//return side == 1 ? this.gaiaAltarTop : this.blockIcon;
-		return side == 1 ? this.gaiaAltarTop : (side == 0 ? this.gaiaAltarTop : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
+		//return side == 1 ? this.gaiaAltarTop : (side == 0 ? this.gaiaAltarTop : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
+		return side == 1 || side == 0 ? this.gaiaAltarTop : (side == 3 && metadata == 0 ? this.gaiaAltarFront : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
+		
     }
 	
 	public void onBlockAdded(World world, int x, int y, int z)

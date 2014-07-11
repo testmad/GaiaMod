@@ -28,7 +28,7 @@ public class GuiGaiaAltar extends GuiContainer{
 
 	protected void drawGuiContainerForegroundLayer(int par1, int par2){
 		
-		String name = StatCollector.translateToLocal(ModBlocks.gaiaAltarBlockIdle.getLocalizedName());
+		String name = StatCollector.translateToLocal(ModBlocks.gaiaAltarBlockIdleEmpty.getLocalizedName());
 		this.fontRendererObj.drawString(name, this.xSize / 2 - this.fontRendererObj.getStringWidth(name) / 2, 6, 4210752);
 		this.fontRendererObj.drawString(I18n.format("container.inventory", new Object[0]), this.xSize /2 - this.fontRendererObj.getStringWidth(I18n.format("container.inventory", new Object[0])) / 2, this.ySize - 96 +2, 4210752);
 		

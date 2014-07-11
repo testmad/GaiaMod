@@ -27,27 +27,30 @@ public class GaiaAltarBlock extends BlockContainer {
 	
 	private Random rand;
 	private final boolean isActive;
+	private final boolean isPowered;
 	private static boolean keepInventory = false;
 	
-	//@SideOnly(Side.CLIENT)
-	//private IIcon gaiaAltarFront;
+	@SideOnly(Side.CLIENT)
+	private IIcon gaiaAltarFront;
 	
 	@SideOnly(Side.CLIENT)
 	private IIcon gaiaAltarTop;
 
-	public GaiaAltarBlock(boolean blockState) {
+	public GaiaAltarBlock(boolean blockState, boolean fuelState) {
 		super(Material.rock);
 		rand = new Random();
 		isActive = blockState;
+		isPowered = fuelState;
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons (IIconRegister iconRegister) {
 		//this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_side");
-		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + (this.isActive ? getUnlocalizedName().substring(5) + "_side_active" : getUnlocalizedName().substring(5) + "_side_idle"));
+		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_side");
 		//this.gaiaAltarFront = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_front");
-		this.gaiaAltarTop = iconRegister.registerIcon(References.MODID + ":" + (this.isActive ? getUnlocalizedName().substring(5) + "_top_active" : getUnlocalizedName().substring(5) + "_top_idle"));
+		this.gaiaAltarTop = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_top");
 		//this.gaiaAltarTop = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_top");
+		this.gaiaAltarFront = iconRegister.registerIcon(References.MODID + ":" + (this.isActive ? getUnlocalizedName().substring(5) + "_front" : (this.isPowered ? getUnlocalizedName().substring(5) + "_front" : getUnlocalizedName().substring(5) + "_front")));
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -56,7 +59,7 @@ public class GaiaAltarBlock extends BlockContainer {
         //return side == 1 ? this.gaiaAltarTop : (side == 0 ? this.gaiaAltarTop : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
 		//return metadata == 0 && side == 1 ? this.gaiaAltarTop : (side == metadata ? this.gaiaAltarTop : this.blockIcon);
 		//return side == 1 ? this.gaiaAltarTop : this.blockIcon;
-		return side == 1 ? this.gaiaAltarTop : (side == 0 ? this.blockIcon : (side != metadata ? this.blockIcon : this.blockIcon));
+		return side == 1 ? this.gaiaAltarTop : (side == 0 ? this.gaiaAltarTop : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
     }
 	
 	public void onBlockAdded(World world, int x, int y, int z)
@@ -148,7 +151,7 @@ public class GaiaAltarBlock extends BlockContainer {
 		return new TileEntityGaiaAltar();
 	}
 	
-	public static void updateBlockState(boolean isAltaring, World world, int xCoord, int yCoord, int zCoord) {
+	public static void updateBlockState(boolean isAltaring, boolean hasPower, World world, int xCoord, int yCoord, int zCoord) {
 
 		int i = world.getBlockMetadata(xCoord, yCoord, zCoord);
 		TileEntity entity = world.getTileEntity(xCoord, yCoord, zCoord);
@@ -157,7 +160,11 @@ public class GaiaAltarBlock extends BlockContainer {
 		if(isAltaring){
 			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.gaiaAltarBlockActive);
 		}else{
-			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.gaiaAltarBlockIdle);
+			if(hasPower){
+				world.setBlock(xCoord, yCoord, zCoord, ModBlocks.gaiaAltarBlockIdleFull);
+			}else{
+				world.setBlock(xCoord, yCoord, zCoord, ModBlocks.gaiaAltarBlockIdleEmpty);
+			}
 		}
 		keepInventory = false;
 		world.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, i, 2);
@@ -200,7 +207,7 @@ public class GaiaAltarBlock extends BlockContainer {
 	
 public Item getItemDropped(World world, int x , int y, int z) {
 		
-		return Item.getItemFromBlock(ModBlocks.gaiaAltarBlockIdle);
+		return Item.getItemFromBlock(ModBlocks.gaiaAltarBlockIdleEmpty);
 	}
 
 

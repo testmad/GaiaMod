@@ -1,6 +1,7 @@
 tile.gaiaAltarBlock.name=Gaia Altar
-tile.gaiaAltarBlockIdle.name=Gaia Altar
-tile.gaiaAltarBlockActive.name=Gaia Altar
+tile.gaiaAltarBlockIdleEmtpy.name=idle empty
+tile.gaiaAltarBlockIdleFull.name=idle full
+tile.gaiaAltarBlockActive.name=active
 
 item.windStoneItem.name=Wind Stone
 item.fireStoneItem.name=Fire Stone

@@ -12,9 +12,11 @@ import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
@@ -27,8 +29,9 @@ public class GaiaAltarBlock extends BlockContainer {
 	
 	private Random rand;
 	private final boolean isActive;
-	private final boolean isPowered;
 	private static boolean keepInventory = false;
+	
+	private final boolean isPowered;
 	
 	@SideOnly(Side.CLIENT)
 	private IIcon gaiaAltarFront;
@@ -36,21 +39,21 @@ public class GaiaAltarBlock extends BlockContainer {
 	@SideOnly(Side.CLIENT)
 	private IIcon gaiaAltarTop;
 
-	public GaiaAltarBlock(boolean blockState, boolean fuelState) {
+	public GaiaAltarBlock(boolean blockState, boolean hasPower) {
 		super(Material.rock);
 		rand = new Random();
 		isActive = blockState;
-		isPowered = fuelState;
+		isPowered = hasPower;
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons (IIconRegister iconRegister) {
 		//this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_side");
-		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_side");
+		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + (this.isActive ? getUnlocalizedName().substring(5) + "_side" : getUnlocalizedName().substring(5) + "_side" ));
 		//this.gaiaAltarFront = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_front");
-		this.gaiaAltarTop = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_top");
+		this.gaiaAltarTop = iconRegister.registerIcon(References.MODID + ":" + (this.isActive ? getUnlocalizedName().substring(5) + "_top" : getUnlocalizedName().substring(5) + "_top"));
 		//this.gaiaAltarTop = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_top");
-		this.gaiaAltarFront = iconRegister.registerIcon(References.MODID + ":" + (this.isActive ? getUnlocalizedName().substring(5) + "_front" : (this.isPowered ? getUnlocalizedName().substring(5) + "_front" : getUnlocalizedName().substring(5) + "_front")));
+		this.gaiaAltarFront = iconRegister.registerIcon(References.MODID + ":" + (this.isPowered ? getUnlocalizedName().substring(5) + "_front" : (this.isActive ? getUnlocalizedName().substring(5) + "_front" : getUnlocalizedName().substring(5) + "_front")));
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -59,9 +62,7 @@ public class GaiaAltarBlock extends BlockContainer {
         //return side == 1 ? this.gaiaAltarTop : (side == 0 ? this.gaiaAltarTop : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
 		//return metadata == 0 && side == 1 ? this.gaiaAltarTop : (side == metadata ? this.gaiaAltarTop : this.blockIcon);
 		//return side == 1 ? this.gaiaAltarTop : this.blockIcon;
-		//return side == 1 ? this.gaiaAltarTop : (side == 0 ? this.gaiaAltarTop : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
-		return side == 1 || side == 0 ? this.gaiaAltarTop : (side == 3 && metadata == 0 ? this.gaiaAltarFront : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
-		
+		return side == 1 || side == 0 ? this.gaiaAltarTop : (metadata == 0 && side == 3 ? this.gaiaAltarFront : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
     }
 	
 	public void onBlockAdded(World world, int x, int y, int z)
@@ -153,20 +154,20 @@ public class GaiaAltarBlock extends BlockContainer {
 		return new TileEntityGaiaAltar();
 	}
 	
-	public static void updateBlockState(boolean isAltaring, boolean hasPower, World world, int xCoord, int yCoord, int zCoord) {
+	public static void updateBlockState(boolean isAltaring, boolean powered, World world, int xCoord, int yCoord, int zCoord) {
+		
+
 
 		int i = world.getBlockMetadata(xCoord, yCoord, zCoord);
 		TileEntity entity = world.getTileEntity(xCoord, yCoord, zCoord);
 		keepInventory = true;
 		
-		if(isAltaring){
+		if(isAltaring && powered){
 			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.gaiaAltarBlockActive);
+		}else if(!isAltaring && powered){ 
+			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.gaiaAltarBlockIdlePower);
 		}else{
-			if(hasPower){
-				world.setBlock(xCoord, yCoord, zCoord, ModBlocks.gaiaAltarBlockIdleFull);
-			}else{
-				world.setBlock(xCoord, yCoord, zCoord, ModBlocks.gaiaAltarBlockIdleEmpty);
-			}
+			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.gaiaAltarBlockIdle);
 		}
 		keepInventory = false;
 		world.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, i, 2);
@@ -196,7 +197,52 @@ public class GaiaAltarBlock extends BlockContainer {
 			}
 	}
 	
-	
+	public void breakBlock(World world, int x, int y, int z, Block oldblock, int oldMetadata) {
+		if (!keepInventory) {
+			TileEntityGaiaAltar tileentity = (TileEntityGaiaAltar) world.getTileEntity(x, y, z);
+
+			if (tileentity != null) {
+				for (int i = 0; i < tileentity.getSizeInventory(); i++) {
+					ItemStack itemstack = tileentity.getStackInSlot(i);
+
+					if (itemstack != null) {
+						float f = this.rand.nextFloat() * 0.8F + 0.1F;
+						float f1 = this.rand.nextFloat() * 0.8F + 0.1F;
+						float f2 = this.rand.nextFloat() * 0.8F + 0.1F;
+
+						while (itemstack.stackSize > 0) {
+							int j = this.rand.nextInt(21) + 10;
+
+							if (j > itemstack.stackSize) {
+								j = itemstack.stackSize;
+							}
+
+							itemstack.stackSize -= j;
+
+							EntityItem item = new EntityItem(world,
+									(double) ((float) x + f),
+									(double) ((float) y + f1),
+									(double) ((float) z + f2), new ItemStack(
+											itemstack.getItem(), j,
+											itemstack.getItemDamage()));
+
+							if (itemstack.hasTagCompound()) {
+								item.getEntityItem().setTagCompound(
+										(NBTTagCompound) itemstack
+												.getTagCompound().copy());
+							}
+
+							world.spawnEntityInWorld(item);
+						}
+					}
+				}
+
+				world.func_147453_f(x, y, z, oldblock);
+			}
+		}
+
+		super.breakBlock(world, x, y, z, oldblock, oldMetadata);
+	}
 	
 	
 	
@@ -209,7 +255,7 @@ public class GaiaAltarBlock extends BlockContainer {
 	
 public Item getItemDropped(World world, int x , int y, int z) {
 		
-		return Item.getItemFromBlock(ModBlocks.gaiaAltarBlockIdleEmpty);
+		return Item.getItemFromBlock(ModBlocks.gaiaAltarBlockIdle);
 	}
 
 

@@ -341,11 +341,11 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 				flag3=true;
 				if(flag && flag1){
 					GaiaAltarBlock.updateBlockState(this.isAltaring(), true, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
-				}else{
-					GaiaAltarBlock.updateBlockState(this.isAltaring(), false, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+				}else{GaiaAltarBlock.updateBlockState(this.isAltaring(), false, this.worldObj, this.xCoord, this.yCoord, this.zCoord);}
+
 				}
-			}
 		}
+
 		if(flag2 || flag3){
 			this.markDirty();
 		}

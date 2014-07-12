@@ -1,5 +1,6 @@
 package gaiamod;
 
+import gaiamod.amulets.ModAmulets;
 import gaiamod.armor.ModArmor;
 import gaiamod.blocks.ModBlocks;
 import gaiamod.creativetab.GaiaModTab;
@@ -44,6 +45,7 @@ public class GaiaMod {
 		ModBlocks.init();
 		ModItems.init();
 		ModStones.init();
+		ModAmulets.init();
 		ModShrines.init();
 		ModTools.init();
 		ModWeapons.init();

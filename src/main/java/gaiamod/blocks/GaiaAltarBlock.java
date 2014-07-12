@@ -191,7 +191,7 @@ public class GaiaAltarBlock extends BlockContainer {
 			float f1 = rand.nextFloat() * 0.6F - 0.3F;
 
 			world.spawnParticle("smoke", (double)(x1), (double)(y1 + f), (double)(z1 + f1), 0D, 0D, 0D);
-			world.spawnParticle("flame", (double)(x1), (double)(y1 + f), (double)(z1 + f1), 0D, 0D, 0D);
+			//world.spawnParticle("flame", (double)(x1), (double)(y1 + f), (double)(z1 + f1), 0D, 0D, 0D);
 			world.spawnParticle("spell", (double)(x1), (double)(y1 + f), (double)(z1 + f1), 0D, 0D, 0D);
 
 			}

@@ -9,23 +9,26 @@ TODO
 
 Base items
 - Gaia Alter (used for crafting gaia stones, has storage space for water + lava and a small crafting grid)
-- Earth Stone (Infinite bonemeal)
-- Fire Stone (infinite lava source / flint and steel)
-- Water Stone (Infinite water source)
-- Wind Stone (Replace all blocks, of the same type, touching one-another, within a radius of the player, with air)
-- Storm Stone (command lightning to strike wherever you aim)
-- Heart Stone (Turn skeletons into zombies, zombies into vilagers, pigmen into pigs)
+- Earth Amulet (Infinite bonemeal)
+- Fire Amulet (infinite lava source / flint and steel)
+- Water Amulet (Infinite water source)
+- Wind Amulet (Replace all blocks, of the same type, touching one-another, within a radius of the player, with air)
+- Storm Amulet (command lightning to strike wherever you aim)
+- Heart Amulet (Turn skeletons into zombies, zombies into vilagers, pigmen into pigs)
 
 Armor
 - Gaia Armor (Ultimate: Water breathing, No hunger, No fall damage, Flight, Fire resistance, Invisible armor models)
 - Earth Armor (crafted entierly from earth stones, scatters bonemeal-effect wherever the player walks. Walking on grass in a plains biom heals the armor's durability)
 - Fire Armor (crafted entierly from fire stones, grants total immunity to lava and fire. Makes the player "invisible" to mobs in The Nether, Walking in fire/lava heals durability)
 - Water Armor (Water breathing, night-vision while underwater, being submerged heals the armor's durability)
+- Heart Armor (All mobs become friendly unless provoked)
 
 - Note: Durability of all armors can be restored via preying, using an anvil, or the armor's special ability
 
 Weapons
 - Gaia Sword
+- Storm Sword (strikes mobs with lightning?)
+- Wind Bow (Fires balls of air with extreme knockback, doesn't require arrows)
 
 Multiblock structures
 - Alters (Pray by crouching to restore armor duribility at an alter)

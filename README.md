@@ -39,3 +39,87 @@ Gaia Alter
 - Used to craft various stones
 - Must pray while holding a stone to enable its special ability (fills durability)
 - Will need to refill durability on stones / armor / weapons at an alter periodically
+
+Earth Stone
+- Recipe:
+
+Fire Stone
+- Recipe: 
+
+Wind Stone
+- Recipe: 
+
+Water Stone
+- Recipe: 
+
+Heart Stone
+- Recipe: 
+
+Memory Stone
+- Recipe: 
+
+Storm Stone
+- Recipe: 
+
+Omega Stone
+- Recipe: 
+
+Gaia Stone
+- Recipe: 
+
+Amulets
+- Recipe:  
+- Amulets are the power forms of the stones.
+
+Earth Armour
+- Helmet
+  - Recipe:
+- Chestplate
+  - Recipe:
+- Leggings
+  - Recipe:
+- Boots
+  - Recipe:
+
+Fire Armour
+- Helmet
+  - Recipe:
+- Chestplate
+  - Recipe:
+- Leggings
+  - Recipe:
+- Boots
+  - Recipe:
+ 
+Water Armour
+- Helmet
+  - Recipe:
+- Chestplate
+  - Recipe:
+- Leggings
+  - Recipe:
+- Boots
+  - Recipe:
+ 
+Omega Armour
+- Helmet
+  - Recipe:
+- Chestplate
+  - Recipe:
+- Leggings
+  - Recipe:
+- Boots
+  - Recipe:
+ 
+Gaia Armour
+- Helmet
+  - Recipe:
+- Chestplate
+  - Recipe:
+- Leggings
+  - Recipe:
+- Boots
+  - Recipe:
+ 
+
+ 

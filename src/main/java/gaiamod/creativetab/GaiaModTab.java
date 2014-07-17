@@ -14,7 +14,7 @@ public class GaiaModTab extends CreativeTabs{
     @Override
     public Item getTabIconItem()
     {
-        return ModStones.gaiaStoneItem;
+        return ModStones.orderStoneItem;
 
     }
 }

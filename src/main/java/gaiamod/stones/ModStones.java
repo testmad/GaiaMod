@@ -5,22 +5,21 @@ import net.minecraft.item.Item;
 
 public class ModStones {
 	
+	public static Item stoneItem;
 	public static Item windStoneItem;
 	public static Item fireStoneItem;
 	public static Item waterStoneItem;
 	public static Item earthStoneItem;
-	
-	public static Item gaiaStoneItem;
-	public static Item omegaStoneItem;
-	
-	public static Item memoryStoneItem;
-	public static Item stormStoneItem;
-	
 	public static Item heartStoneItem;
-	public static Item joinedHeartStoneItem;
+	public static Item stormStoneItem;
+	public static Item chaosStoneItem;
+	public static Item orderStoneItem;
 	 
     public static void init()
     {
+    	stoneItem = new StoneItem();
+        Registrar.registerItem(stoneItem);
+        
         windStoneItem = new WindStoneItem();
         Registrar.registerItem(windStoneItem);
         
@@ -33,28 +32,17 @@ public class ModStones {
         earthStoneItem = new EarthStoneItem();
         Registrar.registerItem(earthStoneItem);
         
-        
-        
-        gaiaStoneItem = new GaiaStoneItem();
-        Registrar.registerItem(gaiaStoneItem);
-        
-        omegaStoneItem = new OmegaStoneItem();
-        Registrar.registerItem(omegaStoneItem);
-        
-        
-        
-        memoryStoneItem = new MemoryStoneItem();
-        Registrar.registerItem(memoryStoneItem);
-        
+        heartStoneItem = new HeartStoneItem();
+        Registrar.registerItem(heartStoneItem);
+
         stormStoneItem = new StormStoneItem();
         Registrar.registerItem(stormStoneItem);
         
+        chaosStoneItem = new ChaosStoneItem();
+        Registrar.registerItem(chaosStoneItem);
         
+        orderStoneItem = new OrderStoneItem();
+        Registrar.registerItem(orderStoneItem);
         
-        heartStoneItem = new HeartStoneItem();
-        Registrar.registerItem(heartStoneItem);
-        
-        joinedHeartStoneItem = new JoinedHeartStoneItem();
-        Registrar.registerItem(joinedHeartStoneItem);
     }
 }

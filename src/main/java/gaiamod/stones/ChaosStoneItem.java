@@ -5,12 +5,12 @@ import gaiamod.util.References;
 import gaiamod.util.Strings;
 import net.minecraft.item.Item;
 
-public class MemoryStoneItem  extends Item{
+public class ChaosStoneItem extends Item{
 	
-	public MemoryStoneItem()
+	public ChaosStoneItem()
     {
 		super();
-        this.setUnlocalizedName(Strings.MemoryStoneItemName);
+        this.setUnlocalizedName(Strings.OmegaStoneItemName);
         this.setCreativeTab(GaiaMod.getcreativeTab());
         this.setTextureName(References.MODID + ":" + getUnlocalizedName().substring(5));
 

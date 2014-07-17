@@ -8,16 +8,6 @@ import net.minecraftforge.common.util.EnumHelper;
 
 public class ModArmor {
 	
-	public static Item gaiaHelmet;
-	public static Item gaiaChest;
-	public static Item gaiaLeggings;
-	public static Item gaiaBoots;
-	
-	public static Item omegaHelmet;
-	public static Item omegaChest;
-	public static Item omegaLeggings;
-	public static Item omegaBoots;
-	
 	public static Item earthHelmet;
 	public static Item earthChest;
 	public static Item earthLeggings;
@@ -28,78 +18,130 @@ public class ModArmor {
 	public static Item fireLeggings;
 	public static Item fireBoots;
 	
+	public static Item windHelmet;
+	public static Item windChest;
+	public static Item windLeggings;
+	public static Item windBoots;
+	
 	public static Item waterHelmet;
 	public static Item waterChest;
 	public static Item waterLeggings;
 	public static Item waterBoots;
 	
+	public static Item heartHelmet;
+	public static Item heartChest;
+	public static Item heartLeggings;
+	public static Item heartBoots;
+	
+	public static Item stormHelmet;
+	public static Item stormChest;
+	public static Item stormLeggings;
+	public static Item stormBoots;
+	
+	public static Item chaosHelmet;
+	public static Item chaosChest;
+	public static Item chaosLeggings;
+	public static Item chaosBoots;
+	
+	public static Item orderHelmet;
+	public static Item orderChest;
+	public static Item orderLeggings;
+	public static Item orderBoots;
+	
 	static ArmorMaterial gaiaArmorMaterial = EnumHelper.addArmorMaterial("gaiaArmorMaterial", 20, new int[]{2,6,5,2}, 20);
 	
 	public static void init()
     {
-
-        gaiaHelmet = new GaiaArmorItem(gaiaArmorMaterial, 0, Strings.GaiaHelmetName);
-        Registrar.registerItem(gaiaHelmet);
         
-        gaiaChest = new GaiaArmorItem(gaiaArmorMaterial, 1, Strings.GaiaChestName);
-        Registrar.registerItem(gaiaChest);
-        
-        gaiaLeggings = new GaiaArmorItem(gaiaArmorMaterial, 2, Strings.GaiaLeggingsName);
-        Registrar.registerItem(gaiaLeggings);
-        
-        gaiaBoots = new GaiaArmorItem(gaiaArmorMaterial, 3, Strings.GaiaBootsName);
-        Registrar.registerItem(gaiaBoots);
-        
-        omegaHelmet = new OmegaArmorItem(gaiaArmorMaterial, 0, Strings.OmegaHelmetName);
-        Registrar.registerItem(omegaHelmet);
-        
-        omegaChest = new OmegaArmorItem(gaiaArmorMaterial, 1, Strings.OmegaChestName);
-        Registrar.registerItem(omegaChest);
-        
-        omegaLeggings = new OmegaArmorItem(gaiaArmorMaterial, 2, Strings.OmegaLeggingsName);
-        Registrar.registerItem(omegaLeggings);
-        
-        omegaBoots = new OmegaArmorItem(gaiaArmorMaterial, 3, Strings.OmegaBootsName);
-        Registrar.registerItem(omegaBoots);
-        
-        
-        earthHelmet = new OmegaArmorItem(gaiaArmorMaterial, 0, Strings.EarthHelmetName);
+        earthHelmet = new ChaosArmorItem(gaiaArmorMaterial, 0, Strings.EarthHelmetName);
         Registrar.registerItem(earthHelmet);
         
-        earthChest = new OmegaArmorItem(gaiaArmorMaterial, 1, Strings.EarthChestName);
+        earthChest = new ChaosArmorItem(gaiaArmorMaterial, 1, Strings.EarthChestName);
         Registrar.registerItem(earthChest);
         
-        earthLeggings = new OmegaArmorItem(gaiaArmorMaterial, 2, Strings.EarthLeggingsName);
+        earthLeggings = new ChaosArmorItem(gaiaArmorMaterial, 2, Strings.EarthLeggingsName);
         Registrar.registerItem(earthLeggings);
         
-        earthBoots = new OmegaArmorItem(gaiaArmorMaterial, 3, Strings.EarthBootsName);
+        earthBoots = new ChaosArmorItem(gaiaArmorMaterial, 3, Strings.EarthBootsName);
         Registrar.registerItem(earthBoots);
         
         
-        fireHelmet = new OmegaArmorItem(gaiaArmorMaterial, 0, Strings.FireHelmetName);
+        fireHelmet = new ChaosArmorItem(gaiaArmorMaterial, 0, Strings.FireHelmetName);
         Registrar.registerItem(fireHelmet);
         
-        fireChest = new OmegaArmorItem(gaiaArmorMaterial, 1, Strings.FireChestName);
+        fireChest = new ChaosArmorItem(gaiaArmorMaterial, 1, Strings.FireChestName);
         Registrar.registerItem(fireChest);
         
-        fireLeggings = new OmegaArmorItem(gaiaArmorMaterial, 2, Strings.FireLeggingsName);
+        fireLeggings = new ChaosArmorItem(gaiaArmorMaterial, 2, Strings.FireLeggingsName);
         Registrar.registerItem(fireLeggings);
         
-        fireBoots = new OmegaArmorItem(gaiaArmorMaterial, 3, Strings.FireBootsName);
+        fireBoots = new ChaosArmorItem(gaiaArmorMaterial, 3, Strings.FireBootsName);
         Registrar.registerItem(fireBoots);
         
         
-        waterHelmet = new OmegaArmorItem(gaiaArmorMaterial, 0, Strings.WaterHelmetName);
+        windHelmet = new ChaosArmorItem(gaiaArmorMaterial, 0, Strings.WaterHelmetName);
+        Registrar.registerItem(windHelmet);
+        
+        windChest = new ChaosArmorItem(gaiaArmorMaterial, 1, Strings.WaterChestName);
+        Registrar.registerItem(windChest);
+        
+        windLeggings = new ChaosArmorItem(gaiaArmorMaterial, 2, Strings.WaterLeggingsName);
+        Registrar.registerItem(windLeggings);
+        
+        windBoots = new ChaosArmorItem(gaiaArmorMaterial, 3, Strings.WaterBootsName);
+        Registrar.registerItem(windBoots);
+        
+        
+        waterHelmet = new ChaosArmorItem(gaiaArmorMaterial, 0, Strings.WaterHelmetName);
         Registrar.registerItem(waterHelmet);
         
-        waterChest = new OmegaArmorItem(gaiaArmorMaterial, 1, Strings.WaterChestName);
+        waterChest = new ChaosArmorItem(gaiaArmorMaterial, 1, Strings.WaterChestName);
         Registrar.registerItem(waterChest);
         
-        waterLeggings = new OmegaArmorItem(gaiaArmorMaterial, 2, Strings.WaterLeggingsName);
+        waterLeggings = new ChaosArmorItem(gaiaArmorMaterial, 2, Strings.WaterLeggingsName);
         Registrar.registerItem(waterLeggings);
         
-        waterBoots = new OmegaArmorItem(gaiaArmorMaterial, 3, Strings.WaterBootsName);
+        waterBoots = new ChaosArmorItem(gaiaArmorMaterial, 3, Strings.WaterBootsName);
         Registrar.registerItem(waterBoots);
+        
+        
+        heartHelmet = new ChaosArmorItem(gaiaArmorMaterial, 0, Strings.WaterHelmetName);
+        Registrar.registerItem(heartHelmet);
+        
+        heartChest = new ChaosArmorItem(gaiaArmorMaterial, 1, Strings.WaterChestName);
+        Registrar.registerItem(heartChest);
+        
+        heartLeggings = new ChaosArmorItem(gaiaArmorMaterial, 2, Strings.WaterLeggingsName);
+        Registrar.registerItem(heartLeggings);
+        
+        heartBoots = new ChaosArmorItem(gaiaArmorMaterial, 3, Strings.WaterBootsName);
+        Registrar.registerItem(heartBoots);
+        
+        
+        chaosHelmet = new ChaosArmorItem(gaiaArmorMaterial, 0, Strings.OmegaHelmetName);
+        Registrar.registerItem(chaosHelmet);
+        
+        chaosChest = new ChaosArmorItem(gaiaArmorMaterial, 1, Strings.OmegaChestName);
+        Registrar.registerItem(chaosChest);
+        
+        chaosLeggings = new ChaosArmorItem(gaiaArmorMaterial, 2, Strings.OmegaLeggingsName);
+        Registrar.registerItem(chaosLeggings);
+        
+        chaosBoots = new ChaosArmorItem(gaiaArmorMaterial, 3, Strings.OmegaBootsName);
+        Registrar.registerItem(chaosBoots);
+        
+        
+        orderHelmet = new OrderArmorItem(gaiaArmorMaterial, 0, Strings.GaiaHelmetName);
+        Registrar.registerItem(orderHelmet);
+        
+        orderChest = new OrderArmorItem(gaiaArmorMaterial, 1, Strings.GaiaChestName);
+        Registrar.registerItem(orderChest);
+        
+        orderLeggings = new OrderArmorItem(gaiaArmorMaterial, 2, Strings.GaiaLeggingsName);
+        Registrar.registerItem(orderLeggings);
+        
+        orderBoots = new OrderArmorItem(gaiaArmorMaterial, 3, Strings.GaiaBootsName);
+        Registrar.registerItem(orderBoots);
         
     }
 	

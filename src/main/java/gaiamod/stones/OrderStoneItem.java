@@ -5,9 +5,9 @@ import gaiamod.util.References;
 import gaiamod.util.Strings;
 import net.minecraft.item.Item;
 
-public class GaiaStoneItem extends Item{
+public class OrderStoneItem extends Item{
 	
-	public GaiaStoneItem()
+	public OrderStoneItem()
     {
 		super();
         this.setUnlocalizedName(Strings.GaiaStoneItemName);

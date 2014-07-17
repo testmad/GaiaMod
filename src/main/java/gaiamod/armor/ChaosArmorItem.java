@@ -9,9 +9,9 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagList;
 
-public class OmegaArmorItem extends ItemArmor{
+public class ChaosArmorItem extends ItemArmor{
 	
-	public OmegaArmorItem(ArmorMaterial material, int armorType,String name) {
+	public ChaosArmorItem(ArmorMaterial material, int armorType,String name) {
 		
 		super(material, 0 , armorType);
 		this.setUnlocalizedName(name);
@@ -24,19 +24,19 @@ public class OmegaArmorItem extends ItemArmor{
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
 		
-		if(stack.getItem() == ModArmor.omegaHelmet)
+		if(stack.getItem() == ModArmor.chaosHelmet)
 		{
 			return References.MODID + ":models/armor/omegaarmor1.png";
 		}
-		else if(stack.getItem() == ModArmor.omegaChest)
+		else if(stack.getItem() == ModArmor.chaosChest)
 		{
 			return References.MODID + ":models/armor/omegaarmor1.png";
 		}
-		else if(stack.getItem() == ModArmor.omegaLeggings)
+		else if(stack.getItem() == ModArmor.chaosLeggings)
 		{
 			return References.MODID + ":models/armor/omegaarmor2.png";
 		}
-		else if(stack.getItem() == ModArmor.omegaBoots)
+		else if(stack.getItem() == ModArmor.chaosBoots)
 		{
 			return References.MODID + ":models/armor/omegaarmor1.png";
 		}

@@ -9,9 +9,9 @@ import net.minecraft.nbt.NBTTagList;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GaiaArmorItem extends ItemArmor{
+public class OrderArmorItem extends ItemArmor{
 	
-	public GaiaArmorItem(ArmorMaterial material, int armorType,String name) {
+	public OrderArmorItem(ArmorMaterial material, int armorType,String name) {
 		
 		super(material, 0 , armorType);
 		this.setUnlocalizedName(name);
@@ -24,19 +24,19 @@ public class GaiaArmorItem extends ItemArmor{
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
 		
-		if(stack.getItem() == ModArmor.gaiaHelmet)
+		if(stack.getItem() == ModArmor.orderHelmet)
 		{
 			return References.MODID + ":models/armor/gaiaarmor1.png";
 		}
-		else if(stack.getItem() == ModArmor.gaiaChest)
+		else if(stack.getItem() == ModArmor.orderChest)
 		{
 			return References.MODID + ":models/armor/gaiaarmor1.png";
 		}
-		else if(stack.getItem() == ModArmor.gaiaLeggings)
+		else if(stack.getItem() == ModArmor.orderLeggings)
 		{
 			return References.MODID + ":models/armor/gaiaarmor2.png";
 		}
-		else if(stack.getItem() == ModArmor.gaiaBoots)
+		else if(stack.getItem() == ModArmor.orderBoots)
 		{
 			return References.MODID + ":models/armor/gaiaarmor1.png";
 		}

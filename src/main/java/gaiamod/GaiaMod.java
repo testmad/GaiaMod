@@ -4,6 +4,7 @@ import gaiamod.amulets.ModAmulets;
 import gaiamod.armor.ModArmor;
 import gaiamod.blocks.ModBlocks;
 import gaiamod.creativetab.GaiaModTab;
+import gaiamod.essence.ModEssence;
 import gaiamod.gui.ModGui;
 import gaiamod.handlers.GuiHandler;
 import gaiamod.handlers.RecipeHandler;
@@ -44,6 +45,7 @@ public class GaiaMod {
 		
 		ModBlocks.init();
 		ModItems.init();
+		ModEssence.init();
 		ModStones.init();
 		ModAmulets.init();
 		ModShrines.init();
@@ -57,10 +59,7 @@ public class GaiaMod {
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
-		
-		//Move to ModHandlers
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
-
 	}
 
 	@Mod.EventHandler

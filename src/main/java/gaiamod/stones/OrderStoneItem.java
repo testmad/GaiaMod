@@ -10,7 +10,7 @@ public class OrderStoneItem extends Item{
 	public OrderStoneItem()
     {
 		super();
-        this.setUnlocalizedName(Strings.GaiaStoneItemName);
+        this.setUnlocalizedName(Strings.OrderStoneItemName);
         this.setCreativeTab(GaiaMod.getcreativeTab());
         this.setTextureName(References.MODID + ":" + getUnlocalizedName().substring(5));
 

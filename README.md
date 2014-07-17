@@ -8,7 +8,7 @@ TODO
 =======
 
 Blocks
-
+    
     Altar of Order
         - 2x2 crafting grid
         - Uses both water and lava for fuel.
@@ -26,180 +26,178 @@ Blocks
         - Recipe:
         
 
-Items
+Essence
 
-    Essence
-    - Holder of Essence
+    Holder of Essence
         - Just a vial
         - Hold various essence.
         - Recipe:
     
-    - Earth
+    Earth
         - Objects with Essence:
         
-    - Fire
+    Fire
         - Objects with Essence:
         
-    - Wind
+    Wind
         - Objects with Essence:
         
-    - Water
+    Water
         - Objects with Essence:
         
-    - Heart
+    Heart
         - Objects with Essence:
         
-    - Storm
+    Storm
         - Objects with Essence:
         
-    - Chaos
+    Chaos
         - Objects with Essence:
         
-    - Order
+    Order
         - Objects with Essence:
         
     
-    Stones
-    - Body of Essence
+Stones
+
+    Body of Essence
         - Just a stone
         - Imbued with Essence
         - Recipe:
         
-    - Earth Stone
+    Earth Stone
         - Powers:
         - Durability:
         - Recipe:
         
-    - Fire Stone
+    Fire Stone
         - Powers:
         - Durability:
         - Recipe:
         
-    - Wind Stone
+    Wind Stone
         - Powers:
         - Durability:
         - Recipe:
         
-    - Water Stone
+    Water Stone
         - Powers:
         - Durability:
         - Recipe:
         
-    - Heart Stone
+    Heart Stone
         - Powers:
         - Durability:
         - Recipe:
         
-    - Storm Stone
+    Storm Stone
         - Powers:
         - Durability:
         - Recipe:
         
-    - Chaos Stone
+    Chaos Stone
         - Powers:
         - Durability:
         - Recipe:
         
-    - Order Stone
+    Order Stone
         - Powers:
         - Durability:
         - Recipe:
         
     
-    Amulets
-    - Amulet
+Amulets
+
+    Amulet
         - Generic amulet
         - Holds a Body of Essence
         - Focuses power to higher levels or even adds new powers.
         - Recipe:
         
-    - Earth
+    Earth
         - Powers:
         - Durability:
         - Recipe:
         
-    - Fire
+    Fire
         - Powers:
         - Durability:
         - Recipe:
         
-    - Wind
+    Wind
         - Powers:
         - Durability:
         - Recipe:
         
-    - Water
+    Water
         - Powers:
         - Durability:
         - Recipe:
         
-    - Heart
+    Heart
         - Powers:
         - Durability:
         - Recipe:
         
-    - Storm
+    Storm
         - Powers:
         - Durability:
         - Recipe:
         
-    - Chaos
+    Chaos
         - Powers:
         - Durability:
         - Recipe:
         
-    - Order
-        - Powers:
-        - Durability:
-        - Recipe:
-        
-    
-    Armor
-    - Earth
-        - Powers:
-        - Durability:
-        - Recipe:
-        
-    - Fire
-        - Powers:
-        - Durability:
-        - Recipe:
-        
-    - Wind
-        - Powers:
-        - Durability:
-        - Recipe:
-        
-    - Water
-        - Powers:
-        - Durability:
-        - Recipe:
-        
-    - Heart
-        - Powers:
-        - Durability:
-        - Recipe:
-        
-    - Storm
-        - Powers:
-        - Durability:
-        - Recipe:
-        
-    - Chaos
-        - Powers:
-        - Durability:
-        - Recipe:
-        
-    - Order
+    Order
         - Powers:
         - Durability:
         - Recipe:
         
     
+Armor
 
-
-
-
+    Earth
+        - Powers:
+        - Durability:
+        - Recipe:
+        
+    Fire
+        - Powers:
+        - Durability:
+        - Recipe:
+        
+    Wind
+        - Powers:
+        - Durability:
+        - Recipe:
+        
+    Water
+        - Powers:
+        - Durability:
+        - Recipe:
+        
+    Heart
+        - Powers:
+        - Durability:
+        - Recipe:
+        
+    Storm
+        - Powers:
+        - Durability:
+        - Recipe:
+        
+    Chaos
+        - Powers:
+        - Durability:
+        - Recipe:
+        
+    Order
+        - Powers:
+        - Durability:
+        - Recipe:
+        
+    
 OLD TODO INFO (LEAVING FOR REFERENCE)
 
 - Gaia Alter (used for crafting gaia stones, has storage space for water + lava and a small crafting grid)

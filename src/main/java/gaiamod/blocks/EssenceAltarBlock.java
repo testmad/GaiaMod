@@ -2,6 +2,7 @@ package gaiamod.blocks;
 
 import gaiamod.GaiaMod;
 import gaiamod.gui.ModGui;
+import gaiamod.tileentities.TileEntityEssenceAltar;
 import gaiamod.tileentities.TileEntityGaiaAltar;
 import gaiamod.util.References;
 
@@ -33,10 +34,10 @@ public class EssenceAltarBlock extends BlockContainer{
 	private final boolean isPowered;
 	
 	@SideOnly(Side.CLIENT)
-	private IIcon gaiaAltarFront;
+	private IIcon essenceAltarFront;
 	
 	@SideOnly(Side.CLIENT)
-	private IIcon gaiaAltarTop;
+	private IIcon essenceAltarTop;
 
 	public EssenceAltarBlock(boolean blockState, boolean hasPower) {
 		super(Material.rock);
@@ -50,9 +51,9 @@ public class EssenceAltarBlock extends BlockContainer{
 		//this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_side");
 		this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + (this.isActive ? getUnlocalizedName().substring(5) + "_side" : getUnlocalizedName().substring(5) + "_side" ));
 		//this.gaiaAltarFront = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_front");
-		this.gaiaAltarTop = iconRegister.registerIcon(References.MODID + ":" + (this.isActive ? getUnlocalizedName().substring(5) + "_top" : getUnlocalizedName().substring(5) + "_top"));
+		this.essenceAltarTop = iconRegister.registerIcon(References.MODID + ":" + (this.isActive ? getUnlocalizedName().substring(5) + "_top" : getUnlocalizedName().substring(5) + "_top"));
 		//this.gaiaAltarTop = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_top");
-		this.gaiaAltarFront = iconRegister.registerIcon(References.MODID + ":" + (this.isPowered ? getUnlocalizedName().substring(5) + "_front" : (this.isActive ? getUnlocalizedName().substring(5) + "_front" : getUnlocalizedName().substring(5) + "_front")));
+		this.essenceAltarFront = iconRegister.registerIcon(References.MODID + ":" + (this.isPowered ? getUnlocalizedName().substring(5) + "_front" : (this.isActive ? getUnlocalizedName().substring(5) + "_front" : getUnlocalizedName().substring(5) + "_front")));
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -61,7 +62,7 @@ public class EssenceAltarBlock extends BlockContainer{
         //return side == 1 ? this.gaiaAltarTop : (side == 0 ? this.gaiaAltarTop : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
 		//return metadata == 0 && side == 1 ? this.gaiaAltarTop : (side == metadata ? this.gaiaAltarTop : this.blockIcon);
 		//return side == 1 ? this.gaiaAltarTop : this.blockIcon;
-		return side == 1 || side == 0 ? this.gaiaAltarTop : (metadata == 0 && side == 3 ? this.gaiaAltarFront : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
+		return side == 1 || side == 0 ? this.essenceAltarTop : (metadata == 0 && side == 3 ? this.essenceAltarFront : (side != metadata ? this.blockIcon : this.essenceAltarFront));
     }
 	
 	public void onBlockAdded(World world, int x, int y, int z)
@@ -138,9 +139,9 @@ public class EssenceAltarBlock extends BlockContainer{
 		if(world.isRemote) {
 			return true;
 		}else if (!player.isSneaking()){
-			TileEntityGaiaAltar entity =(TileEntityGaiaAltar)world.getTileEntity(x, y, z);
+			TileEntityEssenceAltar entity =(TileEntityEssenceAltar)world.getTileEntity(x, y, z);
 			if (entity != null){
-				FMLNetworkHandler.openGui(player, GaiaMod.instance, ModGui.guiIDGaiaAltar, world, x, y, z);
+				FMLNetworkHandler.openGui(player, GaiaMod.instance, ModGui.guiIDEssenceAltar, world, x, y, z);
 			}
 			return true;
 		}else{
@@ -150,7 +151,7 @@ public class EssenceAltarBlock extends BlockContainer{
 	
 	@Override
 	public TileEntity createNewTileEntity(World world, int i) {
-		return new TileEntityGaiaAltar();
+		return new TileEntityEssenceAltar();
 	}
 	
 	public static void updateBlockState(boolean isAltaring, boolean powered, World world, int xCoord, int yCoord, int zCoord) {
@@ -162,11 +163,11 @@ public class EssenceAltarBlock extends BlockContainer{
 		keepInventory = true;
 		
 		if(isAltaring && powered){
-			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.gaiaAltarBlockActive);
+			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.essenceAltarBlockActive);
 		}else if(!isAltaring && powered){ 
-			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.gaiaAltarBlockIdlePower);
+			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.essenceAltarBlockIdlePower);
 		}else{
-			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.gaiaAltarBlockIdle);
+			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.essenceAltarBlockIdle);
 		}
 		keepInventory = false;
 		world.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, i, 2);
@@ -198,7 +199,7 @@ public class EssenceAltarBlock extends BlockContainer{
 	
 	public void breakBlock(World world, int x, int y, int z, Block oldblock, int oldMetadata) {
 		if (!keepInventory) {
-			TileEntityGaiaAltar tileentity = (TileEntityGaiaAltar) world.getTileEntity(x, y, z);
+			TileEntityEssenceAltar tileentity = (TileEntityEssenceAltar) world.getTileEntity(x, y, z);
 
 			if (tileentity != null) {
 				for (int i = 0; i < tileentity.getSizeInventory(); i++) {
@@ -254,7 +255,7 @@ public class EssenceAltarBlock extends BlockContainer{
 	
 public Item getItemDropped(World world, int x , int y, int z) {
 		
-		return Item.getItemFromBlock(ModBlocks.gaiaAltarBlockIdle);
+		return Item.getItemFromBlock(ModBlocks.essenceAltarBlockIdle);
 	}
 
 

@@ -11,6 +11,8 @@ public class ModTileEntities {
 		
 		GameRegistry.registerTileEntity(TileEntityGaiaAltar.class, StatCollector.translateToLocal(Strings.GaiaAltarBlockName));
 		
+		GameRegistry.registerTileEntity(TileEntityEssenceAltar.class, StatCollector.translateToLocal(Strings.EssenceAltarBlockName));
+		
     }
 
 }

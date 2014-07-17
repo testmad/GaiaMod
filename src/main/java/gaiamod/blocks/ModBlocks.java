@@ -32,13 +32,13 @@ public class ModBlocks {
 		
 		
 		essenceAltarBlockIdle = new EssenceAltarBlock(false, false).setBlockName(Strings.EssenceAltarBlockName + "Idle").setCreativeTab(GaiaMod.getcreativeTab()).setHardness(3.5F);
-		Registrar.registerBlock(gaiaAltarBlockIdle);
+		Registrar.registerBlock(essenceAltarBlockIdle);
 		
 		essenceAltarBlockIdlePower = new EssenceAltarBlock(false, true).setBlockName(Strings.EssenceAltarBlockName + "IdlePower").setHardness(3.5F);
-		Registrar.registerBlock(gaiaAltarBlockIdlePower);
+		Registrar.registerBlock(essenceAltarBlockIdlePower);
 		
 		essenceAltarBlockActive = new EssenceAltarBlock(true, true).setBlockName(Strings.EssenceAltarBlockName + "Active").setHardness(3.5F).setLightLevel(0.875F);
-		Registrar.registerBlock(gaiaAltarBlockActive);
+		Registrar.registerBlock(essenceAltarBlockActive);
 		
 		
 		gaiaShrine = new GaiaShrineBlock();

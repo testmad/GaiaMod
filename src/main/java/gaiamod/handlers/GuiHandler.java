@@ -1,8 +1,11 @@
 package gaiamod.handlers;
 
+import gaiamod.containers.ContainerEssenceAltar;
 import gaiamod.containers.ContainerGaiaAltar;
+import gaiamod.gui.GuiEssenceAltar;
 import gaiamod.gui.GuiGaiaAltar;
 import gaiamod.gui.ModGui;
+import gaiamod.tileentities.TileEntityEssenceAltar;
 import gaiamod.tileentities.TileEntityGaiaAltar;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
@@ -22,7 +25,15 @@ TileEntity entity = world.getTileEntity(x, y, z);
 					return new ContainerGaiaAltar(player.inventory, (TileEntityGaiaAltar) entity);
 				}
 				return null;
+				
+			case ModGui.guiIDEssenceAltar:
+				if (entity instanceof TileEntityEssenceAltar){
+					return new ContainerEssenceAltar(player.inventory, (TileEntityEssenceAltar) entity);
+				}
+				return null;
 			}
+			
+			
 		}
 		return null;
 	}
@@ -36,6 +47,12 @@ TileEntity entity = world.getTileEntity(x, y, z);
 			case ModGui.guiIDGaiaAltar:
 				if (entity instanceof TileEntityGaiaAltar){
 					return new GuiGaiaAltar(player.inventory, (TileEntityGaiaAltar) entity);
+				}
+				return null;
+				
+			case ModGui.guiIDEssenceAltar:
+				if (entity instanceof TileEntityEssenceAltar){
+					return new GuiEssenceAltar(player.inventory, (TileEntityEssenceAltar) entity);
 				}
 				return null;
 			}

@@ -5,6 +5,13 @@ tile.gaiaAltarBlockIdlePower.name=Gaia Altar
 tile.gaiaAltarBlockActive.name=Gaia Altar
 tile.gaiaAltarBlockIdle.name=Gaia Altar
 
+tile.essenceAltarBlock.name=Essence Altar
+tile.essenceAltarBlockIdleEmtpy.name=Essence Altar
+tile.essenceAltarBlockIdleFull.name=Essence Altar
+tile.essenceAltarBlockIdlePower.name=Essence Altar
+tile.essenceAltarBlockActive.name=Essence Altar
+tile.essenceAltarBlockIdle.name=Essence Altar
+
 tile.gaiaShrine.name=Gaia Shrine
 
 item.windStoneItem.name=Wind Stone

@@ -1,5 +1,7 @@
 package gaiamod.tileentities;
 
+import java.util.Random;
+
 import gaiamod.blocks.EssenceAltarBlock;
 import gaiamod.handlers.AltarRecipes;
 import net.minecraft.block.Block;
@@ -18,14 +20,19 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 	
 	private ItemStack[] slots = new ItemStack[7];
 	
-	public int cookTime;
 	public int waterPowerLevel;
 	public int lavaPowerLevel;
-	public int burn;
+	
+	public boolean isAltaring = false;
+	
+	public int chanceLevel;
+	public int essenceLevel;
+	
 	public static final int maxWaterPower = 1000;
 	public static final int maxLavaPower = 1000;
 	
-	public static final int cookSpeed = 100;
+	public static final int maxChanceLevel = 1000;
+	public static final int maxEssenceLevel = 1000;
 	
 	private static final int[] slots_top = new int[]{0, 1, 2, 3};
 	private static final int[] slots_bottom = new int[]{4};
@@ -89,7 +96,7 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 
 	@Override
 	public String getInventoryName() {
-		return "container.gaiaAltar";
+		return "container.essenceAltar";
 	}
 
 	@Override
@@ -175,14 +182,19 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		}
 		waterPowerLevel = nbt.getShort("WaterPower");
 		lavaPowerLevel = nbt.getShort("LavaPower");
-		cookTime = nbt.getShort("CookTime");
+		
+		chanceLevel = nbt.getShort("ChanceLevel");
+		essenceLevel = nbt.getShort("EssenceLevel");
 	}
 
 	public void  writeToNBT(NBTTagCompound nbt){
 		super.writeToNBT(nbt);
 		nbt.setShort("WaterPower", (short)waterPowerLevel);
 		nbt.setShort("LavaPower", (short)lavaPowerLevel);
-		nbt.setShort("CookTime", (short)cookTime);
+		
+		nbt.setShort("ChanceLevel", (short)chanceLevel);
+		nbt.setShort("EssenceLevel", (short)essenceLevel);
+		
 		NBTTagList list = new NBTTagList();
 		
 		for(int i = 0; i < slots.length; i++){
@@ -211,10 +223,6 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		return j != 4 || i != 1;
 	}
 	
-	public int getAltarProgressScaled(int i){
-		return(cookTime *i / this.cookSpeed);
-	}
-	
 	public int getWaterRemainingScaled(int i){
 		return(waterPowerLevel *i / maxWaterPower);
 	}
@@ -223,42 +231,28 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		return(lavaPowerLevel *i / maxLavaPower);
 	}
 	
+	public int getChanceProgressScaled(int i){
+		return(chanceLevel *i / maxChanceLevel);
+	}
+	
+	public int getEssenceProgressScaled(int i){
+		return(essenceLevel *i / maxEssenceLevel);
+	}
+	
 	private boolean canAltar(){
-		if (slots[0] == null || slots[1] == null || slots[2] == null || slots[3] == null){
+		if (slots[0] == null && slots[1] == null && slots[2] == null && slots[3] == null){
+			return false;
+		}else if(slots[4] != null){
 			return false;
 		}
-		
-		ItemStack itemstack = AltarRecipes.getAltarResult(slots[0].getItem(), slots[1].getItem(), slots[2].getItem(), slots[3].getItem());
-		
-		if (itemstack == null){
-			return false;
-		}
-		
-		if (slots[4] == null){
+		else{
+
 			return true;
-		}
-		
-		if (!slots[4].isItemEqual(itemstack)){
-			return false;
-		}
-		
-		if (slots[4].stackSize < getInventoryStackLimit() && slots[4].stackSize < slots[4].getMaxStackSize()){
-			return true;
-		}else{
-			return slots[4].stackSize < itemstack.getMaxStackSize();
 		}
 	}
 	
 	private void altarItem(){
 		if (canAltar()){
-			ItemStack itemstack = AltarRecipes.getAltarResult(slots[0].getItem(), slots[1].getItem(), slots[2].getItem(), slots[3].getItem());
-			
-			if(slots[4] == null){
-				slots[4] = itemstack.copy();
-			}else if (slots[4].isItemEqual(itemstack)){
-				slots[4].stackSize += itemstack.stackSize;
-			}
-			
 			for (int i = 0; i < 4; i++){
 				if(slots[i].stackSize <= 0){
 					slots[i] = new ItemStack(slots[i].getItem().setFull3D());
@@ -281,8 +275,25 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		return lavaPowerLevel > 0;
 	}
 	
-	public boolean isAltaring(){
-		return this.cookTime > 0;
+	public boolean hasChanceLevel(){
+		return chanceLevel > 0;
+	}
+	
+	public boolean hasEssenceLevel(){
+		return essenceLevel > 0;
+	}
+	
+	public boolean chanceToEssence(){
+		
+		Random r = new Random();
+		float chance = r.nextFloat();
+
+		  if (chance <= 0.50f){
+		    return true;
+		  }
+		  else{
+			  return false;
+		  }
 	}
 	
 	public void updateEntity(){
@@ -291,8 +302,8 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		boolean flag1 = this.hasLavaPower();
 		boolean flag2 = false;
 		boolean flag3 = false;
-		
-		if(hasWaterPower() && hasLavaPower() && this.isAltaring()){
+
+		if(hasWaterPower() && hasLavaPower() && this.isAltaring){
 			this.waterPowerLevel--;
 			this.lavaPowerLevel--;
 		}
@@ -323,25 +334,86 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 					}
 				}
 			}
-			
+	
 			if (hasWaterPower() && hasLavaPower() && canAltar()){
-				cookTime++;
-				
-				if (this.cookTime == this.cookSpeed){
-					this.cookTime = 0;
-					this.altarItem();
+				this.isAltaring = true;
+				if(slots[0] == null){
+					slots[0] = null;
+					
+					if(slots[1] == null){
+						slots[1] = null;
+						
+						if(slots[2] == null){
+							slots[2] = null;
+							
+							if(slots[3] == null){
+								slots[3] = null;
+							}else{
+								if(slots[3].stackSize <= 0){
+									slots[3] = null;
+									flag2 = true;
+								}else{
+								slots[3].stackSize--;
+								chanceLevel = chanceLevel + 10;
+
+								this.isAltaring = true;
+								flag2 = true;
+								}
+							}
+						}else{
+							if(slots[2].stackSize <= 0){
+								slots[2] = null;
+								flag2 = true;
+							}else{
+							slots[2].stackSize--;
+							chanceLevel = chanceLevel + 10;
+
+							this.isAltaring = true;
+							flag2 = true;
+							}
+						}
+					}else{
+						if(slots[1].stackSize <= 0){
+							slots[1] = null;
+							flag2 = true;
+						}else{
+						slots[1].stackSize--;
+						chanceLevel = chanceLevel + 10;
+
+						this.isAltaring = true;
+						flag2 = true;
+						}
+					}
+				}else{
+					if(slots[0].stackSize <= 0){
+						slots[0] = null;
+						flag2 = true;
+					}else{
+					slots[0].stackSize--;
+					chanceLevel = chanceLevel + 10;
+
+					this.isAltaring = true;
 					flag2 = true;
+					}
+				}	
+				if(chanceLevel == maxChanceLevel){
+					
+					chanceLevel = 0;
+					if(chanceToEssence()){
+						essenceLevel = essenceLevel + 100;
+					}
+					
 				}
 			}else{
-				this.cookTime = 0;
+				this.isAltaring = false;
 				flag3 = true;
 			}
 			
-			if(flag3 != this.isAltaring()){
+			if(flag3 != this.isAltaring){
 				flag3=true;
 				if(flag && flag1){
-					EssenceAltarBlock.updateBlockState(this.isAltaring(), true, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
-				}else{EssenceAltarBlock.updateBlockState(this.isAltaring(), false, this.worldObj, this.xCoord, this.yCoord, this.zCoord);}
+					EssenceAltarBlock.updateBlockState(this.isAltaring, true, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+				}else{EssenceAltarBlock.updateBlockState(this.isAltaring, false, this.worldObj, this.xCoord, this.yCoord, this.zCoord);}
 
 				}
 		}

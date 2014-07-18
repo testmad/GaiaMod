@@ -53,10 +53,20 @@ public class GuiEssenceAltar extends GuiContainer{
 			drawTexturedModalRect(guiLeft + 151, guiTop + 53 - i1, 190, 43-i1,14,i1 );
 		}
 		
-		//do cooking
+		if(essenceAltar.hasChanceLevel()){
+			int i1 = essenceAltar.getChanceProgressScaled(43);
+			drawTexturedModalRect(guiLeft + 86, guiTop + 64 - i1, 204, 43 - i1,6,i1);
+		}
 		
-			int j1 = essenceAltar.getAltarProgressScaled(24);
-			drawTexturedModalRect(guiLeft + 79, guiTop + 34, 176, 64,j1 + 1,81 );
+		if(essenceAltar.hasEssenceLevel()){
+			int i1 = essenceAltar.getEssenceProgressScaled(43);
+			drawTexturedModalRect(guiLeft + 102, guiTop + 64 - i1, 210, 43 - i1,6,i1);
+		}
+		//do cooking
+					
+			
+			
+			
 		
 	}
 

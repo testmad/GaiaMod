@@ -21,6 +21,9 @@ public class ContainerEssenceAltar extends Container{
 	private int waterPower;
 	private int lavaPower;
 	private int lastItemBurnTime;
+	
+	private int chanceLevel;
+	private int essenceLevel;
 
 	public ContainerEssenceAltar(InventoryPlayer invPlayer, TileEntityEssenceAltar entity){
 		
@@ -29,16 +32,19 @@ public class ContainerEssenceAltar extends Container{
 		lavaPower = 0;
 		lastItemBurnTime = 0;
 		
+		chanceLevel = 0;
+		essenceLevel = 0;
+		
 		altar = entity;
 		
 		//grid
-		this.addSlotToContainer(new Slot(entity, 0, 36, 26));
-		this.addSlotToContainer(new Slot(entity, 1, 54, 26));
-		this.addSlotToContainer(new Slot(entity, 2, 36, 44));
-		this.addSlotToContainer(new Slot(entity, 3, 54, 44));
+		this.addSlotToContainer(new Slot(entity, 0, 42, 26));
+		this.addSlotToContainer(new Slot(entity, 1, 60, 26));
+		this.addSlotToContainer(new Slot(entity, 2, 42, 44));
+		this.addSlotToContainer(new Slot(entity, 3, 60, 44));
 		
 		//result
-		this.addSlotToContainer(new SlotGaiaAltar(invPlayer.player, entity, 4, 116, 35));
+		this.addSlotToContainer(new SlotGaiaAltar(invPlayer.player, entity, 4, 118, 35));
 		
 		//water slot
 		this.addSlotToContainer(new Slot(entity, 5, 10, 58));
@@ -63,6 +69,9 @@ public class ContainerEssenceAltar extends Container{
 		crafting.sendProgressBarUpdate(this, 0, this.altar.cookTime);
 		crafting.sendProgressBarUpdate(this, 1, this.altar.waterPowerLevel);
 		crafting.sendProgressBarUpdate(this, 2, this.altar.lavaPowerLevel);
+		
+		crafting.sendProgressBarUpdate(this, 3, this.altar.chanceLevel);
+		crafting.sendProgressBarUpdate(this, 4, this.altar.essenceLevel);
 	}
 	
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2){
@@ -153,11 +162,22 @@ public class ContainerEssenceAltar extends Container{
 			if(this.lavaPower != this.altar.lavaPowerLevel){
 				par1.sendProgressBarUpdate(this, 2, this.altar.lavaPowerLevel);
 			}
+			
+			if(this.chanceLevel != this.altar.chanceLevel){
+				par1.sendProgressBarUpdate(this, 3, this.altar.chanceLevel);
+			}
+			
+			if(this.essenceLevel != this.altar.essenceLevel){
+				par1.sendProgressBarUpdate(this, 4, this.altar.essenceLevel);
+			}
 		}
 		
 		this.cookTime = this.altar.cookTime;
 		this.waterPower = this.altar.waterPowerLevel;
 		this.lavaPower = this.altar.lavaPowerLevel;
+		
+		this.chanceLevel = this.altar.chanceLevel;
+		this.essenceLevel = this.altar.essenceLevel;
 		
 	}
 	
@@ -174,6 +194,14 @@ public class ContainerEssenceAltar extends Container{
 		
 		if(i ==2){
 			altar.lavaPowerLevel = j;
+		}
+		
+		if(i ==3){
+			altar.chanceLevel = j;
+		}
+		
+		if(i ==4){
+			altar.essenceLevel = j;
 		}
 	}
 	

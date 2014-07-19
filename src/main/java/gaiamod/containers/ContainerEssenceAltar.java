@@ -66,7 +66,7 @@ public class ContainerEssenceAltar extends Container{
 
 	public void addCraftingToCrafters(ICrafting crafting){
 		super.addCraftingToCrafters(crafting);
-		crafting.sendProgressBarUpdate(this, 0, this.altar.cookTime);
+		//crafting.sendProgressBarUpdate(this, 0, this.altar.cookTime);
 		crafting.sendProgressBarUpdate(this, 1, this.altar.waterPowerLevel);
 		crafting.sendProgressBarUpdate(this, 2, this.altar.lavaPowerLevel);
 		
@@ -151,9 +151,9 @@ public class ContainerEssenceAltar extends Container{
 		for (int i=0; i < this.crafters.size(); i++){
 			ICrafting par1 = (ICrafting)this.crafters.get(i);
 			
-			if(this.cookTime != this.altar.cookTime){
-				par1.sendProgressBarUpdate(this, 0, this.altar.cookTime);
-			}
+			//if(this.cookTime != this.altar.cookTime){
+			//	par1.sendProgressBarUpdate(this, 0, this.altar.cookTime);
+			//}
 			
 			if(this.waterPower != this.altar.waterPowerLevel){
 				par1.sendProgressBarUpdate(this, 1, this.altar.waterPowerLevel);
@@ -172,7 +172,7 @@ public class ContainerEssenceAltar extends Container{
 			}
 		}
 		
-		this.cookTime = this.altar.cookTime;
+		//this.cookTime = this.altar.cookTime;
 		this.waterPower = this.altar.waterPowerLevel;
 		this.lavaPower = this.altar.lavaPowerLevel;
 		
@@ -184,7 +184,7 @@ public class ContainerEssenceAltar extends Container{
 	@SideOnly(Side.CLIENT)
 	public void updateProgressBar(int i, int j){
 		if(i ==0){
-			altar.cookTime = j;
+			//altar.cookTime = j;
 			
 		}
 		

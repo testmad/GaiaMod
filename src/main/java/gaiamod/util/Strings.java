@@ -9,6 +9,16 @@ public class Strings {
 
 
 	public static final String EssenceItemName = "essenceItem";
+	
+	public static final String EmptyEarthEssenceItemName = "emptyEarthEssenceItem";
+	public static final String EmptyFireEssenceItemName = "emptyFireEssenceItem";
+	public static final String EmptyWindEssenceItemName = "emptyWindEssenceItem";
+	public static final String EmptyWaterEssenceItemName = "emptyWaterEssenceItem";
+	public static final String EmptyHeartEssenceItemName = "emptyHeartEssenceItem";
+	public static final String EmptyStormEssenceItemName = "emptyStormEssenceItem";
+	public static final String EmptyChaosEssenceItemName = "emptyChaosEssenceItem";
+	public static final String EmptyOrderEssenceItemName = "emptyOrderEssenceItem";
+	
 	public static final String EarthEssenceItemName = "earthEssenceItem";
 	public static final String FireEssenceItemName = "fireEssenceItem";
 	public static final String WindEssenceItemName = "windEssenceItem";

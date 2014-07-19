@@ -16,7 +16,7 @@ public class ModBlocks {
 	public static Block essenceAltarBlockIdlePower;
 	public static Block essenceAltarBlockActive;
 	
-	public static Block gaiaShrine;
+	//public static Block gaiaShrine;
 	
 	public static void init()
     {
@@ -41,8 +41,8 @@ public class ModBlocks {
 		Registrar.registerBlock(essenceAltarBlockActive);
 		
 		
-		gaiaShrine = new GaiaShrineBlock();
-		Registrar.registerBlock(gaiaShrine);
+		//gaiaShrine = new GaiaShrineBlock();
+		//Registrar.registerBlock(gaiaShrine);
 		
     }
 }

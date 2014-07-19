@@ -3,6 +3,7 @@ package gaiamod.tileentities;
 import java.util.Random;
 
 import gaiamod.blocks.EssenceAltarBlock;
+import gaiamod.essence.ModEssence;
 import gaiamod.handlers.AltarRecipes;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
@@ -130,6 +131,36 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		return getHasLava(itemstack) > 0;
 	}
 	
+	public boolean isItemBaseEssence(ItemStack itemstack){
+		if(itemstack.getItem() == ModEssence.essenceItem){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	public boolean isItemClaimedEssence(ItemStack itemstack){
+		if(itemstack.getItem() == ModEssence.emptyEarthEssenceItem){
+			return true;
+		}else if(itemstack.getItem() == ModEssence.emptyFireEssenceItem){
+			return true;
+		}else if(itemstack.getItem() == ModEssence.emptyWindEssenceItem){
+			return true;
+		}else if(itemstack.getItem() == ModEssence.emptyWaterEssenceItem){
+			return true;
+		}else if(itemstack.getItem() == ModEssence.emptyHeartEssenceItem){
+			return true;
+		}else if(itemstack.getItem() == ModEssence.emptyStormEssenceItem){
+			return true;
+		}else if(itemstack.getItem() == ModEssence.emptyChaosEssenceItem){
+			return true;
+		}else if(itemstack.getItem() == ModEssence.emptyOrderEssenceItem){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
 	public static int getHasWater (ItemStack itemstack){
 		if(itemstack == null){
 			return 0;
@@ -242,12 +273,32 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 	private boolean canAltar(){
 		if (slots[0] == null && slots[1] == null && slots[2] == null && slots[3] == null){
 			return false;
-		}else if(slots[4] != null){
+		}else if(slots[4] == null){
 			return false;
+		}else if(slots[4] != null){
+			if(slots[4].getItem() == ModEssence.emptyEarthEssenceItem){
+				return true;
+			}else if(slots[4].getItem() == ModEssence.emptyFireEssenceItem){
+				return true;
+			}else if(slots[4].getItem() == ModEssence.emptyWindEssenceItem){
+				return true;
+			}else if(slots[4].getItem() == ModEssence.emptyWaterEssenceItem){
+				return true;
+			}else if(slots[4].getItem() == ModEssence.emptyHeartEssenceItem){
+				return true;
+			}else if(slots[4].getItem() == ModEssence.emptyStormEssenceItem){
+				return true;
+			}else if(slots[4].getItem() == ModEssence.emptyChaosEssenceItem){
+				return true;
+			}else if(slots[4].getItem() == ModEssence.emptyOrderEssenceItem){
+				return true;
+			}else{
+				return false;
+			}
 		}
 		else{
 
-			return true;
+			return false;
 		}
 	}
 	
@@ -333,6 +384,11 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 						this.slots[6] = this.slots[6].getItem().getContainerItem(this.slots[6]);
 					}
 				}
+			}
+			
+			if (slots[4] == null){
+				chanceLevel = 0;
+				essenceLevel = 0;
 			}
 	
 			if (hasWaterPower() && hasLavaPower() && canAltar()){

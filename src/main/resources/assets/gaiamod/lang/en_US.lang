@@ -5,6 +5,7 @@ tile.gaiaAltarBlockIdlePower.name=Gaia Altar
 tile.gaiaAltarBlockActive.name=Gaia Altar
 tile.gaiaAltarBlockIdle.name=Gaia Altar
 
+
 tile.essenceAltarBlock.name=Essence Altar
 tile.essenceAltarBlockIdleEmtpy.name=Essence Altar
 tile.essenceAltarBlockIdleFull.name=Essence Altar
@@ -12,7 +13,19 @@ tile.essenceAltarBlockIdlePower.name=Essence Altar
 tile.essenceAltarBlockActive.name=Essence Altar
 tile.essenceAltarBlockIdle.name=Essence Altar
 
-tile.gaiaShrine.name=Gaia Shrine
+
+item.essenceItem.name=Holder of Essence
+item.emptyEarthEssenceItem.name=Empty Holder of Earth Essence
+item.emptyFireEssenceItem.name=Empty Holder of Fire Essence
+item.emptyWindEssenceItem.name=Empty Holder of Wind Essence
+item.emptyWaterEssenceItem.name=Empty Holder of Water Essence
+item.emptyHeartEssenceItem.name=Empty Holder of Heart Essence
+item.emptyStormEssenceItem.name=Empty Holder of Storm Essence
+item.emptyChaosEssenceItem.name=Empty Holder of Chaos Essence
+item.emptyOrderEssenceItem.name=Empty Holder of Order Essence
+
+
+
 
 item.windStoneItem.name=Wind Stone
 item.fireStoneItem.name=Fire Stone

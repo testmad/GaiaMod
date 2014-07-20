@@ -20,18 +20,18 @@ public class ModStones {
     	stoneItem = new StoneItem();
         Registrar.registerItem(stoneItem);
         
-        windStoneItem = new WindStoneItem();
-        Registrar.registerItem(windStoneItem);
-        
+        earthStoneItem = new EarthStoneItem();
+        Registrar.registerItem(earthStoneItem);
+
         fireStoneItem = new FireStoneItem();
         Registrar.registerItem(fireStoneItem);
         
+        windStoneItem = new WindStoneItem();
+        Registrar.registerItem(windStoneItem);
+        
         waterStoneItem = new WaterStoneItem();
         Registrar.registerItem(waterStoneItem);
-        
-        earthStoneItem = new EarthStoneItem();
-        Registrar.registerItem(earthStoneItem);
-        
+
         heartStoneItem = new HeartStoneItem();
         Registrar.registerItem(heartStoneItem);
 

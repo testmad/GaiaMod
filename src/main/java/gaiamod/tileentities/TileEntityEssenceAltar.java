@@ -131,14 +131,6 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		return getHasLava(itemstack) > 0;
 	}
 	
-	public boolean isItemBaseEssence(ItemStack itemstack){
-		if(itemstack.getItem() == ModEssence.essenceItem){
-			return true;
-		}else{
-			return false;
-		}
-	}
-	
 	public boolean isItemClaimedEssence(ItemStack itemstack){
 		if(itemstack.getItem() == ModEssence.emptyEarthEssenceItem){
 			return true;
@@ -304,16 +296,22 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 	
 	private void altarItem(){
 		if (canAltar()){
-			for (int i = 0; i < 4; i++){
-				if(slots[i].stackSize <= 0){
-					slots[i] = new ItemStack(slots[i].getItem().setFull3D());
-				}else{
-					slots[i].stackSize--;
-				}
-				
-				if(slots[i].stackSize <= 0){
-					slots[i] = null;
-				}
+			if(slots[4].getItem() == ModEssence.emptyEarthEssenceItem){
+				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
+			}else if(slots[4].getItem() == ModEssence.emptyFireEssenceItem){
+				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
+			}else if(slots[4].getItem() == ModEssence.emptyWindEssenceItem){
+				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
+			}else if(slots[4].getItem() == ModEssence.emptyWaterEssenceItem){
+				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
+			}else if(slots[4].getItem() == ModEssence.emptyHeartEssenceItem){
+				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
+			}else if(slots[4].getItem() == ModEssence.emptyStormEssenceItem){
+				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
+			}else if(slots[4].getItem() == ModEssence.emptyChaosEssenceItem){
+				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
+			}else if(slots[4].getItem() == ModEssence.emptyOrderEssenceItem){
+				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
 			}
 		}
 	}
@@ -353,11 +351,14 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		boolean flag1 = this.hasLavaPower();
 		boolean flag2 = false;
 		boolean flag3 = false;
+		
+		System.out.println(canAltar());
 
 		if(hasWaterPower() && hasLavaPower() && this.isAltaring){
 			this.waterPowerLevel--;
 			this.lavaPowerLevel--;
 		}
+		
 		
 		if(!worldObj.isRemote){
 			if(this.isItemWater(this.slots[5]) && this.waterPowerLevel < (this.maxWaterPower - this.getHasWater(this.slots[5]))){
@@ -457,7 +458,15 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 					chanceLevel = 0;
 					if(chanceToEssence()){
 						essenceLevel = essenceLevel + 100;
+						flag2 = true;
 					}
+					
+				}
+				if(essenceLevel == maxEssenceLevel){
+					
+					essenceLevel = 0;
+					this.altarItem();
+					flag2 = true;
 					
 				}
 			}else{
@@ -471,7 +480,7 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 					EssenceAltarBlock.updateBlockState(this.isAltaring, true, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
 				}else{EssenceAltarBlock.updateBlockState(this.isAltaring, false, this.worldObj, this.xCoord, this.yCoord, this.zCoord);}
 
-				}
+			}
 		}
 
 		if(flag2 || flag3){

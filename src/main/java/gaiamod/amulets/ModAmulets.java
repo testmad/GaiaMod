@@ -18,32 +18,32 @@ public class ModAmulets {
 	
 	public static void init()
     {
-		amuletItem = new AmuletItem();
-        Registrar.registerItem(amuletItem);
-        
-        earthAmuletItem = new EarthAmuletItem();
-        Registrar.registerItem(earthAmuletItem);
-        
-        fireAmuletItem = new FireAmuletItem();
-        Registrar.registerItem(fireAmuletItem);
-        
-        windAmuletItem = new WindAmuletItem();
-        Registrar.registerItem(windAmuletItem);
-        
-        waterAmuletItem = new WaterAmuletItem();
-        Registrar.registerItem(waterAmuletItem);
-        
-        heartAmuletItem = new HeartAmuletItem();
-        Registrar.registerItem(heartAmuletItem);
-        
-        stormAmuletItem = new StormAmuletItem();
-        Registrar.registerItem(stormAmuletItem);
-        
-        chaosAmuletItem = new ChaosAmuletItem();
-        Registrar.registerItem(chaosAmuletItem);
-        
-        orderAmuletItem = new OrderAmuletItem();
-        Registrar.registerItem(orderAmuletItem);
+//		amuletItem = new AmuletItem();
+//        Registrar.registerItem(amuletItem);
+//        
+//        earthAmuletItem = new EarthAmuletItem();
+//        Registrar.registerItem(earthAmuletItem);
+//        
+//        fireAmuletItem = new FireAmuletItem();
+//        Registrar.registerItem(fireAmuletItem);
+//        
+//        windAmuletItem = new WindAmuletItem();
+//        Registrar.registerItem(windAmuletItem);
+//        
+//        waterAmuletItem = new WaterAmuletItem();
+//        Registrar.registerItem(waterAmuletItem);
+//        
+//        heartAmuletItem = new HeartAmuletItem();
+//        Registrar.registerItem(heartAmuletItem);
+//        
+//        stormAmuletItem = new StormAmuletItem();
+//        Registrar.registerItem(stormAmuletItem);
+//        
+//        chaosAmuletItem = new ChaosAmuletItem();
+//        Registrar.registerItem(chaosAmuletItem);
+//        
+//        orderAmuletItem = new OrderAmuletItem();
+//        Registrar.registerItem(orderAmuletItem);
     }
 
 }

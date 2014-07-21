@@ -352,7 +352,7 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		boolean flag2 = false;
 		boolean flag3 = false;
 		
-		System.out.println(canAltar());
+		//System.out.println(canAltar());
 
 		if(hasWaterPower() && hasLavaPower() && this.isAltaring){
 			this.waterPowerLevel--;

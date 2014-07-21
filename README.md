@@ -16,9 +16,9 @@ Blocks
         - Used for making Body of Essence (Stones).
         - Used to make Holder of Essence (Empty Vial).
         - Recipe:
-            - Stone 		- Stone 		- Stone 
-            - Cauldron 	    - Ender Pearl 	- Cauldron
-            - Stone 		- Stone 		- Stone  
+		- Stone 		- Stone 		- Stone 
+		- Cauldron 	- Ender Pearl 	- Cauldron
+		- Stone 		- Stone 		- Stone  
         
     Altar of Essence
         - 1 input, 1 holding slot, 1 tank entity.
@@ -34,53 +34,53 @@ Blocks
 
 Essence
 
- - Holder of Essence
+ Holder of Essence
         - Just a vial
         - Hold various essence.
         - Recipe:
-            - (blank) 	   - Glass 	         - (blank) 
-            - Glass		   - Obsidian	     - Glass
-            - Glass		   - Glass		     - Glass 
+		- (blank) 		- Glass 		- (blank) 
+		- Glass		- Obsidian		- Glass
+		- Glass		- Glass		- Glass 
 
-- Empty Earth Essence Recipe:
-    		- Dirt		   - Dirt 		     - Dirt
-            - Dirt		   - (e)Vile		 - Dirt
-            - Dirt		   - Dirt		     - Dirt
+Empty Earth Essence Recipe:
+    		- Dirt		- Dirt 		- Dirt
+		- Dirt		- (e)Vile		- Dirt
+		- Dirt		- Dirt		- Dirt
 
-- Empty Fire Essence Recipe:
+Empty Fire Essence Recipe:
     		- Lava Bucket	- Lava Bucket 	- Lava Bucket
-            - Lava Bucket	- (e)Vile		- Lava Bucket
-            - Lava Bucket	- Lava Bucket	- Lava Bucket
+		- Lava Bucket	- (e)Vile		- Lava Bucket
+		- Lava Bucket	- Lava Bucket	- Lava Bucket
 
-- Empty Wind Essence Recipe:
+Empty Wind Essence Recipe:
     		- Feather		- Feather		- Feather
-            - Feather		- (e)Vile		- Feather
-            - Feather		- Feather		- Feather
+		- Feather		- (e)Vile		- Feather
+		- Feather		- Feather		- Feather
 
-- Empty Water Essence Recipe:
-    		- Water Bucket	- Water Bucket	- Water Bucket
-            - Water Bucket	- (e)Vile		- Water Bucket
-            - Water Bucket	- Water Bucket	- Water Bucket
+Empty Water Essence Recipe:
+   		- Water Bucket	- Water Bucket	- Water Bucket
+		- Water Bucket	- (e)Vile		- Water Bucket
+		- Water Bucket	- Water Bucket	- Water Bucket
 
-- Empty Heart Essence Recipe:
+Empty Heart Essence Recipe:
     		- Pork Chop	- Pork Chop 	- Pork Chop
-            - Pork Chop	- (e)Vile		- Pork Chop
-            - Pork Chop	- Pork Chop	- Pork Chop
+		- Pork Chop	- (e)Vile		- Pork Chop
+		- Pork Chop	- Pork Chop	- Pork Chop
 
-- Empty Storm Essence Recipe:
+Empty Storm Essence Recipe:
     		- (Earth)Vile(e)- Water Bucket	- (Fire)Vile(e)
-            - Redstone		- (e)Vile		- Redstone
-            - (Wind)Vile(e)	- Water Bucket	- (Water)Vile(e)
+		- Redstone		- (e)Vile		- Redstone
+		- (Wind)Vile(e)	- Water Bucket	- (Water)Vile(e)
 
-- Empty Chaos Essence Recipe:
+Empty Chaos Essence Recipe:
     		- (Earth)Vile(e)- (Heart)Vile(e)- (Fire)Vile(e)
-            - (Storm)Vile(e)- (e)Vile		- (Storm)Vile(e)
-            - (Wind)Vile(e) - Diamond		- (Water)Vile(e)
+		- (Storm)Vile(e)- (e)Vile		- (Storm)Vile(e)
+		- (Wind)Vile(e) - Diamond		- (Water)Vile(e)
 
-- Empty Order Essence Recipe:
+Empty Order Essence Recipe:
     		- (Earth)Vile(e)- (Heart)Vile(e)- (Fire)Vile(e)
-            - (Chaos)Vile(e)- (e)Vile		- (Chaos)Vile(e)
-            - (Wind)Vile(e) - Emerald		- (Water)Vile(e)
+		- (Chaos)Vile(e)- (e)Vile		- (Chaos)Vile(e)
+		- (Wind)Vile(e) - Emerald		- (Water)Vile(e)
 
     Earth
         - Objects with Essence:
@@ -340,20 +340,20 @@ Armor
         - Durability:
         - Recipe:
 	Helm -
-	- Heart Stone		- Heart Stone	- Heart Stone
-	- Heart Stone		- Blank		- Heart Stone
+	- Earth Helm		- Heart Stone	- Fire Helm
+	- Wind Helm		- Blank		- Water Helm
 	- Blank			- Heart Amulet	- Blank
 	Chest -
-	- Heart Stone		- Heart Amulet 	- Heart Stone
+	- Earth Chest		- Heart Amulet 	- Fire Chest
+	- Wind Chest		- Heart Stone	- Water Chest
 	- Heart Stone		- Heart Stone	- Heart Stone
-	- Heart Stone		- Heart Stone	- HeartStone
 	Legs -
-	- Heart Stone		- Heart Stone 	- Heart Stone
-	- Heart Stone		- Heart Amulet 	- Heart Stone
+	- Earth Legs		- Heart Stone 	- Fire Legs
+	- Wind Legs		- Heart Amulet 	- Water Legs
 	- Heart Stone		- Blank		- Heart Stone
 	Boots -
-	- Heart Stone		- Blank 		- Heart Stone
-	- Heart Stone		- Blank		- Heart Stone
+	- Earth Boots		- Blank 		- Fire Boots
+	- Wind Boots		- Heart Stone	- Water Boots
 	- Blank			- Heart Amulet 	- Blank
         
     Storm
@@ -361,20 +361,20 @@ Armor
         - Durability:
         - Recipe:
 	Helm -
-	- Storm Stone		- Storm Stone	- Storm Stone
-	- Storm Stone		- Blank		- Storm Stone
+	- Earth Helm		- Storm Stone	- Fire Helm
+	- Wind Helm		- Blank		- Water Helm
 	- Blank			- Storm Amulet	- Blank
 	Chest -
-	- Storm Stone		- Storm Amulet 	- Storm Stone
-	- Storm Stone		- Storm Stone	- Storm Stone
+	- Earth Chest		- Storm Amulet 	- Fire Chest
+	- Wind Chest		- Storm Stone	- Water Chest
 	- Storm Stone		- Storm Stone	- Storm Stone
 	Legs -
-	- Storm Stone		- Storm Stone 	- Storm Stone
-	- Storm Stone		- Storm Amulet 	- Storm Stone
+	- Earth Legs		- Storm Stone 	- Fire Legs
+	- Wind Legs		- Storm Amulet 	- Water Legs
 	- Storm Stone		- Blank		- Storm Stone
 	Boots -
-	- Storm Stone		- Blank 		- Storm Stone
-	- Storm Stone		- Blank		- Storm Stone
+	- Earth Boots		- Blank 		- Fire Boots
+	- Wind Boots		- Storm Stone	- Water Boots
 	- Blank			- Storm Amulet 	- Blank
        
     Chaos
@@ -382,20 +382,20 @@ Armor
         - Durability:
         - Recipe:
 	Helm -
-	- Chaos Stone		- Chaos Stone	- Chaos Stone
-	- Chaos Stone		- Blank		- Chaos Stone
+	- Earth Helm		- Chaos Stone	- Fire Helm
+	- Wind Helm		- Blank		- Storm Helm
 	- Blank			- Chaos Amulet	- Blank
 	Chest -
-	- Chaos Stone		- Chaos Amulet 	- Chaos Stone
-	- Chaos Stone		- Chaos Stone	- Chaos Stone
+	- Earth Chest		- Chaos Amulet 	- Fire Chest
+	- Wind Chest		- Chaos Stone	- Storm Chest
 	- Chaos Stone		- Chaos Stone	- Chaos Stone
 	Legs -
-	- Chaos Stone		- Chaos Stone 	- Chaos Stone
-	- Chaos Stone		- Chaos Amulet 	- Chaos Stone
+	- Earth Legs		- Chaos Stone 	- Fire Legs
+	- Wind Legs		- Chaos Amulet 	- Storm Legs
 	- Chaos Stone		- Blank		- Chaos Stone
 	Boots -
-	- Chaos Stone		- Blank 		- Chaos Stone
-	- Chaos Stone		- Blank		- Chaos Stone
+	- Earth Boots		- Blank 		- Fire Boots
+	- Wind Boots		- Chaos Stone	- Storm Boots
 	- Blank			- Chaos Amulet 	- Blank
        
     Order
@@ -403,22 +403,22 @@ Armor
         - Durability:
         - Recipe:
 	Helm -
-	- Order Stone		- Order Stone	- Order Stone
-	- Order Stone		- Blank		- Order Stone
+	- Earth Helm		- Chaos Helm	- Heart Helm
+	- Wind Helm		- Storm Helm	- Water Helm
 	- Blank			- Order Amulet	- Blank
 	Chest -
-	- Order Stone		- Order Amulet 	- Order Stone
-	- Order Stone		- Order Stone	- Order Stone
-	- Order Stone		- Order Stone	- Order Stone
+	- Earth Chest		- Order Amulet 	- Heart Chest
+	- Wind Chest		- Order Stone	- Water Chest
+	- Chaos Chest		- Order Stone	- Storm Chest
 	Legs -
-	- Order Stone		- Order Stone 	- Order Stone
-	- Order Stone		- Order Amulet 	- Order Stone
-	- Order Stone		- Blank		- Order Stone
+	- Earth Legs		- Order Stone 	- Heart Legs
+	- Wind Legs		- Order Amulet 	- Water Legs
+	- Chaos Legs		- Blank		- Storm Legs
 	Boots -
-	- Order Stone		- Blank 		- Order Stone
-	- Order Stone		- Blank		- Order Stone
-	- Blank			- Order Amulet 	- Blank
-     
+	- Earth Boots		- Blank 		- Heart Boots
+	- Wind Boots		- Order Stone	- Water Boots
+	- Chaos Boots		- Order Amulet 	- Storm Boots
+  
     
 OLD TODO INFO (LEAVING FOR REFERENCE)
 

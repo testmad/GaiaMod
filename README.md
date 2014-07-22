@@ -17,7 +17,7 @@ Blocks
         - Used to make Holder of Essence (Empty Vial).
         - Recipe:
 		- Stone 		- Stone 		- Stone 
-		- Cauldron 	- Ender Pearl 	- Cauldron
+		- Cauldron 		- Ender Pearl 		- Cauldron
 		- Stone 		- Stone 		- Stone  
         
     Altar of Essence
@@ -28,7 +28,7 @@ Blocks
         - When certain value is attained, you get a chance of actually producing a ranged amount of essence.
         - Recipe:
 		- Piston 		- Stone 		- Piston 
-		- Cauldron 	- Gaia Alter	- Cauldron
+		- Cauldron 		- Gaia Alter		- Cauldron
 		- Stone 		- Stone 		- Stone  
         
 
@@ -38,49 +38,49 @@ Essence
         - Just a vial
         - Hold various essence.
         - Recipe:
-		- (blank) 		- Glass 		- (blank) 
+		- (blank) 	- Glass 		- (blank) 
 		- Glass		- Obsidian		- Glass
-		- Glass		- Glass		- Glass 
+		- Glass		- Glass			- Glass 
 
 	Empty Earth Essence Recipe:
-    		- Dirt		- Dirt 		- Dirt
-		- Dirt		- (e)Vile		- Dirt
-		- Dirt		- Dirt		- Dirt
+    		- Dirt			- Dirt 		- Dirt
+		- Dirt			- (e)Vile	- Dirt
+		- Dirt			- Dirt		- Dirt
 
 	Empty Fire Essence Recipe:
-    		- Lava Bucket	- Lava Bucket 	- Lava Bucket
-		- Lava Bucket	- (e)Vile		- Lava Bucket
-		- Lava Bucket	- Lava Bucket	- Lava Bucket
+    		- Lava Bucket		- Lava Bucket 	- Lava Bucket
+		- Lava Bucket		- (e)Vile	- Lava Bucket
+		- Lava Bucket		- Lava Bucket	- Lava Bucket
 
 	Empty Wind Essence Recipe:
-    		- Feather		- Feather		- Feather
-		- Feather		- (e)Vile		- Feather
-		- Feather		- Feather		- Feather
+    		- Feather		- Feather	- Feather
+		- Feather		- (e)Vile	- Feather
+		- Feather		- Feather	- Feather
 
 	Empty Water Essence Recipe:
-   		- Water Bucket	- Water Bucket	- Water Bucket
-		- Water Bucket	- (e)Vile		- Water Bucket
-		- Water Bucket	- Water Bucket	- Water Bucket
+   		- Water Bucket		- Water Bucket	- Water Bucket
+		- Water Bucket		- (e)Vile	- Water Bucket
+		- Water Bucket		- Water Bucket	- Water Bucket
 
 	Empty Heart Essence Recipe:
-    		- Pork Chop	- Pork Chop 	- Pork Chop
-		- Pork Chop	- (e)Vile		- Pork Chop
-		- Pork Chop	- Pork Chop	- Pork Chop
+    		- Pork Chop		- Pork Chop 	- Pork Chop
+		- Pork Chop		- (e)Vile	- Pork Chop
+		- Pork Chop		- Pork Chop	- Pork Chop
 
 	Empty Storm Essence Recipe:
-    		- (Earth)Vile(e)- Water Bucket	- (Fire)Vile(e)
-		- Redstone		- (e)Vile		- Redstone
-		- (Wind)Vile(e)	- Water Bucket	- (Water)Vile(e)
+    		- (Earth)Vile(e)	- Water Bucket	- (Fire)Vile(e)
+		- Redstone		- (e)Vile	- Redstone
+		- (Wind)Vile(e)		- Water Bucket	- (Water)Vile(e)
 
 	Empty Chaos Essence Recipe:
-    		- (Earth)Vile(e)- (Heart)Vile(e)- (Fire)Vile(e)
-		- (Storm)Vile(e)- (e)Vile		- (Storm)Vile(e)
-		- (Wind)Vile(e) - Diamond		- (Water)Vile(e)
+    		- (Earth)Vile(e)	- (Heart)Vile(e)- (Fire)Vile(e)
+		- (Storm)Vile(e)	- (e)Vile	- (Storm)Vile(e)
+		- (Wind)Vile(e) 	- Diamond	- (Water)Vile(e)
 
 	Empty Order Essence Recipe:
-    		- (Earth)Vile(e)- (Heart)Vile(e)- (Fire)Vile(e)
-		- (Chaos)Vile(e)- (e)Vile		- (Chaos)Vile(e)
-		- (Wind)Vile(e) - Emerald		- (Water)Vile(e)
+    		- (Earth)Vile(e)	- (Heart)Vile(e)- (Fire)Vile(e)
+		- (Chaos)Vile(e)	- (e)Vile	- (Chaos)Vile(e)
+		- (Wind)Vile(e) 	- Emerald	- (Water)Vile(e)
 
     Earth
         - Objects with Essence:
@@ -113,45 +113,45 @@ Stones
         - Just a stone
         - Imbued with Essence
         - Recipe:
-		- Stone 		- Stone 		- Stone 
+		- Stone 		- Stone 	- Stone 
 		- Stone 		- Cobblestone	- Stone
-		- Stone 		- Stone 		- Stone  
+		- Stone 		- Stone 	- Stone  
         
     Earth Stone
         - Powers:
         - Durability:
         - Altar Recipe:
-			Earth Essence  	- Dirt
+			Earth Essence  		- Dirt
 			Dirt 			- Body Of Essence
        		
     Fire Stone
         - Powers:
         - Durability:
         - Altar Recipe:
-			Fire Essence  	- Lava Bucket
-			Lava Bucket	- Body Of Essence
+			Fire Essence  		- Lava Bucket
+			Lava Bucket		- Body Of Essence
 
         
     Wind Stone
         - Powers:
         - Durability:
         - Altar Recipe:
-			Wind Essence  	- Feather
-			Feather		- Body Of Essence
+			Wind Essence  		- Feather
+			Feather			- Body Of Essence
 
         
     Water Stone
         - Powers:
         - Durability:
         - Altar Recipe:
-			Water Essence  	- Water Bucket
-			Water Bucket	- Body Of Essence
+			Water Essence  		- Water Bucket
+			Water Bucket		- Body Of Essence
         
     Heart Stone
         - Powers:
         - Durability:
         - Altar Recipe:
-			Heart Essence  	- Pork Chop
+			Heart Essence  		- Pork Chop
 			Pork Chop		- Body Of Essence
 
         
@@ -159,7 +159,7 @@ Stones
         - Powers:
         - Durability:
         - Altar Recipe:
-			Storm Essence  	- Water Bucket
+			Storm Essence  		- Water Bucket
 			Redstone 		- Body Of Essence
 
         
@@ -167,7 +167,7 @@ Stones
         - Powers:
         - Durability:
         - Altar Recipe:
-			Chaos Essence  	- Obsidian
+			Chaos Essence  		- Obsidian
 			Diamond 		- Body Of Essence
 
         
@@ -175,7 +175,7 @@ Stones
         - Powers:
         - Durability:
         - Altar Recipe:
-			Order Essence  	- Diamond
+			Order Essence  		- Diamond
 			Emerald 		- Body Of Essence
         
     
@@ -186,17 +186,17 @@ Amulets
         - Holds a Body of Essence
         - Focuses power to higher levels or even adds new powers.
         - Recipe:
-	Blank		- Gold Ingot 		- Blank
-	Gold Ingot	- Body Of Essence	- Gold Ingot
-	Blank		- Gold Ingot		- Blank		
+		Blank		- Gold Ingot 		- Blank
+		Gold Ingot	- Body Of Essence	- Gold Ingot
+		Blank		- Gold Ingot		- Blank		
 
     Earth
         - Powers:
 		Efficiancy +1	
         - Durability: Crafting Uses 5
         -  Altar Recipe:
-        		Earth Stone	- Dirt
-			Stone 		- Amulet(G)
+        		Earth Stone		- Dirt
+			Stone 			- Amulet(G)
         
     Fire
         - Powers:
@@ -204,7 +204,7 @@ Amulets
         - Durability: Crafting Uses 5
         - Altar Recipe:
         		Fire Stone		- Lava Bucket
-			Lava Bucket 	- Amulet(G)
+			Lava Bucket 		- Amulet(G)
 
     Wind
         - Powers:
@@ -218,35 +218,35 @@ Amulets
         - Powers:Sharpness +1
         - Durability:Crafting Uses 5
         - Altar Recipe:
-        		Water Stone	- Water Bucket
-			Water	 Bucket	- Amulet(G)
+        		Water Stone		- Water Bucket
+			Water Bucket		- Amulet(G)
 
     Heart
         - Powers:Looting +1 - Smite +1 - Infinity +1
         - Durability: Crafting Uses 3
         - Altar Recipe:
-        		Heart Stone	- Pork Chop
+        		Heart Stone		- Pork Chop
 			Pork Chop		- Amulet(G)
 
     Storm
         - Powers:Unbreaking +1
         - Durability:Crafting Uses 2
         - Altar Recipe:
-        		Storm Stone	- Water Bucket
+        		Storm Stone		- Water Bucket
 			Redstone		- Amulet(G)
  
     Chaos
         - Powers: Silk Touch +1
         - Durability:Crafting Uses 2
         - Altar Recipe:
-        		Chaos Stone	- Obsidian
+        		Chaos Stone		- Obsidian
 			Diamond 		- Amulet(G)
  
     Order
         - Powers: Fortune + 1 
         - Durability:Crafting Uses 2
         - Altar Recipe:
-        		Order Stone	- Diamond
+        		Order Stone		- Diamond
 			Emerald 		- Amulet(G)
        
 Armor
@@ -256,21 +256,21 @@ Armor
         - Durability:
         - Recipe:
 	Helm -
-	- Earth Stone		- Earth Stone	- Earth Stone
-	- Earth Stone		- Blank		- Earth Stone
-	- Blank			- Earth Amulet	- Blank
+		- Earth Stone		- Earth Stone	- Earth Stone
+		- Earth Stone		- Blank		- Earth Stone
+		- Blank			- Earth Amulet	- Blank
 	Chest -
-	- Earth Stone		- Earth Amulet 	- Earth Stone
-	- Earth Stone		- Earth Stone	- Earth Stone
-	- Earth Stone		- Earth Stone	- Earth Stone
+		- Earth Stone		- Earth Amulet 	- Earth Stone
+		- Earth Stone		- Earth Stone	- Earth Stone
+		- Earth Stone		- Earth Stone	- Earth Stone
 	Legs -
-	- Earth Stone		- Earth Stone 	- Earth Stone
-	- Earth Stone		- Earth Amulet 	- Earth Stone
-	- Earth Stone		- Blank		- Earth Stone
+		- Earth Stone		- Earth Stone 	- Earth Stone
+		- Earth Stone		- Earth Amulet 	- Earth Stone
+		- Earth Stone		- Blank		- Earth Stone
 	Boots -
-	- Earth Stone		- Blank 		- Earth Stone
-	- Earth Stone		- Blank		- Earth Stone
-	- Blank			- Earth Amulet 	- Blank
+		- Earth Stone		- Blank 	- Earth Stone
+		- Earth Stone		- Blank		- Earth Stone
+		- Blank			- Earth Amulet 	- Blank
 
  
     Fire
@@ -278,21 +278,21 @@ Armor
         - Durability:
         - Recipe:
 	Helm -
-	- Fire Stone		- Fire Stone	- Fire Stone
-	- Fire Stone		- Blank		- Fire Stone
-	- Blank			- Fire Amulet	- Blank
+		- Fire Stone		- Fire Stone	- Fire Stone
+		- Fire Stone		- Blank		- Fire Stone
+		- Blank			- Fire Amulet	- Blank
 	Chest -
-	- Fire Stone		- Fire Amulet 	- Fire Stone
-	- Fire Stone		- Fire Stone	- Fire Stone
-	- Fire Stone		- Fire Stone	- Fire Stone
+		- Fire Stone		- Fire Amulet 	- Fire Stone
+		- Fire Stone		- Fire Stone	- Fire Stone
+		- Fire Stone		- Fire Stone	- Fire Stone
 	Legs -
-	- Fire Stone		- Fire Stone 	- Fire Stone
-	- Fire Stone		- Fire Amulet 	- Fire Stone
-	- Fire Stone		- Blank		- Fire Stone
+		- Fire Stone		- Fire Stone 	- Fire Stone
+		- Fire Stone		- Fire Amulet 	- Fire Stone
+		- Fire Stone		- Blank		- Fire Stone
 	Boots -
-	- Fire Stone		- Blank 		- Fire Stone
-	- Fire Stone		- Blank		- Fire Stone
-	- Blank			- Fire Amulet 	- Blank
+		- Fire Stone		- Blank 	- Fire Stone
+		- Fire Stone		- Blank		- Fire Stone
+		- Blank			- Fire Amulet 	- Blank
 
 
     Wind
@@ -300,21 +300,21 @@ Armor
         - Durability:
         - Recipe:
 	Helm -
-	- Wind Stone		- Wind Stone	- Wind Stone
-	- Wind Stone		- Blank		- Wind Stone
-	- Blank			- Wind Amulet	- Blank
+		- Wind Stone		- Wind Stone	- Wind Stone
+		- Wind Stone		- Blank		- Wind Stone
+		- Blank			- Wind Amulet	- Blank
 	Chest -
-	- Wind Stone		- Wind Amulet 	- Wind Stone
-	- Wind Stone		- Wind Stone	- Wind Stone
-	- Wind Stone		- Wind Stone	- Wind Stone
+		- Wind Stone		- Wind Amulet 	- Wind Stone
+		- Wind Stone		- Wind Stone	- Wind Stone
+		- Wind Stone		- Wind Stone	- Wind Stone
 	Legs -
-	- Wind Stone		- Wind Stone 	- Wind Stone
-	- Wind Stone		- Wind Amulet 	- Wind Stone
-	- Wind Stone		- Blank		- Wind Stone
+		- Wind Stone		- Wind Stone 	- Wind Stone
+		- Wind Stone		- Wind Amulet 	- Wind Stone
+		- Wind Stone		- Blank		- Wind Stone
 	Boots -
-	- Wind Stone		- Blank 		- Wind Stone
-	- Wind Stone		- Blank		- Wind Stone
-	- Blank			- Wind Amulet 	- Blank
+		- Wind Stone		- Blank 	- Wind Stone
+		- Wind Stone		- Blank		- Wind Stone
+		- Blank			- Wind Amulet 	- Blank
 
         
     Water
@@ -322,105 +322,106 @@ Armor
         - Durability:
         - Recipe:
 	Helm -
-	- Water Stone		- Water Stone	- Water Stone
-	- Water Stone		- Blank		- WaterStone
-	- Blank			- Water Amulet	- Blank
+		- Water Stone		- Water Stone	- Water Stone
+		- Water Stone		- Blank		- WaterStone
+		- Blank			- Water Amulet	- Blank
 	Chest -
-	- Water Stone		- Water Amulet 	- Water Stone
-	- Water Stone		- Water Stone	- Water Stone
-	- Water Stone		- Water Stone	- Water Stone
+		- Water Stone		- Water Amulet 	- Water Stone
+		- Water Stone		- Water Stone	- Water Stone
+		- Water Stone		- Water Stone	- Water Stone
 	Legs -
-	- Water Stone		- Water Stone 	- Water Stone
-	- Water Stone		- Water Amulet 	- Water Stone
-	- Water Stone		- Blank		- Water Stone
+		- Water Stone		- Water Stone 	- Water Stone
+		- Water Stone		- Water Amulet 	- Water Stone
+		- Water Stone		- Blank		- Water Stone
 	Boots -
-	- Water Stone		- Blank 		- Water Stone
-	- Water Stone		- Blank		- Water Stone
-	- Blank			- Water Amulet 	- Blank
+		- Water Stone		- Blank 	- Water Stone
+		- Water Stone		- Blank		- Water Stone
+		- Blank			- Water Amulet 	- Blank
 
     Heart
         - Powers:
         - Durability:
         - Recipe:
 	Helm -
-	- Earth Helm		- Heart Stone	- Fire Helm
-	- Wind Helm		- Blank		- Water Helm
-	- Blank			- Heart Amulet	- Blank
+		- Earth Helm		- Heart Stone	- Fire Helm
+		- Wind Helm		- Blank		- Water Helm
+		- Blank			- Heart Amulet	- Blank
 	Chest -
-	- Earth Chest		- Heart Amulet 	- Fire Chest
-	- Wind Chest		- Heart Stone	- Water Chest
-	- Heart Stone		- Heart Stone	- Heart Stone
+		- Earth Chest		- Heart Amulet 	- Fire Chest
+		- Wind Chest		- Heart Stone	- Water Chest
+		- Heart Stone		- Heart Stone	- Heart Stone
 	Legs -
-	- Earth Legs		- Heart Stone 	- Fire Legs
-	- Wind Legs		- Heart Amulet 	- Water Legs
-	- Heart Stone		- Blank		- Heart Stone
+		- Earth Legs		- Heart Stone 	- Fire Legs
+		- Wind Legs		- Heart Amulet 	- Water Legs
+		- Heart Stone		- Blank		- Heart Stone
 	Boots -
-	- Earth Boots		- Blank 		- Fire Boots
-	- Wind Boots		- Heart Stone	- Water Boots
-	- Blank			- Heart Amulet 	- Blank
+		- Earth Boots		- Blank 	- Fire Boots
+		- Wind Boots		- Heart Stone	- Water Boots
+		- Blank			- Heart Amulet 	- Blank
         
     Storm
         - Powers:
         - Durability:
         - Recipe:
 	Helm -
-	- Earth Helm		- Storm Stone	- Fire Helm
-	- Wind Helm		- Blank		- Water Helm
-	- Blank			- Storm Amulet	- Blank
+		- Earth Helm		- Storm Stone	- Fire Helm
+		- Wind Helm		- Blank		- Water Helm
+		- Blank			- Storm Amulet	- Blank
 	Chest -
-	- Earth Chest		- Storm Amulet 	- Fire Chest
-	- Wind Chest		- Storm Stone	- Water Chest
-	- Storm Stone		- Storm Stone	- Storm Stone
+		- Earth Chest		- Storm Amulet 	- Fire Chest
+		- Wind Chest		- Storm Stone	- Water Chest
+		- Storm Stone		- Storm Stone	- Storm Stone
 	Legs -
-	- Earth Legs		- Storm Stone 	- Fire Legs
-	- Wind Legs		- Storm Amulet 	- Water Legs
-	- Storm Stone		- Blank		- Storm Stone
+		- Earth Legs		- Storm Stone 	- Fire Legs
+		- Wind Legs		- Storm Amulet 	- Water Legs
+		- Storm Stone		- Blank		- Storm Stone
 	Boots -
-	- Earth Boots		- Blank 		- Fire Boots
-	- Wind Boots		- Storm Stone	- Water Boots
-	- Blank			- Storm Amulet 	- Blank
+		- Earth Boots		- Blank 	- Fire Boots
+		- Wind Boots		- Storm Stone	- Water Boots
+		- Blank			- Storm Amulet 	- Blank
        
     Chaos
         - Powers:
         - Durability:
         - Recipe:
 	Helm -
-	- Earth Helm		- Chaos Stone	- Fire Helm
-	- Wind Helm		- Blank		- Storm Helm
-	- Blank			- Chaos Amulet	- Blank
+		- Earth Helm		- Chaos Stone	- Fire Helm
+		- Wind Helm		- Blank		- Storm Helm
+		- Blank			- Chaos Amulet	- Blank
 	Chest -
-	- Earth Chest		- Chaos Amulet 	- Fire Chest
-	- Wind Chest		- Chaos Stone	- Storm Chest
-	- Chaos Stone		- Chaos Stone	- Chaos Stone
+		- Earth Chest		- Chaos Amulet 	- Fire Chest
+		- Wind Chest		- Chaos Stone	- Storm Chest
+		- Chaos Stone		- Chaos Stone	- Chaos Stone
 	Legs -
-	- Earth Legs		- Chaos Stone 	- Fire Legs
-	- Wind Legs		- Chaos Amulet 	- Storm Legs
-	- Chaos Stone		- Blank		- Chaos Stone
+		- Earth Legs		- Chaos Stone 	- Fire Legs
+		- Wind Legs		- Chaos Amulet 	- Storm Legs
+		- Chaos Stone		- Blank		- Chaos Stone
 	Boots -
-	- Earth Boots		- Blank 		- Fire Boots
-	- Wind Boots		- Chaos Stone	- Storm Boots
-	- Blank			- Chaos Amulet 	- Blank
+		- Earth Boots		- Blank 	- Fire Boots
+		- Wind Boots		- Chaos Stone	- Storm Boots
+		- Blank			- Chaos Amulet 	- Blank
        
     Order
         - Powers:
         - Durability:
         - Recipe:
+
 	Helm -
-	- Earth Helm		- Chaos Helm	- Heart Helm
-	- Wind Helm		- Storm Helm	- Water Helm
-	- Blank			- Order Amulet	- Blank
+		- Earth Helm		- Chaos Helm	- Heart Helm
+		- Wind Helm		- Storm Helm	- Water Helm
+		- Blank			- Order Amulet	- Blank
 	Chest -
-	- Earth Chest		- Order Amulet 	- Heart Chest
-	- Wind Chest		- Order Stone	- Water Chest
-	- Chaos Chest		- Order Stone	- Storm Chest
+		- Earth Chest		- Order Amulet 	- Heart Chest
+		- Wind Chest		- Order Stone	- Water Chest
+		- Chaos Chest		- Order Stone	- Storm Chest
 	Legs -
-	- Earth Legs		- Order Stone 	- Heart Legs
-	- Wind Legs		- Order Amulet 	- Water Legs
-	- Chaos Legs		- Blank		- Storm Legs
+		- Earth Legs		- Order Stone 	- Heart Legs
+		- Wind Legs		- Order Amulet 	- Water Legs
+		- Chaos Legs		- Blank		- Storm Legs
 	Boots -
-	- Earth Boots		- Blank 		- Heart Boots
-	- Wind Boots		- Order Stone	- Water Boots
-	- Chaos Boots		- Order Amulet 	- Storm Boots
+		- Earth Boots		- Blank 	- Heart Boots
+		- Wind Boots		- Order Stone	- Water Boots
+		- Chaos Boots		- Order Amulet 	- Storm Boots
 
 
 Swords
@@ -437,9 +438,9 @@ Swords
 	- Powers:
 	- Durability:
 	- Recipe:
-		(blank)		- (Chaos Stone)	- (blank)
-    		(blank)		- (Chaos Amulet)	- (blank)
-		(blank)		- (Storm Sword)	- (blank)
+		(blank)	- (Chaos Stone)	- (blank)
+    		(blank)	- (Chaos Amulet)- (blank)
+		(blank)	- (Storm Sword)	- (blank)
 
 
 	The Order of Gaia
@@ -447,7 +448,7 @@ Swords
 	- Durability:
 	- Recipe:
 		(blank)		- (Order Stone)	- (blank)
-    		(Chaos Sword)	- (Order Amulet)	- (Storm Sword)
+    		(Chaos Sword)	- (Order Amulet)- (Storm Sword)
 		(blank)		- (Emerald)	- (blank)
 
 

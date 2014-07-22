@@ -34,7 +34,7 @@ Blocks
 
 Essence
 
- Holder of Essence
+	 Holder of Essence
         - Just a vial
         - Hold various essence.
         - Recipe:
@@ -42,42 +42,42 @@ Essence
 		- Glass		- Obsidian		- Glass
 		- Glass		- Glass		- Glass 
 
-Empty Earth Essence Recipe:
+	Empty Earth Essence Recipe:
     		- Dirt		- Dirt 		- Dirt
 		- Dirt		- (e)Vile		- Dirt
 		- Dirt		- Dirt		- Dirt
 
-Empty Fire Essence Recipe:
+	Empty Fire Essence Recipe:
     		- Lava Bucket	- Lava Bucket 	- Lava Bucket
 		- Lava Bucket	- (e)Vile		- Lava Bucket
 		- Lava Bucket	- Lava Bucket	- Lava Bucket
 
-Empty Wind Essence Recipe:
+	Empty Wind Essence Recipe:
     		- Feather		- Feather		- Feather
 		- Feather		- (e)Vile		- Feather
 		- Feather		- Feather		- Feather
 
-Empty Water Essence Recipe:
+	Empty Water Essence Recipe:
    		- Water Bucket	- Water Bucket	- Water Bucket
 		- Water Bucket	- (e)Vile		- Water Bucket
 		- Water Bucket	- Water Bucket	- Water Bucket
 
-Empty Heart Essence Recipe:
+	Empty Heart Essence Recipe:
     		- Pork Chop	- Pork Chop 	- Pork Chop
 		- Pork Chop	- (e)Vile		- Pork Chop
 		- Pork Chop	- Pork Chop	- Pork Chop
 
-Empty Storm Essence Recipe:
+	Empty Storm Essence Recipe:
     		- (Earth)Vile(e)- Water Bucket	- (Fire)Vile(e)
 		- Redstone		- (e)Vile		- Redstone
 		- (Wind)Vile(e)	- Water Bucket	- (Water)Vile(e)
 
-Empty Chaos Essence Recipe:
+	Empty Chaos Essence Recipe:
     		- (Earth)Vile(e)- (Heart)Vile(e)- (Fire)Vile(e)
 		- (Storm)Vile(e)- (e)Vile		- (Storm)Vile(e)
 		- (Wind)Vile(e) - Diamond		- (Water)Vile(e)
 
-Empty Order Essence Recipe:
+	Empty Order Essence Recipe:
     		- (Earth)Vile(e)- (Heart)Vile(e)- (Fire)Vile(e)
 		- (Chaos)Vile(e)- (e)Vile		- (Chaos)Vile(e)
 		- (Wind)Vile(e) - Emerald		- (Water)Vile(e)
@@ -192,56 +192,59 @@ Amulets
 
     Earth
         - Powers:
-        - Durability:
+		Efficiancy +1	
+        - Durability: Crafting Uses 5
         -  Altar Recipe:
         		Earth Stone	- Dirt
 			Stone 		- Amulet(G)
         
     Fire
         - Powers:
-        - Durability:
+		Fire Aspect
+        - Durability: Crafting Uses 5
         - Altar Recipe:
         		Fire Stone		- Lava Bucket
 			Lava Bucket 	- Amulet(G)
 
     Wind
         - Powers:
-        - Durability:
+		Knockback +1 & Punch +1
+        - Durability:Crafting Uses
         - Altar Recipe:
         		Wind Stone		- Feather
 			Feather 		- Amulet(G)
         
     Water
-        - Powers:
-        - Durability:
+        - Powers:Sharpness +1
+        - Durability:Crafting Uses 5
         - Altar Recipe:
         		Water Stone	- Water Bucket
 			Water	 Bucket	- Amulet(G)
 
     Heart
-        - Powers:
-        - Durability:
+        - Powers:Looting +1 - Smite +1 - Infinity +1
+        - Durability: Crafting Uses 3
         - Altar Recipe:
         		Heart Stone	- Pork Chop
 			Pork Chop		- Amulet(G)
 
     Storm
-        - Powers:
-        - Durability:
+        - Powers:Unbreaking +1
+        - Durability:Crafting Uses 2
         - Altar Recipe:
         		Storm Stone	- Water Bucket
 			Redstone		- Amulet(G)
  
     Chaos
-        - Powers:
-        - Durability:
+        - Powers: Silk Touch +1
+        - Durability:Crafting Uses 2
         - Altar Recipe:
         		Chaos Stone	- Obsidian
 			Diamond 		- Amulet(G)
  
     Order
-        - Powers:
-        - Durability:
+        - Powers: Fortune + 1 
+        - Durability:Crafting Uses 2
         - Altar Recipe:
         		Order Stone	- Diamond
 			Emerald 		- Amulet(G)
@@ -418,8 +421,37 @@ Armor
 	- Earth Boots		- Blank 		- Heart Boots
 	- Wind Boots		- Order Stone	- Water Boots
 	- Chaos Boots		- Order Amulet 	- Storm Boots
-  
-    
+
+
+Swords
+	
+	Blade of Jupiter (aka Third Leg of Zues)(Thunder Fucker)
+	- Powers:
+	- Durability:
+	- Recipe:
+		(blank)		- (Storm Stone)	- (blank)
+    		(Storm Amulet)	- (Storm Stone)	- (Storm Amulet)
+		(blank)		- (Diamond)	- (blank)
+
+	The Chaos of Tartarus (Chaos Sword)
+	- Powers:
+	- Durability:
+	- Recipe:
+		(blank)		- (Chaos Stone)	- (blank)
+    		(blank)		- (Chaos Amulet)	- (blank)
+		(blank)		- (Storm Sword)	- (blank)
+
+
+	The Order of Gaia
+	- Powers:
+	- Durability:
+	- Recipe:
+		(blank)		- (Order Stone)	- (blank)
+    		(Chaos Sword)	- (Order Amulet)	- (Storm Sword)
+		(blank)		- (Emerald)	- (blank)
+
+
+
 OLD TODO INFO (LEAVING FOR REFERENCE)
 
 - Gaia Alter (used for crafting gaia stones, has storage space for water + lava and a small crafting grid)
@@ -437,7 +469,7 @@ Armor
 - Water Armor (Water breathing, night-vision while underwater, being submerged heals the armor's durability)
 - Heart Armor (All mobs become friendly unless provoked)
 
-- Note: Durability of all armors can be restored via preying, using an anvil, or the armor's special ability
+- Note: Durability of all armors can be restored via praying, using an anvil, or the armor's special ability
 
 Weapons
 - Gaia Sword

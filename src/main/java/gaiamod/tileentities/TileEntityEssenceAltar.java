@@ -337,7 +337,7 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		Random r = new Random();
 		float chance = r.nextFloat();
 
-		  if (chance <= 0.50f){
+		  if (chance <= 0.80f){
 		    return true;
 		  }
 		  else{

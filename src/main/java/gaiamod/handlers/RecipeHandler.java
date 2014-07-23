@@ -22,6 +22,13 @@ public class RecipeHandler {
  
     	//Blocks//
     	
+    	CraftingManager.getInstance().addRecipe(new ItemStack(ModBlocks.marbleBrickBlock, 4),
+    			"ss ",
+				"ss ",
+				"   ",
+
+				's', ModBlocks.marbleBlock);
+    	
     	CraftingManager.getInstance().addRecipe(new ItemStack(ModBlocks.gaiaAltarBlockIdle, 1),
     			"sss",
 				"cec",

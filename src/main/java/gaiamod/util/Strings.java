@@ -6,6 +6,9 @@ public class Strings {
 	public static final String EssenceAltarBlockName = "essenceAltarBlock";
 	
 	public static final String GaiaShrineBlockName = "gaiaShrine";
+	
+	public static final String MarbleBlockName = "marbleBlock";
+	public static final String MarbleBrickBlockName = "marbleBrickBlock";
 
 
 	public static final String EssenceItemName = "essenceItem";

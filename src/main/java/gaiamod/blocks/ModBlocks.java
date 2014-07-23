@@ -16,6 +16,10 @@ public class ModBlocks {
 	public static Block essenceAltarBlockIdlePower;
 	public static Block essenceAltarBlockActive;
 	
+	
+	public static Block marbleBlock;
+	public static Block marbleBrickBlock;
+	
 	//public static Block gaiaShrine;
 	
 	public static void init()
@@ -43,6 +47,13 @@ public class ModBlocks {
 		
 		//gaiaShrine = new GaiaShrineBlock();
 		//Registrar.registerBlock(gaiaShrine);
+		
+		
+		marbleBlock = new MarbleBlock().setBlockName(Strings.MarbleBlockName).setHardness(1.25F);
+		Registrar.registerBlock(marbleBlock);
+		
+		marbleBrickBlock = new MarbleBrickBlock().setBlockName(Strings.MarbleBrickBlockName).setHardness(1.25F);
+		Registrar.registerBlock(marbleBrickBlock);
 		
     }
 }

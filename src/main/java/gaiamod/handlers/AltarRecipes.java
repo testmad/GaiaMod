@@ -3,12 +3,15 @@ package gaiamod.handlers;
 import gaiamod.amulets.ModAmulets;
 import gaiamod.essence.ModEssence;
 import gaiamod.stones.ModStones;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class AltarRecipes {
+	
 
 	public AltarRecipes(){
 		
@@ -85,7 +88,222 @@ public class AltarRecipes {
 			return new ItemStack(ModAmulets.orderAmuletItem, 1);
 		}
 		
+		
+		
+		
 		return null;
+	}
+	
+	public static ItemStack getEnchantingResult(Item item, Item item2, ItemStack item3, ItemStack item4) {
+		return getEnchanted(item, item2, item3, item4);
+	}
+	
+	private static ItemStack getEnchanted(Item item, Item item2, ItemStack item3, ItemStack item4) {
+		ItemStack result;
+
+		
+		if (item == ModAmulets.earthAmuletItem && item2.getItemEnchantability() > 0){
+			if(item2 == Items.diamond_shovel || item2 == Items.diamond_pickaxe || item2 == Items.diamond_axe || item2 == Items.shears ){
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.efficiency.effectId, item4);
+				if (lvl == 5){
+					return null;
+				}else if(item3.stackSize < lvl){
+					return null;
+				}else if (item3.stackSize > lvl){
+					result = new ItemStack(item2, 1);
+					result.addEnchantment(Enchantment.efficiency, lvl + 1);
+					return result;
+				}
+			}else if(item2 == Items.fishing_rod){
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.field_151369_A.effectId, item4);
+				if (lvl == 3){
+					return null;
+				}else if(item3.stackSize < lvl){
+					return null;
+				}else if (item3.stackSize > lvl){
+					result = new ItemStack(item2, 1);
+					result.addEnchantment(Enchantment.field_151369_A, lvl + 1);
+					return result;
+				}
+			}
+		}
+		
+		
+		//todo add gaia swords//
+		
+		if (item == ModAmulets.fireAmuletItem && item2.getItemEnchantability() > 0){
+			if(item2 == Items.diamond_sword ){
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.fireAspect.effectId, item4);
+				if (lvl == 2){
+					return null;
+				}else if(item3.stackSize < lvl){
+					return null;
+				}else if (item3.stackSize > lvl){
+					result = new ItemStack(item2, 1);
+					result.addEnchantment(Enchantment.fireAspect, lvl + 1);
+					return result;
+				}
+			}else if(item2 == Items.bow){
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.flame.effectId, item4);
+				if (lvl == 1){
+					return null;
+				}else if(item3.stackSize < lvl){
+					return null;
+				}else if (item3.stackSize > lvl){
+					result = new ItemStack(item2, 1);
+					result.addEnchantment(Enchantment.flame, lvl + 1);
+					return result;
+				}
+			}
+		}
+		
+		if (item == ModAmulets.windAmuletItem && item2.getItemEnchantability() > 0){
+			if(item2 == Items.diamond_sword ){
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.knockback.effectId, item4);
+				if (lvl == 2){
+					return null;
+				}else if(item3.stackSize < lvl){
+					return null;
+				}else if (item3.stackSize > lvl){
+					result = new ItemStack(item2, 1);
+					result.addEnchantment(Enchantment.knockback, lvl + 1);
+					return result;
+				}
+			}else if(item2 == Items.bow){
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.punch.effectId, item4);
+				if (lvl == 2){
+					return null;
+				}else if(item3.stackSize < lvl){
+					return null;
+				}else if (item3.stackSize > lvl){
+					result = new ItemStack(item2, 1);
+					result.addEnchantment(Enchantment.punch, lvl + 1);
+					return result;
+				}
+			}
+		}
+		
+		if (item == ModAmulets.waterAmuletItem && item2.getItemEnchantability() > 0){
+			if(item2 == Items.diamond_sword || item2 == Items.diamond_axe ){
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.sharpness.effectId, item4);
+				if (lvl == 5){
+					return null;
+				}else if(item3.stackSize < lvl){
+					return null;
+				}else if (item3.stackSize > lvl){
+					result = new ItemStack(item2, 1);
+					result.addEnchantment(Enchantment.sharpness, lvl + 1);
+					return result;
+				}
+			}else if(item2 == Items.bow){
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.power.effectId, item4);
+				if (lvl == 5){
+					return null;
+				}else if(item3.stackSize < lvl){
+					return null;
+				}else if (item3.stackSize > lvl){
+					result = new ItemStack(item2, 1);
+					result.addEnchantment(Enchantment.power, lvl + 1);
+					return result;
+				}
+			}
+		}
+		
+		if (item == ModAmulets.heartAmuletItem && item2.getItemEnchantability() > 0){
+			if(item2 == Items.diamond_sword ){
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.looting.effectId, item4);
+				if (lvl == 3){
+					return null;
+				}else if(item3.stackSize < lvl){
+					return null;
+				}else if (item3.stackSize > lvl){
+					result = new ItemStack(item2, 1);
+					result.addEnchantment(Enchantment.looting, lvl + 1);
+					return result;
+				}
+			}else if(item2 == Items.diamond_axe ){
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.smite.effectId, item4);
+				if (lvl == 5){
+					return null;
+				}else if(item3.stackSize < lvl){
+					return null;
+				}else if (item3.stackSize > lvl){
+					result = new ItemStack(item2, 1);
+					result.addEnchantment(Enchantment.smite, lvl + 1);
+					return result;
+				}
+			}else if(item2 == Items.bow){
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.infinity.effectId, item4);
+				if (lvl == 1){
+					return null;
+				}else if(item3.stackSize < lvl){
+					return null;
+				}else if (item3.stackSize > lvl){
+					result = new ItemStack(item2, 1);
+					result.addEnchantment(Enchantment.infinity, lvl + 1);
+					return result;
+				}
+			}
+		}
+		
+		if (item == ModAmulets.stormAmuletItem && item2.getItemEnchantability() > 0){
+			if(item2 == Items.diamond_pickaxe || item2 == Items.diamond_shovel || item2 == Items.diamond_axe || item2 == Items.fishing_rod || item2 == Items.diamond_sword || item2 == Items.bow || item2 == Items.diamond_hoe || item2 == Items.shears || item2 == Items.flint_and_steel || item2 == Items.carrot_on_a_stick){
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.unbreaking.effectId, item4);
+				if (lvl == 3){
+					return null;
+				}else if(item3.stackSize < lvl){
+					return null;
+				}else if (item3.stackSize > lvl){
+					result = new ItemStack(item2, 1);
+					result.addEnchantment(Enchantment.unbreaking, lvl + 1);
+					return result;
+				}
+			}
+		}
+		
+		
+		if (item == ModAmulets.chaosAmuletItem && item2.getItemEnchantability() > 0){
+			if(item2 == Items.diamond_pickaxe || item2 == Items.diamond_shovel || item2 == Items.diamond_axe || item2 == Items.shears ){
+				if (EnchantmentHelper.getEnchantmentLevel(Enchantment.fortune.effectId, item4) > 0){
+					return null;
+				}else
+				{
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.silkTouch.effectId, item4);
+				if (lvl == 1){
+					return null;
+				}else if(item3.stackSize < lvl){
+					return null;
+				}else if (item3.stackSize > lvl){
+					result = new ItemStack(item2, 1);
+					result.addEnchantment(Enchantment.silkTouch, lvl + 1);
+					return result;
+				}
+				}
+			}
+		}
+		
+		if (item == ModAmulets.chaosAmuletItem && item2.getItemEnchantability() > 0){
+			if(item2 == Items.diamond_pickaxe || item2 == Items.diamond_shovel || item2 == Items.diamond_axe ){
+				if (EnchantmentHelper.getEnchantmentLevel(Enchantment.silkTouch.effectId, item4) > 0){
+					return null;
+				}else
+				{
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.fortune.effectId, item4);
+				if (lvl == 3){
+					return null;
+				}else if(item3.stackSize < lvl){
+					return null;
+				}else if (item3.stackSize > lvl){
+					result = new ItemStack(item2, 1);
+					result.addEnchantment(Enchantment.fortune, lvl + 1);
+					return result;
+				}
+				}
+			}
+		}
+		
+		return null;
+		
 	}
 
 }

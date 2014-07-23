@@ -1,5 +1,6 @@
 package gaiamod.containers;
 
+import gaiamod.slots.SlotEssenceAltar;
 import gaiamod.slots.SlotGaiaAltar;
 import gaiamod.tileentities.TileEntityEssenceAltar;
 import net.minecraft.entity.player.EntityPlayer;
@@ -44,7 +45,7 @@ public class ContainerEssenceAltar extends Container{
 		this.addSlotToContainer(new Slot(entity, 3, 60, 44));
 		
 		//result
-		this.addSlotToContainer(new SlotGaiaAltar(invPlayer.player, entity, 4, 118, 35));
+		this.addSlotToContainer(new SlotEssenceAltar(invPlayer.player, entity, 4, 118, 35));
 		
 		//water slot
 		this.addSlotToContainer(new Slot(entity, 5, 10, 58));

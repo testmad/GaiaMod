@@ -153,339 +153,339 @@ public class RecipeHandler {
     	
     	//Armors
     	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.earthHelmet, 1),
-				"sss",
-				"s s",
-				" a ",
-
-				's', ModStones.earthStoneItem,
-				'a', ModAmulets.earthAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.earthChest, 1),
-				"sas",
-				"sss",
-				"sss",
-
-				's', ModStones.earthStoneItem,
-				'a', ModAmulets.earthAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.earthLeggings, 1),
-				"sss",
-				"sas",
-				"s s",
-
-				's', ModStones.earthStoneItem,
-				'a', ModAmulets.earthAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.earthBoots, 1),
-				"s s",
-				"s s",
-				" a ",
-
-				's', ModStones.earthStoneItem,
-				'a', ModAmulets.earthAmuletItem);
-    	
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.fireHelmet, 1),
-				"sss",
-				"s s",
-				" a ",
-
-				's', ModStones.fireStoneItem,
-				'a', ModAmulets.fireAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.fireChest, 1),
-				"sas",
-				"sss",
-				"sss",
-
-				's', ModStones.fireStoneItem,
-				'a', ModAmulets.fireAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.fireLeggings, 1),
-				"sss",
-				"sas",
-				"s s",
-
-				's', ModStones.fireStoneItem,
-				'a', ModAmulets.fireAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.fireBoots, 1),
-				"s s",
-				"s s",
-				" a ",
-
-				's', ModStones.fireStoneItem,
-				'a', ModAmulets.fireAmuletItem);
-    	
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.windHelmet, 1),
-				"sss",
-				"s s",
-				" a ",
-
-				's', ModStones.windStoneItem,
-				'a', ModAmulets.windAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.windChest, 1),
-				"sas",
-				"sss",
-				"sss",
-
-				's', ModStones.windStoneItem,
-				'a', ModAmulets.windAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.windLeggings, 1),
-				"sss",
-				"sas",
-				"s s",
-
-				's', ModStones.windStoneItem,
-				'a', ModAmulets.windAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.windBoots, 1),
-				"s s",
-				"s s",
-				" a ",
-
-				's', ModStones.windStoneItem,
-				'a', ModAmulets.windAmuletItem);
-    	
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.waterHelmet, 1),
-				"sss",
-				"s s",
-				" a ",
-
-				's', ModStones.waterStoneItem,
-				'a', ModAmulets.waterAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.waterChest, 1),
-				"sas",
-				"sss",
-				"sss",
-
-				's', ModStones.waterStoneItem,
-				'a', ModAmulets.waterAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.waterLeggings, 1),
-				"sss",
-				"sas",
-				"s s",
-
-				's', ModStones.waterStoneItem,
-				'a', ModAmulets.waterAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.waterBoots, 1),
-				"s s",
-				"s s",
-				" a ",
-
-				's', ModStones.waterStoneItem,
-				'a', ModAmulets.waterAmuletItem);
-    	
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.heartHelmet, 1),
-				"esf",
-				"w x",
-				" a ",
-
-				's', ModStones.heartStoneItem,
-				'e', ModArmor.earthHelmet,
-				'f', ModArmor.fireHelmet,
-				'w', ModArmor.windHelmet,
-				'x', ModArmor.waterHelmet,
-				'a', ModAmulets.heartAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.heartChest, 1),
-				"eaf",
-				"wsx",
-				"sss",
-
-				's', ModStones.heartStoneItem,
-				'e', ModArmor.earthChest,
-				'f', ModArmor.fireChest,
-				'w', ModArmor.windChest,
-				'x', ModArmor.waterChest,
-				'a', ModAmulets.heartAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.heartLeggings, 1),
-				"esf",
-				"wax",
-				"s s",
-
-				's', ModStones.heartStoneItem,
-				'e', ModArmor.earthLeggings,
-				'f', ModArmor.fireLeggings,
-				'w', ModArmor.windLeggings,
-				'x', ModArmor.waterLeggings,
-				'a', ModAmulets.heartAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.heartBoots, 1),
-				"e f",
-				"wsx",
-				" a ",
-
-				's', ModStones.heartStoneItem,
-				'e', ModArmor.earthBoots,
-				'f', ModArmor.fireBoots,
-				'w', ModArmor.windBoots,
-				'x', ModArmor.waterBoots,
-				'a', ModAmulets.heartAmuletItem);
-    	
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.stormHelmet, 1),
-				"esf",
-				"w x",
-				" a ",
-
-				's', ModStones.stormStoneItem,
-				'e', ModArmor.earthHelmet,
-				'f', ModArmor.fireHelmet,
-				'w', ModArmor.windHelmet,
-				'x', ModArmor.waterHelmet,
-				'a', ModAmulets.stormAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.stormChest, 1),
-				"eaf",
-				"wsx",
-				"sss",
-
-				's', ModStones.heartStoneItem,
-				'e', ModArmor.earthChest,
-				'f', ModArmor.fireChest,
-				'w', ModArmor.windChest,
-				'x', ModArmor.waterChest,
-				'a', ModAmulets.heartAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.stormLeggings, 1),
-				"esf",
-				"wax",
-				"s s",
-
-				's', ModStones.stormStoneItem,
-				'e', ModArmor.earthLeggings,
-				'f', ModArmor.fireLeggings,
-				'w', ModArmor.windLeggings,
-				'x', ModArmor.waterLeggings,
-				'a', ModAmulets.stormAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.stormBoots, 1),
-				"e f",
-				"wsx",
-				" a ",
-
-				's', ModStones.stormStoneItem,
-				'e', ModArmor.earthBoots,
-				'f', ModArmor.fireBoots,
-				'w', ModArmor.windBoots,
-				'x', ModArmor.waterBoots,
-				'a', ModAmulets.stormAmuletItem);
-    	
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.chaosHelmet, 1),
-				"esf",
-				"w x",
-				" a ",
-
-				's', ModStones.chaosStoneItem,
-				'e', ModArmor.earthHelmet,
-				'f', ModArmor.fireHelmet,
-				'w', ModArmor.windHelmet,
-				'x', ModArmor.stormHelmet,
-				'a', ModAmulets.chaosAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.chaosChest, 1),
-				"eaf",
-				"wsx",
-				"sss",
-
-				's', ModStones.chaosStoneItem,
-				'e', ModArmor.earthChest,
-				'f', ModArmor.fireChest,
-				'w', ModArmor.windChest,
-				'x', ModArmor.stormChest,
-				'a', ModAmulets.chaosAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.chaosLeggings, 1),
-				"esf",
-				"wax",
-				"s s",
-
-				's', ModStones.chaosStoneItem,
-				'e', ModArmor.earthLeggings,
-				'f', ModArmor.fireLeggings,
-				'w', ModArmor.windLeggings,
-				'x', ModArmor.stormLeggings,
-				'a', ModAmulets.chaosAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.chaosBoots, 1),
-				"e f",
-				"wsx",
-				" a ",
-
-				's', ModStones.chaosStoneItem,
-				'e', ModArmor.earthBoots,
-				'f', ModArmor.fireBoots,
-				'w', ModArmor.windBoots,
-				'x', ModArmor.stormBoots,
-				'a', ModAmulets.chaosAmuletItem);
-    	
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.orderHelmet, 1),
-				"ecf",
-				"wsx",
-				" a ",
-
-				's', ModArmor.stormHelmet,
-				'e', ModArmor.earthHelmet,
-				'f', ModArmor.heartHelmet,
-				'w', ModArmor.windHelmet,
-				'c', ModArmor.chaosHelmet,
-				'x', ModArmor.waterHelmet,
-				'a', ModAmulets.orderAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.orderChest, 1),
-				"eaf",
-				"wsx",
-				"csq",
-
-				's', ModStones.orderStoneItem,
-				'e', ModArmor.earthChest,
-				'f', ModArmor.heartChest,
-				'w', ModArmor.windChest,
-				'c', ModArmor.chaosChest,
-				'q', ModArmor.stormChest,
-				'x', ModArmor.waterChest,
-				'a', ModAmulets.orderAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.orderLeggings, 1),
-				"esf",
-				"wax",
-				"c q",
-
-				's', ModStones.orderStoneItem,
-				'e', ModArmor.earthLeggings,
-				'f', ModArmor.heartLeggings,
-				'w', ModArmor.windLeggings,
-				'c', ModArmor.chaosChest,
-				'q', ModArmor.stormChest,
-				'x', ModArmor.waterLeggings,
-				'a', ModAmulets.orderAmuletItem);
-    	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.orderBoots, 1),
-				"e f",
-				"wsx",
-				"caq",
-
-				's', ModStones.orderStoneItem,
-				'e', ModArmor.earthBoots,
-				'f', ModArmor.heartBoots,
-				'w', ModArmor.windBoots,
-				'c', ModArmor.chaosChest,
-				'q', ModArmor.stormChest,
-				'x', ModArmor.waterBoots,
-				'a', ModAmulets.orderAmuletItem);
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.earthHelmet, 1),
+//				"sss",
+//				"s s",
+//				" a ",
+//
+//				's', ModStones.earthStoneItem,
+//				'a', ModAmulets.earthAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.earthChest, 1),
+//				"sas",
+//				"sss",
+//				"sss",
+//
+//				's', ModStones.earthStoneItem,
+//				'a', ModAmulets.earthAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.earthLeggings, 1),
+//				"sss",
+//				"sas",
+//				"s s",
+//
+//				's', ModStones.earthStoneItem,
+//				'a', ModAmulets.earthAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.earthBoots, 1),
+//				"s s",
+//				"s s",
+//				" a ",
+//
+//				's', ModStones.earthStoneItem,
+//				'a', ModAmulets.earthAmuletItem);
+//    	
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.fireHelmet, 1),
+//				"sss",
+//				"s s",
+//				" a ",
+//
+//				's', ModStones.fireStoneItem,
+//				'a', ModAmulets.fireAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.fireChest, 1),
+//				"sas",
+//				"sss",
+//				"sss",
+//
+//				's', ModStones.fireStoneItem,
+//				'a', ModAmulets.fireAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.fireLeggings, 1),
+//				"sss",
+//				"sas",
+//				"s s",
+//
+//				's', ModStones.fireStoneItem,
+//				'a', ModAmulets.fireAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.fireBoots, 1),
+//				"s s",
+//				"s s",
+//				" a ",
+//
+//				's', ModStones.fireStoneItem,
+//				'a', ModAmulets.fireAmuletItem);
+//    	
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.windHelmet, 1),
+//				"sss",
+//				"s s",
+//				" a ",
+//
+//				's', ModStones.windStoneItem,
+//				'a', ModAmulets.windAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.windChest, 1),
+//				"sas",
+//				"sss",
+//				"sss",
+//
+//				's', ModStones.windStoneItem,
+//				'a', ModAmulets.windAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.windLeggings, 1),
+//				"sss",
+//				"sas",
+//				"s s",
+//
+//				's', ModStones.windStoneItem,
+//				'a', ModAmulets.windAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.windBoots, 1),
+//				"s s",
+//				"s s",
+//				" a ",
+//
+//				's', ModStones.windStoneItem,
+//				'a', ModAmulets.windAmuletItem);
+//    	
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.waterHelmet, 1),
+//				"sss",
+//				"s s",
+//				" a ",
+//
+//				's', ModStones.waterStoneItem,
+//				'a', ModAmulets.waterAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.waterChest, 1),
+//				"sas",
+//				"sss",
+//				"sss",
+//
+//				's', ModStones.waterStoneItem,
+//				'a', ModAmulets.waterAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.waterLeggings, 1),
+//				"sss",
+//				"sas",
+//				"s s",
+//
+//				's', ModStones.waterStoneItem,
+//				'a', ModAmulets.waterAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.waterBoots, 1),
+//				"s s",
+//				"s s",
+//				" a ",
+//
+//				's', ModStones.waterStoneItem,
+//				'a', ModAmulets.waterAmuletItem);
+//    	
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.heartHelmet, 1),
+//				"esf",
+//				"w x",
+//				" a ",
+//
+//				's', ModStones.heartStoneItem,
+//				'e', ModArmor.earthHelmet,
+//				'f', ModArmor.fireHelmet,
+//				'w', ModArmor.windHelmet,
+//				'x', ModArmor.waterHelmet,
+//				'a', ModAmulets.heartAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.heartChest, 1),
+//				"eaf",
+//				"wsx",
+//				"sss",
+//
+//				's', ModStones.heartStoneItem,
+//				'e', ModArmor.earthChest,
+//				'f', ModArmor.fireChest,
+//				'w', ModArmor.windChest,
+//				'x', ModArmor.waterChest,
+//				'a', ModAmulets.heartAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.heartLeggings, 1),
+//				"esf",
+//				"wax",
+//				"s s",
+//
+//				's', ModStones.heartStoneItem,
+//				'e', ModArmor.earthLeggings,
+//				'f', ModArmor.fireLeggings,
+//				'w', ModArmor.windLeggings,
+//				'x', ModArmor.waterLeggings,
+//				'a', ModAmulets.heartAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.heartBoots, 1),
+//				"e f",
+//				"wsx",
+//				" a ",
+//
+//				's', ModStones.heartStoneItem,
+//				'e', ModArmor.earthBoots,
+//				'f', ModArmor.fireBoots,
+//				'w', ModArmor.windBoots,
+//				'x', ModArmor.waterBoots,
+//				'a', ModAmulets.heartAmuletItem);
+//    	
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.stormHelmet, 1),
+//				"esf",
+//				"w x",
+//				" a ",
+//
+//				's', ModStones.stormStoneItem,
+//				'e', ModArmor.earthHelmet,
+//				'f', ModArmor.fireHelmet,
+//				'w', ModArmor.windHelmet,
+//				'x', ModArmor.waterHelmet,
+//				'a', ModAmulets.stormAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.stormChest, 1),
+//				"eaf",
+//				"wsx",
+//				"sss",
+//
+//				's', ModStones.heartStoneItem,
+//				'e', ModArmor.earthChest,
+//				'f', ModArmor.fireChest,
+//				'w', ModArmor.windChest,
+//				'x', ModArmor.waterChest,
+//				'a', ModAmulets.heartAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.stormLeggings, 1),
+//				"esf",
+//				"wax",
+//				"s s",
+//
+//				's', ModStones.stormStoneItem,
+//				'e', ModArmor.earthLeggings,
+//				'f', ModArmor.fireLeggings,
+//				'w', ModArmor.windLeggings,
+//				'x', ModArmor.waterLeggings,
+//				'a', ModAmulets.stormAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.stormBoots, 1),
+//				"e f",
+//				"wsx",
+//				" a ",
+//
+//				's', ModStones.stormStoneItem,
+//				'e', ModArmor.earthBoots,
+//				'f', ModArmor.fireBoots,
+//				'w', ModArmor.windBoots,
+//				'x', ModArmor.waterBoots,
+//				'a', ModAmulets.stormAmuletItem);
+//    	
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.chaosHelmet, 1),
+//				"esf",
+//				"w x",
+//				" a ",
+//
+//				's', ModStones.chaosStoneItem,
+//				'e', ModArmor.earthHelmet,
+//				'f', ModArmor.fireHelmet,
+//				'w', ModArmor.windHelmet,
+//				'x', ModArmor.stormHelmet,
+//				'a', ModAmulets.chaosAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.chaosChest, 1),
+//				"eaf",
+//				"wsx",
+//				"sss",
+//
+//				's', ModStones.chaosStoneItem,
+//				'e', ModArmor.earthChest,
+//				'f', ModArmor.fireChest,
+//				'w', ModArmor.windChest,
+//				'x', ModArmor.stormChest,
+//				'a', ModAmulets.chaosAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.chaosLeggings, 1),
+//				"esf",
+//				"wax",
+//				"s s",
+//
+//				's', ModStones.chaosStoneItem,
+//				'e', ModArmor.earthLeggings,
+//				'f', ModArmor.fireLeggings,
+//				'w', ModArmor.windLeggings,
+//				'x', ModArmor.stormLeggings,
+//				'a', ModAmulets.chaosAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.chaosBoots, 1),
+//				"e f",
+//				"wsx",
+//				" a ",
+//
+//				's', ModStones.chaosStoneItem,
+//				'e', ModArmor.earthBoots,
+//				'f', ModArmor.fireBoots,
+//				'w', ModArmor.windBoots,
+//				'x', ModArmor.stormBoots,
+//				'a', ModAmulets.chaosAmuletItem);
+//    	
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.orderHelmet, 1),
+//				"ecf",
+//				"wsx",
+//				" a ",
+//
+//				's', ModArmor.stormHelmet,
+//				'e', ModArmor.earthHelmet,
+//				'f', ModArmor.heartHelmet,
+//				'w', ModArmor.windHelmet,
+//				'c', ModArmor.chaosHelmet,
+//				'x', ModArmor.waterHelmet,
+//				'a', ModAmulets.orderAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.orderChest, 1),
+//				"eaf",
+//				"wsx",
+//				"csq",
+//
+//				's', ModStones.orderStoneItem,
+//				'e', ModArmor.earthChest,
+//				'f', ModArmor.heartChest,
+//				'w', ModArmor.windChest,
+//				'c', ModArmor.chaosChest,
+//				'q', ModArmor.stormChest,
+//				'x', ModArmor.waterChest,
+//				'a', ModAmulets.orderAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.orderLeggings, 1),
+//				"esf",
+//				"wax",
+//				"c q",
+//
+//				's', ModStones.orderStoneItem,
+//				'e', ModArmor.earthLeggings,
+//				'f', ModArmor.heartLeggings,
+//				'w', ModArmor.windLeggings,
+//				'c', ModArmor.chaosChest,
+//				'q', ModArmor.stormChest,
+//				'x', ModArmor.waterLeggings,
+//				'a', ModAmulets.orderAmuletItem);
+//    	
+//    	CraftingManager.getInstance().addRecipe(new ItemStack(ModArmor.orderBoots, 1),
+//				"e f",
+//				"wsx",
+//				"caq",
+//
+//				's', ModStones.orderStoneItem,
+//				'e', ModArmor.earthBoots,
+//				'f', ModArmor.heartBoots,
+//				'w', ModArmor.windBoots,
+//				'c', ModArmor.chaosChest,
+//				'q', ModArmor.stormChest,
+//				'x', ModArmor.waterBoots,
+//				'a', ModAmulets.orderAmuletItem);
 
     }
 

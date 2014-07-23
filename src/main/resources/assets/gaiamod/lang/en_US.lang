@@ -33,18 +33,15 @@ item.stormEssenceItem.name=Holder of Storm Essence
 item.chaosEssenceItem.name=Holder of Chaos Essence
 item.orderEssenceItem.name=Holder of Order Essence
 
-
-item.windStoneItem.name=Wind Stone
-item.fireStoneItem.name=Fire Stone
-item.waterStoneItem.name=Water Stone
-item.earthStoneItem.name=Earth Stone
-item.gaiaStoneItem.name=Gaia Stone
-item.omegaStoneItem.name=Omega Stone
-item.heartStoneItem.name=Heart Stone
-item.joinedHeartStoneItem.name=Joined Heart Stone
-item.memoryStoneItem.name=Memory Stone
-item.stormStoneItem.name=Storm Stone
-
+item.stoneItem.name=Body of Essence
+item.earthStoneItem.name=Body of Earth
+item.fireStoneItem.name=Body of Fire
+item.windStoneItem.name=Body of Wind
+item.waterStoneItem.name=Body of Water
+item.heartStoneItem.name=Body of Heart
+item.stormStoneItem.name=Body of Storm
+item.chaosStoneItem.name=Body of Chaos
+item.orderStoneItem.name=Body of Order
 
 item.gaiaHelmet.name=Gaia Helmet
 item.gaiaChest.name=Gaia Chestplate

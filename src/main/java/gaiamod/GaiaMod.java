@@ -8,12 +8,9 @@ import gaiamod.essence.ModEssence;
 import gaiamod.gui.ModGui;
 import gaiamod.handlers.GuiHandler;
 import gaiamod.handlers.RecipeHandler;
-import gaiamod.items.ModItems;
 import gaiamod.proxy.CommonProxy;
-import gaiamod.shrines.ModShrines;
 import gaiamod.stones.ModStones;
 import gaiamod.tileentities.ModTileEntities;
-import gaiamod.tools.ModTools;
 import gaiamod.util.References;
 import gaiamod.weapons.ModWeapons;
 import net.minecraft.creativetab.CreativeTabs;
@@ -44,12 +41,11 @@ public class GaiaMod {
 		ModTileEntities.init();
 		
 		ModBlocks.init();
-		ModItems.init();
+
 		ModEssence.init();
 		ModStones.init();
 		ModAmulets.init();
-		ModShrines.init();
-		ModTools.init();
+
 		ModWeapons.init();
 		ModArmor.init();
 

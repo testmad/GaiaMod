@@ -1,8 +1,11 @@
 package gaiamod.tileentities;
 
+import gaiamod.amulets.ModAmulets;
 import gaiamod.blocks.GaiaAltarBlock;
 import gaiamod.handlers.AltarRecipes;
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -224,11 +227,26 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 	}
 	
 	private boolean canAltar(){
-		if (slots[0] == null || slots[1] == null || slots[2] == null || slots[3] == null){
+		
+		ItemStack itemstack = null;
+		
+		if (slots[0] == null && slots[1] == null && slots[2] == null && slots[3] == null){
 			return false;
 		}
 		
-		ItemStack itemstack = AltarRecipes.getAltarResult(slots[0].getItem(), slots[1].getItem(), slots[2].getItem(), slots[3].getItem());
+		if (slots[0] != null && slots[1] != null && slots[2] == null && slots[3] == null){
+			itemstack = AltarRecipes.getEnchantingResult(slots[0].getItem(), slots[1].getItem(), slots[0], slots[1]);
+		}else
+		
+		if (slots[0] != null && slots[1] != null && slots[2] != null && slots[3] != null){
+			itemstack = AltarRecipes.getAltarResult(slots[0].getItem(), slots[1].getItem(), slots[2].getItem(), slots[3].getItem());
+		}
+		
+		
+		
+		//itemstack = AltarRecipes.getAltarResult(slots[0].getItem(), slots[1].getItem(), slots[2].getItem(), slots[3].getItem());
+
+		
 		
 		if (itemstack == null){
 			return false;
@@ -251,25 +269,67 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 	
 	private void altarItem(){
 		if (canAltar()){
-			ItemStack itemstack = AltarRecipes.getAltarResult(slots[0].getItem(), slots[1].getItem(), slots[2].getItem(), slots[3].getItem());
+			ItemStack  itemstack;
+
 			
-			if(slots[4] == null){
-				slots[4] = itemstack.copy();
-			}else if (slots[4].isItemEqual(itemstack)){
-				slots[4].stackSize += itemstack.stackSize;
-			}
-			
-			for (int i = 0; i < 4; i++){
-				if(slots[i].stackSize <= 0){
-					slots[i] = new ItemStack(slots[i].getItem().setFull3D());
+			if(slots[1].getItem().getItemEnchantability() > 0 ){
+				itemstack = AltarRecipes.getEnchantingResult(slots[0].getItem(), slots[1].getItem(), slots[0], slots[1]);
+				
+				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.efficiency.effectId, slots[1]) +1;
+				
+				
+				if (slots[0].stackSize == lvl){
+					slots[0] = null;
 				}else{
-					slots[i].stackSize--;
+				slots[0].stackSize = slots[0].stackSize - lvl;
 				}
 				
-				if(slots[i].stackSize <= 0){
-					slots[i] = null;
+				slots[1] = null;
+				
+				if(slots[4] == null){
+					slots[4] = itemstack.copy();
+				}else if (slots[4].isItemEqual(itemstack)){
+					slots[4].stackSize += itemstack.stackSize;
+				}
+				
+//				slots[0].setItemDamage(slots[0].getItemDamage() + 1);
+//				if(slots[0].getItemDamage() >= slots[0].getMaxDamage()){
+//					slots[0] = new ItemStack(ModAmulets.amuletItem, 1);
+//				}
+//				slots[1] = null;
+//				
+//				if(slots[4] == null){
+//					slots[4] = itemstack.copy();
+//					
+//				}else if (slots[4].isItemEqual(itemstack)){
+//					slots[4].stackSize += itemstack.stackSize;
+//				}
+				
+				
+
+			}else{
+				itemstack = AltarRecipes.getAltarResult(slots[0].getItem(), slots[1].getItem(), slots[2].getItem(), slots[3].getItem());
+				
+				if(slots[4] == null){
+					slots[4] = itemstack.copy();
+				}else if (slots[4].isItemEqual(itemstack)){
+					slots[4].stackSize += itemstack.stackSize;
+				}
+				
+				for (int i = 0; i < 4; i++){
+					if(slots[i].stackSize <= 0){
+						slots[i] = new ItemStack(slots[i].getItem().setFull3D());
+					}else{
+						slots[i].stackSize--;
+					}
+					
+					if(slots[i].stackSize <= 0){
+						slots[i] = null;
+					}
 				}
 			}
+			
+			
 		}
 	}
 	

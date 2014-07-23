@@ -48,7 +48,7 @@ public class RecipeHandler {
 				'c', Items.cauldron,
 				'a', ModBlocks.gaiaAltarBlockIdle);
     	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModBlocks.shrineBlock, 1),
+    	CraftingManager.getInstance().addRecipe(new ItemStack(ModBlocks.orderShrineBlockIdle, 1),
 				"sas",
 				"geg",
 				"sas",

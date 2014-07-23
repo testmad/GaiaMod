@@ -1,6 +1,6 @@
 package gaiamod.tileentities;
 
-import gaiamod.blocks.GaiaAltarBlock;
+import gaiamod.blocks.OrderShrineBlock;
 import gaiamod.handlers.AltarRecipes;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
@@ -16,7 +16,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
+public class TileEntityOrderShrine extends TileEntity implements ISidedInventory{
 	
 	private ItemStack[] slots = new ItemStack[7];
 	
@@ -35,7 +35,7 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 	
 	private String customName;
 	
-	public TileEntityGaiaAltar(){
+	public TileEntityOrderShrine(){
 		//slots = new ItemStack[7];
 	}
 
@@ -91,7 +91,7 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 
 	@Override
 	public String getInventoryName() {
-		return "container.gaiaAltar";
+		return "container.orderShrine";
 	}
 
 	@Override
@@ -399,8 +399,8 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 			if(flag3 != this.isAltaring()){
 				flag3=true;
 				if(flag && flag1){
-					GaiaAltarBlock.updateBlockState(this.isAltaring(), true, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
-				}else{GaiaAltarBlock.updateBlockState(this.isAltaring(), false, this.worldObj, this.xCoord, this.yCoord, this.zCoord);}
+					OrderShrineBlock.updateBlockState( true, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+				}else{OrderShrineBlock.updateBlockState( false, this.worldObj, this.xCoord, this.yCoord, this.zCoord);}
 
 				}
 		}

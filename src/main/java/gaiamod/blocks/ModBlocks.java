@@ -16,7 +16,8 @@ public class ModBlocks {
 	public static Block essenceAltarBlockIdlePower;
 	public static Block essenceAltarBlockActive;
 	
-	public static Block shrineBlock;
+	public static Block orderShrineBlockIdle;
+	public static Block orderShrineBlockIdlePower;
 	
 	public static Block marbleBlock;
 	public static Block marbleBrickBlock;
@@ -46,8 +47,11 @@ public class ModBlocks {
 		Registrar.registerBlock(essenceAltarBlockActive);
 		
 		
-		shrineBlock = new ShrineBlock().setBlockName(Strings.ShrineBlockName).setHardness(3.5F);
-		Registrar.registerBlock(shrineBlock);
+		orderShrineBlockIdle = new OrderShrineBlock(false).setBlockName(Strings.OrderShrineBlockName + "Idle").setCreativeTab(GaiaMod.getcreativeTab()).setHardness(3.5F);
+		Registrar.registerBlock(orderShrineBlockIdle);
+		
+		orderShrineBlockIdlePower = new OrderShrineBlock(true).setBlockName(Strings.OrderShrineBlockName + "IdlePower").setHardness(3.5F);
+		Registrar.registerBlock(orderShrineBlockIdlePower);
 		
 		
 		marbleBlock = new MarbleBlock().setBlockName(Strings.MarbleBlockName).setHardness(1.25F);

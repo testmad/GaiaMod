@@ -2,11 +2,14 @@ package gaiamod.handlers;
 
 import gaiamod.containers.ContainerEssenceAltar;
 import gaiamod.containers.ContainerGaiaAltar;
+import gaiamod.containers.ContainerOrderShrine;
 import gaiamod.gui.GuiEssenceAltar;
 import gaiamod.gui.GuiGaiaAltar;
+import gaiamod.gui.GuiOrderShrine;
 import gaiamod.gui.ModGui;
 import gaiamod.tileentities.TileEntityEssenceAltar;
 import gaiamod.tileentities.TileEntityGaiaAltar;
+import gaiamod.tileentities.TileEntityOrderShrine;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -31,6 +34,12 @@ TileEntity entity = world.getTileEntity(x, y, z);
 					return new ContainerEssenceAltar(player.inventory, (TileEntityEssenceAltar) entity);
 				}
 				return null;
+				
+			case ModGui.guiIDOrderShrine:
+				if (entity instanceof TileEntityOrderShrine){
+					return new ContainerOrderShrine(player.inventory, (TileEntityOrderShrine) entity);
+				}
+				return null;
 			}
 			
 			
@@ -53,6 +62,12 @@ TileEntity entity = world.getTileEntity(x, y, z);
 			case ModGui.guiIDEssenceAltar:
 				if (entity instanceof TileEntityEssenceAltar){
 					return new GuiEssenceAltar(player.inventory, (TileEntityEssenceAltar) entity);
+				}
+				return null;
+				
+			case ModGui.guiIDOrderShrine:
+				if (entity instanceof TileEntityOrderShrine){
+					return new GuiOrderShrine(player.inventory, (TileEntityOrderShrine) entity);
 				}
 				return null;
 			}

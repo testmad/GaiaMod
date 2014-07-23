@@ -5,7 +5,7 @@ public class Strings {
 	public static final String GaiaAltarBlockName = "gaiaAltarBlock";
 	public static final String EssenceAltarBlockName = "essenceAltarBlock";
 	
-	public static final String ShrineBlockName = "shrineBlock";
+	public static final String OrderShrineBlockName = "orderShrineBlock";
 	
 	public static final String MarbleBlockName = "marbleBlock";
 	public static final String MarbleBrickBlockName = "marbleBrickBlock";

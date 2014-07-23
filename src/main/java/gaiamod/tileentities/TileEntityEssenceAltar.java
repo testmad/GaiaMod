@@ -1,10 +1,10 @@
 package gaiamod.tileentities;
 
-import java.util.Random;
-
 import gaiamod.blocks.EssenceAltarBlock;
 import gaiamod.essence.ModEssence;
-import gaiamod.handlers.AltarRecipes;
+
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;

@@ -13,6 +13,7 @@ import gaiamod.stones.ModStones;
 import gaiamod.tileentities.ModTileEntities;
 import gaiamod.util.References;
 import gaiamod.weapons.ModWeapons;
+import gaiamod.worldgen.GaiaModWorldGen;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -20,11 +21,14 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = References.MODID, name = References.MODNAME, version = References.VERSION)
 public class GaiaMod {
 
 	public static CreativeTabs gaiaModTab;
+	
+	GaiaModWorldGen eventWorldGen = new GaiaModWorldGen();
 	
 	@Mod.Instance(References.MODID)
 	public static GaiaMod instance;
@@ -56,6 +60,8 @@ public class GaiaMod {
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+		
+		GameRegistry.registerWorldGenerator(eventWorldGen, 0);
 	}
 
 	@Mod.EventHandler

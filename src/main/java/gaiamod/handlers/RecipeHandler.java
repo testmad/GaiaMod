@@ -34,7 +34,7 @@ public class RecipeHandler {
 				"cec",
 				"sss",
 
-				's', Blocks.stone,
+				's', ModBlocks.marbleBlock,
 				'c', Items.cauldron,
 				'e', Items.ender_pearl);
     	
@@ -44,15 +44,24 @@ public class RecipeHandler {
 				"sss",
 
 				'p', Blocks.piston,
-				's', Blocks.stone,
+				's', ModBlocks.marbleBlock,
 				'c', Items.cauldron,
-				'a', ModBlocks.gaiaAltarBlockIdle,
-				's', Blocks.stone);
+				'a', ModBlocks.gaiaAltarBlockIdle);
+    	
+    	CraftingManager.getInstance().addRecipe(new ItemStack(ModBlocks.shrineBlock, 1),
+				"sas",
+				"geg",
+				"sas",
+
+				's', ModBlocks.marbleBlock,
+				'g', ModBlocks.essenceAltarBlockIdle,
+				'e', Items.emerald,
+				'a', Blocks.anvil);
     	
     	
     	//Essence//
     	
-    	CraftingManager.getInstance().addRecipe(new ItemStack(ModEssence.essenceItem, 1),
+    	CraftingManager.getInstance().addRecipe(new ItemStack(ModEssence.essenceItem, 4),
 				" g ",
 				"gog",
 				"ggg",

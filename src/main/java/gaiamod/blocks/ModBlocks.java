@@ -16,11 +16,12 @@ public class ModBlocks {
 	public static Block essenceAltarBlockIdlePower;
 	public static Block essenceAltarBlockActive;
 	
+	public static Block shrineBlock;
 	
 	public static Block marbleBlock;
 	public static Block marbleBrickBlock;
 	
-	//public static Block gaiaShrine;
+	
 	
 	public static void init()
     {
@@ -45,8 +46,8 @@ public class ModBlocks {
 		Registrar.registerBlock(essenceAltarBlockActive);
 		
 		
-		//gaiaShrine = new GaiaShrineBlock();
-		//Registrar.registerBlock(gaiaShrine);
+		shrineBlock = new ShrineBlock().setBlockName(Strings.ShrineBlockName).setHardness(3.5F);
+		Registrar.registerBlock(shrineBlock);
 		
 		
 		marbleBlock = new MarbleBlock().setBlockName(Strings.MarbleBlockName).setHardness(1.25F);

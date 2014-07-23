@@ -13,6 +13,8 @@ tile.essenceAltarBlockIdlePower.name=Essence Altar
 tile.essenceAltarBlockActive.name=Essence Altar
 tile.essenceAltarBlockIdle.name=Essence Altar
 
+tile.shrineBlock.name=Gaia Shrine
+
 
 tile.marbleBlock.name=Marble
 tile.marbleBrickBlock.name=Marble Bricks

@@ -43,14 +43,54 @@ item.stormStoneItem.name=Body of Storm
 item.chaosStoneItem.name=Body of Chaos
 item.orderStoneItem.name=Body of Order
 
-item.gaiaHelmet.name=Gaia Helmet
-item.gaiaChest.name=Gaia Chestplate
-item.gaiaLeggings.name=Gaia Leggings
-item.gaiaBoots.name=Gaia Boots
+item.amuletItem.name=Amulet of Body
+item.earthamuletItem.name=Amulet of Earth
+item.fireamuletItem.name=Amulet of Fire
+item.windamuletItem.name=Amulet of Wind
+item.wateramuletItem.name=Amulet of Water
+item.heartamuletItem.name=Amulet of Heart
+item.stormamuletItem.name=Amulet of Storm
+item.chaosamuletItem.name=Amulet of Chaos
+item.orderamuletItem.name=Amulet of Order
 
-item.omegaHelmet.name=Omega Helmet
-item.omegaChest.name=Omega Chestplate
-item.omegaLeggings.name=Omega Leggings
-item.omegaBoots.name=Omega Boots
+item.earthHelmet.name=Gaia Helmet
+item.earthChest.name=Gaia Chestplate
+item.earthLeggings.name=Gaia Leggings
+item.earthBoots.name=Gaia Boots
+
+item.fireHelmet.name=Gaia Helmet
+item.fireChest.name=Gaia Chestplate
+item.fireLeggings.name=Gaia Leggings
+item.fireBoots.name=Gaia Boots
+
+item.windHelmet.name=Gaia Helmet
+item.windChest.name=Gaia Chestplate
+item.windLeggings.name=Gaia Leggings
+item.windBoots.name=Gaia Boots
+
+item.waterHelmet.name=Omega Helmet
+item.waterChest.name=Omega Chestplate
+item.waterLeggings.name=Omega Leggings
+item.waterBoots.name=Omega Boots
+
+item.heartHelmet.name=Omega Helmet
+item.heartChest.name=Omega Chestplate
+item.heartLeggings.name=Omega Leggings
+item.heartBoots.name=Omega Boots
+
+item.stormHelmet.name=Omega Helmet
+item.stormChest.name=Omega Chestplate
+item.stormLeggings.name=Omega Leggings
+item.stormBoots.name=Omega Boots
+
+item.chaosHelmet.name=Omega Helmet
+item.chaosChest.name=Omega Chestplate
+item.chaosLeggings.name=Omega Leggings
+item.chaosBoots.name=Omega Boots
+
+item.orderHelmet.name=Omega Helmet
+item.orderChest.name=Omega Chestplate
+item.orderLeggings.name=Omega Leggings
+item.orderBoots.name=Omega Boots
 
 itemGroup.gaiamod=Gaia Mod

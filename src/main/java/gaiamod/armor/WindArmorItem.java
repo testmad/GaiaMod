@@ -5,11 +5,12 @@ import gaiamod.util.References;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 
-public class ChaosArmorItem extends ItemArmor{
-	
-	public ChaosArmorItem(ArmorMaterial material, int armorType,String name) {
-		
+public class WindArmorItem  extends ItemArmor{
+
+	public WindArmorItem(ArmorMaterial material, int armorType,String name) {
+			
 		super(material, 0 , armorType);
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(GaiaMod.getcreativeTab());
@@ -20,19 +21,19 @@ public class ChaosArmorItem extends ItemArmor{
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
 		
-		if(stack.getItem() == ModArmor.chaosHelmet)
+		if(stack.getItem() == ModArmor.windHelmet)
 		{
 			return References.MODID + ":models/armor/omegaarmor1.png";
 		}
-		else if(stack.getItem() == ModArmor.chaosChest)
+		else if(stack.getItem() == ModArmor.windChest)
 		{
 			return References.MODID + ":models/armor/omegaarmor1.png";
 		}
-		else if(stack.getItem() == ModArmor.chaosLeggings)
+		else if(stack.getItem() == ModArmor.windLeggings)
 		{
 			return References.MODID + ":models/armor/omegaarmor2.png";
 		}
-		else if(stack.getItem() == ModArmor.chaosBoots)
+		else if(stack.getItem() == ModArmor.windBoots)
 		{
 			return References.MODID + ":models/armor/omegaarmor1.png";
 		}
@@ -42,4 +43,5 @@ public class ChaosArmorItem extends ItemArmor{
 			return null;
 		}
 	}
+
 }

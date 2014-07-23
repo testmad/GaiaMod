@@ -7,9 +7,9 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 
-public class StormEarthArmorItem  extends ItemArmor{
+public class StormArmorItem  extends ItemArmor{
 
-	public StormEarthArmorItem(ArmorMaterial material, int armorType,String name) {
+	public StormArmorItem(ArmorMaterial material, int armorType,String name) {
 			
 		super(material, 0 , armorType);
 		this.setUnlocalizedName(name);

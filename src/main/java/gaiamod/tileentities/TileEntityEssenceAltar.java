@@ -299,19 +299,19 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 			if(slots[4].getItem() == ModEssence.emptyEarthEssenceItem){
 				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
 			}else if(slots[4].getItem() == ModEssence.emptyFireEssenceItem){
-				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
+				slots[4] = new ItemStack(ModEssence.fireEssenceItem);
 			}else if(slots[4].getItem() == ModEssence.emptyWindEssenceItem){
-				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
+				slots[4] = new ItemStack(ModEssence.windEssenceItem);
 			}else if(slots[4].getItem() == ModEssence.emptyWaterEssenceItem){
-				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
+				slots[4] = new ItemStack(ModEssence.waterEssenceItem);
 			}else if(slots[4].getItem() == ModEssence.emptyHeartEssenceItem){
-				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
+				slots[4] = new ItemStack(ModEssence.heartEssenceItem);
 			}else if(slots[4].getItem() == ModEssence.emptyStormEssenceItem){
-				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
+				slots[4] = new ItemStack(ModEssence.stormEssenceItem);
 			}else if(slots[4].getItem() == ModEssence.emptyChaosEssenceItem){
-				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
+				slots[4] = new ItemStack(ModEssence.chaosEssenceItem);
 			}else if(slots[4].getItem() == ModEssence.emptyOrderEssenceItem){
-				slots[4] = new ItemStack(ModEssence.earthEssenceItem);
+				slots[4] = new ItemStack(ModEssence.orderEssenceItem);
 			}
 		}
 	}
@@ -332,17 +332,97 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		return essenceLevel > 0;
 	}
 	
-	public boolean chanceToEssence(){
+	public boolean chanceToEssence(Item item){
+		
+		System.out.println(item.getUnlocalizedName());
 		
 		Random r = new Random();
 		float chance = r.nextFloat();
+		
+		if(item == ModEssence.emptyEarthEssenceItem){
+			if (chance <= 0.80f){
+			    return true;
+			  }
+			  else{
+				  return false;
+			  }
+			
+		}else
+		
+		if(item == ModEssence.emptyFireEssenceItem){
+			if (chance <= 0.80f){
+			    return true;
+			  }
+			  else{
+				  return false;
+			  }
+			
+		}else
 
-		  if (chance <= 0.80f){
-		    return true;
-		  }
-		  else{
-			  return false;
-		  }
+		if(item == ModEssence.emptyWindEssenceItem){
+			if (chance <= 0.80f){
+			    return true;
+			  }
+			  else{
+				  return false;
+			  }
+	
+		}else
+
+		if(item == ModEssence.emptyWaterEssenceItem){
+			if (chance <= 0.80f){
+			    return true;
+			  }
+			  else{
+				  return false;
+			  }
+	
+		}else
+
+		if(item == ModEssence.emptyHeartEssenceItem){
+			if (chance <= 0.70f){
+			    return true;
+			  }
+			  else{
+				  return false;
+			  }
+	
+		}else
+
+		if(item == ModEssence.emptyStormEssenceItem){
+			if (chance <= 0.60f){
+			    return true;
+			  }
+			  else{
+				  return false;
+			  }
+	
+		}else
+
+		if(item == ModEssence.emptyChaosEssenceItem){
+			if (chance <= 0.50f){
+			    return true;
+			  }
+			  else{
+				  return false;
+			  }
+	
+		}else
+
+		if(item == ModEssence.emptyOrderEssenceItem){
+			if (chance <= 0.40f){
+			    return true;
+			  }
+			  else{
+				  return false;
+			  }
+	
+		}else
+		{
+			return false;
+		}
+
+		  
 	}
 	
 	public void updateEntity(){
@@ -456,7 +536,7 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 				if(chanceLevel == maxChanceLevel){
 					
 					chanceLevel = 0;
-					if(chanceToEssence()){
+					if(chanceToEssence(slots[4].getItem())){
 						essenceLevel = essenceLevel + 100;
 						flag2 = true;
 					}

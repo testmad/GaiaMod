@@ -18,11 +18,11 @@ import org.lwjgl.opengl.GL11;
 public class GuiOrderShrine extends GuiContainer{
 	
 	private ResourceLocation texture = new ResourceLocation(References.MODID + ":" + "textures/gui/GuiOrderShrineBlock.png");
-	private TileEntityOrderShrine gaiaAltar;
+	private TileEntityOrderShrine orderShrine;
 	
 	public GuiOrderShrine(InventoryPlayer invPlayer, TileEntityOrderShrine entity) {
 		super(new ContainerOrderShrine(invPlayer, entity));
-		gaiaAltar = entity;
+		orderShrine = entity;
 		
 		this.xSize = 176;
 		this.ySize = 166;
@@ -44,21 +44,9 @@ public class GuiOrderShrine extends GuiContainer{
 		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
 		
 		//do power
-		if(gaiaAltar.hasWaterPower()){
-			int i1 = gaiaAltar.getWaterRemainingScaled(43);
-			drawTexturedModalRect(guiLeft + 11, guiTop + 53 - i1, 176, 43-i1,14,i1 );
-		}
-		
-		if(gaiaAltar.hasLavaPower()){
-			int i1 = gaiaAltar.getLavaRemainingScaled(43);
-			drawTexturedModalRect(guiLeft + 151, guiTop + 53 - i1, 190, 43-i1,14,i1 );
-		}
-		
-		//do cooking
-		
-			int j1 = gaiaAltar.getAltarProgressScaled(24);
-			drawTexturedModalRect(guiLeft + 79, guiTop + 34, 176, 64,j1 + 1,81 );
-		
+		if(orderShrine.hasEssencePower()){
+			int i1 = orderShrine.getEssenceRemainingScaled(43);
+			drawTexturedModalRect(guiLeft + 57, guiTop + 63 - i1, 176, 43-i1,14,i1 );
+		}		
 	}
-
 }

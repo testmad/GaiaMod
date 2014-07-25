@@ -306,4 +306,9 @@ public class AltarRecipes {
 		
 	}
 
+	public static ItemStack getShrineResult(Item item) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

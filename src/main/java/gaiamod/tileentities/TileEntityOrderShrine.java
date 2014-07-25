@@ -1,6 +1,7 @@
 package gaiamod.tileentities;
 
 import gaiamod.blocks.OrderShrineBlock;
+import gaiamod.essence.ModEssence;
 import gaiamod.handlers.AltarRecipes;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
@@ -21,13 +22,12 @@ public class TileEntityOrderShrine extends TileEntity implements ISidedInventory
 	private ItemStack[] slots = new ItemStack[7];
 	
 	public int cookTime;
-	public int waterPowerLevel;
-	public int lavaPowerLevel;
-	public int burn;
-	public static final int maxWaterPower = 1000;
-	public static final int maxLavaPower = 1000;
+	public int essencePowerLevel;
+
+
+	public static final int maxEssencePower = 1000;
 	
-	public static final int cookSpeed = 100;
+	public int cookSpeed;
 	
 	private static final int[] slots_top = new int[]{0, 1, 2, 3};
 	private static final int[] slots_bottom = new int[]{4};
@@ -114,52 +114,24 @@ public class TileEntityOrderShrine extends TileEntity implements ISidedInventory
 
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		return i == 4 ? false : (i == 5 ? isItemWater(itemstack) : (i == 6 ? isItemLava(itemstack) : true));
+		return i == 2 ? false : (i == 0 ? isItemEssence(itemstack) :  true);
 	}
 	
-	public boolean isItemWater(ItemStack itemstack){
-		return getHasWater(itemstack) > 0;
+	public boolean isItemEssence(ItemStack itemstack){
+		return getHasEssence(itemstack) > 0;
 	}
 	
-	public boolean isItemLava(ItemStack itemstack){
-		return getHasLava(itemstack) > 0;
-	}
-	
-	public static int getHasWater (ItemStack itemstack){
+	public static int getHasEssence (ItemStack itemstack){
 		if(itemstack == null){
 			return 0;
 		}else{
 			Item item = itemstack.getItem();
-			
-			if(item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.air) {
-				Block block = Block.getBlockFromItem(item);
-				
-				if(block == Blocks.water) return 800;
-				
-			}
-			
-			if(item == Items.water_bucket) return 800;
+						
+			if(item == ModEssence.earthEssenceItem) return 100;
 		}
 		return 0;
 	}
 	
-	public static int getHasLava (ItemStack itemstack){
-		if(itemstack == null){
-			return 0;
-		}else{
-			Item item = itemstack.getItem();
-			
-			if(item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.air) {
-				Block block = Block.getBlockFromItem(item);
-				
-				if(block == Blocks.lava) return 800;
-				
-			}
-			
-			if(item == Items.lava_bucket) return 800;
-		}
-		return 0;
-	}
 	
 	public void readFromNBT(NBTTagCompound nbt){
 		super.readFromNBT(nbt);
@@ -175,16 +147,14 @@ public class TileEntityOrderShrine extends TileEntity implements ISidedInventory
 				slots[b0] = ItemStack.loadItemStackFromNBT(nbt1);
 			}
 		}
-		waterPowerLevel = nbt.getShort("WaterPower");
-		lavaPowerLevel = nbt.getShort("LavaPower");
-		cookTime = nbt.getShort("CookTime");
+		essencePowerLevel = nbt.getShort("EssencePower");
+
 	}
 
 	public void  writeToNBT(NBTTagCompound nbt){
 		super.writeToNBT(nbt);
-		nbt.setShort("WaterPower", (short)waterPowerLevel);
-		nbt.setShort("LavaPower", (short)lavaPowerLevel);
-		nbt.setShort("CookTime", (short)cookTime);
+		nbt.setShort("EssencePower", (short)essencePowerLevel);
+
 		NBTTagList list = new NBTTagList();
 		
 		for(int i = 0; i < slots.length; i++){
@@ -210,135 +180,83 @@ public class TileEntityOrderShrine extends TileEntity implements ISidedInventory
 
 	@Override
 	public boolean canExtractItem(int i, ItemStack itemstack, int j) {
-		return j != 4 || i != 1;
+		return j != 0 || i != 1;
 	}
 	
-	public int getAltarProgressScaled(int i){
-		return(cookTime *i / this.cookSpeed);
-	}
 	
-	public int getWaterRemainingScaled(int i){
-		return(waterPowerLevel *i / maxWaterPower);
-	}
-	
-	public int getLavaRemainingScaled(int i){
-		return(lavaPowerLevel *i / maxLavaPower);
+	public int getEssenceRemainingScaled(int i){
+		return(essencePowerLevel *i / maxEssencePower);
 	}
 	
 	private boolean canAltar(){
 		
+		
+		
 		ItemStack itemstack = null;
 		
-		if (slots[0] == null && slots[1] == null && slots[2] == null && slots[3] == null){
+		if (slots[1] == null){
 			return false;
 		}
 		
-		if (slots[0] != null && slots[1] != null && slots[2] == null && slots[3] == null){
-			itemstack = AltarRecipes.getEnchantingResult(slots[0].getItem(), slots[1].getItem(), slots[0], slots[1]);
-		}else
-		
-		if (slots[0] != null && slots[1] != null && slots[2] != null && slots[3] != null){
-			itemstack = AltarRecipes.getAltarResult(slots[0].getItem(), slots[1].getItem(), slots[2].getItem(), slots[3].getItem());
+		if (slots[1] != null && !slots[1].isItemDamaged()){
+			return false;
 		}
 		
-		
-		
-		//itemstack = AltarRecipes.getAltarResult(slots[0].getItem(), slots[1].getItem(), slots[2].getItem(), slots[3].getItem());
-
-		
+		if (slots[1] != null && slots[1].isItemDamaged()){
+			itemstack = slots[1];
+		}
+	
+		//itemstack = AltarRecipes.getShrineResult(slots[0].getItem());
 		
 		if (itemstack == null){
 			return false;
 		}
 		
-		if (slots[4] == null){
+		if (slots[2] == null){
 			return true;
 		}
 		
-		if (!slots[4].isItemEqual(itemstack)){
+		if (!slots[2].isItemEqual(itemstack)){
 			return false;
 		}
 		
-		if (slots[4].stackSize < getInventoryStackLimit() && slots[4].stackSize < slots[4].getMaxStackSize()){
+		if (slots[2].stackSize < getInventoryStackLimit() && slots[2].stackSize < slots[4].getMaxStackSize()){
 			return true;
 		}else{
-			return slots[4].stackSize < itemstack.getMaxStackSize();
+			return slots[2].stackSize < itemstack.getMaxStackSize();
 		}
 	}
 	
-	private void altarItem(){
-		if (canAltar()){
-			ItemStack  itemstack;
-
-			
-			if(slots[1].getItem().getItemEnchantability() > 0 ){
-				itemstack = AltarRecipes.getEnchantingResult(slots[0].getItem(), slots[1].getItem(), slots[0], slots[1]);
-				
-				int lvl = EnchantmentHelper.getEnchantmentLevel(Enchantment.efficiency.effectId, slots[1]) +1;
-				
-				
-				if (slots[0].stackSize == lvl){
-					slots[0] = null;
-				}else{
-				slots[0].stackSize = slots[0].stackSize - lvl;
-				}
-				
-				slots[1] = null;
-				
-				if(slots[4] == null){
-					slots[4] = itemstack.copy();
-				}else if (slots[4].isItemEqual(itemstack)){
-					slots[4].stackSize += itemstack.stackSize;
-				}
-				
-//				slots[0].setItemDamage(slots[0].getItemDamage() + 1);
-//				if(slots[0].getItemDamage() >= slots[0].getMaxDamage()){
-//					slots[0] = new ItemStack(ModAmulets.amuletItem, 1);
-//				}
-//				slots[1] = null;
+//	private void altarItem(){
+//		if (canAltar()){
+//			ItemStack  itemstack;
+//
+//			
+//			
 //				
-//				if(slots[4] == null){
-//					slots[4] = itemstack.copy();
-//					
-//				}else if (slots[4].isItemEqual(itemstack)){
-//					slots[4].stackSize += itemstack.stackSize;
+//				itemstack = slots[1];
+//				
+//				
+//				
+//				
+//								
+//				
+//				
+//				if(slots[2] == null){
+//					slots[2] = itemstack.copy();
+//					slots[1] = null;
+//				}else if (slots[2].isItemEqual(itemstack)){
+//					slots[2].stackSize += itemstack.stackSize;
+//					slots[1] = null;
 //				}
-				
-				
-
-			}else{
-				itemstack = AltarRecipes.getAltarResult(slots[0].getItem(), slots[1].getItem(), slots[2].getItem(), slots[3].getItem());
-				
-				if(slots[4] == null){
-					slots[4] = itemstack.copy();
-				}else if (slots[4].isItemEqual(itemstack)){
-					slots[4].stackSize += itemstack.stackSize;
-				}
-				
-				for (int i = 0; i < 4; i++){
-					if(slots[i].stackSize <= 0){
-						slots[i] = new ItemStack(slots[i].getItem().setFull3D());
-					}else{
-						slots[i].stackSize--;
-					}
-					
-					if(slots[i].stackSize <= 0){
-						slots[i] = null;
-					}
-				}
-			}
-			
-			
-		}
+//		
+//		}
+//	}
+	
+	public boolean hasEssencePower(){
+		return essencePowerLevel > 0;
 	}
 	
-	public boolean hasWaterPower(){
-		return waterPowerLevel > 0;
-	}
-	
-	public boolean hasLavaPower(){
-		return lavaPowerLevel > 0;
-	}
 	
 	public boolean isAltaring(){
 		return this.cookTime > 0;
@@ -346,49 +264,48 @@ public class TileEntityOrderShrine extends TileEntity implements ISidedInventory
 	
 	public void updateEntity(){
 		
-		boolean flag = this.hasWaterPower();
-		boolean flag1 = this.hasLavaPower();
+		boolean flag = this.hasEssencePower();
+
 		boolean flag2 = false;
 		boolean flag3 = false;
 		
-		if(hasWaterPower() && hasLavaPower() && this.isAltaring()){
-			this.waterPowerLevel--;
-			this.lavaPowerLevel--;
+		
+		if(hasEssencePower() && this.isAltaring()){
+			
+			this.essencePowerLevel--;
+
 		}
 		
 		if(!worldObj.isRemote){
-			if(this.isItemWater(this.slots[5]) && this.waterPowerLevel < (this.maxWaterPower - this.getHasWater(this.slots[5]))){
-				this.waterPowerLevel += getHasWater(this.slots[5]);
+			
+			//System.out.println(canAltar());
+			
+			if(this.isItemEssence(this.slots[0]) && this.essencePowerLevel < (this.maxEssencePower - this.getHasEssence(this.slots[0]))){
+				this.essencePowerLevel += getHasEssence(this.slots[0]);
 				
-				if(this.slots[5] != null){
+				if(this.slots[0] != null){
 					flag2 = true;
-					this.slots[5].stackSize --;
+					this.slots[0].stackSize --;
 					
-					if(this.slots[5].stackSize ==0){
-						this.slots[5] = this.slots[5].getItem().getContainerItem(this.slots[5]);
+					if(this.slots[0].stackSize ==0){
+						this.slots[0] = this.slots[0].getItem().getContainerItem(this.slots[0]);
 					}
 				}
 			}
 			
-			if(this.isItemLava(this.slots[6]) && this.lavaPowerLevel < (this.maxLavaPower - this.getHasLava(this.slots[6]))){
-				this.lavaPowerLevel += getHasLava(this.slots[6]);
-				
-				if(this.slots[6] != null){
-					flag2 = true;
-					this.slots[6].stackSize --;
-					
-					if(this.slots[6].stackSize ==0){
-						this.slots[6] = this.slots[6].getItem().getContainerItem(this.slots[6]);
-					}
-				}
-			}
 			
-			if (hasWaterPower() && hasLavaPower() && canAltar()){
+			if (hasEssencePower() && canAltar()){
+				//cookSpeed = 80;
+				int currentDamage = slots[1].getItemDamage();
+				
+				currentDamage= currentDamage - 5;
+
+				slots[1].getItem().setDamage(this.slots[1], currentDamage);
 				cookTime++;
 				
-				if (this.cookTime == this.cookSpeed){
+				if (currentDamage == 0){
 					this.cookTime = 0;
-					this.altarItem();
+					//this.altarItem();
 					flag2 = true;
 				}
 			}else{
@@ -398,7 +315,7 @@ public class TileEntityOrderShrine extends TileEntity implements ISidedInventory
 			
 			if(flag3 != this.isAltaring()){
 				flag3=true;
-				if(flag && flag1){
+				if(flag){
 					OrderShrineBlock.updateBlockState( true, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
 				}else{OrderShrineBlock.updateBlockState( false, this.worldObj, this.xCoord, this.yCoord, this.zCoord);}
 

@@ -1,6 +1,6 @@
 package gaiamod.containers;
 
-import gaiamod.slots.SlotGaiaAltar;
+import gaiamod.slots.SlotOrderShrine;
 import gaiamod.tileentities.TileEntityOrderShrine;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -15,36 +15,31 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ContainerOrderShrine extends Container{
 	
-	private TileEntityOrderShrine altar;
+	private TileEntityOrderShrine shrine;
 	
 	private int cookTime;
-	private int waterPower;
-	private int lavaPower;
+	private int essencePower;
+
 	private int lastItemBurnTime;
 
 	public ContainerOrderShrine(InventoryPlayer invPlayer, TileEntityOrderShrine entity){
 		
 		cookTime = 0;
-		waterPower = 0;
-		lavaPower = 0;
+		essencePower = 0;
+
 		lastItemBurnTime = 0;
 		
-		altar = entity;
+		shrine = entity;
 		
 		//grid
-		this.addSlotToContainer(new Slot(entity, 0, 36, 26));
-		this.addSlotToContainer(new Slot(entity, 1, 54, 26));
-		this.addSlotToContainer(new Slot(entity, 2, 36, 44));
-		this.addSlotToContainer(new Slot(entity, 3, 54, 44));
+		this.addSlotToContainer(new Slot(entity, 0, 34, 35));
+		this.addSlotToContainer(new Slot(entity, 1, 89, 35));
+		
 		
 		//result
-		this.addSlotToContainer(new SlotGaiaAltar(invPlayer.player, entity, 4, 116, 35));
+		this.addSlotToContainer(new SlotOrderShrine(invPlayer.player, entity, 2, 126, 35));
 		
-		//water slot
-		this.addSlotToContainer(new Slot(entity, 5, 10, 58));
-		
-		//lava slot
-		this.addSlotToContainer(new Slot(entity, 6, 150, 58));
+
 		
 		//player inv		
 		for (int i = 0; i < 3; i++){
@@ -60,9 +55,8 @@ public class ContainerOrderShrine extends Container{
 
 	public void addCraftingToCrafters(ICrafting crafting){
 		super.addCraftingToCrafters(crafting);
-		crafting.sendProgressBarUpdate(this, 0, this.altar.cookTime);
-		crafting.sendProgressBarUpdate(this, 1, this.altar.waterPowerLevel);
-		crafting.sendProgressBarUpdate(this, 2, this.altar.lavaPowerLevel);
+		crafting.sendProgressBarUpdate(this, 0, this.shrine.essencePowerLevel);
+		
 	}
 	
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2){
@@ -142,44 +136,31 @@ public class ContainerOrderShrine extends Container{
 		for (int i=0; i < this.crafters.size(); i++){
 			ICrafting par1 = (ICrafting)this.crafters.get(i);
 			
-			if(this.cookTime != this.altar.cookTime){
-				par1.sendProgressBarUpdate(this, 0, this.altar.cookTime);
-			}
 			
-			if(this.waterPower != this.altar.waterPowerLevel){
-				par1.sendProgressBarUpdate(this, 1, this.altar.waterPowerLevel);
-			}
-			
-			if(this.lavaPower != this.altar.lavaPowerLevel){
-				par1.sendProgressBarUpdate(this, 2, this.altar.lavaPowerLevel);
+			if(this.essencePower != this.shrine.essencePowerLevel){
+				par1.sendProgressBarUpdate(this, 0, this.shrine.essencePowerLevel);
 			}
 		}
 		
-		this.cookTime = this.altar.cookTime;
-		this.waterPower = this.altar.waterPowerLevel;
-		this.lavaPower = this.altar.lavaPowerLevel;
+
+		this.essencePower = this.shrine.essencePowerLevel;
+
 		
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public void updateProgressBar(int i, int j){
 		if(i ==0){
-			altar.cookTime = j;
+			shrine.essencePowerLevel = j;
 			
 		}
 		
-		if(i ==1){
-			altar.waterPowerLevel = j;
-		}
-		
-		if(i ==2){
-			altar.lavaPowerLevel = j;
-		}
+
 	}
 	
 	@Override
 	public boolean canInteractWith(EntityPlayer player) {
-		return altar.isUseableByPlayer(player);
+		return shrine.isUseableByPlayer(player);
 	}
 
 }

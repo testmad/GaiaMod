@@ -93,4 +93,8 @@ public class Strings {
 	public static final String OrderChestName = "orderChest";
 	public static final String OrderLeggingsName = "orderLeggings";
 	public static final String OrderBootsName = "orderBoots";	
+	
+	public static final String StormSwordItemName = "stormSwordItem";	
+	public static final String ChaosSwordItemName = "chaosSwordItem";	
+	public static final String OrderSwordItemName = "orderSwordItem";	
 }

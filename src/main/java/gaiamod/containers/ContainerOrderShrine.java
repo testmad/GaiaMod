@@ -32,8 +32,8 @@ public class ContainerOrderShrine extends Container{
 		shrine = entity;
 		
 		//grid
-		this.addSlotToContainer(new Slot(entity, 0, 34, 35));
-		this.addSlotToContainer(new Slot(entity, 1, 89, 35));
+		this.addSlotToContainer(new Slot(entity, 0, 54, 35));
+		this.addSlotToContainer(new Slot(entity, 1, 109, 35));
 		
 		
 		//result

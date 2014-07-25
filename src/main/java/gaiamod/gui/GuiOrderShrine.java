@@ -46,7 +46,7 @@ public class GuiOrderShrine extends GuiContainer{
 		//do power
 		if(orderShrine.hasEssencePower()){
 			int i1 = orderShrine.getEssenceRemainingScaled(43);
-			drawTexturedModalRect(guiLeft + 57, guiTop + 63 - i1, 176, 43-i1,14,i1 );
+			drawTexturedModalRect(guiLeft + 77, guiTop + 63 - i1, 176, 43-i1,14,i1 );
 		}		
 	}
 }

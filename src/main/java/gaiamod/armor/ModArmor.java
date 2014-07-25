@@ -50,6 +50,8 @@ public class ModArmor {
 	
 	static ArmorMaterial gaiaArmorMaterial = EnumHelper.addArmorMaterial("gaiaArmorMaterial", 20, new int[]{2,6,5,2}, 20);
 	
+	
+	
 	public static void init()
     {
         

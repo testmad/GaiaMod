@@ -23,19 +23,19 @@ public class EarthArmorItem  extends ItemArmor{
 		
 		if(stack.getItem() == ModArmor.earthHelmet)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/eartharmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.earthChest)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/eartharmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.earthLeggings)
 		{
-			return References.MODID + ":models/armor/omegaarmor2.png";
+			return References.MODID + ":models/armor/eartharmor2.png";
 		}
 		else if(stack.getItem() == ModArmor.earthBoots)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/eartharmor1.png";
 		}
 		else
 		{

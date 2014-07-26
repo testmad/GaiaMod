@@ -23,19 +23,19 @@ public class StormArmorItem  extends ItemArmor{
 		
 		if(stack.getItem() == ModArmor.stormHelmet)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/stormarmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.stormChest)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/stormarmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.stormLeggings)
 		{
-			return References.MODID + ":models/armor/omegaarmor2.png";
+			return References.MODID + ":models/armor/stormarmor2.png";
 		}
 		else if(stack.getItem() == ModArmor.stormBoots)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/stormarmor1.png";
 		}
 		else
 		{

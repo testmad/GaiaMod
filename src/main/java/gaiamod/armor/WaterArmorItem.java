@@ -23,19 +23,19 @@ public class WaterArmorItem  extends ItemArmor{
 		
 		if(stack.getItem() == ModArmor.waterHelmet)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/waterarmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.waterChest)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/waterarmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.waterLeggings)
 		{
-			return References.MODID + ":models/armor/omegaarmor2.png";
+			return References.MODID + ":models/armor/waterarmor2.png";
 		}
 		else if(stack.getItem() == ModArmor.waterBoots)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/waterarmor1.png";
 		}
 		else
 		{

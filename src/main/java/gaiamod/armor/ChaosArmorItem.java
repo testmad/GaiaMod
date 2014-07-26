@@ -22,19 +22,19 @@ public class ChaosArmorItem extends ItemArmor{
 		
 		if(stack.getItem() == ModArmor.chaosHelmet)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/chaosarmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.chaosChest)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/chaosarmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.chaosLeggings)
 		{
-			return References.MODID + ":models/armor/omegaarmor2.png";
+			return References.MODID + ":models/armor/chaosarmor2.png";
 		}
 		else if(stack.getItem() == ModArmor.chaosBoots)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/chaosarmor1.png";
 		}
 		else
 		{

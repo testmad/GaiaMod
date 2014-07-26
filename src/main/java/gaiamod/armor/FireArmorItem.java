@@ -23,19 +23,19 @@ public class FireArmorItem  extends ItemArmor{
 		
 		if(stack.getItem() == ModArmor.fireHelmet)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/firearmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.fireChest)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/firearmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.fireLeggings)
 		{
-			return References.MODID + ":models/armor/omegaarmor2.png";
+			return References.MODID + ":models/armor/firearmor2.png";
 		}
 		else if(stack.getItem() == ModArmor.fireBoots)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/firearmor1.png";
 		}
 		else
 		{

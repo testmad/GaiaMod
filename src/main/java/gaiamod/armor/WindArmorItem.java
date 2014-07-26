@@ -23,19 +23,19 @@ public class WindArmorItem  extends ItemArmor{
 		
 		if(stack.getItem() == ModArmor.windHelmet)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/windarmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.windChest)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/windarmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.windLeggings)
 		{
-			return References.MODID + ":models/armor/omegaarmor2.png";
+			return References.MODID + ":models/armor/windarmor2.png";
 		}
 		else if(stack.getItem() == ModArmor.windBoots)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/windarmor1.png";
 		}
 		else
 		{

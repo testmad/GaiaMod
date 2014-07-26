@@ -121,16 +121,16 @@ public class ModArmor {
         
         
         stormHelmet = new StormArmorItem(gaiaArmorMaterial, 0, Strings.StormHelmetName);
-        Registrar.registerItem(heartHelmet);
+        Registrar.registerItem(stormHelmet);
         
         stormChest = new StormArmorItem(gaiaArmorMaterial, 1, Strings.StormChestName);
-        Registrar.registerItem(heartChest);
+        Registrar.registerItem(stormChest);
         
         stormLeggings = new StormArmorItem(gaiaArmorMaterial, 2, Strings.StormLeggingsName);
-        Registrar.registerItem(heartLeggings);
+        Registrar.registerItem(stormLeggings);
         
         stormBoots = new StormArmorItem(gaiaArmorMaterial, 3, Strings.StormBootsName);
-        Registrar.registerItem(heartBoots);
+        Registrar.registerItem(stormBoots);
         
         
         chaosHelmet = new ChaosArmorItem(gaiaArmorMaterial, 0, Strings.ChaosHelmetName);

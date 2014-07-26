@@ -23,19 +23,19 @@ public class HeartArmorItem  extends ItemArmor{
 		
 		if(stack.getItem() == ModArmor.heartHelmet)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/heartarmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.heartChest)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/heartarmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.heartLeggings)
 		{
-			return References.MODID + ":models/armor/omegaarmor2.png";
+			return References.MODID + ":models/armor/heartarmor2.png";
 		}
 		else if(stack.getItem() == ModArmor.heartBoots)
 		{
-			return References.MODID + ":models/armor/omegaarmor1.png";
+			return References.MODID + ":models/armor/heartarmor1.png";
 		}
 		else
 		{

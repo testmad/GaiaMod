@@ -60,44 +60,44 @@ item.stormamuletItem.name=Amulet of Storm
 item.chaosamuletItem.name=Amulet of Chaos
 item.orderamuletItem.name=Amulet of Order
 
-item.earthHelmet.name=Gaia Helmet
-item.earthChest.name=Gaia Chestplate
-item.earthLeggings.name=Gaia Leggings
-item.earthBoots.name=Gaia Boots
+item.earthHelmet.name=Earth Helmet
+item.earthChest.name=Earth Chestplate
+item.earthLeggings.name=Earth Leggings
+item.earthBoots.name=Earth Boots
 
-item.fireHelmet.name=Gaia Helmet
-item.fireChest.name=Gaia Chestplate
-item.fireLeggings.name=Gaia Leggings
-item.fireBoots.name=Gaia Boots
+item.fireHelmet.name=Fire Helmet
+item.fireChest.name=Fire Chestplate
+item.fireLeggings.name=Fire Leggings
+item.fireBoots.name=Fire Boots
 
-item.windHelmet.name=Gaia Helmet
-item.windChest.name=Gaia Chestplate
-item.windLeggings.name=Gaia Leggings
-item.windBoots.name=Gaia Boots
+item.windHelmet.name=Wind Helmet
+item.windChest.name=Wind Chestplate
+item.windLeggings.name=Wind Leggings
+item.windBoots.name=Wind Boots
 
-item.waterHelmet.name=Omega Helmet
-item.waterChest.name=Omega Chestplate
-item.waterLeggings.name=Omega Leggings
-item.waterBoots.name=Omega Boots
+item.waterHelmet.name=Water Helmet
+item.waterChest.name=Water Chestplate
+item.waterLeggings.name=Water Leggings
+item.waterBoots.name=Water Boots
 
-item.heartHelmet.name=Omega Helmet
-item.heartChest.name=Omega Chestplate
-item.heartLeggings.name=Omega Leggings
-item.heartBoots.name=Omega Boots
+item.heartHelmet.name=Heart Helmet
+item.heartChest.name=Heart Chestplate
+item.heartLeggings.name=Heart Leggings
+item.heartBoots.name=Heart Boots
 
-item.stormHelmet.name=Omega Helmet
-item.stormChest.name=Omega Chestplate
-item.stormLeggings.name=Omega Leggings
-item.stormBoots.name=Omega Boots
+item.stormHelmet.name=Storm Helmet
+item.stormChest.name=Storm Chestplate
+item.stormLeggings.name=Storm Leggings
+item.stormBoots.name=Storm Boots
 
-item.chaosHelmet.name=Omega Helmet
-item.chaosChest.name=Omega Chestplate
-item.chaosLeggings.name=Omega Leggings
-item.chaosBoots.name=Omega Boots
+item.chaosHelmet.name=Chaos Helmet
+item.chaosChest.name=Chaos Chestplate
+item.chaosLeggings.name=Chaos Leggings
+item.chaosBoots.name=Chaos Boots
 
-item.orderHelmet.name=Omega Helmet
-item.orderChest.name=Omega Chestplate
-item.orderLeggings.name=Omega Leggings
-item.orderBoots.name=Omega Boots
+item.orderHelmet.name=Order Helmet
+item.orderChest.name=Order Chestplate
+item.orderLeggings.name=Order Leggings
+item.orderBoots.name=Order Boots
 
 itemGroup.gaiamod=Gaia Mod

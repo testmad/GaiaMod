@@ -26,19 +26,19 @@ public class OrderArmorItem extends ItemArmor{
 		
 		if(stack.getItem() == ModArmor.orderHelmet)
 		{
-			return References.MODID + ":models/armor/gaiaarmor1.png";
+			return References.MODID + ":models/armor/orderarmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.orderChest)
 		{
-			return References.MODID + ":models/armor/gaiaarmor1.png";
+			return References.MODID + ":models/armor/orderarmor1.png";
 		}
 		else if(stack.getItem() == ModArmor.orderLeggings)
 		{
-			return References.MODID + ":models/armor/gaiaarmor2.png";
+			return References.MODID + ":models/armor/orderarmor2.png";
 		}
 		else if(stack.getItem() == ModArmor.orderBoots)
 		{
-			return References.MODID + ":models/armor/gaiaarmor1.png";
+			return References.MODID + ":models/armor/orderarmor1.png";
 		}
 		else
 		{

@@ -4,12 +4,17 @@ import gaiamod.armor.ModArmor;
 
 import java.util.UUID;
 
+import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialLiquid;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraftforge.client.event.EntityViewRenderEvent;
+import net.minecraftforge.client.event.EntityViewRenderEvent.FogDensity;
 import net.minecraftforge.client.event.FOVUpdateEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
@@ -17,16 +22,46 @@ import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class GaiaModEventHandler {
 	
 	private static final UUID wtvID = UUID.fromString("641470a0-ff51-4598-bdae-210184bbe083");
-	
+
 	@SubscribeEvent
 	public void onFOVUpdate(FOVUpdateEvent event){
 		event.setResult(Result.DEFAULT);
 	}
 
+	@SubscribeEvent
+	public void EntityViewRenderEvent(EntityViewRenderEvent.FogDensity event){
+		EntityLivingBase entityLiving = event.entity;
+		
+//		if(entityLiving instanceof EntityPlayer){
+			EntityPlayer entityPlayer = (EntityPlayer) entityLiving;
+			
+			ItemStack helm = entityPlayer.getCurrentArmor(3);
+			ItemStack chest = entityPlayer.getCurrentArmor(2);
+			ItemStack legs = entityPlayer.getCurrentArmor(1);
+			ItemStack boots = entityPlayer.getCurrentArmor(0);
+			
+			if(helm !=null && chest !=null & legs !=null && boots !=null){
+				if (helm.getItem() == ModArmor.fireHelmet && chest.getItem() == ModArmor.fireChest && legs.getItem() == ModArmor.fireLeggings && boots.getItem() == ModArmor.fireBoots){						if(entityPlayer.isInsideOfMaterial(Material.lava)){
+
+						event.setCanceled(true);
+						event.density = 0.5f;
+						
+					}else{
+						//event.setCanceled(false);
+						//event.renderer.updateRenderer();
+						
+					}
+				}
+			}
+//		}		
+	}
+	
 	@SubscribeEvent
 	public void onEntityUpdate(LivingUpdateEvent event){
 		EntityLivingBase entityLiving = event.entityLiving;
@@ -38,6 +73,9 @@ public class GaiaModEventHandler {
 			ItemStack chest = entityPlayer.getCurrentArmor(2);
 			ItemStack legs = entityPlayer.getCurrentArmor(1);
 			ItemStack boots = entityPlayer.getCurrentArmor(0);
+			
+
+			
 			
 			if(helm !=null && chest !=null & legs !=null && boots !=null && !entityPlayer.capabilities.isCreativeMode){
 				if (helm.getItem() == ModArmor.earthHelmet && chest.getItem() == ModArmor.earthChest && legs.getItem() == ModArmor.earthLeggings && boots.getItem() == ModArmor.earthBoots && !entityPlayer.capabilities.isCreativeMode){
@@ -78,6 +116,7 @@ public class GaiaModEventHandler {
 		if(entityLiving instanceof EntityPlayer){
 			EntityPlayer entityPlayer = (EntityPlayer) entityLiving;
 			
+			
 			ItemStack helm = entityPlayer.getCurrentArmor(3);
 			ItemStack chest = entityPlayer.getCurrentArmor(2);
 			ItemStack legs = entityPlayer.getCurrentArmor(1);
@@ -91,7 +130,20 @@ public class GaiaModEventHandler {
 				}
 				
 				if (helm.getItem() == ModArmor.fireHelmet && chest.getItem() == ModArmor.fireChest && legs.getItem() == ModArmor.fireLeggings && boots.getItem() == ModArmor.fireBoots && !entityPlayer.capabilities.isCreativeMode){
+					if(entityPlayer.isInsideOfMaterial(Material.lava) || entityPlayer.isInsideOfMaterial(MaterialLiquid.lava)){
+						entityPlayer.capabilities.allowFlying = true;
+						entityPlayer.capabilities.isFlying = true;
+						entityPlayer.capabilities.setFlySpeed(.02f);
+						entityPlayer.sendPlayerAbilities();
+						
+						
 
+					}else{
+						entityPlayer.capabilities.allowFlying = false;
+						entityPlayer.capabilities.isFlying = false;
+						entityPlayer.capabilities.setFlySpeed(.05f);
+						entityPlayer.sendPlayerAbilities();
+					}
 				}
 				
 				if (helm.getItem() == ModArmor.windHelmet && chest.getItem() == ModArmor.windChest && legs.getItem() == ModArmor.windLeggings && boots.getItem() == ModArmor.windBoots && !entityPlayer.capabilities.isCreativeMode){
@@ -102,6 +154,18 @@ public class GaiaModEventHandler {
 				
 				if (helm.getItem() == ModArmor.waterHelmet && chest.getItem() == ModArmor.waterChest && legs.getItem() == ModArmor.waterLeggings && boots.getItem() == ModArmor.waterBoots && !entityPlayer.capabilities.isCreativeMode){
 					entityPlayer.setAir(300);
+					if(entityPlayer.isInWater()){
+						
+						entityPlayer.capabilities.allowFlying = true;
+						entityPlayer.capabilities.isFlying = true;
+						entityPlayer.capabilities.setFlySpeed(.03f);
+						entityPlayer.sendPlayerAbilities();
+					}else{
+						entityPlayer.capabilities.allowFlying = false;
+						entityPlayer.capabilities.isFlying = false;
+						entityPlayer.capabilities.setFlySpeed(.05f);
+						entityPlayer.sendPlayerAbilities();
+					}
 				}
 				
 				if (helm.getItem() == ModArmor.heartHelmet && chest.getItem() == ModArmor.heartChest && legs.getItem() == ModArmor.heartLeggings && boots.getItem() == ModArmor.heartBoots && !entityPlayer.capabilities.isCreativeMode){

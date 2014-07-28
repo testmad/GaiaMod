@@ -6,6 +6,7 @@ import gaiamod.blocks.ModBlocks;
 import gaiamod.creativetab.GaiaModTab;
 import gaiamod.essence.ModEssence;
 import gaiamod.gui.ModGui;
+import gaiamod.handlers.GaiaModEventHandler;
 import gaiamod.handlers.GuiHandler;
 import gaiamod.handlers.RecipeHandler;
 import gaiamod.proxy.CommonProxy;
@@ -15,6 +16,8 @@ import gaiamod.util.References;
 import gaiamod.weapons.ModWeapons;
 import gaiamod.worldgen.GaiaModWorldGen;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -29,7 +32,7 @@ public class GaiaMod {
 	public static CreativeTabs gaiaModTab;
 	
 	GaiaModWorldGen eventWorldGen = new GaiaModWorldGen();
-	
+	GaiaModEventHandler handler = new GaiaModEventHandler();
 	@Mod.Instance(References.MODID)
 	public static GaiaMod instance;
 	
@@ -38,6 +41,10 @@ public class GaiaMod {
 	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		
+		FMLCommonHandler.instance().bus().register(handler);
+		MinecraftForge.EVENT_BUS.register(handler);
+		
 		
 		gaiaModTab = new GaiaModTab(CreativeTabs.getNextID(), References.MODID);
 		

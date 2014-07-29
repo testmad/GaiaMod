@@ -9,15 +9,18 @@ import org.lwjgl.opengl.GL11;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialLiquid;
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.client.event.EntityViewRenderEvent.FogDensity;
 import net.minecraftforge.client.event.FOVUpdateEvent;
+import net.minecraftforge.event.entity.EntityStruckByLightningEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
@@ -262,6 +265,27 @@ public class GaiaModEventHandler {
 	}
 	
 	@SubscribeEvent
+	public void onLightningStrike(EntityStruckByLightningEvent event) {
+		Entity entityLiving = event.entity;
+		if(entityLiving instanceof EntityPlayer){
+			EntityPlayer entityPlayer = (EntityPlayer) entityLiving;
+			
+			ItemStack helm = entityPlayer.getCurrentArmor(3);
+			ItemStack chest = entityPlayer.getCurrentArmor(2);
+			ItemStack legs = entityPlayer.getCurrentArmor(1);
+			ItemStack boots = entityPlayer.getCurrentArmor(0);
+			
+			if(helm !=null && chest !=null & legs !=null && boots !=null){
+				if (helm.getItem() == ModArmor.stormHelmet && chest.getItem() == ModArmor.stormChest && legs.getItem() == ModArmor.stormLeggings && boots.getItem() == ModArmor.stormBoots && !entityPlayer.capabilities.isCreativeMode){
+					
+					event.setCanceled(true);
+					
+				}
+			}
+		}
+	}
+	
+	@SubscribeEvent
 	public void onLivingHurt(LivingHurtEvent event){
 		EntityLivingBase attackedEntity = event.entityLiving;
 		DamageSource attackerEntity = event.source;
@@ -277,13 +301,14 @@ public class GaiaModEventHandler {
 			
 			if(helm !=null && chest !=null & legs !=null && boots !=null){
 				if (helm.getItem() == ModArmor.stormHelmet && chest.getItem() == ModArmor.stormChest && legs.getItem() == ModArmor.stormLeggings && boots.getItem() == ModArmor.stormBoots && !entityPlayer.capabilities.isCreativeMode){
-					if(itemHeld.getItem() == Items.bow){
+					if(event.source.getSourceOfDamage() instanceof EntityArrow){
+					//if(itemHeld.getItem() == Items.bow){
 						double i = attackedEntity.posX;
 						double j = attackedEntity.posY;
 						double k = attackedEntity.posZ;
 				
 						EntityLightningBolt entityLightningBolt = new EntityLightningBolt(entityPlayer.worldObj, i, j, k);
-				
+						//entityPlayer.worldObj.spawnEntityInWorld(new EntityLightningBolt(entityPlayer.worldObj, i, j, k));
 						entityPlayer.worldObj.addWeatherEffect(entityLightningBolt);
 					}
 				}

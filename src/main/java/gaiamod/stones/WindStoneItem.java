@@ -13,7 +13,9 @@ public class WindStoneItem  extends Item{
         this.setUnlocalizedName(Strings.WindStoneItemName);
         this.setCreativeTab(GaiaMod.getcreativeTab());
         this.setTextureName(References.MODID + ":" + getUnlocalizedName().substring(5));
-
+        this.setNoRepair();
+        this.setMaxStackSize(64);
+        this.setFull3D();
     }
 
 }

@@ -13,7 +13,8 @@ public class ChaosArmorItem extends ItemArmor{
 		super(material, 0 , armorType);
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(GaiaMod.getcreativeTab());
-		this.canRepair = true;	
+		this.setNoRepair();
+        this.setFull3D();
 
 		this.setTextureName(References.MODID + ":" + getUnlocalizedName().substring(5));
 	}

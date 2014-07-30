@@ -24,8 +24,8 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 	public int waterPowerLevel;
 	public int lavaPowerLevel;
 	public int burn;
-	public static final int maxWaterPower = 1000;
-	public static final int maxLavaPower = 1000;
+	public static final int maxWaterPower = 10001;
+	public static final int maxLavaPower = 10001;
 	
 	public static final int cookSpeed = 100;
 	
@@ -134,11 +134,11 @@ public class TileEntityGaiaAltar extends TileEntity implements ISidedInventory{
 			if(item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.air) {
 				Block block = Block.getBlockFromItem(item);
 				
-				if(block == Blocks.water) return 800;
+				if(block == Blocks.water) return 100;
 				
 			}
 			
-			if(item == Items.water_bucket) return 800;
+			if(item == Items.water_bucket) return 100;
 		}
 		return 0;
 	}

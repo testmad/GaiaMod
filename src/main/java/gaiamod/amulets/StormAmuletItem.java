@@ -13,6 +13,10 @@ public class StormAmuletItem extends Item {
         this.setUnlocalizedName(Strings.StormAmuletItemName);
         this.setCreativeTab(GaiaMod.getcreativeTab());
         this.setTextureName(References.MODID + ":" + getUnlocalizedName().substring(5));
+        
+        this.setNoRepair();
+        this.setMaxStackSize(64);
+        this.setFull3D();
 	}
 
 }

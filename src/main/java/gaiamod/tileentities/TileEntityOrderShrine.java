@@ -25,7 +25,7 @@ public class TileEntityOrderShrine extends TileEntity implements ISidedInventory
 	public int essencePowerLevel;
 
 
-	public static final int maxEssencePower = 1000;
+	public static final int maxEssencePower = 10001;
 	
 	public int cookSpeed;
 	

@@ -13,6 +13,10 @@ public class EmptyOrderEssenceItem extends Item {
         this.setUnlocalizedName(Strings.EmptyOrderEssenceItemName);
         this.setCreativeTab(GaiaMod.getcreativeTab());
         this.setTextureName(References.MODID + ":" + getUnlocalizedName().substring(5));
+        
+        this.setNoRepair();
+        this.setMaxStackSize(64);
+        this.setFull3D();
 	}
 
 }

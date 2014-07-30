@@ -13,9 +13,10 @@ public class EarthAmuletItem extends Item {
         this.setUnlocalizedName(Strings.EarthAmuletItemName);
         this.setCreativeTab(GaiaMod.getcreativeTab());
         this.setTextureName(References.MODID + ":" + getUnlocalizedName().substring(5));
-        
+
         this.setNoRepair();
-        this.setMaxDamage(2);
+        this.setMaxStackSize(64);
+        this.setFull3D();
 	}
 
 }

@@ -14,7 +14,9 @@ public class WaterStoneItem  extends Item{
         this.setCreativeTab(GaiaMod.getcreativeTab());
         this.maxStackSize = 1;
         this.setTextureName(References.MODID + ":" + getUnlocalizedName().substring(5));
-
+        this.setNoRepair();
+        this.setMaxStackSize(64);
+        this.setFull3D();
 
     }
 

@@ -29,8 +29,8 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 	public int chanceLevel;
 	public int essenceLevel;
 	
-	public static final int maxWaterPower = 1000;
-	public static final int maxLavaPower = 1000;
+	public static final int maxWaterPower = 10001;
+	public static final int maxLavaPower = 10001;
 	
 	public static final int maxChanceLevel = 1000;
 	public static final int maxEssenceLevel = 1000;
@@ -340,7 +340,7 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		float chance = r.nextFloat();
 		
 		if(item == ModEssence.emptyEarthEssenceItem){
-			if (chance <= 0.80f){
+			if (chance <= 0.75f){
 			    return true;
 			  }
 			  else{
@@ -350,7 +350,7 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		}else
 		
 		if(item == ModEssence.emptyFireEssenceItem){
-			if (chance <= 0.80f){
+			if (chance <= 0.75f){
 			    return true;
 			  }
 			  else{
@@ -360,7 +360,7 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		}else
 
 		if(item == ModEssence.emptyWindEssenceItem){
-			if (chance <= 0.80f){
+			if (chance <= 0.75f){
 			    return true;
 			  }
 			  else{
@@ -370,7 +370,7 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		}else
 
 		if(item == ModEssence.emptyWaterEssenceItem){
-			if (chance <= 0.80f){
+			if (chance <= 0.75f){
 			    return true;
 			  }
 			  else{
@@ -390,16 +390,6 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 		}else
 
 		if(item == ModEssence.emptyStormEssenceItem){
-			if (chance <= 0.60f){
-			    return true;
-			  }
-			  else{
-				  return false;
-			  }
-	
-		}else
-
-		if(item == ModEssence.emptyChaosEssenceItem){
 			if (chance <= 0.50f){
 			    return true;
 			  }
@@ -409,8 +399,18 @@ public class TileEntityEssenceAltar extends TileEntity implements ISidedInventor
 	
 		}else
 
-		if(item == ModEssence.emptyOrderEssenceItem){
+		if(item == ModEssence.emptyChaosEssenceItem){
 			if (chance <= 0.40f){
+			    return true;
+			  }
+			  else{
+				  return false;
+			  }
+	
+		}else
+
+		if(item == ModEssence.emptyOrderEssenceItem){
+			if (chance <= 0.30f){
 			    return true;
 			  }
 			  else{

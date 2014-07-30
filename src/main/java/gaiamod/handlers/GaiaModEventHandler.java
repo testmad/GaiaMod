@@ -1,34 +1,26 @@
 package gaiamod.handlers;
 
 import gaiamod.armor.ModArmor;
-
-import java.util.UUID;
-
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialLiquid;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.client.event.EntityViewRenderEvent;
-import net.minecraftforge.client.event.EntityViewRenderEvent.FogDensity;
 import net.minecraftforge.client.event.FOVUpdateEvent;
 import net.minecraftforge.event.entity.EntityStruckByLightningEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+
+import org.lwjgl.opengl.GL11;
+
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class GaiaModEventHandler {
 	
@@ -302,13 +294,11 @@ public class GaiaModEventHandler {
 			if(helm !=null && chest !=null & legs !=null && boots !=null){
 				if (helm.getItem() == ModArmor.stormHelmet && chest.getItem() == ModArmor.stormChest && legs.getItem() == ModArmor.stormLeggings && boots.getItem() == ModArmor.stormBoots && !entityPlayer.capabilities.isCreativeMode){
 					if(event.source.getSourceOfDamage() instanceof EntityArrow){
-					//if(itemHeld.getItem() == Items.bow){
 						double i = attackedEntity.posX;
 						double j = attackedEntity.posY;
 						double k = attackedEntity.posZ;
 				
 						EntityLightningBolt entityLightningBolt = new EntityLightningBolt(entityPlayer.worldObj, i, j, k);
-						//entityPlayer.worldObj.spawnEntityInWorld(new EntityLightningBolt(entityPlayer.worldObj, i, j, k));
 						entityPlayer.worldObj.addWeatherEffect(entityLightningBolt);
 					}
 				}
@@ -331,16 +321,19 @@ public class GaiaModEventHandler {
 			
 			if(helm !=null && chest !=null & legs !=null && boots !=null){
 				if (helm.getItem() == ModArmor.windHelmet && chest.getItem() == ModArmor.windChest && legs.getItem() == ModArmor.windLeggings && boots.getItem() == ModArmor.windBoots && !entityPlayer.capabilities.isCreativeMode){
+					if(!entityPlayer.isSneaking()){
 					entityPlayer.motionY +=addY;
-					entityPlayer.velocityChanged = true;
+					entityPlayer.velocityChanged = true;}
 				}
 				if (helm.getItem() == ModArmor.chaosHelmet && chest.getItem() == ModArmor.chaosChest && legs.getItem() == ModArmor.chaosLeggings && boots.getItem() == ModArmor.chaosBoots && !entityPlayer.capabilities.isCreativeMode){
-					entityPlayer.motionY +=addY;
-					entityPlayer.velocityChanged = true;
+					if(!entityPlayer.isSneaking()){
+						entityPlayer.motionY +=addY;
+						entityPlayer.velocityChanged = true;}
 				}
 				if (helm.getItem() == ModArmor.orderHelmet && chest.getItem() == ModArmor.orderChest && legs.getItem() == ModArmor.orderLeggings && boots.getItem() == ModArmor.orderBoots && !entityPlayer.capabilities.isCreativeMode){
-					entityPlayer.motionY +=addY;
-					entityPlayer.velocityChanged = true;
+					if(!entityPlayer.isSneaking()){
+						entityPlayer.motionY +=addY;
+						entityPlayer.velocityChanged = true;}
 				}
 			}
 		}

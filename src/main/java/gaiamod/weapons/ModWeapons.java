@@ -10,18 +10,22 @@ public class ModWeapons {
 	public static Item chaosSword;
 	public static Item orderSword;
 	
-	static Item.ToolMaterial gaiaToolMaterial = EnumHelper.addToolMaterial("gaiaToolMaterial", 2, 192, 5.0F, 1.5F, 12);
+	static Item.ToolMaterial stormToolMaterial = EnumHelper.addToolMaterial("stormToolMaterial", 3, 2061, 14.0F, 10.0F, 0);
+	
+	static Item.ToolMaterial chaosToolMaterial = EnumHelper.addToolMaterial("chaosToolMaterial", 3, 2561, 16.0F, 12.0F, 0);
+	
+	static Item.ToolMaterial orderToolMaterial = EnumHelper.addToolMaterial("orderToolMaterial", 3, 3061, 18.0F, 14.0F, 0);
 	
 	public static void init()
     {
 		
-		stormSword = new StormSwordItem(gaiaToolMaterial);
+		stormSword = new StormSwordItem(stormToolMaterial);
         Registrar.registerItem(stormSword);
         
-        chaosSword = new ChaosSwordItem(gaiaToolMaterial);
+        chaosSword = new ChaosSwordItem(chaosToolMaterial);
         Registrar.registerItem(chaosSword);
         
-        orderSword = new OrderSwordItem(gaiaToolMaterial);
+        orderSword = new OrderSwordItem(orderToolMaterial);
         Registrar.registerItem(orderSword);
 		
     }

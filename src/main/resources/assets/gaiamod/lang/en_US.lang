@@ -100,4 +100,8 @@ item.orderChest.name=Order Chestplate
 item.orderLeggings.name=Order Leggings
 item.orderBoots.name=Order Boots
 
+item.stormSwordItem.name=Jupiter's Blade
+item.chaosSwordItem.name=Chaos of Tartarus
+item.orderSwordItem.name= Gaia's Order
+
 itemGroup.gaiamod=Gaia Mod

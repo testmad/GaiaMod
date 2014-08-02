@@ -2,10 +2,17 @@ package gaiamod.armor;
 
 import gaiamod.GaiaMod;
 import gaiamod.util.References;
+
+import java.util.UUID;
+
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
+import net.minecraft.entity.ai.attributes.IAttributeInstance;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.world.World;
 
 public class EarthArmorItem  extends ItemArmor{
 
@@ -44,5 +51,32 @@ public class EarthArmorItem  extends ItemArmor{
 			return null;
 		}
 	}
+	
+//	@Override
+//	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
+//		
+//		ItemStack helm = player.getCurrentArmor(3);
+//		ItemStack chest = player.getCurrentArmor(2);
+//		ItemStack legs = player.getCurrentArmor(1);
+//		ItemStack boots = player.getCurrentArmor(0);
+//		
+//		IAttributeInstance atinst = player.getEntityAttribute(SharedMonsterAttributes.movementSpeed);
+//		AttributeModifier mod;
+//		mod = new AttributeModifier(wtvID,"MySpeedModifier",.4,2);
+//		
+//		if(helm !=null && chest !=null && legs !=null && boots !=null){
+//			if(atinst.getModifier(wtvID) == null)
+//			{
+//			atinst.applyModifier(mod);
+//			}
+//		}
+//		
+//		if(helm !=null || chest !=null || legs !=null || boots !=null){
+//			if(atinst.getModifier(wtvID) != null)
+//			{
+//			atinst.removeModifier(mod);
+//			}
+//		}
+//	}
 
 }

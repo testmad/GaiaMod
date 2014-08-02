@@ -12,6 +12,7 @@ public class OrderSwordItem extends ItemSword{
 		this.setUnlocalizedName(Strings.OrderSwordItemName);
         this.setCreativeTab(GaiaMod.getcreativeTab());
         this.setTextureName(References.MODID + ":" + getUnlocalizedName().substring(5));
+        this.setNoRepair();
 	}
 	
 	

@@ -5,6 +5,7 @@ import gaiamod.armor.ModArmor;
 import gaiamod.blocks.ModBlocks;
 import gaiamod.essence.ModEssence;
 import gaiamod.stones.ModStones;
+import gaiamod.weapons.ModWeapons;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -501,6 +502,33 @@ public class RecipeHandler {
 				'q', ModArmor.stormChest,
 				'x', ModArmor.waterBoots,
 				'a', ModAmulets.orderAmuletItem);
+    	
+    	CraftingManager.getInstance().addRecipe(new ItemStack(ModWeapons.stormSword, 1),
+				"ese",
+				" s ",
+				"eie",
+
+				's', ModStones.stormStoneItem,
+				'e', ModEssence.stormEssenceItem,
+				'i', Items.iron_ingot);
+    	
+    	CraftingManager.getInstance().addRecipe(new ItemStack(ModWeapons.chaosSword, 1),
+				"ese",
+				" s ",
+				"eie",
+
+				's', ModStones.chaosStoneItem,
+				'e', ModEssence.chaosEssenceItem,
+				'i', Items.iron_ingot);
+    	
+    	CraftingManager.getInstance().addRecipe(new ItemStack(ModWeapons.orderSword, 1),
+				"ese",
+				" s ",
+				"eie",
+
+				's', ModStones.orderStoneItem,
+				'e', ModEssence.orderEssenceItem,
+				'i', Items.iron_ingot);
 
     }
 

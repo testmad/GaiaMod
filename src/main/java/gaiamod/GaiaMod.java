@@ -33,6 +33,7 @@ public class GaiaMod {
 	
 	GaiaModWorldGen eventWorldGen = new GaiaModWorldGen();
 	GaiaModEventHandler handler = new GaiaModEventHandler();
+	
 	@Mod.Instance(References.MODID)
 	public static GaiaMod instance;
 	

@@ -12,6 +12,7 @@ public class StormSwordItem extends ItemSword{
 		this.setUnlocalizedName(Strings.StormSwordItemName);
         this.setCreativeTab(GaiaMod.getcreativeTab());
         this.setTextureName(References.MODID + ":" + getUnlocalizedName().substring(5));
+        this.setNoRepair();
 	}
 	
 	

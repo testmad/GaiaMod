@@ -37,10 +37,11 @@ public class GaiaModEventHandler
     public void onFOVUpdate(FOVUpdateEvent event)
     {
         IAttributeInstance atinst = event.entity.getEntityAttribute(SharedMonsterAttributes.movementSpeed);
-        if (atinst.getModifier(wtvID) != null)
+        AttributeModifier mod;
+        if ((mod = atinst.getModifier(wtvID)) != null)
         {
-            event.newfov = (event.newfov * 2.0f) - 1.0f;
-            event.newfov = event.newfov / 1.4f; // Earth speed modifier
+            event.newfov = (event.newfov * 2.0f) - 1.0f; // Reversal operation, as seen in EntityPlayerSP
+            event.newfov = event.newfov / (float)(1.0 + mod.getAmount()); // Earth speed modifier
             event.newfov = (event.newfov + 1.0f) / 2.0f;
         }
     }
@@ -50,7 +51,6 @@ public class GaiaModEventHandler
     @SubscribeEvent
     public void EntityViewRenderEvent(EntityViewRenderEvent.FogDensity event)
     {
-
         EntityLivingBase entityLiving = event.entity;
 
         if (hasEquippedSet(entityLiving, ModArmor.fireHelmet, ModArmor.fireChest, ModArmor.fireLeggings, ModArmor.fireBoots)

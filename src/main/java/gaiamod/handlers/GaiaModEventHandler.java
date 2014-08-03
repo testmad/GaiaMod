@@ -142,7 +142,7 @@ public class GaiaModEventHandler
             boolean flyingInLava = player.isInsideOfMaterial(Material.lava) && isFireEquipped;
             boolean flyingWithPower = isChaosEquipped || isOrderEquipped;
 
-            player.capabilities.allowFlying = flyingInLava || flyingInWater || flyingWithPower;
+            player.capabilities.allowFlying = flyingInLava || flyingInWater || flyingWithPower || player.capabilities.isCreativeMode;
 
             if (flyingInLava || flyingInWater)
                 player.capabilities.setFlySpeed(flyingInWater ? 0.03f : 0.02f);

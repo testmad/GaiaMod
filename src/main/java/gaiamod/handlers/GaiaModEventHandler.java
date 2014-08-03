@@ -1,6 +1,7 @@
 package gaiamod.handlers;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.relauncher.ReflectionHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import gaiamod.armor.ModArmor;
@@ -13,9 +14,11 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.PlayerCapabilities;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.client.event.FOVUpdateEvent;
@@ -26,11 +29,14 @@ import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import org.lwjgl.opengl.GL11;
 
+import java.lang.reflect.Field;
 import java.util.UUID;
 
 public class GaiaModEventHandler
 {
     private static final UUID wtvID = UUID.fromString("641470a0-ff51-4598-bdae-210184bbe083");
+
+    private static Field flySpeedField;
 
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
@@ -145,9 +151,9 @@ public class GaiaModEventHandler
             player.capabilities.allowFlying = flyingInLava || flyingInWater || flyingWithPower || player.capabilities.isCreativeMode;
 
             if (flyingInLava || flyingInWater)
-                player.capabilities.setFlySpeed(flyingInWater ? 0.03f : 0.02f);
+                setPlayerFlySpeed(player.capabilities, flyingInWater ? 0.03f : 0.02f);
             else
-                player.capabilities.setFlySpeed(0.05f);
+                setPlayerFlySpeed(player.capabilities, 0.05f);
 
             if (!player.capabilities.allowFlying)
                 player.capabilities.isFlying = false;
@@ -216,6 +222,24 @@ public class GaiaModEventHandler
         {
             entityLiving.motionY += 0.3;
             entityLiving.velocityChanged = true;
+        }
+    }
+
+    private static void setPlayerFlySpeed(PlayerCapabilities capabilities, float flySpeed)
+    {
+        if (flySpeedField == null)
+        {
+            flySpeedField = ReflectionHelper.findField(PlayerCapabilities.class, "flySpeed", "field_75096_f");
+            flySpeedField.setAccessible(true);
+        }
+
+        try
+        {
+            flySpeedField.set(capabilities, flySpeed);
+        }
+        catch (IllegalAccessException e)
+        {
+            e.printStackTrace();
         }
     }
 

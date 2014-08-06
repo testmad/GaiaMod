@@ -51,14 +51,14 @@ item.chaosStoneItem.name=Body of Chaos
 item.orderStoneItem.name=Body of Order
 
 item.amuletItem.name=Amulet of Body
-item.earthamuletItem.name=Amulet of Earth
-item.fireamuletItem.name=Amulet of Fire
-item.windamuletItem.name=Amulet of Wind
-item.wateramuletItem.name=Amulet of Water
-item.heartamuletItem.name=Amulet of Heart
-item.stormamuletItem.name=Amulet of Storm
-item.chaosamuletItem.name=Amulet of Chaos
-item.orderamuletItem.name=Amulet of Order
+item.earthAmuletItem.name=Amulet of Earth
+item.fireAmuletItem.name=Amulet of Fire
+item.windAmuletItem.name=Amulet of Wind
+item.waterAmuletItem.name=Amulet of Water
+item.heartAmuletItem.name=Amulet of Heart
+item.stormAmuletItem.name=Amulet of Storm
+item.chaosAmuletItem.name=Amulet of Chaos
+item.orderAmuletItem.name=Amulet of Order
 
 item.earthHelmet.name=Earth Helmet
 item.earthChest.name=Earth Chestplate

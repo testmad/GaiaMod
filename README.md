@@ -1,13 +1,82 @@
-GaiaMod
-=======
+[TOC]
 
-Um. It's a mod for 1.7.10. What else you want?
+##GaiaMod
+###What is it?
+It's a mod for 1.7.10. What else you want?
+####Current Status
+Always a work in progress.
+####Future Plans
+Not certainas of yet.
 
 
-Current Status
-=======
+##Mod Blocks,Items,Armors, & Weapons
+###Blocks
+####Decorative
+| Name | Info | Image |
+|--------|--------|--------|
+|Marble Block|<ul><li>Found randomly in the world.</li></ul>|        |
+|Marble Brick|<ul><li>Made at Crafting Table.</li><li>4 Marble Block return 4 Marble Brick</li></ul>|        |
+####Functional
+| Name | Info | Image |
+|--------|--------|--------|
+|Altar of Order|<ul><li>Made at Crafting Table.</li><li>A 2x2 crafting grid.</li><li>Requires water and lava for operation.</li><li>Has a "cook time" like a furnace.</li></ul>|        |
+|Altar of Essence|<ul><li>Made at Crafting Table.</li><li>Extracts essence from various blocks & items.</li><li>Essence production is based on chance.</li></ul>|        |
+|Gaia's Shrine|<ul><li>Made at Crafting Table.</li><li>Extended enchantability for vanilla items.</li><li>Only way to enchant GaiaMod items??</li></ul>|        |
 
-Blocks
+
+###Items
+####Holders
+
+#####Earth
+#####Fire
+#####Wind
+#####Water
+#####Heart
+#####Storm
+#####Chaos
+#####Order
+
+####Bodies
+
+#####Earth
+#####Fire
+#####Wind
+#####Water
+#####Heart
+#####Storm
+#####Chaos
+#####Order
+
+####Amulets
+
+#####Earth
+#####Fire
+#####Wind
+#####Water
+#####Heart
+#####Storm
+#####Chaos
+#####Order
+
+###Armors
+####Earth
+####Fire
+####Wind
+####Water
+####Heart
+####Storm
+####Chaos
+####Order
+###Weapons
+
+##Recipes
+###Blocks
+###Items
+
+
+
+
+    
     
     Marble
         - Found randomly in the world.

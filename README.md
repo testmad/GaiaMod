@@ -14,9 +14,9 @@ It's a mod for 1.7.10. What else you want?
 Always a work in progress.
 #####Future Plans
 Not certain as of yet.
-___
 
----
+***
+
 #Blocks, Items, Armors, & Weapons
 * [Blocks](#blocks)
 	* [Decorative](#decorative)

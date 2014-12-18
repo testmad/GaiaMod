@@ -32,56 +32,56 @@ Not certain as of yet.
 ####Decorative
 | Name | Info | Image |
 |--------|--------|--------|
-|Marble Block|<ul><li>Found randomly in the world.</li></ul>|![Marble Block](http://i.imgur.com/qDyEgSO.png)|
-|Marble Brick|<ul><li>Made at Crafting Table.</li><li>4 Marble Block return 4 Marble Brick</li></ul>|![Marble Brick](http://i.imgur.com/00A0rTc.png)|
+|Marble Block|<ul><li>Found randomly in the world.</li></ul>|![](http://i.imgur.com/qDyEgSO.png)|
+|Marble Brick|<ul><li>Made at Crafting Table.</li><li>4 Marble Block return 4 Marble Brick</li></ul>|![](http://i.imgur.com/00A0rTc.png)|
 
 ####Functional
 | Name | Info | Image |
 |--------|--------|--------|
-|Altar of Order|<ul><li>Made at Crafting Table.</li><li>A 2x2 crafting grid.</li><li>Requires water and lava for operation.</li><li>Has a "cook time" like a furnace.</li></ul>|![Altar of Order](http://i.imgur.com/WUH2WEg.png)|
-|Altar of Essence|<ul><li>Made at Crafting Table.</li><li>Extracts essence from various blocks & items.</li><li>Essence production is based on chance.</li></ul>|![        ](http://i.imgur.com/ItVYjIz.png)|
-|Gaia's Shrine|<ul><li>Made at Crafting Table.</li><li>Extended enchantability for vanilla items.</li><li>Only way to enchant GaiaMod items??</li></ul>|![        ](http://i.imgur.com/tx40e8Y.png)|
+|Altar of Order|<ul><li>Made at Crafting Table.</li><li>A 2x2 crafting grid.</li><li>Requires water and lava for operation.</li><li>Has a "cook time" like a furnace.</li></ul>|![](http://i.imgur.com/WUH2WEg.png)|
+|Altar of Essence|<ul><li>Made at Crafting Table.</li><li>Extracts essence from various blocks & items.</li><li>Essence production is based on chance.</li></ul>|![](http://i.imgur.com/ItVYjIz.png)|
+|Gaia's Shrine|<ul><li>Made at Crafting Table.</li><li>Extended enchantability for vanilla items.</li><li>Only way to enchant GaiaMod items??</li></ul>|![](http://i.imgur.com/tx40e8Y.png)|
 
 ##Items
 ####Holders of Essence
 | Name | Info | Image |
 |--------|--------|--------|
-|Empty Holder of Essence|||
-|Essence of Earth|||
-|Essence of Fire|||
-|Essence of Wind|||
-|Essence of Water|||
-|Essence of Heart|||
-|Essence of Storm|||
-|Essence of Chaos|||
-|Essence of Order|||
+|Empty Holder of Essence||![](http://i.imgur.com/jlgc5vS.png)|
+|Essence of Earth||![](http://i.imgur.com/M3ee77Z.png)|
+|Essence of Fire||![](http://i.imgur.com/ylckxXx.png)|
+|Essence of Wind||![](http://i.imgur.com/fPouj5t.png)|
+|Essence of Water||![](http://i.imgur.com/8p9mTxI.png)|
+|Essence of Heart||![](http://i.imgur.com/wvPYuuG.png)|
+|Essence of Storm||![](http://i.imgur.com/lMWSfVh.png)|
+|Essence of Chaos||![](http://i.imgur.com/Smtm0fQ.png)|
+|Essence of Order||![](http://i.imgur.com/7pB7BwS.png)|
 
 ####Bodies of Essence
 | Name | Info | Image |
 |--------|--------|--------|
-|Empty Body|||
-|Body of Earth|||
-|Body of Fire|||
-|Body of Wind|||
-|Body of Water|||
-|Body of Heart|||
-|Body of Storm|||
-|Body of Chaos|||
-|Body of Order|||
+|Empty Body||![](http://i.imgur.com/WfcOjE9.png)|
+|Body of Earth||![](http://i.imgur.com/nQ59fJf.png)|
+|Body of Fire||![](http://i.imgur.com/gV31hji.png)|
+|Body of Wind||![](http://i.imgur.com/ohGpGGb.png)|
+|Body of Water||![](http://i.imgur.com/1h1gL4h.png)|
+|Body of Heart||![](http://i.imgur.com/8YigbtH.png)|
+|Body of Storm||![](http://i.imgur.com/8Ca6jAM.png)|
+|Body of Chaos||![](http://i.imgur.com/4VjLGes.png)|
+|Body of Order||![](http://i.imgur.com/dYyptjv.png)|
 
 ####Amulets
 
 | Name | Info | Image |
 |--------|--------|--------|
-|Empty Amulet|||
-|Amulet of Earth|||
-|Amulet of Fire|||
-|Amulet of Wind|||
-|Amulet of Water|||
-|Amulet of Heart|||
-|Amulet of Storm|||
-|Amulet of Chaos|||
-|Amulet of Order|||
+|Empty Amulet||![](http://i.imgur.com/eGUeMb3.png)|
+|Amulet of Earth||![](http://i.imgur.com/aHhis6A.png)|
+|Amulet of Fire||![](http://i.imgur.com/m0oEPgD.png)|
+|Amulet of Wind||![](http://i.imgur.com/A9TtCoN.png)|
+|Amulet of Water||![](http://i.imgur.com/MZt8EG9.png)|
+|Amulet of Heart||![](http://i.imgur.com/RG9AkSK.png)|
+|Amulet of Storm||![](http://i.imgur.com/IVHvvVZ.png)|
+|Amulet of Chaos||![](http://i.imgur.com/zAVPU1q.png)|
+|Amulet of Order||![](http://i.imgur.com/qJmW1Yg.png)|
 
 ##Armors
 | Name | Info | Image |

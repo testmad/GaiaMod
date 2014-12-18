@@ -1,7 +1,7 @@
 GaiaMod
 =======
 
-Um. It's a mod for 1.7.2. What else you want?
+Um. It's a mod for 1.7.10. What else you want?
 
 
 TODO
@@ -9,34 +9,60 @@ TODO
 
 Blocks
     
+    Marble
+        - Found randomly in the world.
+        
+    Marble Brick
+        - Made at Crafting Table.
+        - A more refined Marble block.
+        - 4 Marble blocks return 4 Marble Brick blocks.
+        - Recipe:
+        - Marble 		   - Marble 		     -
+        - Marble 		   - Marble 		     -
+        -                  -                     -
+    
     Altar of Order
-        - 2x2 crafting grid
+        - Made at Crafting Table.
+        - A 2x2 crafting grid.
         - Uses both water and lava for fuel.
         - Has a "cook time" like a furnace.
         - Used for making Body of Essence (Stones).
         - Used to make Holder of Essence (Empty Vial).
         - Recipe:
-		- Stone 		- Stone 		- Stone 
-		- Cauldron 		- Ender Pearl 		- Cauldron
-		- Stone 		- Stone 		- Stone  
+		- Marble 		   - Marble 		     - Marble 
+		- Cauldron 		   - Ender Pearl 		 - Cauldron
+		- Marble 		   - Marble 		     - Marble  
         
     Altar of Essence
+        - Made at Crafting Table.
         - 1 input, 1 holding slot, 1 tank entity.
         - Pulls essence from various vanilla blocks/items.
         - Senses which essence is being worked on based on the vial placed into the holding socket.
         - Essence given is based on values of blocks/items
         - When certain value is attained, you get a chance of actually producing a ranged amount of essence.
         - Recipe:
-		- Piston 		- Stone 		- Piston 
-		- Cauldron 		- Gaia Alter		- Cauldron
-		- Stone 		- Stone 		- Stone  
+		- Piston 		   - Marble 		     - Piston 
+		- Cauldron 		   - Altar of Order		 - Cauldron
+		- Marble 		   - Marble 		     - Marble  
+        
+    Gaia's Shrine
+        - Made at Crafting Table.
+        - Extended enchantability for items.
+        - Only way to enchant Gaia Mod items.
+        - 
+        - Recipe:
+        - Marble 		   - Anvil 		         - Marble 
+		- Altar of Essence - Emerald		     - Altar of Essence
+		- Marble 		   - Anvil 		         - Marble  
+        
         
 
 Essence
 
 	 Holder of Essence
         - Just a vial
-        - Hold various essence.
+        - Holds various essence.
+        - Returns 4 Holder of Essence
         - Recipe:
 		- (blank) 	- Glass 		- (blank) 
 		- Glass		- Obsidian		- Glass

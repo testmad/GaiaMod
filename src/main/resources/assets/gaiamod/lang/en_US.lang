@@ -1,21 +1,21 @@
-tile.gaiaAltarBlock.name=Gaia Altar
-tile.gaiaAltarBlockIdleEmtpy.name=Gaia Altar
-tile.gaiaAltarBlockIdleFull.name=Gaia Altar
-tile.gaiaAltarBlockIdlePower.name=Gaia Altar
-tile.gaiaAltarBlockActive.name=Gaia Altar
-tile.gaiaAltarBlockIdle.name=Gaia Altar
+tile.gaiaAltarBlock.name=Altar of Order
+tile.gaiaAltarBlockIdleEmtpy.name=Altar of Order
+tile.gaiaAltarBlockIdleFull.name=Altar of Order
+tile.gaiaAltarBlockIdlePower.name=Altar of Order
+tile.gaiaAltarBlockActive.name=Altar of Order
+tile.gaiaAltarBlockIdle.name=Altar of Order
 
 
-tile.essenceAltarBlock.name=Essence Altar
-tile.essenceAltarBlockIdleEmtpy.name=Essence Altar
-tile.essenceAltarBlockIdleFull.name=Essence Altar
-tile.essenceAltarBlockIdlePower.name=Essence Altar
-tile.essenceAltarBlockActive.name=Essence Altar
-tile.essenceAltarBlockIdle.name=Essence Altar
+tile.essenceAltarBlock.name=Altar of Essence
+tile.essenceAltarBlockIdleEmtpy.name=Altar of Essence
+tile.essenceAltarBlockIdleFull.name=Altar of Essence
+tile.essenceAltarBlockIdlePower.name=Altar of Essence
+tile.essenceAltarBlockActive.name=Altar of Essence
+tile.essenceAltarBlockIdle.name=Altar of Essence
 
-tile.orderShrineBlock.name=Gaia Shrine
-tile.orderShrineBlockIdle.name=Gaia Shrine
-tile.orderShrineBlockIdlePower.name=Gaia Shrine
+tile.orderShrineBlock.name=Gaia's Shrine
+tile.orderShrineBlockIdle.name=Gaia's Shrine
+tile.orderShrineBlockIdlePower.name=Gaia's Shrine
 
 
 tile.marbleBlock.name=Marble

@@ -2,7 +2,7 @@
 {
   "modid": "gaiamod",
   "name": "Gaia Mod",
-  "description": "For Thinstack private pack only.",
+  "description": "For Thinstack IRC private pack only.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",

@@ -32,7 +32,7 @@ Not certain as of yet.
 ####Decorative
 | Name | Info | Image |
 |--------|--------|--------|
-|Marble Block|<ul><li>Found randomly in the world.</li></ul>|<img src="http://i.imgur.com/pfYCJCK.png" style="width:80px;height:80px;")|
+|Marble Block|<ul><li>Found randomly in the world.</li></ul>|<img src="http://i.imgur.com/pfYCJCK.png" style="width:80px;height:80px;"/>|
 |Marble Brick|<ul><li>Made at Crafting Table.</li><li>4 Marble Block return 4 Marble Brick</li></ul>|        |
 
 ####Functional

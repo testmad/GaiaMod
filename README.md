@@ -1,6 +1,6 @@
 #GaiaMod
 * [General Information](#general-information)
-* [Blocks,Items,Armors, & Weapons](#blocks,-items,-armors,-&-weapons)
+* [Blocks,Items,Armors, & Weapons](#blocks-items-armors--weapons)
 * [Recipes](#recipes)
 
 ##General Information
@@ -32,7 +32,7 @@ Not certain as of yet.
 |--------|--------|--------|
 |Marble Block|<ul><li>Found randomly in the world.</li></ul>|        |
 |Marble Brick|<ul><li>Made at Crafting Table.</li><li>4 Marble Block return 4 Marble Brick</li></ul>|        |
-___
+
 ####Functional
 | Name | Info | Image |
 |--------|--------|--------|
@@ -40,42 +40,46 @@ ___
 |Altar of Essence|<ul><li>Made at Crafting Table.</li><li>Extracts essence from various blocks & items.</li><li>Essence production is based on chance.</li></ul>|        |
 |Gaia's Shrine|<ul><li>Made at Crafting Table.</li><li>Extended enchantability for vanilla items.</li><li>Only way to enchant GaiaMod items??</li></ul>|        |
 
-
 ##Items
-
-
 ####Holders of Essence
-
-#####Earth
-#####Fire
-#####Wind
-#####Water
-#####Heart
-#####Storm
-#####Chaos
-#####Order
+| Name | Info | Image |
+|--------|--------|--------|
+|Empty Holder of Essence|||
+|Essence of Earth|||
+|Essence of Fire|||
+|Essence of Wind|||
+|Essence of Water|||
+|Essence of Heart|||
+|Essence of Storm|||
+|Essence of Chaos|||
+|Essence of Order|||
 
 ####Bodies of Essence
-
-#####Earth
-#####Fire
-#####Wind
-#####Water
-#####Heart
-#####Storm
-#####Chaos
-#####Order
+| Name | Info | Image |
+|--------|--------|--------|
+|Empty Body|||
+|Body of Earth|||
+|Body of Fire|||
+|Body of Wind|||
+|Body of Water|||
+|Body of Heart|||
+|Body of Storm|||
+|Body of Chaos|||
+|Body of Order|||
 
 ####Amulets
 
-#####Earth
-#####Fire
-#####Wind
-#####Water
-#####Heart
-#####Storm
-#####Chaos
-#####Order
+| Name | Info | Image |
+|--------|--------|--------|
+|Empty Amulet|||
+|Amulet of Earth|||
+|Amulet of Fire|||
+|Amulet of Wind|||
+|Amulet of Water|||
+|Amulet of Heart|||
+|Amulet of Storm|||
+|Amulet of Chaos|||
+|Amulet of Order|||
 
 ###Armors
 ####Earth

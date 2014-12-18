@@ -1,13 +1,13 @@
 #GaiaMod
-[General Information](#general-information)
-[Blocks,Items,Armors, & Weapons](#blocks,-items,-armors,-&-weapons)
-[Recipes](#recipes)
+* [General Information](#general-information)
+* [Blocks,Items,Armors, & Weapons](#blocks,-items,-armors,-&-weapons)
+* [Recipes](#recipes)
 
 
 ##General Information
-[What is it?](#what-is-it)
-[Current Status](#current-status)
-[Future Plans](#future-plans)
+* [What is it?](#what-is-it)
+* [Current Status](#current-status)
+* [Future Plans](#future-plans)
 #####What is it?
 It's a mod for 1.7.10. What else you want?
 #####Current Status
@@ -17,12 +17,12 @@ Not certain as of yet.
 
 
 ##Blocks, Items, Armors, & Weapons
-[Blocks](#blocks)
-[Items](#items)
+* [Blocks](#blocks)
+* [Items](#items)
 
 ###Blocks
-[Decorative](#decorative)
-[Functional](#functional)
+* [Decorative](#decorative)
+* [Functional](#functional)
 
 ####Decorative
 | Name | Info | Image |
@@ -38,9 +38,9 @@ Not certain as of yet.
 
 
 ###Items
-[Holders of Essence](#holders-of-essence)
-[Bodies of Essence](#bodies-of-essence)
-[Amulets](#amulets)
+* [Holders of Essence](#holders-of-essence)
+* [Bodies of Essence](#bodies-of-essence)
+* [Amulets](#amulets)
 ####Holders of Essence
 
 #####Earth

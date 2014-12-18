@@ -25,6 +25,8 @@ Not certain as of yet.
 	* [Holders of Essence](#holders-of-essence)
 	* [Bodies of Essence](#bodies-of-essence)
 	* [Amulets](#amulets)
+* [Armors](#armors)
+* [Weapons](#weapons)
 
 ##Blocks
 ####Decorative
@@ -81,16 +83,24 @@ Not certain as of yet.
 |Amulet of Chaos|||
 |Amulet of Order|||
 
-###Armors
-####Earth
-####Fire
-####Wind
-####Water
-####Heart
-####Storm
-####Chaos
-####Order
-###Weapons
+##Armors
+| Name | Info | Image |
+|--------|--------|--------|
+|Earth Armor|||
+|Fire Armor|||
+|Wind Armor|||
+|Water Armor|||
+|Heart Armor|||
+|Storm Armor|||
+|Chaos Armor|||
+|Order Armor|||
+
+##Weapons
+| Name | Info | Image |
+|--------|--------|--------|
+|Blade of Jupiter|||
+|Will of Tartarus|||
+|Protection of Gaia|||
 
 ##Recipes
 ###Blocks

@@ -4,7 +4,7 @@ GaiaMod
 Um. It's a mod for 1.7.10. What else you want?
 
 
-TODO
+Current Status
 =======
 
 Blocks
@@ -64,75 +64,52 @@ Essence
         - Holds various essence.
         - Returns 4 Holder of Essence
         - Recipe:
-		- (blank) 	- Glass 		- (blank) 
-		- Glass		- Obsidian		- Glass
-		- Glass		- Glass			- Glass 
+		-                     - Glass             - 
+		- Glass		          - Obsidian		  - Glass
+		- Glass         	  - Glass			  - Glass 
 
 	Empty Earth Essence Recipe:
-    		- Dirt			- Dirt 		- Dirt
-		- Dirt			- (e)Vile	- Dirt
-		- Dirt			- Dirt		- Dirt
+        - Dirt			      - Dirt 		        - Dirt
+		- Dirt			      - Holder of Essence   - Dirt
+		- Dirt			      - Dirt		        - Dirt
 
 	Empty Fire Essence Recipe:
     		- Lava Bucket		- Lava Bucket 	- Lava Bucket
-		- Lava Bucket		- (e)Vile	- Lava Bucket
+		- Lava Bucket		- Holder of Essence	- Lava Bucket
 		- Lava Bucket		- Lava Bucket	- Lava Bucket
 
 	Empty Wind Essence Recipe:
     		- Feather		- Feather	- Feather
-		- Feather		- (e)Vile	- Feather
+		- Feather		- Holder of Essence	- Feather
 		- Feather		- Feather	- Feather
 
 	Empty Water Essence Recipe:
    		- Water Bucket		- Water Bucket	- Water Bucket
-		- Water Bucket		- (e)Vile	- Water Bucket
+		- Water Bucket		- Holder of Essence	- Water Bucket
 		- Water Bucket		- Water Bucket	- Water Bucket
 
 	Empty Heart Essence Recipe:
     		- Pork Chop		- Pork Chop 	- Pork Chop
-		- Pork Chop		- (e)Vile	- Pork Chop
+		- Pork Chop		- Holder of Essence	- Pork Chop
 		- Pork Chop		- Pork Chop	- Pork Chop
 
 	Empty Storm Essence Recipe:
     		- (Earth)Vile(e)	- Water Bucket	- (Fire)Vile(e)
-		- Redstone		- (e)Vile	- Redstone
+		- Redstone		- Holder of Essence	- Redstone
 		- (Wind)Vile(e)		- Water Bucket	- (Water)Vile(e)
 
 	Empty Chaos Essence Recipe:
     		- (Earth)Vile(e)	- (Heart)Vile(e)- (Fire)Vile(e)
-		- (Storm)Vile(e)	- (e)Vile	- (Storm)Vile(e)
+		- (Storm)Vile(e)	- Holder of Essence	- (Storm)Vile(e)
 		- (Wind)Vile(e) 	- Diamond	- (Water)Vile(e)
 
 	Empty Order Essence Recipe:
     		- (Earth)Vile(e)	- (Heart)Vile(e)- (Fire)Vile(e)
-		- (Chaos)Vile(e)	- (e)Vile	- (Chaos)Vile(e)
+		- (Chaos)Vile(e)	- Holder of Essence	- (Chaos)Vile(e)
 		- (Wind)Vile(e) 	- Emerald	- (Water)Vile(e)
 
-    Earth
-        - Objects with Essence:
-        
-    Fire
-        - Objects with Essence:
-        
-    Wind
-        - Objects with Essence:
-        
-    Water
-        - Objects with Essence:
-        
-    Heart
-        - Objects with Essence:
-        
-    Storm
-        - Objects with Essence:
-        
-    Chaos
-        - Objects with Essence:
-        
-    Order
-        - Objects with Essence:
-        
-    
+
+
 Stones
 
     Body of Essence

@@ -32,7 +32,7 @@ Not certain as of yet.
 ####Decorative
 | Name | Info | Image |
 |--------|--------|--------|
-|Marble Block|<ul><li>Found randomly in the world.</li></ul>|        |
+|Marble Block|<ul><li>Found randomly in the world.</li></ul>|![](http://i.imgur.com/pfYCJCK.png "Marble Block" "width:80px;height:80px;")|
 |Marble Brick|<ul><li>Made at Crafting Table.</li><li>4 Marble Block return 4 Marble Brick</li></ul>|        |
 
 ####Functional
@@ -103,9 +103,27 @@ Not certain as of yet.
 |Protection of Gaia|||
 
 ##Recipes
-###Blocks
-###Items
+* [Block Recipes](#block-recipes)
+* [Item Recipes](#item-recipes)
+	* [Holder Recipes](#holder-recipes)
+	* [Body Recipes](#body-recipes)
+	* [Amulet Recipes](#amulet-recipes)
+* [Armors](#armor-recipes)
+	* [Earth Armor Recipes](#earth-armor-recipes)
+	* [Fire Armor Recipes](#fire-armor-recipes)
+	* [Wind Armor Recipes](#wind-armor-recipes)
+	* [Water Armor Recipes](#water-armor-recipes)
+	* [Heart Armor Recipes](#heart-armor-recipes)
+	* [Storm Armor Recipes](#storm-armor-recipes)
+	* [Chaos Armor Recipes](#chaos-armor-recipes)
+	* [Order Armor Recipes](#order-armor-recipes)
+* [Weapons](#weapon-recipes)
 
+
+##Block Recipes
+##Item Recipes
+##Armor Recipes
+##Weapon Recipes
 
 
 

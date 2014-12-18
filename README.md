@@ -3,32 +3,36 @@
 * [Blocks,Items,Armors, & Weapons](#blocks,-items,-armors,-&-weapons)
 * [Recipes](#recipes)
 
-
 ##General Information
 * [What is it?](#what-is-it)
 * [Current Status](#current-status)
 * [Future Plans](#future-plans)
+
 #####What is it?
 It's a mod for 1.7.10. What else you want?
 #####Current Status
 Always a work in progress.
 #####Future Plans
 Not certain as of yet.
+___
 
-
-##Blocks, Items, Armors, & Weapons
+---
+#Blocks, Items, Armors, & Weapons
 * [Blocks](#blocks)
+	* [Decorative](#decorative)
+	* [Functional](#functional)
 * [Items](#items)
+	* [Holders of Essence](#holders-of-essence)
+	* [Bodies of Essence](#bodies-of-essence)
+	* [Amulets](#amulets)
 
-###Blocks
-* [Decorative](#decorative)
-* [Functional](#functional)
-
+##Blocks
 ####Decorative
 | Name | Info | Image |
 |--------|--------|--------|
 |Marble Block|<ul><li>Found randomly in the world.</li></ul>|        |
 |Marble Brick|<ul><li>Made at Crafting Table.</li><li>4 Marble Block return 4 Marble Brick</li></ul>|        |
+___
 ####Functional
 | Name | Info | Image |
 |--------|--------|--------|
@@ -37,10 +41,9 @@ Not certain as of yet.
 |Gaia's Shrine|<ul><li>Made at Crafting Table.</li><li>Extended enchantability for vanilla items.</li><li>Only way to enchant GaiaMod items??</li></ul>|        |
 
 
-###Items
-* [Holders of Essence](#holders-of-essence)
-* [Bodies of Essence](#bodies-of-essence)
-* [Amulets](#amulets)
+##Items
+
+
 ####Holders of Essence
 
 #####Earth

@@ -170,35 +170,36 @@ Not certain as of yet.
 |Amulet of Order| Altar of Order </p> <table align="center"><tr><td>Body of Order Essence</td><td>Diamond</td></tr><tr><td>Emerald</td><td>Empty Amulet</td></tr></table> |
 
 ##Armor Recipes
-####Earth Armor
+####Earth Armor Recipes
+| Helmet | Chest | Leggings | Boots |
+|:--------:|:--------:|:--------:|:--------:|
+| <table align="center"><tr><td>Body of Earth</td><td>Body of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Empty</td><td>Body of Earth</td></tr><tr><td>Empty</td><td>Amulet of Earth</td><td>Empty</td></tr></table> | <table align="center"><tr><td>Body of Earth</td><td>Amulet of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Body of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Body of Earth</td><td>Body of Earth</td></tr></table> | <table align="center"><tr><td>Body of Earth</td><td>Body of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Amulet of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Empty</td><td>Body of Earth</td></tr></table> | <table align="center"><tr><td>Body of Earth</td><td>Empty</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Empty</td><td>Body of Earth</td></tr><tr><td>Empty</td><td>Amulet of Earth</td><td>Empty</td></tr></table>|
+
+####Fire Armor Recipes
 | Helmet | Chest | Leggings | Boots |
 |:--------:|:--------:|:--------:|:--------:|
 
-####Fire Armor
+####Wind Armor Recipes
 | Helmet | Chest | Leggings | Boots |
 |:--------:|:--------:|:--------:|:--------:|
 
-####Wind Armor
+####Water Armor Recipes
 | Helmet | Chest | Leggings | Boots |
 |:--------:|:--------:|:--------:|:--------:|
 
-####Water Armor
+####Heart Armor Recipes
 | Helmet | Chest | Leggings | Boots |
 |:--------:|:--------:|:--------:|:--------:|
 
-####Heart Armor
+####Storm Armor Recipes
 | Helmet | Chest | Leggings | Boots |
 |:--------:|:--------:|:--------:|:--------:|
 
-####Storm Armor
+####Chaos Armor Recipes
 | Helmet | Chest | Leggings | Boots |
 |:--------:|:--------:|:--------:|:--------:|
 
-####Chaos Armor
-| Helmet | Chest | Leggings | Boots |
-|:--------:|:--------:|:--------:|:--------:|
-
-####Order Armor
+####Order Armor Recipes
 | Helmet | Chest | Leggings | Boots |
 |:--------:|:--------:|:--------:|:--------:|
 

@@ -38,9 +38,9 @@ Not certain as of yet.
 ####Functional
 | Name | Info | Image |
 |--------|--------|--------|
-|Altar of Order|<ul><li>Made at Crafting Table.</li><li>A 2x2 crafting grid.</li><li>Requires water and lava for operation.</li><li>Has a "cook time" like a furnace.</li></ul>|![](http://i.imgur.com/WUH2WEg.png)|
+|Altar of Order|<ul><li>Made at Crafting Table.</li><li>A 2x2 crafting grid.</li><li>Requires water and lava for operation.</li><li>Has a "cook time" like a furnace.</li><li>Can enchant items using amulates</li></ul>|![](http://i.imgur.com/WUH2WEg.png)|
 |Altar of Essence|<ul><li>Made at Crafting Table.</li><li>Extracts essence from various blocks & items.</li><li>Essence production is based on chance.</li></ul>|![](http://i.imgur.com/ItVYjIz.png)|
-|Gaia's Shrine|<ul><li>Made at Crafting Table.</li><li>Extended enchantability for vanilla items.</li><li>Only way to enchant GaiaMod items??</li></ul>|![](http://i.imgur.com/tx40e8Y.png)|
+|Gaia's Shrine|<ul><li>Made at Crafting Table.</li><li>Repairs damaged items using essence as fuel.</li></ul>|![](http://i.imgur.com/tx40e8Y.png)|
 
 ##Items
 ####Holders of Essence
@@ -98,9 +98,9 @@ Not certain as of yet.
 ##Weapons
 | Name | Info | Image |
 |--------|--------|--------|
-|Blade of Jupiter|||
-|Will of Tartarus|||
-|Protection of Gaia|||
+|Blade of Jupiter|Attack Damage: 14|![](http://i.imgur.com/eGto1FQ.png)|
+|Will of Tartarus|Attack Damage: 16|![](http://i.imgur.com/eGto1FQ.png)|
+|Protection of Gaia|Attack Damage: 18|![](http://i.imgur.com/PlZOVlW.png)|
 
 ##Recipes
 * [Block Recipes](#block-recipes)
@@ -121,9 +121,42 @@ Not certain as of yet.
 
 
 ##Block Recipes
+| Name | Recipe |
+|:--------:|:-------:|
+|Marble|None|
+|Marble Brick| Crafting Table </p> <table align="center"><tr><td>Marble</td><td>Marble</td><td>Empty</td></tr><tr><td>Marble</td><td>Marble</td><td>Empty</td></tr><tr><td>Empty</td><td>Empty</td><td>Empty</td></tr></table> |
+|Altar of Order| Crafting Table </p> <table align="center"><tr><td>Marble</td><td>Marble</td><td>Marble</td></tr><tr><td>Cauldron</td><td>Ender Pearl</td><td>Cauldron</td></tr><tr><td>Marble</td><td>Marble</td><td>Marble</td></tr></table> |
+|Altar of Essence| Crafting Table </p> <table align="center"><tr><td>Piston</td><td>Marble</td><td>Piston</td></tr><tr><td>Cauldron</td><td>Altar of Order</td><td>Cauldron</td></tr><tr><td>Marble</td><td>Marble</td><td>Marble</td></tr></table> |
+|Gaia's Shrine| Crafting Table </p> <table align="center"><tr><td>Marble</td><td>Anvil</td><td>Marble</td></tr><tr><td>Altar of Essence</td><td>Emerald</td><td>Altar of Essence</td></tr><tr><td>Marble</td><td>Anvil</td><td>Marble</td></tr></table> |
+
 ##Item Recipes
+####Holder Recipes
+| Name | Recipe |
+|--------|--------|
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+
+
 ##Armor Recipes
+| Name | Recipe |
+|--------|--------|
+
 ##Weapon Recipes
+| Name | Recipe |
+|--------|--------|
 
 
 

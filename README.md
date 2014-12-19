@@ -46,42 +46,42 @@ Not certain as of yet.
 ####Holders of Essence
 | Name | Info | Image |
 |--------|--------|--------|
-|Empty Holder of Essence||![](http://i.imgur.com/jlgc5vS.png)|
-|Essence of Earth||![](http://i.imgur.com/M3ee77Z.png)|
-|Essence of Fire||![](http://i.imgur.com/ylckxXx.png)|
-|Essence of Wind||![](http://i.imgur.com/fPouj5t.png)|
-|Essence of Water||![](http://i.imgur.com/8p9mTxI.png)|
-|Essence of Heart||![](http://i.imgur.com/wvPYuuG.png)|
-|Essence of Storm||![](http://i.imgur.com/lMWSfVh.png)|
-|Essence of Chaos||![](http://i.imgur.com/Smtm0fQ.png)|
-|Essence of Order||![](http://i.imgur.com/7pB7BwS.png)|
+|Empty Holder of Essence|<ul><li>Made at Crafting Table.</li><li>Base item that is for storing essence.</li><li>Combine with items to make a specific holder.</li></ul>|![](http://i.imgur.com/jlgc5vS.png)|
+|Essence of Earth|<ul><li>Has an empty and filled state.</li><li>Made at Crafting Table.</li><li>Filled at Altar of Essence.</li></ul>|![](http://i.imgur.com/M3ee77Z.png)|
+|Essence of Fire|<ul><li>Has an empty and filled state.</li><li>Made at Crafting Table.</li><li>Filled at Altar of Essence.</li></ul>|![](http://i.imgur.com/ylckxXx.png)|
+|Essence of Wind|<ul><li>Has an empty and filled state.</li><li>Made at Crafting Table.</li><li>Filled at Altar of Essence.</li></ul>|![](http://i.imgur.com/fPouj5t.png)|
+|Essence of Water|<ul><li>Has an empty and filled state.</li><li>Made at Crafting Table.</li><li>Filled at Altar of Essence.</li></ul>|![](http://i.imgur.com/8p9mTxI.png)|
+|Essence of Heart|<ul><li>Has an empty and filled state.</li><li>Made at Crafting Table.</li><li>Filled at Altar of Essence.</li></ul>|![](http://i.imgur.com/wvPYuuG.png)|
+|Essence of Storm|<ul><li>Has an empty and filled state.</li><li>Made at Crafting Table.</li><li>Filled at Altar of Essence.</li></ul>|![](http://i.imgur.com/lMWSfVh.png)|
+|Essence of Chaos|<ul><li>Has an empty and filled state.</li><li>Made at Crafting Table.</li><li>Filled at Altar of Essence.</li></ul>|![](http://i.imgur.com/Smtm0fQ.png)|
+|Essence of Order|<ul><li>Has an empty and filled state.</li><li>Made at Crafting Table.</li><li>Filled at Altar of Essence.</li></ul>|![](http://i.imgur.com/7pB7BwS.png)|
 
 ####Bodies of Essence
 | Name | Info | Image |
 |--------|--------|--------|
-|Empty Body||![](http://i.imgur.com/WfcOjE9.png)|
-|Body of Earth||![](http://i.imgur.com/nQ59fJf.png)|
-|Body of Fire||![](http://i.imgur.com/gV31hji.png)|
-|Body of Wind||![](http://i.imgur.com/ohGpGGb.png)|
-|Body of Water||![](http://i.imgur.com/1h1gL4h.png)|
-|Body of Heart||![](http://i.imgur.com/8YigbtH.png)|
-|Body of Storm||![](http://i.imgur.com/8Ca6jAM.png)|
-|Body of Chaos||![](http://i.imgur.com/4VjLGes.png)|
-|Body of Order||![](http://i.imgur.com/dYyptjv.png)|
+|Empty Body|<ul><li>Made at the Crafting Table.</li><li>Base item that is an embodiment of essence.</li><li>Combine with Holders of Essence to make specific bodies.</li></ul>|![](http://i.imgur.com/WfcOjE9.png)|
+|Body of Earth|<ul><li>Made at Altar of Order.</li></ul>|![](http://i.imgur.com/nQ59fJf.png)|
+|Body of Fire|<ul><li>Made at Altar of Order.</li></ul>|![](http://i.imgur.com/gV31hji.png)|
+|Body of Wind|<ul><li>Made at Altar of Order.</li></ul>|![](http://i.imgur.com/ohGpGGb.png)|
+|Body of Water|<ul><li>Made at Altar of Order.</li></ul>|![](http://i.imgur.com/1h1gL4h.png)|
+|Body of Heart|<ul><li>Made at Altar of Order.</li></ul>|![](http://i.imgur.com/8YigbtH.png)|
+|Body of Storm|<ul><li>Made at Altar of Order.</li></ul>|![](http://i.imgur.com/8Ca6jAM.png)|
+|Body of Chaos|<ul><li>Made at Altar of Order.</li></ul>|![](http://i.imgur.com/4VjLGes.png)|
+|Body of Order|<ul><li>Made at Altar of Order.</li></ul>|![](http://i.imgur.com/dYyptjv.png)|
 
 ####Amulets
 
 | Name | Info | Image |
 |--------|--------|--------|
-|Empty Amulet||![](http://i.imgur.com/eGUeMb3.png)|
-|Amulet of Earth||![](http://i.imgur.com/aHhis6A.png)|
-|Amulet of Fire||![](http://i.imgur.com/m0oEPgD.png)|
-|Amulet of Wind||![](http://i.imgur.com/A9TtCoN.png)|
-|Amulet of Water||![](http://i.imgur.com/MZt8EG9.png)|
-|Amulet of Heart||![](http://i.imgur.com/RG9AkSK.png)|
-|Amulet of Storm||![](http://i.imgur.com/IVHvvVZ.png)|
-|Amulet of Chaos||![](http://i.imgur.com/zAVPU1q.png)|
-|Amulet of Order||![](http://i.imgur.com/qJmW1Yg.png)|
+|Empty Amulet|<ul><li>Made at the Crafting Table.</li><li>Base item.</li><li>Combine with Bodies of Essence to make specific amulets.</li></ul>|![](http://i.imgur.com/eGUeMb3.png)|
+|Amulet of Earth|<ul><li>Made at Altar of Order.</li><li>Used in armor construction.</li><li>Can be used to enchant items in the Altar of Order.</li></ul>|![](http://i.imgur.com/aHhis6A.png)|
+|Amulet of Fire|<ul><li>Made at Altar of Order.</li><li>Used in armor construction.</li><li>Can be used to enchant items in the Altar of Order.</li></ul>|![](http://i.imgur.com/m0oEPgD.png)|
+|Amulet of Wind|<ul><li>Made at Altar of Order.</li><li>Used in armor construction.</li><li>Can be used to enchant items in the Altar of Order.</li></ul>|![](http://i.imgur.com/A9TtCoN.png)|
+|Amulet of Water|<ul><li>Made at Altar of Order.</li><li>Used in armor construction.</li><li>Can be used to enchant items in the Altar of Order.</li></ul>|![](http://i.imgur.com/MZt8EG9.png)|
+|Amulet of Heart|<ul><li>Made at Altar of Order.</li><li>Used in armor construction.</li><li>Can be used to enchant items in the Altar of Order.</li></ul>|![](http://i.imgur.com/RG9AkSK.png)|
+|Amulet of Storm|<ul><li>Made at Altar of Order.</li><li>Used in armor construction.</li><li>Can be used to enchant items in the Altar of Order.</li></ul>|![](http://i.imgur.com/IVHvvVZ.png)|
+|Amulet of Chaos|<ul><li>Made at Altar of Order.</li><li>Used in armor construction.</li><li>Can be used to enchant items in the Altar of Order.</li></ul>|![](http://i.imgur.com/zAVPU1q.png)|
+|Amulet of Order|<ul><li>Made at Altar of Order.</li><li>Used in armor construction.</li><li>Can be used to enchant items in the Altar of Order.</li></ul>|![](http://i.imgur.com/qJmW1Yg.png)|
 
 ##Armors
 | Name | Info | Image |

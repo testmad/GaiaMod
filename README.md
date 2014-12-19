@@ -132,19 +132,28 @@ Not certain as of yet.
 ##Item Recipes
 ####Holder Recipes
 | Name | Recipe |
+|:--------:|:--------:|
+|Empty Holder of Essence| Crafting Table </p> <table align="center"><tr><td>Empty</td><td>Glass</td><td>Empty</td></tr><tr><td>Glass</td><td>Obsidian</td><td>Glass</td></tr><tr><td>Glass</td><td>Glass</td><td>Glass</td></tr></table> |
+|Empty Holder of Earth Essence| Crafting Table </p> <table align="center"><tr><td>Dirt</td><td>Dirt</td><td>Dirt</td></tr><tr><td>Dirt</td><td>Empty Holder of Essence</td><td>Dirt</td></tr><tr><td>Dirt</td><td>Dirt</td><td>Dirt</td></tr></table> |
+|Empty Holder of Fire Essence| Crafting Table </p> <table align="center"><tr><td>Lava Bucket</td><td>Lava Bucket</td><td>Lava Bucket</td></tr><tr><td>Lava Bucket</td><td>Empty Holder of Essence</td><td>Lava Bucket</td></tr><tr><td>Lava Bucket</td><td>Lava Buckett</td><td>Lava Bucket</td></tr></table> |
+|Empty Holder of Wind Essence| Crafting Table </p> <table align="center"><tr><td>Feather</td><td>Feather</td><td>Feather</td></tr><tr><td>Feather</td><td>Empty Holder of Essence</td><td>Feather</td></tr><tr><td>Feather</td><td>Feather</td><td>Feather</td></tr></table> |
+|Empty Holder of Water Essence| Crafting Table </p> <table align="center"><tr><td>Water Bucket</td><td>Water Bucket</td><td>Water Bucket</td></tr><tr><td>Water Bucket</td><td>Empty Holder of Essence</td><td>Water Bucket</td></tr><tr><td>Water Bucket</td><td>Water Bucket</td><td>Water Bucket</td></tr></table> |
+|Empty Holder of Heart Essence| Crafting Table </p> <table align="center"><tr><td>Cooked Porkchop</td><td>Cooked Porkchop</td><td>Cooked Porkchop</td></tr><tr><td>Cooked Porkchop</td><td>Empty Holder of Essence</td><td>Cooked Porkchop</td></tr><tr><td>Cooked Porkchop</td><td>Cooked Porkchopr</td><td>Cooked Porkchop</td></tr></table> |
+|Empty Holder of Storm Essence| Crafting Table </p> <table align="center"><tr><td>Empty Holder of Earth Essence</td><td>Water Bucket</td><td>Empty Holder of Fire Essence</td></tr><tr><td>Redstone</td><td>Empty Holder of Essence</td><td>Redstone</td></tr><tr><td>Empty Holder of Wind Essence</td><td>Water Bucket</td><td>Empty Holder of Water Essence</td></tr></table> |
+|Empty Holder of Chaos Essence| Crafting Table </p> <table align="center"><tr><td>Empty Holder of Earth Essence</td><td>Empty Holder of Heart Essence</td><td>Empty Holder of Fire Essence</td></tr><tr><td>Empty Holder of Storm Essence</td><td>Empty Holder of Essence</td><td>Empty Holder of Storm Essence</td></tr><tr><td>Empty Holder of Wind Essence</td><td>Diamond</td><td>Empty Holder of Water Essence</td></tr></table> |
+|Empty Holder of Order Essence| Crafting Table </p> <table align="center"><tr><td>Empty Holder of Earth Essence</td><td>Empty Holder of Heart Essence</td><td>Empty Holder of Fire Essence</td></tr><tr><td>Empty Holder of Chaos Essence</td><td>Empty Holder of Essence</td><td>Empty Holder of Chaos Essence</td></tr><tr><td>Empty Holder of Wind Essence</td><td>Emerald</td><td>Empty Holder of Water Essence</td></tr></table> |
+
+####Body Recipes
+| Name | Recipe |
 |--------|--------|
 |||
 |||
 |||
 |||
 |||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
+####Amulet Recipes
+| Name | Recipe |
+|--------|--------|
 |||
 |||
 |||

@@ -102,7 +102,7 @@ Not certain as of yet.
 |Will of Tartarus|Attack Damage: 16|![](http://i.imgur.com/eGto1FQ.png)|
 |Protection of Gaia|Attack Damage: 18|![](http://i.imgur.com/PlZOVlW.png)|
 
-##Recipes
+#Recipes
 * [Block Recipes](#block-recipes)
 * [Item Recipes](#item-recipes)
 	* [Holder Recipes](#holder-recipes)
@@ -145,274 +145,68 @@ Not certain as of yet.
 
 ####Body Recipes
 | Name | Recipe |
-|--------|--------|
-|||
-|||
-|||
-|||
-|||
+|:--------:|:--------:|
+|Empty Body| Crafting Table </p> <table align="center"><tr><td>Stone</td><td>Stone</td><td>Stone</td></tr><tr><td>Stone</td><td>Cobble Stone</td><td>Stone</td></tr><tr><td>Stone</td><td>Stone</td><td>Stone</td></tr></table> |
+|Body of Earth| Altar of Order </p> <table align="center"><tr><td>Holder of Earth Essence</td><td>Dirt</td></tr><tr><td>Dirt</td><td>Empty Body</td></tr></table> |
+|Body of Fire| Altar of Order </p> <table align="center"><tr><td>Holder of Fire Essence</td><td>Lava Bucket</td></tr><tr><td>Lava Bucket</td><td>Empty Body</td></tr></table> |
+|Body of Wind| Altar of Order </p> <table align="center"><tr><td>Holder of Wind Essence</td><td>Feather</td></tr><tr><td>Feather</td><td>Empty Body</td></tr></table> |
+|Body of Water| Altar of Order </p> <table align="center"><tr><td>Holder of Water Essence</td><td>Water Bucket</td></tr><tr><td>Water Bucket</td><td>Empty Body</td></tr></table> |
+|Body of Heart| Altar of Order </p> <table align="center"><tr><td>Holder of Heart Essence</td><td>Cooked Porkchop</td></tr><tr><td>Cooked Porkchop</td><td>Empty Body</td></tr></table> |
+|Body of Storm| Altar of Order </p> <table align="center"><tr><td>Holder of Storm Essence</td><td>Water Bucket</td></tr><tr><td>Redstone</td><td>Empty Body</td></tr></table> |
+|Body of Chaos| Altar of Order </p> <table align="center"><tr><td>Holder of Chaos Essence</td><td>Obsidian</td></tr><tr><td>Diamond</td><td>Empty Body</td></tr></table> |
+|Body of Order| Altar of Order </p> <table align="center"><tr><td>Holder of Order Essence</td><td>Diamond</td></tr><tr><td>Emerald</td><td>Empty Body</td></tr></table> |
+
 ####Amulet Recipes
 | Name | Recipe |
-|--------|--------|
-|||
-|||
-|||
-
+|:--------:|:--------:|
+|Empty Amulet| Crafting Table </p> <table align="center"><tr><td>Empty</td><td>Gold Ingot</td><td>Empty</td></tr><tr><td>Gold Ingot</td><td>Empty Body</td><td>Gold Ingot</td></tr><tr><td>Empty</td><td>Gold Ingot</td><td>Empty</td></tr></table> |
+|Amulet of Earth| Altar of Order </p> <table align="center"><tr><td>Body of Earth Essence</td><td>Dirt</td></tr><tr><td>Dirt</td><td>Empty Amulet</td></tr></table> |
+|Amulet of Fire| Altar of Order </p> <table align="center"><tr><td>Body of Fire Essence</td><td>Lava Bucket</td></tr><tr><td>Lava Bucket</td><td>Empty Amulet</td></tr></table> |
+|Amulet of Wind| Altar of Order </p> <table align="center"><tr><td>Body of Wind Essence</td><td>Feather</td></tr><tr><td>Feather</td><td>Empty Amulet</td></tr></table> |
+|Amulet of Water| Altar of Order </p> <table align="center"><tr><td>Body of Water Essence</td><td>Water Bucket</td></tr><tr><td>Water Bucket</td><td>Empty Amulet</td></tr></table> |
+|Amulet of Heart| Altar of Order </p> <table align="center"><tr><td>Body of Heart Essence</td><td>Cooked Porkchop</td></tr><tr><td>Cooked Porkchop</td><td>Empty Amulet</td></tr></table> |
+|Amulet of Storm| Altar of Order </p> <table align="center"><tr><td>Body of Storm Essence</td><td>Water Bucket</td></tr><tr><td>Redstone</td><td>Empty Amulet</td></tr></table> |
+|Amulet of Chaos| Altar of Order </p> <table align="center"><tr><td>Body of Chaos Essence</td><td>Obsidian</td></tr><tr><td>Diamond</td><td>Empty Amulet</td></tr></table> |
+|Amulet of Order| Altar of Order </p> <table align="center"><tr><td>Body of Order Essence</td><td>Diamond</td></tr><tr><td>Emerald</td><td>Empty Amulet</td></tr></table> |
 
 ##Armor Recipes
-| Name | Recipe |
-|--------|--------|
+####Earth Armor
+| Helmet | Chest | Leggings | Boots |
+|:--------:|:--------:|:--------:|:--------:|
+
+####Fire Armor
+| Helmet | Chest | Leggings | Boots |
+|:--------:|:--------:|:--------:|:--------:|
+
+####Wind Armor
+| Helmet | Chest | Leggings | Boots |
+|:--------:|:--------:|:--------:|:--------:|
+
+####Water Armor
+| Helmet | Chest | Leggings | Boots |
+|:--------:|:--------:|:--------:|:--------:|
+
+####Heart Armor
+| Helmet | Chest | Leggings | Boots |
+|:--------:|:--------:|:--------:|:--------:|
+
+####Storm Armor
+| Helmet | Chest | Leggings | Boots |
+|:--------:|:--------:|:--------:|:--------:|
+
+####Chaos Armor
+| Helmet | Chest | Leggings | Boots |
+|:--------:|:--------:|:--------:|:--------:|
+
+####Order Armor
+| Helmet | Chest | Leggings | Boots |
+|:--------:|:--------:|:--------:|:--------:|
 
 ##Weapon Recipes
 | Name | Recipe |
-|--------|--------|
+|:--------:|:--------:|
 
 
-
-    
-    
-    Marble
-        - Found randomly in the world.
-        
-    Marble Brick
-        - Made at Crafting Table.
-        - A more refined Marble block.
-        - 4 Marble blocks return 4 Marble Brick blocks.
-        - Recipe:
-        - Marble 		   - Marble 		     -
-        - Marble 		   - Marble 		     -
-        -                  -                     -
-    
-    Altar of Order
-        - Made at Crafting Table.
-        - A 2x2 crafting grid.
-        - Uses both water and lava for fuel.
-        - Has a "cook time" like a furnace.
-        - Used for making Body of Essence (Stones).
-        - Used to make Holder of Essence (Empty Vial).
-        - Recipe:
-		- Marble 		   - Marble 		     - Marble 
-		- Cauldron 		   - Ender Pearl 		 - Cauldron
-		- Marble 		   - Marble 		     - Marble  
-        
-    Altar of Essence
-        - Made at Crafting Table.
-        - 1 input, 1 holding slot, 1 tank entity.
-        - Pulls essence from various vanilla blocks/items.
-        - Senses which essence is being worked on based on the vial placed into the holding socket.
-        - Essence given is based on values of blocks/items
-        - When certain value is attained, you get a chance of actually producing a ranged amount of essence.
-        - Recipe:
-		- Piston 		   - Marble 		     - Piston 
-		- Cauldron 		   - Altar of Order		 - Cauldron
-		- Marble 		   - Marble 		     - Marble  
-        
-    Gaia's Shrine
-        - Made at Crafting Table.
-        - Extended enchantability for items.
-        - Only way to enchant Gaia Mod items.
-        - 
-        - Recipe:
-        - Marble 		   - Anvil 		         - Marble 
-		- Altar of Essence - Emerald		     - Altar of Essence
-		- Marble 		   - Anvil 		         - Marble  
-        
-        
-
-Essence
-
-	 Holder of Essence
-        - Just a vial
-        - Holds various essence.
-        - Returns 4 Holder of Essence
-        - Recipe:
-		-                     - Glass             - 
-		- Glass		          - Obsidian		  - Glass
-		- Glass         	  - Glass			  - Glass 
-
-	Empty Earth Essence Recipe:
-        - Dirt			      - Dirt 		        - Dirt
-		- Dirt			      - Holder of Essence   - Dirt
-		- Dirt			      - Dirt		        - Dirt
-
-	Empty Fire Essence Recipe:
-    		- Lava Bucket		- Lava Bucket 	- Lava Bucket
-		- Lava Bucket		- Holder of Essence	- Lava Bucket
-		- Lava Bucket		- Lava Bucket	- Lava Bucket
-
-	Empty Wind Essence Recipe:
-    		- Feather		- Feather	- Feather
-		- Feather		- Holder of Essence	- Feather
-		- Feather		- Feather	- Feather
-
-	Empty Water Essence Recipe:
-   		- Water Bucket		- Water Bucket	- Water Bucket
-		- Water Bucket		- Holder of Essence	- Water Bucket
-		- Water Bucket		- Water Bucket	- Water Bucket
-
-	Empty Heart Essence Recipe:
-    		- Pork Chop		- Pork Chop 	- Pork Chop
-		- Pork Chop		- Holder of Essence	- Pork Chop
-		- Pork Chop		- Pork Chop	- Pork Chop
-
-	Empty Storm Essence Recipe:
-    		- (Earth)Vile(e)	- Water Bucket	- (Fire)Vile(e)
-		- Redstone		- Holder of Essence	- Redstone
-		- (Wind)Vile(e)		- Water Bucket	- (Water)Vile(e)
-
-	Empty Chaos Essence Recipe:
-    		- (Earth)Vile(e)	- (Heart)Vile(e)- (Fire)Vile(e)
-		- (Storm)Vile(e)	- Holder of Essence	- (Storm)Vile(e)
-		- (Wind)Vile(e) 	- Diamond	- (Water)Vile(e)
-
-	Empty Order Essence Recipe:
-    		- (Earth)Vile(e)	- (Heart)Vile(e)- (Fire)Vile(e)
-		- (Chaos)Vile(e)	- Holder of Essence	- (Chaos)Vile(e)
-		- (Wind)Vile(e) 	- Emerald	- (Water)Vile(e)
-
-
-
-Stones
-
-    Body of Essence
-        - Just a stone
-        - Imbued with Essence
-        - Recipe:
-		- Stone 		- Stone 	- Stone 
-		- Stone 		- Cobblestone	- Stone
-		- Stone 		- Stone 	- Stone  
-        
-    Earth Stone
-        - Powers:
-        - Durability:
-        - Altar Recipe:
-			Earth Essence  		- Dirt
-			Dirt 			- Body Of Essence
-       		
-    Fire Stone
-        - Powers:
-        - Durability:
-        - Altar Recipe:
-			Fire Essence  		- Lava Bucket
-			Lava Bucket		- Body Of Essence
-
-        
-    Wind Stone
-        - Powers:
-        - Durability:
-        - Altar Recipe:
-			Wind Essence  		- Feather
-			Feather			- Body Of Essence
-
-        
-    Water Stone
-        - Powers:
-        - Durability:
-        - Altar Recipe:
-			Water Essence  		- Water Bucket
-			Water Bucket		- Body Of Essence
-        
-    Heart Stone
-        - Powers:
-        - Durability:
-        - Altar Recipe:
-			Heart Essence  		- Pork Chop
-			Pork Chop		- Body Of Essence
-
-        
-    Storm Stone
-        - Powers:
-        - Durability:
-        - Altar Recipe:
-			Storm Essence  		- Water Bucket
-			Redstone 		- Body Of Essence
-
-        
-    Chaos Stone
-        - Powers:
-        - Durability:
-        - Altar Recipe:
-			Chaos Essence  		- Obsidian
-			Diamond 		- Body Of Essence
-
-        
-    Order Stone
-        - Powers:
-        - Durability:
-        - Altar Recipe:
-			Order Essence  		- Diamond
-			Emerald 		- Body Of Essence
-        
-    
-Amulets
-
-    Amulet
-        - Generic amulet
-        - Holds a Body of Essence
-        - Focuses power to higher levels or even adds new powers.
-        - Recipe:
-		Blank		- Gold Ingot 		- Blank
-		Gold Ingot	- Body Of Essence	- Gold Ingot
-		Blank		- Gold Ingot		- Blank		
-
-    Earth
-        - Powers:
-		Efficiancy +1	
-        - Durability: Crafting Uses 5
-        -  Altar Recipe:
-        		Earth Stone		- Dirt
-			Stone 			- Amulet(G)
-        
-    Fire
-        - Powers:
-		Fire Aspect
-        - Durability: Crafting Uses 5
-        - Altar Recipe:
-        		Fire Stone		- Lava Bucket
-			Lava Bucket 		- Amulet(G)
-
-    Wind
-        - Powers:
-		Knockback +1 & Punch +1
-        - Durability:Crafting Uses
-        - Altar Recipe:
-        		Wind Stone		- Feather
-			Feather 		- Amulet(G)
-        
-    Water
-        - Powers:Sharpness +1
-        - Durability:Crafting Uses 5
-        - Altar Recipe:
-        		Water Stone		- Water Bucket
-			Water Bucket		- Amulet(G)
-
-    Heart
-        - Powers:Looting +1 - Smite +1 - Infinity +1
-        - Durability: Crafting Uses 3
-        - Altar Recipe:
-        		Heart Stone		- Pork Chop
-			Pork Chop		- Amulet(G)
-
-    Storm
-        - Powers:Unbreaking +1
-        - Durability:Crafting Uses 2
-        - Altar Recipe:
-        		Storm Stone		- Water Bucket
-			Redstone		- Amulet(G)
- 
-    Chaos
-        - Powers: Silk Touch +1
-        - Durability:Crafting Uses 2
-        - Altar Recipe:
-        		Chaos Stone		- Obsidian
-			Diamond 		- Amulet(G)
- 
-    Order
-        - Powers: Fortune + 1 
-        - Durability:Crafting Uses 2
-        - Altar Recipe:
-        		Order Stone		- Diamond
-			Emerald 		- Amulet(G)
        
 Armor
 

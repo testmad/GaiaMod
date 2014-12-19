@@ -86,14 +86,14 @@ Not certain as of yet.
 ##Armors
 | Name | Info | Image |
 |--------|--------|--------|
-|Earth Armor|||
-|Fire Armor|||
-|Wind Armor|||
-|Water Armor|||
-|Heart Armor|||
-|Storm Armor|||
-|Chaos Armor|||
-|Order Armor|||
+|Earth Armor|<ul><li>Armor Set Rating: 6.5</li><li>Special abilities require a full set.</li><ul><li>Step height increased.</li><li>Faster land movement.</li></ul></ul>|![](http://i.imgur.com/OO3xeYA.png)|
+|Fire Armor|<ul><li>Armor Set Rating: 6.5</li><li>Special abilities require a full set.</li><ul><li>Better visibility in lava.</li><li>Fire and lava resistant.</li><li>Faster movement in lava.</li><li>Breathe under lava.</li></ul></ul>|![](http://i.imgur.com/Zs516Hr.png)|
+|Wind Armor|<ul><li>Armor Set Rating: 6.5</li><li>Special abilities require a full set.</li><ul><li>Fall damage negated.</li><li>Jump height significantly increased.</li></ul></ul>|![](http://i.imgur.com/Y2KYW1P.png)|
+|Water Armor|<ul><li>Armor Set Rating: 6.5</li><li>Special abilities require a full set.</li><ul><li>Faster movement in water.</li><li>Breathe under water.</li></ul></ul>|![](http://i.imgur.com/qB4idJy.png)|
+|Heart Armor|<ul><li>Armor Set Rating: 7</li><li>Special abilities require a full set.</li><ul><li>Never need food.</li></ul></ul>|![](http://i.imgur.com/QyMOORX.png)|
+|Storm Armor|<ul><li>Armor Set Rating: 8</li><li>Special abilities require a full set.</li><ul><li>No damage from lightning.</li><li>Lightning damage given to targets when using bow.</li></ul></ul>|![](http://i.imgur.com/mtnNDc9.png)|
+|Chaos Armor|<ul><li>Armor Set Rating: 9</li><li>Special abilities require a full set.</li><ul><li>Unknown.</li></ul></ul>|![](http://i.imgur.com/04LtQyv.png)|
+|Order Armor|<ul><li>Armor Set Rating: 10</li><li>Special abilities require a full set.</li><ul><li>Invisible.</li><li>Unknown.</li></ul></ul>|![](http://i.imgur.com/au7hzFw.png)|
 
 ##Weapons
 | Name | Info | Image |

@@ -11,26 +11,26 @@ import net.minecraft.tileentity.TileEntity;
 import com.testmad.gaiamod.blocks.OrderShrineBlock;
 import com.testmad.gaiamod.essence.ModEssence;
 
-public class TileEntityOrderShrine extends TileEntity implements ISidedInventory{
-	
-	private ItemStack[] slots = new ItemStack[7];
-	
+public class TileEntityOrderShrine extends TileEntity implements
+		ISidedInventory {
+
+	private ItemStack[] slots = new ItemStack[2];
+
 	public int cookTime;
 	public int essencePowerLevel;
 
+	public static final int maxEssencePower = 201;
 
-	public static final int maxEssencePower = 10001;
-	
 	public int cookSpeed;
-	
-	private static final int[] slots_top = new int[]{0, 1, 2, 3};
-	private static final int[] slots_bottom = new int[]{4};
-	private static final int[] slots_side = new int[]{5, 6};
-	
+
+	private static final int[] slots_top = new int[] { 0 };
+	private static final int[] slots_bottom = new int[] { 0 };
+	private static final int[] slots_side = new int[] { 0 };
+
 	private String customName;
-	
-	public TileEntityOrderShrine(){
-		//slots = new ItemStack[7];
+
+	public TileEntityOrderShrine() {
+		// slots = new ItemStack[7];
 	}
 
 	@Override
@@ -45,29 +45,29 @@ public class TileEntityOrderShrine extends TileEntity implements ISidedInventory
 
 	@Override
 	public ItemStack decrStackSize(int i, int j) {
-		if (slots[i] != null){
+		if (slots[i] != null) {
 			ItemStack itemstack;
-			
-			if (slots[i].stackSize <= j){
+
+			if (slots[i].stackSize <= j) {
 				itemstack = slots[i];
 				slots[i] = null;
 				return itemstack;
-			}else{
-		
+			} else {
+
 				itemstack = slots[i].splitStack(j);
-				if(slots[i].stackSize == 0){
+				if (slots[i].stackSize == 0) {
 					slots[i] = null;
 				}
 				return itemstack;
 			}
-		}else{
+		} else {
 			return null;
 		}
 	}
 
 	@Override
 	public ItemStack getStackInSlotOnClosing(int i) {
-		if(slots[i]!= null){
+		if (slots[i] != null) {
 			ItemStack itemstack = slots[i];
 			slots[i] = null;
 			return itemstack;
@@ -78,7 +78,7 @@ public class TileEntityOrderShrine extends TileEntity implements ISidedInventory
 	@Override
 	public void setInventorySlotContents(int i, ItemStack itemstack) {
 		slots[i] = itemstack;
-		if (itemstack != null && itemstack.stackSize > getInventoryStackLimit()){
+		if (itemstack != null && itemstack.stackSize > getInventoryStackLimit()) {
 			itemstack.stackSize = getInventoryStackLimit();
 		}
 	}
@@ -100,44 +100,63 @@ public class TileEntityOrderShrine extends TileEntity implements ISidedInventory
 
 	@Override
 	public boolean isUseableByPlayer(EntityPlayer player) {
-		return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : player.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
-	}	
+		return this.worldObj.getTileEntity(this.xCoord, this.yCoord,
+				this.zCoord) != this ? false
+				: player.getDistanceSq(this.xCoord + 0.5D, this.yCoord + 0.5D,
+						this.zCoord + 0.5D) <= 64.0D;
+	}
 
-	public void openInventory() {}
-	public void closeInventory() {}
+	@Override
+	public void openInventory() {
+	}
+
+	@Override
+	public void closeInventory() {
+	}
 
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		return i == 2 ? false : (i == 0 ? isItemEssence(itemstack) :  true);
+		return i == 2 ? false : (i == 0 ? isItemEssence(itemstack) : true);
 	}
-	
-	public boolean isItemEssence(ItemStack itemstack){
+
+	public boolean isItemEssence(ItemStack itemstack) {
 		return getHasEssence(itemstack) > 0;
 	}
-	
-	public static int getHasEssence (ItemStack itemstack){
-		if(itemstack == null){
+
+	public static int getHasEssence(ItemStack itemstack) {
+		if (itemstack == null) {
 			return 0;
-		}else{
+		} else {
 			Item item = itemstack.getItem();
-						
-			if(item == ModEssence.earthEssenceItem) return 100;
+
+			if (item == ModEssence.earthEssenceItem
+					|| item == ModEssence.fireEssenceItem
+					|| item == ModEssence.windEssenceItem
+					|| item == ModEssence.waterEssenceItem) {
+				return 10;
+			} else if (item == ModEssence.heartEssenceItem
+					|| item == ModEssence.stormEssenceItem) {
+				return 20;
+			} else if (item == ModEssence.chaosEssenceItem
+					|| item == ModEssence.orderEssenceItem) {
+				return 40;
+			}
 		}
 		return 0;
 	}
-	
-	
-	public void readFromNBT(NBTTagCompound nbt){
+
+	@Override
+	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
-	
+
 		NBTTagList list = nbt.getTagList("Items", 10);
 		slots = new ItemStack[getSizeInventory()];
-	
-		for(int i = 0; i < list.tagCount(); i++){
-			NBTTagCompound nbt1 = (NBTTagCompound) list.getCompoundTagAt(i);
+
+		for (int i = 0; i < list.tagCount(); i++) {
+			NBTTagCompound nbt1 = list.getCompoundTagAt(i);
 			byte b0 = nbt1.getByte("Slot");
-		
-			if(b0 >= 0 && b0 < slots.length){
+
+			if (b0 >= 0 && b0 < slots.length) {
 				slots[b0] = ItemStack.loadItemStackFromNBT(nbt1);
 			}
 		}
@@ -145,23 +164,24 @@ public class TileEntityOrderShrine extends TileEntity implements ISidedInventory
 
 	}
 
-	public void  writeToNBT(NBTTagCompound nbt){
+	@Override
+	public void writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
-		nbt.setShort("EssencePower", (short)essencePowerLevel);
+		nbt.setShort("EssencePower", (short) essencePowerLevel);
 
 		NBTTagList list = new NBTTagList();
-		
-		for(int i = 0; i < slots.length; i++){
-			if(slots[i] != null){
+
+		for (int i = 0; i < slots.length; i++) {
+			if (slots[i] != null) {
 				NBTTagCompound nbt1 = new NBTTagCompound();
-				nbt1.setByte("Slot", (byte)i);
+				nbt1.setByte("Slot", (byte) i);
 				slots[i].writeToNBT(nbt1);
 				list.appendTag(nbt1);
 			}
 		}
 		nbt.setTag("Items", list);
 	}
-	
+
 	@Override
 	public int[] getAccessibleSlotsFromSide(int i) {
 		return i == 0 ? slots_bottom : (i == 1 ? slots_top : slots_side);
@@ -176,147 +196,150 @@ public class TileEntityOrderShrine extends TileEntity implements ISidedInventory
 	public boolean canExtractItem(int i, ItemStack itemstack, int j) {
 		return j != 0 || i != 1;
 	}
-	
-	
-	public int getEssenceRemainingScaled(int i){
-		return(essencePowerLevel *i / maxEssencePower);
+
+	public int getEssenceRemainingScaled(int i) {
+		return (essencePowerLevel * i / maxEssencePower);
 	}
-	
-	private boolean canAltar(){
-		
-		
-		
+
+	private boolean canAltar() {
+
 		ItemStack itemstack = null;
-		
-		if (slots[1] == null){
+
+		if (slots[1] == null) {
 			return false;
 		}
-		
-		if (slots[1] != null && !slots[1].isItemDamaged()){
+
+		if (slots[1] != null && !slots[1].isItemDamaged()) {
 			return false;
 		}
-		
-		if (slots[1] != null && slots[1].isItemDamaged()){
+
+		if (slots[1] != null && slots[1].isItemDamaged()) {
 			itemstack = slots[1];
 		}
-	
-		//itemstack = AltarRecipes.getShrineResult(slots[0].getItem());
-		
-		if (itemstack == null){
+
+		// itemstack = AltarRecipes.getShrineResult(slots[0].getItem());
+
+		if (itemstack == null) {
 			return false;
 		}
-		
-		if (slots[2] == null){
+
+		if (slots[2] == null) {
 			return true;
 		}
-		
-		if (!slots[2].isItemEqual(itemstack)){
+
+		if (!slots[2].isItemEqual(itemstack)) {
 			return false;
 		}
-		
-		if (slots[2].stackSize < getInventoryStackLimit() && slots[2].stackSize < slots[4].getMaxStackSize()){
+
+		if (slots[2].stackSize < getInventoryStackLimit()
+				&& slots[2].stackSize < slots[4].getMaxStackSize()) {
 			return true;
-		}else{
+		} else {
 			return slots[2].stackSize < itemstack.getMaxStackSize();
 		}
 	}
-	
-//	private void altarItem(){
-//		if (canAltar()){
-//			ItemStack  itemstack;
-//
-//			
-//			
-//				
-//				itemstack = slots[1];
-//				
-//				
-//				
-//				
-//								
-//				
-//				
-//				if(slots[2] == null){
-//					slots[2] = itemstack.copy();
-//					slots[1] = null;
-//				}else if (slots[2].isItemEqual(itemstack)){
-//					slots[2].stackSize += itemstack.stackSize;
-//					slots[1] = null;
-//				}
-//		
-//		}
-//	}
-	
-	public boolean hasEssencePower(){
+
+	// private void altarItem(){
+	// if (canAltar()){
+	// ItemStack itemstack;
+	//
+	//
+	//
+	//
+	// itemstack = slots[1];
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	// if(slots[2] == null){
+	// slots[2] = itemstack.copy();
+	// slots[1] = null;
+	// }else if (slots[2].isItemEqual(itemstack)){
+	// slots[2].stackSize += itemstack.stackSize;
+	// slots[1] = null;
+	// }
+	//
+	// }
+	// }
+
+	public boolean hasEssencePower() {
 		return essencePowerLevel > 0;
 	}
-	
-	
-	public boolean isAltaring(){
+
+	public boolean isAltaring() {
 		return this.cookTime > 0;
 	}
-	
-	public void updateEntity(){
-		
+
+	@Override
+	public void updateEntity() {
+
 		boolean flag = this.hasEssencePower();
 
 		boolean flag2 = false;
 		boolean flag3 = false;
-		
-		
-		if(hasEssencePower() && this.isAltaring()){
-			
+
+		if (hasEssencePower() && this.isAltaring()) {
+
 			this.essencePowerLevel--;
 
 		}
-		
-		if(!worldObj.isRemote){
-			
-			//System.out.println(canAltar());
-			
-			if(this.isItemEssence(this.slots[0]) && this.essencePowerLevel < (this.maxEssencePower - this.getHasEssence(this.slots[0]))){
+
+		if (!worldObj.isRemote) {
+
+			// System.out.println(canAltar());
+
+			if (this.isItemEssence(this.slots[0])
+					&& this.essencePowerLevel < (TileEntityOrderShrine.maxEssencePower - TileEntityOrderShrine
+							.getHasEssence(this.slots[0]))) {
 				this.essencePowerLevel += getHasEssence(this.slots[0]);
-				
-				if(this.slots[0] != null){
+
+				if (this.slots[0] != null) {
 					flag2 = true;
-					this.slots[0].stackSize --;
-					
-					if(this.slots[0].stackSize ==0){
-						this.slots[0] = this.slots[0].getItem().getContainerItem(this.slots[0]);
+					this.slots[0].stackSize--;
+
+					if (this.slots[0].stackSize == 0) {
+						this.slots[0] = this.slots[0].getItem()
+								.getContainerItem(this.slots[0]);
 					}
 				}
 			}
-			
-			
-			if (hasEssencePower() && canAltar()){
-				//cookSpeed = 80;
+
+			if (hasEssencePower() && canAltar()) {
+				// cookSpeed = 80;
 				int currentDamage = slots[1].getItemDamage();
-				
-				currentDamage= currentDamage - 5;
+
+				currentDamage = currentDamage - 5;
 
 				slots[1].getItem().setDamage(this.slots[1], currentDamage);
 				cookTime++;
-				
-				if (currentDamage == 0){
+
+				if (currentDamage == 0) {
 					this.cookTime = 0;
-					//this.altarItem();
+					// this.altarItem();
 					flag2 = true;
 				}
-			}else{
+			} else {
 				this.cookTime = 0;
 				flag3 = true;
 			}
-			
-			if(flag3 != this.isAltaring()){
-				flag3=true;
-				if(flag){
-					OrderShrineBlock.updateBlockState( true, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
-				}else{OrderShrineBlock.updateBlockState( false, this.worldObj, this.xCoord, this.yCoord, this.zCoord);}
 
+			if (flag3 != this.isAltaring()) {
+				flag3 = true;
+				if (flag) {
+					OrderShrineBlock.updateBlockState(true, this.worldObj,
+							this.xCoord, this.yCoord, this.zCoord);
+				} else {
+					OrderShrineBlock.updateBlockState(false, this.worldObj,
+							this.xCoord, this.yCoord, this.zCoord);
 				}
+
+			}
 		}
 
-		if(flag2 || flag3){
+		if (flag2 || flag3) {
 			this.markDirty();
 		}
 	}

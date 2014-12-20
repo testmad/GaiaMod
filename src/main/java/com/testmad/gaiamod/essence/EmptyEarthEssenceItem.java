@@ -7,16 +7,16 @@ import com.testmad.gaiamod.util.References;
 import com.testmad.gaiamod.util.Strings;
 
 public class EmptyEarthEssenceItem extends Item {
-	public EmptyEarthEssenceItem()
-	{
+	public EmptyEarthEssenceItem() {
 		super();
-        this.setUnlocalizedName(Strings.EmptyEarthEssenceItemName);
-        this.setCreativeTab(GaiaMod.getcreativeTab());
-        this.setTextureName(References.MODIDLOCAL + ":" + getUnlocalizedName().substring(5));
-        
-        this.setNoRepair();
-        this.setMaxStackSize(64);
-        this.setFull3D();
+		this.setUnlocalizedName(Strings.EmptyEarthEssenceItemName);
+		this.setCreativeTab(GaiaMod.getcreativeTab());
+		this.setTextureName(References.MODIDLOCAL + ":"
+				+ getUnlocalizedName().substring(5));
+
+		this.setNoRepair();
+		this.setMaxStackSize(64);
+		this.setFull3D();
 	}
 
 }

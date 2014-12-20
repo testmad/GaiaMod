@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 import com.testmad.gaiamod.util.Registrar;
 
 public class ModStones {
-	
+
 	public static Item stoneItem;
 	public static Item windStoneItem;
 	public static Item fireStoneItem;
@@ -15,35 +15,34 @@ public class ModStones {
 	public static Item stormStoneItem;
 	public static Item chaosStoneItem;
 	public static Item orderStoneItem;
-	 
-    public static void init()
-    {
-    	stoneItem = new StoneItem();
-        Registrar.registerItem(stoneItem);
-        
-        earthStoneItem = new EarthStoneItem();
-        Registrar.registerItem(earthStoneItem);
 
-        fireStoneItem = new FireStoneItem();
-        Registrar.registerItem(fireStoneItem);
-        
-        windStoneItem = new WindStoneItem();
-        Registrar.registerItem(windStoneItem);
-        
-        waterStoneItem = new WaterStoneItem();
-        Registrar.registerItem(waterStoneItem);
+	public static void init() {
+		stoneItem = new StoneItem();
+		Registrar.registerItem(stoneItem);
 
-        heartStoneItem = new HeartStoneItem();
-        Registrar.registerItem(heartStoneItem);
+		earthStoneItem = new EarthStoneItem();
+		Registrar.registerItem(earthStoneItem);
 
-        stormStoneItem = new StormStoneItem();
-        Registrar.registerItem(stormStoneItem);
-        
-        chaosStoneItem = new ChaosStoneItem();
-        Registrar.registerItem(chaosStoneItem);
-        
-        orderStoneItem = new OrderStoneItem();
-        Registrar.registerItem(orderStoneItem);
-        
-    }
+		fireStoneItem = new FireStoneItem();
+		Registrar.registerItem(fireStoneItem);
+
+		windStoneItem = new WindStoneItem();
+		Registrar.registerItem(windStoneItem);
+
+		waterStoneItem = new WaterStoneItem();
+		Registrar.registerItem(waterStoneItem);
+
+		heartStoneItem = new HeartStoneItem();
+		Registrar.registerItem(heartStoneItem);
+
+		stormStoneItem = new StormStoneItem();
+		Registrar.registerItem(stormStoneItem);
+
+		chaosStoneItem = new ChaosStoneItem();
+		Registrar.registerItem(chaosStoneItem);
+
+		orderStoneItem = new OrderStoneItem();
+		Registrar.registerItem(orderStoneItem);
+
+	}
 }

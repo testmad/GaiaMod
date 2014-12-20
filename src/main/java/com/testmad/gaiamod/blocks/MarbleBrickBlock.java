@@ -14,15 +14,17 @@ public class MarbleBrickBlock extends Block {
 
 	protected MarbleBrickBlock() {
 		super(Material.rock);
-		
+
 		this.setStepSound(soundTypeStone);
 		setCreativeTab(GaiaMod.getcreativeTab());
 
 	}
-	
+
+	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerBlockIcons (IIconRegister iconRegister) {
-		this.blockIcon = iconRegister.registerIcon(References.MODIDLOCAL + ":" + getUnlocalizedName().substring(5));
+	public void registerBlockIcons(IIconRegister iconRegister) {
+		this.blockIcon = iconRegister.registerIcon(References.MODIDLOCAL + ":"
+				+ getUnlocalizedName().substring(5));
 	}
 
 }

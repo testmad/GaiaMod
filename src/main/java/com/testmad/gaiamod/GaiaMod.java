@@ -32,28 +32,27 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class GaiaMod {
 
 	public static CreativeTabs gaiaModTab;
-	
+
 	GaiaModWorldGen eventWorldGen = new GaiaModWorldGen();
 	GaiaModEventHandler handler = new GaiaModEventHandler();
-	
+
 	@Mod.Instance(References.MODID)
 	public static GaiaMod instance;
-	
+
 	@SidedProxy(clientSide = References.CLIENTPROXYLOCATION, serverSide = References.COMMONPROXYLOCATION)
 	public static CommonProxy proxy;
-	
+
 	@Mod.EventHandler
-	public void preInit(FMLPreInitializationEvent event)
-	{
+	public void preInit(FMLPreInitializationEvent event) {
 
 		FMLCommonHandler.instance().bus().register(handler);
 		MinecraftForge.EVENT_BUS.register(handler);
-		
+
 		gaiaModTab = new GaiaModTab(CreativeTabs.getNextID(), References.MODID);
-		
+
 		ModGui.init();
 		ModTileEntities.init();
-		
+
 		ModBlocks.init();
 
 		ModEssence.init();
@@ -65,23 +64,20 @@ public class GaiaMod {
 
 		RecipeHandler.init();
 	}
-	
+
 	@Mod.EventHandler
-	public void init(FMLInitializationEvent event)
-	{
+	public void init(FMLInitializationEvent event) {
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 		GameRegistry.registerWorldGenerator(eventWorldGen, 0);
 	}
-	
+
 	@Mod.EventHandler
-	public void postInit(FMLPostInitializationEvent event)
-	{
+	public void postInit(FMLPostInitializationEvent event) {
 
 	}
-	
-	public static CreativeTabs getcreativeTab()
-	{
+
+	public static CreativeTabs getcreativeTab() {
 		return gaiaModTab;
 	}
-	
+
 }

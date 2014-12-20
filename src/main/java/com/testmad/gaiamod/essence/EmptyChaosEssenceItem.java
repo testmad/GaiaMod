@@ -7,17 +7,17 @@ import com.testmad.gaiamod.util.References;
 import com.testmad.gaiamod.util.Strings;
 
 public class EmptyChaosEssenceItem extends Item {
-	
-	public EmptyChaosEssenceItem()
-	{
+
+	public EmptyChaosEssenceItem() {
 		super();
-        this.setUnlocalizedName(Strings.EmptyChaosEssenceItemName);
-        this.setCreativeTab(GaiaMod.getcreativeTab());
-        this.setTextureName(References.MODIDLOCAL + ":" + getUnlocalizedName().substring(5));
-        
-        this.setNoRepair();
-        this.setMaxStackSize(64);
-        this.setFull3D();
+		this.setUnlocalizedName(Strings.EmptyChaosEssenceItemName);
+		this.setCreativeTab(GaiaMod.getcreativeTab());
+		this.setTextureName(References.MODIDLOCAL + ":"
+				+ getUnlocalizedName().substring(5));
+
+		this.setNoRepair();
+		this.setMaxStackSize(64);
+		this.setFull3D();
 	}
 
 }

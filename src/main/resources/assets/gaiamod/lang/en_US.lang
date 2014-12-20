@@ -19,9 +19,9 @@ tile.orderShrineBlockIdlePower.name=Gaia's Shrine
 
 
 tile.marbleBlock.name=Marble
-tile.marbleBrickBlock.name=Marble Bricks
+tile.marbleBrickBlock.name=Marble Brick
 
-item.essenceItem.name=Holder of Essence
+item.essenceItem.name=Empty Holder of Essence
 item.emptyEarthEssenceItem.name=Empty Holder of Earth Essence
 item.emptyFireEssenceItem.name=Empty Holder of Fire Essence
 item.emptyWindEssenceItem.name=Empty Holder of Wind Essence
@@ -40,7 +40,7 @@ item.stormEssenceItem.name=Holder of Storm Essence
 item.chaosEssenceItem.name=Holder of Chaos Essence
 item.orderEssenceItem.name=Holder of Order Essence
 
-item.stoneItem.name=Body of Essence
+item.stoneItem.name=Empty Body
 item.earthStoneItem.name=Body of Earth
 item.fireStoneItem.name=Body of Fire
 item.windStoneItem.name=Body of Wind
@@ -50,7 +50,7 @@ item.stormStoneItem.name=Body of Storm
 item.chaosStoneItem.name=Body of Chaos
 item.orderStoneItem.name=Body of Order
 
-item.amuletItem.name=Amulet of Body
+item.amuletItem.name=Empty Amulet
 item.earthAmuletItem.name=Amulet of Earth
 item.fireAmuletItem.name=Amulet of Fire
 item.windAmuletItem.name=Amulet of Wind
@@ -100,8 +100,8 @@ item.orderChest.name=Order Chestplate
 item.orderLeggings.name=Order Leggings
 item.orderBoots.name=Order Boots
 
-item.stormSwordItem.name=Jupiter's Blade
-item.chaosSwordItem.name=Chaos of Tartarus
-item.orderSwordItem.name= Gaia's Order
+item.stormSwordItem.name=Blade of Jupiter
+item.chaosSwordItem.name=Will of Tartarus
+item.orderSwordItem.name=Protection of Gaia
 
-itemGroup.gaiamod=Gaia Mod
+itemGroup.com.testmad.gaiamod=GaiaMod

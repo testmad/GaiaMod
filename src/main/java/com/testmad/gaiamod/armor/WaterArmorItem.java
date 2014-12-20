@@ -7,39 +7,33 @@ import net.minecraft.item.ItemStack;
 import com.testmad.gaiamod.GaiaMod;
 import com.testmad.gaiamod.util.References;
 
-public class WaterArmorItem  extends ItemArmor{
+public class WaterArmorItem extends ItemArmor {
 
-	public WaterArmorItem(ArmorMaterial material, int armorType,String name) {
-			
-		super(material, 0 , armorType);
+	public WaterArmorItem(ArmorMaterial material, int armorType, String name) {
+
+		super(material, 0, armorType);
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(GaiaMod.getcreativeTab());
 		this.setNoRepair();
-        this.setFull3D();
+		this.setFull3D();
 
-		this.setTextureName(References.MODIDLOCAL + ":" + getUnlocalizedName().substring(5));
+		this.setTextureName(References.MODIDLOCAL + ":"
+				+ getUnlocalizedName().substring(5));
 	}
 
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
-		
-		if(stack.getItem() == ModArmor.waterHelmet)
-		{
+	@Override
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
+			String type) {
+
+		if (stack.getItem() == ModArmor.waterHelmet) {
 			return References.MODIDLOCAL + ":models/armor/waterarmor1.png";
-		}
-		else if(stack.getItem() == ModArmor.waterChest)
-		{
+		} else if (stack.getItem() == ModArmor.waterChest) {
 			return References.MODIDLOCAL + ":models/armor/waterarmor1.png";
-		}
-		else if(stack.getItem() == ModArmor.waterLeggings)
-		{
+		} else if (stack.getItem() == ModArmor.waterLeggings) {
 			return References.MODIDLOCAL + ":models/armor/waterarmor2.png";
-		}
-		else if(stack.getItem() == ModArmor.waterBoots)
-		{
+		} else if (stack.getItem() == ModArmor.waterBoots) {
 			return References.MODIDLOCAL + ":models/armor/waterarmor1.png";
-		}
-		else
-		{
+		} else {
 			System.out.println("Invalid Item OmegaArmorItem");
 			return null;
 		}

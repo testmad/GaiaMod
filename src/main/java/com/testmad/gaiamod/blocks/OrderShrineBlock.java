@@ -31,163 +31,179 @@ public class OrderShrineBlock extends BlockContainer {
 	private Random rand;
 
 	private static boolean keepInventory = false;
-	
+
 	private final boolean isPowered;
-	
+
 	@SideOnly(Side.CLIENT)
 	private IIcon orderShrineFront;
-	
+
 	@SideOnly(Side.CLIENT)
 	private IIcon orderShrineTop;
-	
+
 	@SideOnly(Side.CLIENT)
 	private IIcon orderShrineBottom;
-	
+
 	protected OrderShrineBlock(boolean hasPower) {
 		super(Material.rock);
 		rand = new Random();
 
 		isPowered = hasPower;
 	}
-	
+
+	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerBlockIcons (IIconRegister iconRegister) {
-		//this.blockIcon = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_side");
-		this.blockIcon = iconRegister.registerIcon(References.MODIDLOCAL + ":" + getUnlocalizedName().substring(5) + "_side" );
-		//this.gaiaAltarFront = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_front");
-		this.orderShrineTop = iconRegister.registerIcon(References.MODIDLOCAL + ":" + getUnlocalizedName().substring(5) + "_top");
-		//this.gaiaAltarTop = iconRegister.registerIcon(References.MODID + ":" + getUnlocalizedName().substring(5) + "_top");
-		this.orderShrineFront = iconRegister.registerIcon(References.MODIDLOCAL + ":" + (this.isPowered ? getUnlocalizedName().substring(5) + "_front"  : getUnlocalizedName().substring(5) + "_front" ));
+	public void registerBlockIcons(IIconRegister iconRegister) {
+		// this.blockIcon = iconRegister.registerIcon(References.MODID + ":" +
+		// getUnlocalizedName().substring(5) + "_side");
+		this.blockIcon = iconRegister.registerIcon(References.MODIDLOCAL + ":"
+				+ getUnlocalizedName().substring(5) + "_side");
+		// this.gaiaAltarFront = iconRegister.registerIcon(References.MODID +
+		// ":" + getUnlocalizedName().substring(5) + "_front");
+		this.orderShrineTop = iconRegister.registerIcon(References.MODIDLOCAL
+				+ ":" + getUnlocalizedName().substring(5) + "_top");
+		// this.gaiaAltarTop = iconRegister.registerIcon(References.MODID + ":"
+		// + getUnlocalizedName().substring(5) + "_top");
+		this.orderShrineFront = iconRegister.registerIcon(References.MODIDLOCAL
+				+ ":"
+				+ (this.isPowered ? getUnlocalizedName().substring(5)
+						+ "_front" : getUnlocalizedName().substring(5)
+						+ "_front"));
 	}
-	
+
+	@Override
 	@SideOnly(Side.CLIENT)
-    public IIcon getIcon(int side, int metadata)
-    {
-        //return side == 1 ? this.gaiaAltarTop : (side == 0 ? this.gaiaAltarTop : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
-		//return metadata == 0 && side == 1 ? this.gaiaAltarTop : (side == metadata ? this.gaiaAltarTop : this.blockIcon);
-		//return side == 1 ? this.gaiaAltarTop : this.blockIcon;
-		return side == 1 || side == 0 ? this.orderShrineTop : (metadata == 0 && side == 3 ? this.orderShrineFront : (side != metadata ? this.blockIcon : this.orderShrineFront));
-    }
-	
-	public void onBlockAdded(World world, int x, int y, int z)
-    {
-        super.onBlockAdded(world, x, y, z);
-        this.setDefaultDirection(world, x, y, z);
-    }
-	
+	public IIcon getIcon(int side, int metadata) {
+		// return side == 1 ? this.gaiaAltarTop : (side == 0 ? this.gaiaAltarTop
+		// : (side != metadata ? this.blockIcon : this.gaiaAltarFront));
+		// return metadata == 0 && side == 1 ? this.gaiaAltarTop : (side ==
+		// metadata ? this.gaiaAltarTop : this.blockIcon);
+		// return side == 1 ? this.gaiaAltarTop : this.blockIcon;
+		return side == 1 || side == 0 ? this.orderShrineTop : (metadata == 0
+				&& side == 3 ? this.orderShrineFront
+				: (side != metadata ? this.blockIcon : this.orderShrineFront));
+	}
+
+	@Override
+	public void onBlockAdded(World world, int x, int y, int z) {
+		super.onBlockAdded(world, x, y, z);
+		this.setDefaultDirection(world, x, y, z);
+	}
+
 	private void setDefaultDirection(World world, int x, int y, int z) {
-		if (!world.isRemote)
-        {
-            Block block = world.getBlock(x, y, z - 1);
-            Block block1 = world.getBlock(x, y, z + 1);
-            Block block2 = world.getBlock(x - 1, y, z);
-            Block block3 = world.getBlock(x + 1, y, z);
-            byte b0 = 3;
+		if (!world.isRemote) {
+			Block block = world.getBlock(x, y, z - 1);
+			Block block1 = world.getBlock(x, y, z + 1);
+			Block block2 = world.getBlock(x - 1, y, z);
+			Block block3 = world.getBlock(x + 1, y, z);
+			byte b0 = 3;
 
-            if (block.func_149730_j() && !block1.func_149730_j())
-            {
-                b0 = 3;
-            }
+			if (block.func_149730_j() && !block1.func_149730_j()) {
+				b0 = 3;
+			}
 
-            if (block1.func_149730_j() && !block.func_149730_j())
-            {
-                b0 = 2;
-            }
+			if (block1.func_149730_j() && !block.func_149730_j()) {
+				b0 = 2;
+			}
 
-            if (block2.func_149730_j() && !block3.func_149730_j())
-            {
-                b0 = 5;
-            }
+			if (block2.func_149730_j() && !block3.func_149730_j()) {
+				b0 = 5;
+			}
 
-            if (block3.func_149730_j() && !block2.func_149730_j())
-            {
-                b0 = 4;
-            }
+			if (block3.func_149730_j() && !block2.func_149730_j()) {
+				b0 = 4;
+			}
 
-            world.setBlockMetadataWithNotify(x, y, z, b0, 2);
-        }
-		
+			world.setBlockMetadataWithNotify(x, y, z, b0, 2);
+		}
+
 	}
-	
-	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemstack)
-    {
-        int l = MathHelper.floor_double((double)(entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 
-        if (l == 0)
-        {
-        	world.setBlockMetadataWithNotify(x, y, z, 2, 2);
-        }
+	@Override
+	public void onBlockPlacedBy(World world, int x, int y, int z,
+			EntityLivingBase entity, ItemStack itemstack) {
+		int l = MathHelper
+				.floor_double(entity.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
 
-        if (l == 1)
-        {
-        	world.setBlockMetadataWithNotify(x, y, z, 5, 2);
-        }
+		if (l == 0) {
+			world.setBlockMetadataWithNotify(x, y, z, 2, 2);
+		}
 
-        if (l == 2)
-        {
-        	world.setBlockMetadataWithNotify(x, y, z, 3, 2);
-        }
+		if (l == 1) {
+			world.setBlockMetadataWithNotify(x, y, z, 5, 2);
+		}
 
-        if (l == 3)
-        {
-        	world.setBlockMetadataWithNotify(x, y, z, 4, 2);
-        }
+		if (l == 2) {
+			world.setBlockMetadataWithNotify(x, y, z, 3, 2);
+		}
 
-        if (itemstack.hasDisplayName())
-        {
-            //((TileEntityGaiaAltar)world.getTileEntity(x, y, z)).setCustomName(itemstack.getDisplayName());
-        }
-    }
-	
-	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
-		if(world.isRemote) {
+		if (l == 3) {
+			world.setBlockMetadataWithNotify(x, y, z, 4, 2);
+		}
+
+		if (itemstack.hasDisplayName()) {
+			// ((TileEntityGaiaAltar)world.getTileEntity(x, y,
+			// z)).setCustomName(itemstack.getDisplayName());
+		}
+	}
+
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z,
+			EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
+		if (world.isRemote) {
 			return true;
-		}else if (!player.isSneaking()){
-			TileEntityOrderShrine entity =(TileEntityOrderShrine)world.getTileEntity(x, y, z);
-			if (entity != null){
-				FMLNetworkHandler.openGui(player, GaiaMod.instance, ModGui.guiIDOrderShrine, world, x, y, z);
+		} else if (!player.isSneaking()) {
+			TileEntityOrderShrine entity = (TileEntityOrderShrine) world
+					.getTileEntity(x, y, z);
+			if (entity != null) {
+				FMLNetworkHandler.openGui(player, GaiaMod.instance,
+						ModGui.guiIDOrderShrine, world, x, y, z);
 			}
 			return true;
-		}else{
+		} else {
 			return false;
 		}
 	}
-	
+
 	@Override
 	public TileEntity createNewTileEntity(World world, int i) {
 		return new TileEntityOrderShrine();
 	}
-	
-	public static void updateBlockState( boolean powered, World world, int xCoord, int yCoord, int zCoord) {
-		
 
+	public static void updateBlockState(boolean powered, World world,
+			int xCoord, int yCoord, int zCoord) {
 
 		int i = world.getBlockMetadata(xCoord, yCoord, zCoord);
 		TileEntity entity = world.getTileEntity(xCoord, yCoord, zCoord);
 		keepInventory = true;
-		
-		 if( powered){ 
-			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.orderShrineBlockIdlePower);
-		}else{
-			world.setBlock(xCoord, yCoord, zCoord, ModBlocks.orderShrineBlockIdle);
+
+		if (powered) {
+			world.setBlock(xCoord, yCoord, zCoord,
+					ModBlocks.orderShrineBlockIdlePower);
+		} else {
+			world.setBlock(xCoord, yCoord, zCoord,
+					ModBlocks.orderShrineBlockIdle);
 		}
 		keepInventory = false;
 		world.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, i, 2);
-		
-		if(entity != null){
+
+		if (entity != null) {
 			entity.validate();
 			world.setTileEntity(xCoord, yCoord, zCoord, entity);
 		}
 	}
-	
+
+	@Override
 	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(World world, int x, int y, int z, Random rand){
-		
+	public void randomDisplayTick(World world, int x, int y, int z, Random rand) {
+
 	}
-	
-	public void breakBlock(World world, int x, int y, int z, Block oldblock, int oldMetadata) {
+
+	@Override
+	public void breakBlock(World world, int x, int y, int z, Block oldblock,
+			int oldMetadata) {
 		if (!keepInventory) {
-			TileEntityOrderShrine tileentity = (TileEntityOrderShrine) world.getTileEntity(x, y, z);
+			TileEntityOrderShrine tileentity = (TileEntityOrderShrine) world
+					.getTileEntity(x, y, z);
 
 			if (tileentity != null) {
 				for (int i = 0; i < tileentity.getSizeInventory(); i++) {
@@ -207,12 +223,10 @@ public class OrderShrineBlock extends BlockContainer {
 
 							itemstack.stackSize -= j;
 
-							EntityItem item = new EntityItem(world,
-									(double) ((float) x + f),
-									(double) ((float) y + f1),
-									(double) ((float) z + f2), new ItemStack(
-											itemstack.getItem(), j,
-											itemstack.getItemDamage()));
+							EntityItem item = new EntityItem(world, x + f, y
+									+ f1, z + f2, new ItemStack(
+									itemstack.getItem(), j,
+									itemstack.getItemDamage()));
 
 							if (itemstack.hasTagCompound()) {
 								item.getEntityItem().setTagCompound(
@@ -231,38 +245,10 @@ public class OrderShrineBlock extends BlockContainer {
 
 		super.breakBlock(world, x, y, z, oldblock, oldMetadata);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-public Item getItemDropped(World world, int x , int y, int z) {
-		
+
+	public Item getItemDropped(World world, int x, int y, int z) {
+
 		return Item.getItemFromBlock(ModBlocks.orderShrineBlockIdle);
 	}
 
-
-	
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-
-	
 }

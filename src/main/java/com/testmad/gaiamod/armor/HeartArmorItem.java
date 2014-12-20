@@ -7,39 +7,33 @@ import net.minecraft.item.ItemStack;
 import com.testmad.gaiamod.GaiaMod;
 import com.testmad.gaiamod.util.References;
 
-public class HeartArmorItem  extends ItemArmor{
+public class HeartArmorItem extends ItemArmor {
 
-	public HeartArmorItem(ArmorMaterial material, int armorType,String name) {
-			
-		super(material, 0 , armorType);
+	public HeartArmorItem(ArmorMaterial material, int armorType, String name) {
+
+		super(material, 0, armorType);
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(GaiaMod.getcreativeTab());
 		this.setNoRepair();
-        this.setFull3D();
+		this.setFull3D();
 
-		this.setTextureName(References.MODIDLOCAL + ":" + getUnlocalizedName().substring(5));
+		this.setTextureName(References.MODIDLOCAL + ":"
+				+ getUnlocalizedName().substring(5));
 	}
 
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type){
-		
-		if(stack.getItem() == ModArmor.heartHelmet)
-		{
+	@Override
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
+			String type) {
+
+		if (stack.getItem() == ModArmor.heartHelmet) {
 			return References.MODIDLOCAL + ":models/armor/heartarmor1.png";
-		}
-		else if(stack.getItem() == ModArmor.heartChest)
-		{
+		} else if (stack.getItem() == ModArmor.heartChest) {
 			return References.MODIDLOCAL + ":models/armor/heartarmor1.png";
-		}
-		else if(stack.getItem() == ModArmor.heartLeggings)
-		{
+		} else if (stack.getItem() == ModArmor.heartLeggings) {
 			return References.MODIDLOCAL + ":models/armor/heartarmor2.png";
-		}
-		else if(stack.getItem() == ModArmor.heartBoots)
-		{
+		} else if (stack.getItem() == ModArmor.heartBoots) {
 			return References.MODIDLOCAL + ":models/armor/heartarmor1.png";
-		}
-		else
-		{
+		} else {
 			System.out.println("Invalid Item OmegaArmorItem");
 			return null;
 		}

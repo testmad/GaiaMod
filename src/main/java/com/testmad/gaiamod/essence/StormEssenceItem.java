@@ -7,17 +7,17 @@ import com.testmad.gaiamod.util.References;
 import com.testmad.gaiamod.util.Strings;
 
 public class StormEssenceItem extends Item {
-	
-	public StormEssenceItem()
-	{
+
+	public StormEssenceItem() {
 		super();
-        this.setUnlocalizedName(Strings.StormEssenceItemName);
-        this.setCreativeTab(GaiaMod.getcreativeTab());
-        this.setTextureName(References.MODIDLOCAL + ":" + getUnlocalizedName().substring(5));
-        
-        this.setNoRepair();
-        this.setMaxStackSize(64);
-        this.setFull3D();
+		this.setUnlocalizedName(Strings.StormEssenceItemName);
+		this.setCreativeTab(GaiaMod.getcreativeTab());
+		this.setTextureName(References.MODIDLOCAL + ":"
+				+ getUnlocalizedName().substring(5));
+
+		this.setNoRepair();
+		this.setMaxStackSize(64);
+		this.setFull3D();
 	}
 
 }

@@ -1,14 +1,14 @@
 [
 {
   "modid": "gaiamod",
-  "name": "Gaia Mod",
+  "name": "GaiaMod",
   "description": "For Thinstack IRC private pack only.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
   "authorList": ["testmad"],
-  "credits": "The Forge and FML guys, for making Forge.",
+  "credits": "The Forge and FML guys, for making Forge. Cheesieweegie for textures.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

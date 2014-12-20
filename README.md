@@ -171,37 +171,76 @@ Not certain as of yet.
 
 ##Armor Recipes
 ####Earth Armor Recipes
-| Helmet | Chest | Leggings | Boots |
-|:--------:|:--------:|:--------:|:--------:|
-| <table align="center"><tr><td>Body of Earth</td><td>Body of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Empty</td><td>Body of Earth</td></tr><tr><td>Empty</td><td>Amulet of Earth</td><td>Empty</td></tr></table> | <table align="center"><tr><td>Body of Earth</td><td>Amulet of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Body of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Body of Earth</td><td>Body of Earth</td></tr></table> | <table align="center"><tr><td>Body of Earth</td><td>Body of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Amulet of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Empty</td><td>Body of Earth</td></tr></table> | <table align="center"><tr><td>Body of Earth</td><td>Empty</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Empty</td><td>Body of Earth</td></tr><tr><td>Empty</td><td>Amulet of Earth</td><td>Empty</td></tr></table>|
+| Helmet | Chest |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Body of Earth</td><td>Body of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Empty</td><td>Body of Earth</td></tr><tr><td>Empty</td><td>Amulet of Earth</td><td>Empty</td></tr></table> | <table align="center"><tr><td>Body of Earth</td><td>Amulet of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Body of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Body of Earth</td><td>Body of Earth</td></tr></table> |
+
+| Leggings | Boots |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Body of Earth</td><td>Body of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Amulet of Earth</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Empty</td><td>Body of Earth</td></tr></table> | <table align="center"><tr><td>Body of Earth</td><td>Empty</td><td>Body of Earth</td></tr><tr><td>Body of Earth</td><td>Empty</td><td>Body of Earth</td></tr><tr><td>Empty</td><td>Amulet of Earth</td><td>Empty</td></tr></table>|
 
 ####Fire Armor Recipes
-| Helmet | Chest | Leggings | Boots |
-|:--------:|:--------:|:--------:|:--------:|
+| Helmet | Chest |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Body of Fire</td><td>Body of Fire</td><td>Body of Fire</td></tr><tr><td>Body of Fire</td><td>Empty</td><td>Body of Fire</td></tr><tr><td>Empty</td><td>Amulet of Fire</td><td>Empty</td></tr></table> | <table align="center"><tr><td>Body of Fire</td><td>Amulet of Fire</td><td>Body of Fire</td></tr><tr><td>Body of Fire</td><td>Body of Fire</td><td>Body of Fire</td></tr><tr><td>Body of Fire</td><td>Body of Fire</td><td>Body of Fire</td></tr></table> |
+
+| Leggings | Boots |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Body of Fire</td><td>Body of Fire</td><td>Body of Fire</td></tr><tr><td>Body of Fire</td><td>Amulet of Fire</td><td>Body of Fire</td></tr><tr><td>Body of Fire</td><td>Empty</td><td>Body of Fire</td></tr></table> | <table align="center"><tr><td>Body of Fire</td><td>Empty</td><td>Body of Fire</td></tr><tr><td>Body of Fire</td><td>Empty</td><td>Body of Fire</td></tr><tr><td>Empty</td><td>Amulet of Fire</td><td>Empty</td></tr></table>|
 
 ####Wind Armor Recipes
-| Helmet | Chest | Leggings | Boots |
-|:--------:|:--------:|:--------:|:--------:|
+| Helmet | Chest |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Body of Wind</td><td>Body of Wind</td><td>Body of Wind</td></tr><tr><td>Body of Wind</td><td>Empty</td><td>Body of Wind</td></tr><tr><td>Empty</td><td>Amulet of Wind</td><td>Empty</td></tr></table> | <table align="center"><tr><td>Body of Wind</td><td>Amulet of Wind</td><td>Body of Wind</td></tr><tr><td>Body of Wind</td><td>Body of Wind</td><td>Body of Wind</td></tr><tr><td>Body of Wind</td><td>Body of Wind</td><td>Body of Wind</td></tr></table> |
+
+| Leggings | Boots |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Body of Wind</td><td>Body of Wind</td><td>Body of Wind</td></tr><tr><td>Body of Wind</td><td>Amulet of Wind</td><td>Body of Wind</td></tr><tr><td>Body of Wind</td><td>Empty</td><td>Body of Wind</td></tr></table> | <table align="center"><tr><td>Body of Wind</td><td>Empty</td><td>Body of Wind</td></tr><tr><td>Body of Wind</td><td>Empty</td><td>Body of Wind</td></tr><tr><td>Empty</td><td>Amulet of Wind</td><td>Empty</td></tr></table>|
 
 ####Water Armor Recipes
-| Helmet | Chest | Leggings | Boots |
-|:--------:|:--------:|:--------:|:--------:|
+| Helmet | Chest |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Body of Water</td><td>Body of Water</td><td>Body of Water</td></tr><tr><td>Body of Water</td><td>Empty</td><td>Body of Water</td></tr><tr><td>Empty</td><td>Amulet of Water</td><td>Empty</td></tr></table> | <table align="center"><tr><td>Body of Water</td><td>Amulet of Water</td><td>Body of Water</td></tr><tr><td>Body of Water</td><td>Body of Water</td><td>Body of Water</td></tr><tr><td>Body of Water</td><td>Body of Water</td><td>Body of Water</td></tr></table> |
+
+| Leggings | Boots |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Body of Water</td><td>Body of Water</td><td>Body of Water</td></tr><tr><td>Body of Water</td><td>Amulet of Water</td><td>Body of Water</td></tr><tr><td>Body of Water</td><td>Empty</td><td>Body of Water</td></tr></table> | <table align="center"><tr><td>Body of Water</td><td>Empty</td><td>Body of Water</td></tr><tr><td>Body of Water</td><td>Empty</td><td>Body of Water</td></tr><tr><td>Empty</td><td>Amulet of Water</td><td>Empty</td></tr></table>|
 
 ####Heart Armor Recipes
-| Helmet | Chest | Leggings | Boots |
-|:--------:|:--------:|:--------:|:--------:|
+| Helmet | Chest |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Earth Helmet</td><td>Body of Heart</td><td>Fire Helmet</td></tr><tr><td>Wind Helmet</td><td>Empty</td><td>Water Helmet</td></tr><tr><td>Empty</td><td>Amulet of Heart</td><td>Empty</td></tr></table> | <table align="center"><tr><td>Earth Chest</td><td>Amulet of Heart</td><td>Fire Chest</td></tr><tr><td>Wind Chest</td><td>Body of Heart</td><td>Water Chest</td></tr><tr><td>Body of Heart</td><td>Body of Heart</td><td>Body of Heart</td></tr></table> |
+
+| Leggings | Boots |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Earth Leggings</td><td>Body of Heart</td><td>Fire Leggings</td></tr><tr><td>Wind Leggings</td><td>Amulet of Heart</td><td>Water Leggings</td></tr><tr><td>Body of Heart</td><td>Empty</td><td>Body of Heart</td></tr></table> | <table align="center"><tr><td>Earth Boots</td><td>Empty</td><td>Fire Boots</td></tr><tr><td>Wind Boots</td><td>Body of Heart</td><td>Water Boots</td></tr><tr><td>Empty</td><td>Amulet of Heart</td><td>Empty</td></tr></table>|
 
 ####Storm Armor Recipes
-| Helmet | Chest | Leggings | Boots |
-|:--------:|:--------:|:--------:|:--------:|
+| Helmet | Chest |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Earth Helmet</td><td>Body of Storm</td><td>Fire Helmet</td></tr><tr><td>Wind Helmet</td><td>Empty</td><td>Water Helmet</td></tr><tr><td>Empty</td><td>Amulet of Storm</td><td>Empty</td></tr></table> | <table align="center"><tr><td>Earth Chest</td><td>Amulet of Stormt</td><td>Fire Chest</td></tr><tr><td>Wind Chest</td><td>Body of Storm</td><td>Water Chest</td></tr><tr><td>Body of Storm</td><td>Body of Storm</td><td>Body of Storm</td></tr></table> |
+
+| Leggings | Boots |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Earth Leggings</td><td>Body of Storm</td><td>Fire Leggings</td></tr><tr><td>Wind Leggings</td><td>Amulet of Storm</td><td>Water Leggings</td></tr><tr><td>Body of Storm</td><td>Empty</td><td>Body of Storm</td></tr></table> | <table align="center"><tr><td>Earth Boots</td><td>Empty</td><td>Fire Boots</td></tr><tr><td>Wind Boots</td><td>Body of Storm</td><td>Water Boots</td></tr><tr><td>Empty</td><td>Amulet of Storm</td><td>Empty</td></tr></table>|
 
 ####Chaos Armor Recipes
-| Helmet | Chest | Leggings | Boots |
-|:--------:|:--------:|:--------:|:--------:|
+| Helmet | Chest |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Earth Helmet</td><td>Body of Storm</td><td>Fire Helmet</td></tr><tr><td>Wind Helmet</td><td>Empty</td><td>Water Helmet</td></tr><tr><td>Empty</td><td>Amulet of Storm</td><td>Empty</td></tr></table> | <table align="center"><tr><td>Earth Chest</td><td>Amulet of Stormt</td><td>Fire Chest</td></tr><tr><td>Wind Chest</td><td>Body of Storm</td><td>Water Chest</td></tr><tr><td>Body of Storm</td><td>Body of Storm</td><td>Body of Storm</td></tr></table> |
+
+| Leggings | Boots |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Earth Leggings</td><td>Body of Storm</td><td>Fire Leggings</td></tr><tr><td>Wind Leggings</td><td>Amulet of Storm</td><td>Water Leggings</td></tr><tr><td>Body of Storm</td><td>Empty</td><td>Body of Storm</td></tr></table> | <table align="center"><tr><td>Earth Boots</td><td>Empty</td><td>Fire Boots</td></tr><tr><td>Wind Boots</td><td>Body of Storm</td><td>Water Boots</td></tr><tr><td>Empty</td><td>Amulet of Storm</td><td>Empty</td></tr></table>|
 
 ####Order Armor Recipes
-| Helmet | Chest | Leggings | Boots |
-|:--------:|:--------:|:--------:|:--------:|
+| Helmet | Chest |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Earth Helmet</td><td>Body of Storm</td><td>Fire Helmet</td></tr><tr><td>Wind Helmet</td><td>Empty</td><td>Water Helmet</td></tr><tr><td>Empty</td><td>Amulet of Storm</td><td>Empty</td></tr></table> | <table align="center"><tr><td>Earth Chest</td><td>Amulet of Stormt</td><td>Fire Chest</td></tr><tr><td>Wind Chest</td><td>Body of Storm</td><td>Water Chest</td></tr><tr><td>Body of Storm</td><td>Body of Storm</td><td>Body of Storm</td></tr></table> |
+
+| Leggings | Boots |
+|:--------:|:--------:|
+| <table align="center"><tr><td>Earth Leggings</td><td>Body of Storm</td><td>Fire Leggings</td></tr><tr><td>Wind Leggings</td><td>Amulet of Storm</td><td>Water Leggings</td></tr><tr><td>Body of Storm</td><td>Empty</td><td>Body of Storm</td></tr></table> | <table align="center"><tr><td>Earth Boots</td><td>Empty</td><td>Fire Boots</td></tr><tr><td>Wind Boots</td><td>Body of Storm</td><td>Water Boots</td></tr><tr><td>Empty</td><td>Amulet of Storm</td><td>Empty</td></tr></table>|
 
 ##Weapon Recipes
 | Name | Recipe |

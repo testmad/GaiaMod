@@ -98,7 +98,7 @@ Not certain as of yet.
 ##Weapons
 | Name | Info | Image |
 |--------|--------|--------|
-|Blade of Jupiter|Attack Damage: 14|![](http://i.imgur.com/eGto1FQ.png)|
+|Blade of Jupiter|Attack Damage: 14|![](http://i.imgur.com/RGht8PX.png)|
 |Will of Tartarus|Attack Damage: 16|![](http://i.imgur.com/eGto1FQ.png)|
 |Protection of Gaia|Attack Damage: 18|![](http://i.imgur.com/PlZOVlW.png)|
 
@@ -227,265 +227,24 @@ Not certain as of yet.
 ####Chaos Armor Recipes
 | Helmet | Chest |
 |:--------:|:--------:|
-| <table align="center"><tr><td>Earth Helmet</td><td>Body of Storm</td><td>Fire Helmet</td></tr><tr><td>Wind Helmet</td><td>Empty</td><td>Water Helmet</td></tr><tr><td>Empty</td><td>Amulet of Storm</td><td>Empty</td></tr></table> | <table align="center"><tr><td>Earth Chest</td><td>Amulet of Stormt</td><td>Fire Chest</td></tr><tr><td>Wind Chest</td><td>Body of Storm</td><td>Water Chest</td></tr><tr><td>Body of Storm</td><td>Body of Storm</td><td>Body of Storm</td></tr></table> |
+| <table align="center"><tr><td>Earth Helmet</td><td>Body of Chaos</td><td>Fire Helmet</td></tr><tr><td>Wind Helmet</td><td>Empty</td><td>Storm Helmet</td></tr><tr><td>Empty</td><td>Amulet of Chaos</td><td>Empty</td></tr></table> | <table align="center"><tr><td>Earth Chest</td><td>Amulet of Stormt</td><td>Fire Chest</td></tr><tr><td>Wind Chest</td><td>Body of Chaos</td><td>Storm Chest</td></tr><tr><td>Body of Chaos</td><td>Body of Chaos</td><td>Body of Chaos</td></tr></table> |
 
 | Leggings | Boots |
 |:--------:|:--------:|
-| <table align="center"><tr><td>Earth Leggings</td><td>Body of Storm</td><td>Fire Leggings</td></tr><tr><td>Wind Leggings</td><td>Amulet of Storm</td><td>Water Leggings</td></tr><tr><td>Body of Storm</td><td>Empty</td><td>Body of Storm</td></tr></table> | <table align="center"><tr><td>Earth Boots</td><td>Empty</td><td>Fire Boots</td></tr><tr><td>Wind Boots</td><td>Body of Storm</td><td>Water Boots</td></tr><tr><td>Empty</td><td>Amulet of Storm</td><td>Empty</td></tr></table>|
+| <table align="center"><tr><td>Earth Leggings</td><td>Body of Chaos</td><td>Fire Leggings</td></tr><tr><td>Wind Leggings</td><td>Amulet of Chaos</td><td>Storm Leggings</td></tr><tr><td>Body of Chaos</td><td>Empty</td><td>Body of Chaos</td></tr></table> | <table align="center"><tr><td>Earth Boots</td><td>Empty</td><td>Fire Boots</td></tr><tr><td>Wind Boots</td><td>Body of Chaos</td><td>Storm Boots</td></tr><tr><td>Empty</td><td>Amulet of Chaos</td><td>Empty</td></tr></table>|
 
 ####Order Armor Recipes
 | Helmet | Chest |
 |:--------:|:--------:|
-| <table align="center"><tr><td>Earth Helmet</td><td>Body of Storm</td><td>Fire Helmet</td></tr><tr><td>Wind Helmet</td><td>Empty</td><td>Water Helmet</td></tr><tr><td>Empty</td><td>Amulet of Storm</td><td>Empty</td></tr></table> | <table align="center"><tr><td>Earth Chest</td><td>Amulet of Stormt</td><td>Fire Chest</td></tr><tr><td>Wind Chest</td><td>Body of Storm</td><td>Water Chest</td></tr><tr><td>Body of Storm</td><td>Body of Storm</td><td>Body of Storm</td></tr></table> |
+| <table align="center"><tr><td>Earth Helmet</td><td>Chaos Helmet</td><td>Heart Helmet</td></tr><tr><td>Wind Helmet</td><td>Storm Helmet</td><td>Water Helmet</td></tr><tr><td>Empty</td><td>Amulet of Order</td><td>Empty</td></tr></table> | <table align="center"><tr><td>Earth Chest</td><td>Amulet of Order</td><td>Heart Chest</td></tr><tr><td>Wind Chest</td><td>Body of Order</td><td>Water Chest</td></tr><tr><td>Chaos Chest</td><td>Body of Order</td><td>Storm Chest</td></tr></table> |
 
 | Leggings | Boots |
 |:--------:|:--------:|
-| <table align="center"><tr><td>Earth Leggings</td><td>Body of Storm</td><td>Fire Leggings</td></tr><tr><td>Wind Leggings</td><td>Amulet of Storm</td><td>Water Leggings</td></tr><tr><td>Body of Storm</td><td>Empty</td><td>Body of Storm</td></tr></table> | <table align="center"><tr><td>Earth Boots</td><td>Empty</td><td>Fire Boots</td></tr><tr><td>Wind Boots</td><td>Body of Storm</td><td>Water Boots</td></tr><tr><td>Empty</td><td>Amulet of Storm</td><td>Empty</td></tr></table>|
+| <table align="center"><tr><td>Earth Leggings</td><td>Body of Order</td><td>Heart Leggings</td></tr><tr><td>Wind Leggings</td><td>Amulet of Order</td><td>Water Leggings</td></tr><tr><td>Chaos Leggings</td><td>Empty</td><td>Storm Leggings</td></tr></table> | <table align="center"><tr><td>Earth Boots</td><td>Empty</td><td>Heart Boots</td></tr><tr><td>Wind Boots</td><td>Body of Order</td><td>Water Boots</td></tr><tr><td>Chaos Boots</td><td>Amulet of Order</td><td>Storm Boots</td></tr></table>|
 
 ##Weapon Recipes
 | Name | Recipe |
 |:--------:|:--------:|
-
-
-       
-Armor
-
-    Earth
-        - Powers:
-        - Durability:
-        - Recipe:
-	Helm -
-		- Earth Stone		- Earth Stone	- Earth Stone
-		- Earth Stone		- Blank		- Earth Stone
-		- Blank			- Earth Amulet	- Blank
-	Chest -
-		- Earth Stone		- Earth Amulet 	- Earth Stone
-		- Earth Stone		- Earth Stone	- Earth Stone
-		- Earth Stone		- Earth Stone	- Earth Stone
-	Legs -
-		- Earth Stone		- Earth Stone 	- Earth Stone
-		- Earth Stone		- Earth Amulet 	- Earth Stone
-		- Earth Stone		- Blank		- Earth Stone
-	Boots -
-		- Earth Stone		- Blank 	- Earth Stone
-		- Earth Stone		- Blank		- Earth Stone
-		- Blank			- Earth Amulet 	- Blank
-
- 
-    Fire
-        - Powers:
-        - Durability:
-        - Recipe:
-	Helm -
-		- Fire Stone		- Fire Stone	- Fire Stone
-		- Fire Stone		- Blank		- Fire Stone
-		- Blank			- Fire Amulet	- Blank
-	Chest -
-		- Fire Stone		- Fire Amulet 	- Fire Stone
-		- Fire Stone		- Fire Stone	- Fire Stone
-		- Fire Stone		- Fire Stone	- Fire Stone
-	Legs -
-		- Fire Stone		- Fire Stone 	- Fire Stone
-		- Fire Stone		- Fire Amulet 	- Fire Stone
-		- Fire Stone		- Blank		- Fire Stone
-	Boots -
-		- Fire Stone		- Blank 	- Fire Stone
-		- Fire Stone		- Blank		- Fire Stone
-		- Blank			- Fire Amulet 	- Blank
-
-
-    Wind
-        - Powers:
-        - Durability:
-        - Recipe:
-	Helm -
-		- Wind Stone		- Wind Stone	- Wind Stone
-		- Wind Stone		- Blank		- Wind Stone
-		- Blank			- Wind Amulet	- Blank
-	Chest -
-		- Wind Stone		- Wind Amulet 	- Wind Stone
-		- Wind Stone		- Wind Stone	- Wind Stone
-		- Wind Stone		- Wind Stone	- Wind Stone
-	Legs -
-		- Wind Stone		- Wind Stone 	- Wind Stone
-		- Wind Stone		- Wind Amulet 	- Wind Stone
-		- Wind Stone		- Blank		- Wind Stone
-	Boots -
-		- Wind Stone		- Blank 	- Wind Stone
-		- Wind Stone		- Blank		- Wind Stone
-		- Blank			- Wind Amulet 	- Blank
-
-        
-    Water
-        - Powers:
-        - Durability:
-        - Recipe:
-	Helm -
-		- Water Stone		- Water Stone	- Water Stone
-		- Water Stone		- Blank		- WaterStone
-		- Blank			- Water Amulet	- Blank
-	Chest -
-		- Water Stone		- Water Amulet 	- Water Stone
-		- Water Stone		- Water Stone	- Water Stone
-		- Water Stone		- Water Stone	- Water Stone
-	Legs -
-		- Water Stone		- Water Stone 	- Water Stone
-		- Water Stone		- Water Amulet 	- Water Stone
-		- Water Stone		- Blank		- Water Stone
-	Boots -
-		- Water Stone		- Blank 	- Water Stone
-		- Water Stone		- Blank		- Water Stone
-		- Blank			- Water Amulet 	- Blank
-
-    Heart
-        - Powers:
-        - Durability:
-        - Recipe:
-	Helm -
-		- Earth Helm		- Heart Stone	- Fire Helm
-		- Wind Helm		- Blank		- Water Helm
-		- Blank			- Heart Amulet	- Blank
-	Chest -
-		- Earth Chest		- Heart Amulet 	- Fire Chest
-		- Wind Chest		- Heart Stone	- Water Chest
-		- Heart Stone		- Heart Stone	- Heart Stone
-	Legs -
-		- Earth Legs		- Heart Stone 	- Fire Legs
-		- Wind Legs		- Heart Amulet 	- Water Legs
-		- Heart Stone		- Blank		- Heart Stone
-	Boots -
-		- Earth Boots		- Blank 	- Fire Boots
-		- Wind Boots		- Heart Stone	- Water Boots
-		- Blank			- Heart Amulet 	- Blank
-        
-    Storm
-        - Powers:
-        - Durability:
-        - Recipe:
-	Helm -
-		- Earth Helm		- Storm Stone	- Fire Helm
-		- Wind Helm		- Blank		- Water Helm
-		- Blank			- Storm Amulet	- Blank
-	Chest -
-		- Earth Chest		- Storm Amulet 	- Fire Chest
-		- Wind Chest		- Storm Stone	- Water Chest
-		- Storm Stone		- Storm Stone	- Storm Stone
-	Legs -
-		- Earth Legs		- Storm Stone 	- Fire Legs
-		- Wind Legs		- Storm Amulet 	- Water Legs
-		- Storm Stone		- Blank		- Storm Stone
-	Boots -
-		- Earth Boots		- Blank 	- Fire Boots
-		- Wind Boots		- Storm Stone	- Water Boots
-		- Blank			- Storm Amulet 	- Blank
-       
-    Chaos
-        - Powers:
-        - Durability:
-        - Recipe:
-	Helm -
-		- Earth Helm		- Chaos Stone	- Fire Helm
-		- Wind Helm		- Blank		- Storm Helm
-		- Blank			- Chaos Amulet	- Blank
-	Chest -
-		- Earth Chest		- Chaos Amulet 	- Fire Chest
-		- Wind Chest		- Chaos Stone	- Storm Chest
-		- Chaos Stone		- Chaos Stone	- Chaos Stone
-	Legs -
-		- Earth Legs		- Chaos Stone 	- Fire Legs
-		- Wind Legs		- Chaos Amulet 	- Storm Legs
-		- Chaos Stone		- Blank		- Chaos Stone
-	Boots -
-		- Earth Boots		- Blank 	- Fire Boots
-		- Wind Boots		- Chaos Stone	- Storm Boots
-		- Blank			- Chaos Amulet 	- Blank
-       
-    Order
-        - Powers:
-        - Durability:
-        - Recipe:
-
-	Helm -
-		- Earth Helm		- Chaos Helm	- Heart Helm
-		- Wind Helm		- Storm Helm	- Water Helm
-		- Blank			- Order Amulet	- Blank
-	Chest -
-		- Earth Chest		- Order Amulet 	- Heart Chest
-		- Wind Chest		- Order Stone	- Water Chest
-		- Chaos Chest		- Order Stone	- Storm Chest
-	Legs -
-		- Earth Legs		- Order Stone 	- Heart Legs
-		- Wind Legs		- Order Amulet 	- Water Legs
-		- Chaos Legs		- Blank		- Storm Legs
-	Boots -
-		- Earth Boots		- Blank 	- Heart Boots
-		- Wind Boots		- Order Stone	- Water Boots
-		- Chaos Boots		- Order Amulet 	- Storm Boots
-
-
-Swords
-	
-	Blade of Jupiter (aka Third Leg of Zues)(Thunder Fucker)
-	- Powers:
-	- Durability:
-	- Recipe:
-		(blank)		- (Storm Stone)	- (blank)
-    		(Storm Amulet)	- (Storm Stone)	- (Storm Amulet)
-		(blank)		- (Diamond)	- (blank)
-
-	The Chaos of Tartarus (Chaos Sword)
-	- Powers:
-	- Durability:
-	- Recipe:
-		(blank)	- (Chaos Stone)	- (blank)
-    		(blank)	- (Chaos Amulet)- (blank)
-		(blank)	- (Storm Sword)	- (blank)
-
-
-	The Order of Gaia
-	- Powers:
-	- Durability:
-	- Recipe:
-		(blank)		- (Order Stone)	- (blank)
-    		(Chaos Sword)	- (Order Amulet)- (Storm Sword)
-		(blank)		- (Emerald)	- (blank)
-
-
-
-OLD TODO INFO (LEAVING FOR REFERENCE)
-
-- Gaia Alter (used for crafting gaia stones, has storage space for water + lava and a small crafting grid)
-- Earth Amulet (Infinite bonemeal)
-- Fire Amulet (infinite lava source / flint and steel)
-- Water Amulet (Infinite water source)
-- Wind Amulet (Replace all blocks, of the same type, touching one-another, within a radius of the player, with air)
-- Storm Amulet (command lightning to strike wherever you aim)
-- Heart Amulet (Turn skeletons into zombies, zombies into vilagers, pigmen into pigs)
-
-Armor
-- Gaia Armor (Ultimate: Water breathing, No hunger, No fall damage, Flight, Fire resistance, Invisible armor models)
-- Earth Armor (crafted entierly from earth stones, scatters bonemeal-effect wherever the player walks. Walking on grass in a plains biom heals the armor's durability)
-- Fire Armor (crafted entierly from fire stones, grants total immunity to lava and fire. Makes the player "invisible" to mobs in The Nether, Walking in fire/lava heals durability)
-- Water Armor (Water breathing, night-vision while underwater, being submerged heals the armor's durability)
-- Heart Armor (All mobs become friendly unless provoked)
-
-- Note: Durability of all armors can be restored via praying, using an anvil, or the armor's special ability
-
-Weapons
-- Gaia Sword
-- Storm Sword (strikes mobs with lightning?)
-- Wind Bow (Fires balls of air with extreme knockback, doesn't require arrows)
-
-Multiblock structures
-- Alters (Pray by crouching to restore armor duribility at an alter)
-
-
-Detailed Item Notes
-=======
-Gaia Alter
-- Contains water and lava tanks
-- 2x2 crafting grid in the center
-- Used to craft various stones
-- Must pray while holding a stone to enable its special ability (fills durability)
-- Will need to refill durability on stones / armor / weapons at an alter periodically
-
+|Blade of Jupiter|<table align="center"><tr><td>Essence of Storm</td><td>Body of Storm</td><td>Essence of Storm</td></tr><tr><td>Empty</td><td>Body of Storm</td><td>Empty</td></tr><tr><td>Essence of Storm</td><td>Iron ingot</td><td>Essence of Storm</td></tr></table>|
+|Will of Tartarus|<table align="center"><tr><td>Essence of Chaos</td><td>Body of Chaos</td><td>Essence of Chaos</td></tr><tr><td>Empty</td><td>Body of Chaos</td><td>Empty</td></tr><tr><td>Essence of Chaos</td><td>Iron ingot</td><td>Essence of Chaos</td></tr></table>|
+|Protection of Gaia|<table align="center"><tr><td>Essence of Order</td><td>Body of Order</td><td>Essence of Order</td></tr><tr><td>Empty</td><td>Body of Order</td><td>Empty</td></tr><tr><td>Essence of Order</td><td>Iron ingot</td><td>Essence of Order</td></tr></table>|
